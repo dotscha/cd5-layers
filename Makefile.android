@@ -1,0 +1,44 @@
+HEADERS = Bitmap.H Graphic.H BitmapObject.H Scene.H Code.H 3D.H
+BMPS = icos_out.bmp ball.bmp ball_dark.bmp
+
+AS = ./ass.sh
+EXO = ~/exo207/src/exomizer
+YAPE = echo
+
+FLAGS = -O3 -Wall
+
+all : main_exo.prg
+	echo
+
+run : main.prg
+	$(YAPE) main.prg &
+
+run_exo : main_exo.prg
+	$(YAPE) main_exo.prg &
+
+main_exo.prg : main.prg scene_bg.prg
+	$(EXO) sfx basic -t4 -n -o main_exo.prg main.prg scene_bg.prg
+
+main.prg : scene_code.asm main.asm obj_coords.asm
+	$(AS) main
+
+scene_code.asm: layer $(BMPS)
+	./layer code
+
+obj_coords.asm: layer
+	./layer coords
+
+comp: layer
+
+gen_code: layer $(BMPS)
+	./layer code
+
+gen_coords: layer
+	./layer coords
+
+clean:
+	rm *.prg scene_*.bmp layers.asm scene_*.asm *coord*.asm main.inc main.lst layer
+
+% : %.C $(HEADERS)
+	g++ $(FLAGS) -o $@ $@.C
+
