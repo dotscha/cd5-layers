@@ -186,7 +186,7 @@ void addTriangle(Scene& s, Triangle tri)
   BitmapObject obj("obj"+num(obj_count));
   BitmapObject sh_obj("obj"+num(obj_count));
   double zShadow = 0;
-  cout << "object: " << obj.name() << endl;
+  cout << "object: " << obj.name() << " face: " << face << endl;
   obj_count++;
   for (int p = 0; p<PHASES; ++p)
   {
@@ -213,12 +213,12 @@ void addTriangle(Scene& s, Triangle tri)
       {
         img|=(msk&icos_out);
       }
-      
+
       double z;
 
       obj.addPhase(img,msk);
-      
-	  #if SCENE_NO==1
+
+      #if SCENE_NO==1
       Bitmap shadow = calcShadow(t,z);
       if (z!=0)
       {
@@ -226,7 +226,7 @@ void addTriangle(Scene& s, Triangle tri)
       }
       shadow= (!msk)&shadow;
       sh_obj.addPhase(shadow&ball_dark,shadow&ball_dark);
-	  #endif
+      #endif
     }
     else
     {
@@ -395,7 +395,7 @@ void genCode()
   Nodes nodes = calcNodes();
   Triangles ts = calcTriangles(nodes);
   addTriangles(scene,ts);
-  
+
   #if SCENE_NO==1
   otherStuff(scene);
   #endif
@@ -514,7 +514,7 @@ void calcTexture(const Nodes& nodes, const Nodes& coords, int q, string name)
   {
     int p = (dist[i]-min)/(max-min)*(q-0.00001);
     out << "\tbyt " << p << endl;
-  }  
+  }
   out.close();
 }
 
@@ -544,10 +544,10 @@ void coordinates()
     {
       if (count[i]>1) cout << i << " count: " << count[i] << endl;
     }
-    
+
     //we double the longitude resolution for the obj coordinates to increase precision
     vector<size_t> midCoords = getCoords(mids,sphereCoords(LATI1,LONG1*2));
-    
+
     out << "obj_latitudes:" << endl;
     for (size_t i = 0; i<mids.size(); ++i)
     {
@@ -595,7 +595,7 @@ void coordinates()
       out << "\tbyt " << ((i*LONG1)/256) << endl;
 	}
     out.close();
-  }  
+  }
 }
 
 int main(int argc, char** argv)
