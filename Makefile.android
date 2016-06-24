@@ -3,6 +3,8 @@ BMPS = icos_out.bmp ball.bmp ball_dark.bmp
 
 AS = ./ass.sh
 EXO = ~/exo209/src/exomizer
+MKD64 = ~/mkd64/bin/mkd64
+
 YAPE = echo
 
 FLAGS = -O3 -Wall
@@ -42,8 +44,12 @@ gen_texture: layer
 clean:
 	rm *.prg scene_*.* layers.asm *coord*.asm texture*.asm main.inc main.lst layer
 
-export: main_exo.prg
+disk.d64: main_exo.prg
+	$(MKD64) -o disk.d64 -m cbmdos -f main_exo.prg -n demo -w
+
+export: disk.d64 main_exo.prg
 	cp main_exo.prg /sdcard/
+	cp disk.d64 /sdcard/
 
 % : %.C $(HEADERS)
 	g++ $(FLAGS) -o $@ $@.C
