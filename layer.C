@@ -360,6 +360,7 @@ void initBitmaps()
   #endif
   p.push_back(255);
   icos_in.fill(p);
+  icos_in.saveBMP("icos_in.bmp");
   #if SCENE_NO==1
   icos_out.loadBMP("icos_out.bmp");
   ball_light.loadBMP("ball.bmp");
