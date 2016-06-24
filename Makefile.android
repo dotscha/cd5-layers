@@ -22,7 +22,7 @@ run_exo : main_exo.prg
 main_exo.prg : main.prg scene_bg.prg
 	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg scene_bg.prg
 
-main.prg : scene_code.asm main.asm obj_coords.asm
+main.prg : scene_code.asm main.asm obj_coords.asm anim.asm
 	$(AS) main
 
 scene_code.asm: layer $(BMPS)

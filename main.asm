@@ -8,12 +8,10 @@
 	byt $9e,"4109",0,0,0
 bas_end = *-2
 
-main:
-
-obj_phases = $02
-	include layers.asm
 
 bitmap = $c000
+
+main:
 
 	sei
 	sta $ff3f
@@ -54,71 +52,20 @@ $$l2:
     sta $ff12
 
 ;init
-	jsr init_phase_patt
+	jsr init_anim
 
-beg:
+anim_loop:
+	jsr render_anim
+	jmp anim_loop
 
-	ldy #0
-	jsr render2
-	ldx beg+1
-	inx
-	cpx #object_count
-	bne $$s
-	ldx #0
-$$s:
-	stx beg+1	
-	jmp beg
 
-	
-render2:
-	ldx #0
-$$l:
-	lda phase_patt,y
-	sta $02,x
-	iny
-	cpy #object_count
-	bne $$s
-	ldy #0
-$$s:	inx
-	cpx #object_count
-	bne $$l
-	;jmp render
+;animation code
+
+	include anim.asm
 
 render:
+obj_phases = $02
+	include layers.asm
 	include scene_code.asm
 	include scene_data.asm
 
-init_phase_patt:
-	ldx #phase_patt_len
-	lda #0
-$$l1:
-	sta phase_patt,x
-	inx
-	cpx #object_count
-	bne $$l1
-	
-	rts
-	
-	tax
-$$l2:
-	lda phase_patt,x
-	sta phase_patt+object_count/2,x
-	inx
-	cpx #phase_patt_len
-	bne $$l2
-	rts
-
-phase_patt:
-	byt 0,1,1,2,2,3,3,4
-	byt 4,5,5,6,6,7,7,7
-	byt 7,7,7,7,7,7,7,7
-	byt 7,7,7,7,7,7,7,7
-	byt 7,7,7,7,7,7,7,7
-	byt 7,7,7,7,7,7,7,7
-	byt 7,7,7,6,6,5,5,4
-	byt 4,3,3,2,2,1,1,0
-	
-phase_patt_len = *-phase_patt
-
-	
-		
