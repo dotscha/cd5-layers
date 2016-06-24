@@ -6,20 +6,38 @@
 #include <cmath>
 #include <cstdlib>
 #include <set>
+#include <algorithm>
 
 using namespace std;
+
+#define SCENE_NO 1
+#define PHASES 8
 
 const double PI = 104348.0/33215.0;
 
 double r_light = 0.05;
 P3D light[320*200];
+#if SCENE_NO==1
 P3D eye(0,0,9);
+#endif
+#if SCENE_NO==2
+P3D eye(0,0,13);
+#endif
 double screen = 200;
 
-size_t LATI1 = 13;
-size_t LONG1 = 30;
+#if SCENE_NO==1
+size_t LATI1 = 24;//13;
+size_t LONG1 = 56;//30;
+#endif
+#if SCENE_NO==2
+size_t LATI1 = 18;//13;
+size_t LONG1 = 42;//30;
+#endif
 size_t LATI2 = 128;
 size_t LONG2 = 128;
+size_t TEXT_LATI = 16;
+size_t TEXT_LONG = 32;
+
 
 Sphere ball = Sphere(eye,eye.z*30/screen);
 
@@ -107,7 +125,13 @@ P3D project(P3D p)
 
 void zoom(Triangle& t, double m)
 {
+  #if SCENE_NO==1
   P3D o = (t.a+t.b+t.c)/3.0;
+  #endif
+  #if SCENE_NO==2
+  m = 1 + (m-0.5)*0.2;
+  P3D o = eye;
+  #endif
   t.a = o + (t.a-o)*m;
   t.b = o + (t.b-o)*m;
   t.c = o + (t.c-o)*m;
@@ -164,14 +188,14 @@ void addTriangle(Scene& s, Triangle tri)
   double zShadow = 0;
   cout << "object: " << obj.name() << endl;
   obj_count++;
-  for (int p = 0; p<8; ++p)
+  for (int p = 0; p<PHASES; ++p)
   {
     Bitmap img;
-    if (p)
+    if (SCENE_NO==2 || p)
     {
       Graphic g(img);
       Triangle t = tri;
-      zoom(t,p/7.0);
+      zoom(t,p/(PHASES-1.0));
       P3D n1 = project(t.a);
       P3D n2 = project(t.b);
       P3D n3 = project(t.c);
@@ -191,15 +215,10 @@ void addTriangle(Scene& s, Triangle tri)
       }
       
       double z;
-      //shadow
-      /*
-      Bitmap shadow = calcShadow(t,z);
-      img|=(!msk)&shadow;
-      msk|=shadow;
-      */
+
       obj.addPhase(img,msk);
       
-      /**/
+	  #if SCENE_NO==1
       Bitmap shadow = calcShadow(t,z);
       if (z!=0)
       {
@@ -207,7 +226,7 @@ void addTriangle(Scene& s, Triangle tri)
       }
       shadow= (!msk)&shadow;
       sh_obj.addPhase(shadow&ball_dark,shadow&ball_dark);
-      /**/
+	  #endif
     }
     else
     {
@@ -229,6 +248,13 @@ void addTriangles(Scene& scene, const Triangles& ts)
   {
     addTriangle(scene,ts[i]);
   }
+}
+
+P3D normVec;
+
+bool compTri(const Triangle& t1, const Triangle& t2)
+{
+  return 0<(normVec*(t1.a+t1.b+t1.c-t2.a-t2.b-t2.c));
 }
 
 Triangles calcTriangles(const Nodes& nodes)
@@ -283,6 +309,10 @@ Triangles calcTriangles(const Nodes& nodes)
       }
     }
   }
+  #if SCENE_NO==1
+  normVec = nodes[0];
+  sort(ts.begin(),ts.end(),compTri);
+  #endif
   return ts;
 }
 
@@ -320,24 +350,21 @@ void otherStuff(Scene& scene)
   scene.addBitmapObject((int)(10000-100*3*eye.z),o);
 }
 
-P3D normVec;
-
-bool compTri(const Triangle& t1, const Triangle& t2)
-{
-  return 0<(normVec*(t1.a+t1.b+t1.c-t2.a-t2.b-t2.c));
-}
-
 void initBitmaps()
 {
-  icos_out.loadBMP("icos_out.bmp");
   vector<byte> p;
+  #if SCENE_NO==1
   p.push_back(85);
   p.push_back(255);
   p.push_back(2*85);
+  #endif
   p.push_back(255);
   icos_in.fill(p);
+  #if SCENE_NO==1
+  icos_out.loadBMP("icos_out.bmp");
   ball_light.loadBMP("ball.bmp");
   ball_dark.loadBMP("ball_dark.bmp");
+  #endif
 }
 
 void initLight()
@@ -366,10 +393,11 @@ void genCode()
   Scene scene;
   Nodes nodes = calcNodes();
   Triangles ts = calcTriangles(nodes);
-  normVec = nodes[0];
-  sort(ts.begin(),ts.end(),compTri);
   addTriangles(scene,ts);
+  
+  #if SCENE_NO==1
   otherStuff(scene);
+  #endif
   //calcTables(ts);
   scene.preview(0,"scene_phase0");
   scene.preview(1,"scene_phase1");
@@ -384,7 +412,7 @@ void genCode()
   out.close();
 }
 
-Nodes calcCoords(int lati, int longi, bool rot = false)
+Nodes sphereCoords(int lati, int longi, bool rot = false)
 {
   Nodes coords;
   for (int i = 0; i<lati; ++i)
@@ -405,6 +433,31 @@ Nodes calcCoords(int lati, int longi, bool rot = false)
       }
     }
   }
+  return coords;
+}
+
+Nodes cubeCoords()
+{
+  Nodes coords;
+  double s = 1/sqrt(3);
+  for (int i = 0; i<8; ++i)
+  {
+	double x = (i&1) ? -s : s;
+	double y = (i&2) ? -s : s;
+	double z = (i&4) ? -s : s;
+    coords.push_back(P3D(x,y,z));
+  }
+  return coords;
+}
+
+Nodes thetraCoords()
+{
+  Nodes coords;
+  double s = 1/sqrt(3);
+  coords.push_back(P3D( s, s, s));
+  coords.push_back(P3D(-s,-s, s));
+  coords.push_back(P3D( s,-s,-s));
+  coords.push_back(P3D(-s, s,-s));
   return coords;
 }
 
@@ -448,13 +501,29 @@ vector<size_t> getCoords(const Nodes& nodes, const Nodes& coords, map<size_t,int
   return out;
 }
 
+void calcTexture(const Nodes& nodes, const Nodes& coords, int q, string name)
+{
+  out.open((name+".asm").data(),ios_base::out);
+  out << "texture:" << endl;
+  vector<double> dist;
+  getCoords(coords,nodes,0,&dist);
+  double min = *min_element(dist.begin(),dist.end());
+  double max = *max_element(dist.begin(),dist.end());
+  for(size_t i = 0; i<dist.size(); ++i)
+  {
+    int p = (dist[i]-min)/(max-min)*(q-0.00001);
+    out << "\tbyt " << p << endl;
+  }  
+  out.close();
+}
+
 void coordinates()
 {
-  Nodes coords = calcCoords(LATI1,LONG1);
+  Nodes coords = sphereCoords(LATI1,LONG1);
   {
     out.open("obj_coords.asm",ios_base::out);
-    out << "LATI1=" << LATI1 << endl;
-    out << "LONG1=" << LONG1 << endl;
+    out << "LATI1 = " << LATI1 << endl;
+    out << "LONG1 = " << LONG1 << endl;
 
     Nodes nodes = calcNodes();
     Triangles ts = calcTriangles(nodes);
@@ -466,61 +535,66 @@ void coordinates()
       mids.push_back(mid);
     }
     map<size_t,int> count;
-    vector<size_t> midCoords = getCoords(mids,coords,&count);
+    /*vector<size_t> midCoords = */getCoords(mids,coords,&count);
     cout << "used: "<< count.size() << endl;
     cout << "coords: "<< coords.size() << endl;
     cout << "duplicates:" << endl;
-    
     for (int i = 0; i<count.size(); ++i)
     {
       if (count[i]>1) cout << i << " count: " << count[i] << endl;
     }
+    
+    //we double the longitude resolution for the obj coordinates to increase precision
+    vector<size_t> midCoords = getCoords(mids,sphereCoords(LATI1,LONG1*2));
+    
     out << "obj_latitudes:" << endl;
     for (size_t i = 0; i<mids.size(); ++i)
     {
-      out << "\t.byt " << midCoords[i]/LONG1 << endl;
+      out << "\tbyt " << midCoords[i]/(LONG1*2) << endl;
     }
     out << "obj_longitudes:" << endl;
     for (size_t i = 0; i<mids.size(); ++i)
     {
-      out << "\t.byt " << midCoords[i]%LONG1 << endl;
+      out << "\tbyt " << midCoords[i]%(LONG1*2) << endl;
     }
     out.close();
   }
   {
     out.open("coord_map.asm",ios_base::out);
-    out << "LATI2=" << LATI2 << endl;
-    out << "LONG2=" << LONG2 << endl;
-    Nodes coords2 = calcCoords(LATI2,LONG2,true);
+    out << "LATI2 = " << LATI2 << endl;
+    out << "LONG2 = " << LONG2 << endl;
+    Nodes coords2 = sphereCoords(LATI2,LONG2,true);
     map<size_t,int> count;
     vector<size_t> coordMap = getCoords(coords,coords2,&count);
     cout << "coord trafo %: " << (double)count.size()/coords.size() << endl;
     out << "coord_latitudes:" << endl;
     for (size_t i = 0; i<LATI1; ++i)
     {
-      out << "\t.byt ";
       for (size_t j = 0; j<LONG1; ++j)
       {
-        if (j) out << ",";
-        out << coordMap[i*LONG1+j]/LONG2;
+        out << "\tbyt " << coordMap[i*LONG1+j]/LONG2 << endl;
       }
-      out << endl;
     }
     out << "coord_longitudes:" << endl;
     for (size_t i = 0; i<LATI1; ++i)
     {
-      out << "\t.byt ";
       for (size_t j = 0; j<LONG1; ++j)
       {
-        if (j) out << ",";
-        out << coordMap[i*LONG1+j]%LONG2;
+        out << "\tbyt " << coordMap[i*LONG1+j]%LONG2 << endl;
       }
-      out << endl;
     }
+    out << "coord_row_lo:" << endl;
+    for (size_t i = 0; i<LATI1; ++i)
+	{
+      out << "\tbyt " << ((i*LONG1)&255) << endl;
+	}
+    out << "coord_row_hi:" << endl;
+    for (size_t i = 0; i<LATI1; ++i)
+	{
+      out << "\tbyt " << ((i*LONG1)/256) << endl;
+	}
     out.close();
-  }
-
-  
+  }  
 }
 
 int main(int argc, char** argv)
@@ -535,6 +609,18 @@ int main(int argc, char** argv)
     if (arg == "coords")
     {
       coordinates();
+    }
+    if (arg == "texture")
+    {
+      calcTexture(cubeCoords(),sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_cube");
+      calcTexture(thetraCoords(),sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_thetra");
+      {
+      Nodes n;
+      n.push_back(P3D(1,0,0));
+      calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_side");
+      n.push_back(P3D(-1,0,0));
+      calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_sides");
+      }
     }
   }
 }

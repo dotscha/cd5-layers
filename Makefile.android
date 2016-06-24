@@ -2,7 +2,7 @@ HEADERS = Bitmap.H Graphic.H BitmapObject.H Scene.H Code.H 3D.H
 BMPS = icos_out.bmp ball.bmp ball_dark.bmp
 
 AS = ./ass.sh
-EXO = ~/exo207/src/exomizer
+EXO = ~/exo209/src/exomizer
 YAPE = echo
 
 FLAGS = -O3 -Wall
@@ -36,8 +36,14 @@ gen_code: layer $(BMPS)
 gen_coords: layer
 	./layer coords
 
+gen_texture: layer
+	./layer texture
+
 clean:
-	rm *.prg scene_*.bmp layers.asm scene_*.asm *coord*.asm main.inc main.lst layer
+	rm *.prg scene_*.* layers.asm *coord*.asm texture*.asm main.inc main.lst layer
+
+export: main_exo.prg
+	cp main_exo.prg /sdcard/
 
 % : %.C $(HEADERS)
 	g++ $(FLAGS) -o $@ $@.C
