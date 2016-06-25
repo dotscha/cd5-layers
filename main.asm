@@ -49,11 +49,13 @@ $$l2:
 	lda $ff12
 	and #%11000011
 	ora #(bitmap/1024)
-    sta $ff12
+	sta $ff12
 
 ;init
 	jsr init_anim
-
+	jsr init_irq
+        cli
+        
 anim_loop:
 	jsr render_anim
 	jmp anim_loop
@@ -69,3 +71,8 @@ obj_phases = $02
 	include scene_code.asm
 	include scene_data.asm
 
+	include !player.asm
+	include music.asm
+
+	include irq.asm
+	
