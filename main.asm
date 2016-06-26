@@ -75,4 +75,6 @@ obj_phases = $02
 	include music.asm
 
 	include irq.asm
-	
+
+	org $c000
+	include logo2.asm

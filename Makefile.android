@@ -19,10 +19,10 @@ run : main.prg
 run_exo : main_exo.prg
 	$(YAPE) main_exo.prg &
 
-main_exo.prg : main.prg scene_bg.prg
-	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg scene_bg.prg
+main_exo.prg : main.prg
+	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg
 
-main.prg : scene_code.asm main.asm obj_coords.asm anim.asm
+main.prg : scene_code.asm main.asm obj_coords.asm anim.asm logo2.asm
 	$(AS) main
 
 scene_code.asm: layer $(BMPS)
