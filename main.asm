@@ -3,10 +3,11 @@
 	org $0fff
 	adr $1001
 
-	adr bas_end
-  adr 2012
-	byt $9e,"4109",0,0,0
-bas_end = *-2
+	adr next_line
+	adr 2016
+	byt $9e,"4109",0
+next_line = *
+	byt 0,0
 
 
 bitmap = $c000
@@ -41,6 +42,25 @@ $$l2:
 	inc $$l2+4
 	dex
 	bne $$l1
+	
+	ldx #$00		; init bitmap colors
+il2	lda #$04		; luminance
+	sta $0800,x
+	lda #$57
+	sta $0800+40*19,x
+	lda #$11		; color
+	sta $0C00,x
+	lda #$00
+	sta $0C00+40*19,x
+	inx
+	cpx #40*6
+	bne il2
+	
+	ldx #39
+	lda #$01
+il3	sta $0AF8,x
+	dex
+	bpl il3
 
 ;set bitmap mode
 	lda $ff06
@@ -50,6 +70,12 @@ $$l2:
 	and #%11000011
 	ora #(bitmap/1024)
 	sta $ff12
+	
+	lda #$01
+	sta $FF15
+	
+	lda #$E0
+	sta $FF13
 
 ;init
 	jsr init_anim
@@ -75,6 +101,11 @@ obj_phases = $02
 	include music.asm
 
 	include irq.asm
+	include scroll.asm
 
 	org $c000
 	include logo2.asm
+	
+	org $E000
+	include font.asm
+	
