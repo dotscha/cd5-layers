@@ -16,7 +16,7 @@ SCROLL
 	lda xshift+1
 	sec
 scroll_speed
-	sbc #$05
+	sbc #$03
 	bpl noscroll
 	;
 	clc
@@ -103,22 +103,23 @@ no_new_char
 	CHARSET 'a','z',$21
 	
 scroll_text
-	byt "Hello an...   ..."
+	byt "greetings to"
 	byt "                                      ..."
 	byt "                                      ..."
-	byt "                                      ..."
+	
 	byt $FF
 	
 char_widths
-	byt 2 ; space
+	byt 2 ; null
 	byt 3,3,3,3,3,3,3,3
 	byt 1,3,3,1,3,3,3,3
 	byt 3,3,3,3,3,3,3,3
 	byt 3,3
-	byt 1,1,1,1,1,1
-	byt 3,3,3,3,3,3,3,3
-	byt 1,3,3,1,3,3,3,3
-	byt 3,3,3,3,3,3,3,3
+	byt 1,1,1,1,1
+	byt 2 ; space
+	byt 3,3,3,3,3,2,3,3
+	byt 1,2,3,1,3,3,3,3
+	byt 3,3,3,2,3,3,3,3
 	byt 3,3
 	byt 1,1,1,1,1,1
 	
@@ -194,6 +195,9 @@ char_upper_e
 char_upper_f
 char_upper_g
 char_upper_h
+	byt $01,$03,$07,$03,$04
+	byt $00,$00,$08,$00,$00
+	byt $01,$03,$0A,$03,$04
 char_upper_i
 char_upper_j
 char_upper_k
@@ -212,9 +216,7 @@ char_upper_w
 char_upper_x
 char_upper_y
 char_upper_z
-	byt $01,$03,$07,$03,$04
-	byt $00,$00,$08,$00,$00
-	byt $01,$03,$0A,$03,$04
+	byt $00,$00,$00,$00,$00
 char_period
 	byt $00,$00,$00,$00,$23
 char_lower_a
@@ -222,16 +224,34 @@ char_lower_a
 	byt $00,$10,$1E,$2B,$08
 	byt $00,$11,$29,$2C,$0E
 char_lower_b
+	byt $01,$07,$03,$03,$0D
+	byt $00,$24,$00,$00,$26
+	byt $00,$11,$13,$15,$18
 char_lower_c
+	byt $00,$0F,$12,$14,$16
+	byt $00,$10,$00,$00,$17
+	byt $00,$11,$19,$1B,$18
 char_lower_d
+	byt $00,$0F,$12,$14,$16
+	byt $00,$25,$00,$00,$27
+	byt $01,$0A,$03,$03,$0E
 char_lower_e
 	byt $00,$0F,$1D,$20,$16
 	byt $00,$10,$1E,$21,$17
 	byt $00,$11,$1F,$22,$18
 char_lower_f
+	byt $0f,$07,$03,$03,$04
+	byt $09,$09,$00,$00,$00
 char_lower_g
+	byt $00,$0F,$12,$16,$06
+	byt $00,$25,$00,$08,$08
+	byt $00,$0C,$03,$0A,$18
 char_lower_h
+	byt $01,$07,$03,$03,$04
+	byt $00,$24,$00,$00,$00
+	byt $00,$11,$13,$03,$04
 char_lower_i
+	byt $00,$01,$03,$03,$04
 char_lower_j
 char_lower_k
 char_lower_l
@@ -242,17 +262,30 @@ char_lower_n
 	byt $00,$08,$00,$00,$00
 	byt $00,$11,$13,$03,$04
 char_lower_o
+	byt $00,$0F,$12,$14,$16
+	byt $00,$10,$00,$00,$17
+	byt $00,$11,$13,$15,$18
 char_lower_p
 char_lower_q
 char_lower_r
+	byt $00,$0B,$03,$03,$04
+	byt $00,$24,$00,$00,$00
+	byt $00,$11,$19,$00,$00
 char_lower_s
+	byt $00,$0F,$2D,$30,$16
+	byt $00,$10,$2E,$31,$17
+	byt $00,$11,$2F,$32,$18
 char_lower_t
+	byt $01,$07,$03,$03,$16
+	byt $00,$09,$00,$00,$09
 char_lower_u
+	byt $00,$01,$03,$14,$16
+	byt $00,$00,$00,$00,$17
+	byt $00,$01,$03,$15,$18
 char_lower_v
 char_lower_w
 char_lower_x
 char_lower_y
 char_lower_z
-	byt $00,$0F,$12,$14,$16
-	byt $00,$10,$00,$00,$17
-	byt $00,$11,$13,$15,$18
+	byt 0,0,0,0,0
+	
