@@ -104,8 +104,8 @@ obj_phases = $02
 	include scroll.asm
 
 	org $c000
-	include logo2.asm
+	include logo.asm
 
-	org $E000
+	org $e000
 	include font.asm
 

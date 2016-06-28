@@ -43,7 +43,6 @@ $$next_loop:
 	sta $$jmp+2
 	jmp scenario_next
 
-
 anim_scenario:
 	sc_rept 1000,render_anim
 	sc_once init_sc
