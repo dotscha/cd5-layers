@@ -17,7 +17,7 @@ main:
 	sei
 	sta $ff3f
 
-;clean bitmap 
+;clean bitmap
 ;	ldx #32
 ;	lda #0
 ;	tay
@@ -42,7 +42,7 @@ $$l2:
 	inc $$l2+4
 	dex
 	bne $$l1
-	
+
 	ldx #$00		; init bitmap colors
 il2	lda #$04		; luminance
 	sta $0800,x
@@ -55,7 +55,7 @@ il2	lda #$04		; luminance
 	inx
 	cpx #40*6
 	bne il2
-	
+
 	ldx #39
 	lda #$01
 il3	sta $0AF8,x
@@ -70,10 +70,10 @@ il3	sta $0AF8,x
 	and #%11000011
 	ora #(bitmap/1024)
 	sta $ff12
-	
+
 	lda #$01
 	sta $FF15
-	
+
 	lda #$E0
 	sta $FF13
 
@@ -81,9 +81,9 @@ il3	sta $0AF8,x
 	jsr init_anim
 	jsr init_irq
         cli
-        
+
 anim_loop:
-	jsr render_anim
+	jsr scenario_next
 	jmp anim_loop
 
 
@@ -105,7 +105,7 @@ obj_phases = $02
 
 	org $c000
 	include logo2.asm
-	
+
 	org $E000
 	include font.asm
-	
+

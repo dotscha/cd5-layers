@@ -311,7 +311,7 @@ Triangles calcTriangles(const Nodes& nodes)
   }
   #if SCENE_NO==1
   normVec = nodes[0];
-  sort(ts.begin(),ts.end(),compTri);
+  //sort(ts.begin(),ts.end(),compTri);
   #endif
   return ts;
 }
@@ -354,11 +354,15 @@ void initBitmaps()
 {
   vector<byte> p;
   #if SCENE_NO==1
-  p.push_back(85);
+  //p.push_back(85);
+  //p.push_back(255);
+  //p.push_back(2*85);
+  //p.push_back(255);
+  p.push_back(17*7);
+  p.push_back(17*13);
+  #else
   p.push_back(255);
-  p.push_back(2*85);
   #endif
-  p.push_back(255);
   icos_in.fill(p);
   icos_in.saveBMP("icos_in.bmp");
   #if SCENE_NO==1
