@@ -45,11 +45,10 @@ gen_texture: layer
 clean:
 	rm *.prg scene_*.* layers.asm *coord*.asm texture*.asm main.inc main.lst layer
 
-disk.d64: main_exo.prg
-	$(MKD64) -o disk.d64 -m cbmdos -i " 2016" -d "DEMO DISK" -f main_exo.prg -n LAYERS -w
+disk.d64: main.prg
+	$(MKD64) -o disk.d64 -m cbmdos -i " 2016" -d "DEMO DISK" -f main.prg -n LAYERS -w
 
-export: disk.d64 main_exo.prg
-	cp main_exo.prg /sdcard/
+export: disk.d64
 	cp disk.d64 /sdcard/
 
 % : %.C $(HEADERS)

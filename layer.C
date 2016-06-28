@@ -108,8 +108,8 @@ P3D smiddle(const P3D& p1, const P3D& p2, double w = 0.5)
 
 P3D transform(P3D p)
 {
-  rotate(p.y,p.z,10);
-  rotate(p.x,p.z,25);
+  rotate(p.y,p.z,115);
+  rotate(p.x,p.z,125);
   return p + eye;
 }
 
