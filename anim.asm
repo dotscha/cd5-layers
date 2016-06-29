@@ -30,17 +30,15 @@ scenario_read:
 
 scenario_next:
 	lda #0
-	beq $$next_loop
+	beq +
 	dec scenario_next+1
-$$jmp:
-	jmp $ffff
-$$next_loop:
-	jsr scenario_read
+-	jmp $ffff
++	jsr scenario_read
 	sta scenario_next+1
 	jsr scenario_read
-	sta $$jmp+1
+	sta - +1
 	jsr scenario_read
-	sta $$jmp+2
+	sta - +2
 	jmp scenario_next
 
 ;-------------------------------------------------
@@ -49,24 +47,37 @@ $$next_loop:
 
 anim_scenario:
 	sc_once zero_out
+	sc_rept 12*8,nodes_in
+	sc_rept 32,render
+	sc_rept 7,fade_out
+	sc_once init_phase1
+	sc_rept 8,phase1
+	sc_rept 64,render
 	sc_rept 8,phase1
 	sc_rept 128,render
 	sc_rept 8,phase1
-	sc_rept 128,render
-	sc_rept 8,phase1
-	sc_rept 335,longi_rot
+	sc_once bump3
+	sc_rept 2*(LATI1+16),lati_rot
+	sc_once bump1
+	sc_rept LONG1+16,longi_rot
+	sc_once bump2
+	sc_rept LONG1+16,longi_rot
+	sc_once bump1
+	sc_rept LONG1+16,longi_rot
 	sc_rept 7,fade_out
 	sc_rept 400,phase2
+	sc_rept 7,fade_out
 	sc_once init_sc
 
 
 init_anim:
 
 	jsr init_phase_patt
-	lda #0
-	sta phase1+1
 init_sc:
 	sc_init anim_scenario
+	lda #0
+	sta nodes_in+1
+	sta nodes_in+3
 	rts
 
 zero_out:
@@ -77,6 +88,40 @@ zero_out:
 	cpx #object_count
 	bne -
 	jmp render
+
+nodes_in:
+	lda #0
+	ldy #0
+	ldx node_triags+0,y
+	sta obj_phases,x
+	ldx node_triags+1,y
+	sta obj_phases,x
+	ldx node_triags+2,y
+	sta obj_phases,x
+	ldx node_triags+3,y
+	sta obj_phases,x
+	ldx node_triags+4,y
+	sta obj_phases,x
+
+	ldx nodes_in+1
+	inx
+	cpx #8
+	bne +
+	ldx #0
+	lda nodes_in+3
+	clc
+	adc #5
+	sta nodes_in+3
++	stx nodes_in+1
+	jmp render
+
+node_triags:
+	include node_triangs.asm
+
+init_phase1:
+	lda #0
+	sta phase1+1
+	rts
 
 phase1:
 
@@ -106,23 +151,48 @@ phase1:
 	bne -
 	jmp render
 
+
+bump1:
+	ldy #15
+	bne bump_init
+bump2:
+	ldy #31
+	bne bump_init
+bump3:
+	ldy #47
+
+bump_init:
+
+	ldx #15
+-	lda +,y
+	sta bump_start,x
+	dey
+	dex
+	bpl -
+	rts
+
++	byt 0,1,2,3,4,5,6,7,7,6,5,4,3,2,1,0
+	byt 0,1,3,5,7,7,7,7,7,7,7,7,5,3,1,0
+	byt 0,0,0,1,3,5,7,7,7,7,5,3,1,0,0,0
+
 bumptab:
-bumptab_mid = bumptab+LONG1+8
 	byt [LONG1]0
+bump_start:
+bumptab_mid = bump_start+8
 	byt 0,1,2,3,4,5,6,7,7,6,5,4,3,2,1,0
-	;byt 0,1,3,5,[8]7,5,3,1,0
 	byt [LONG1]0
+	byt [LATI1]0
 
 longi_rot:
 	ldx #0
-;-	lda obj_latitudes,x
 -	lda obj_longitudes,x
 	lsr
 	clc
+	adc obj_latitudes,x
 shift3 = *+1
 	adc #0
 	tay
-	lda bumptab,y
+	lda bump_start-LONG1,y
 	sta obj_phases,x
 	inx
 	cpx #object_count
@@ -133,6 +203,25 @@ shift3 = *+1
 	bne +
 	ldx #0
 +	stx shift3
+	jmp render
+
+lati_rot:
+	ldx #0
+-	lda obj_latitudes,x
+shift4 = *+1
+	adc #0
+	tay
+	lda bump_start-LATI1,y
+	sta obj_phases,x
+	inx
+	cpx #object_count
+	bne -
+	ldx shift4
+	inx
+	cpx #LATI1+16
+	bne +
+	ldx #0
++	stx shift4
 	jmp render
 
 fade_out:

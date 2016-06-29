@@ -257,7 +257,7 @@ bool compTri(const Triangle& t1, const Triangle& t2)
   return 0<(normVec*(t1.a+t1.b+t1.c-t2.a-t2.b-t2.c));
 }
 
-Triangles calcTriangles(const Nodes& nodes)
+Triangles calcTriangles(const Nodes& nodes, map<int,vector<int> > *nodeTriangs = 0 )
 {
   Triangles ts;
   size_t s = nodes.size();
@@ -270,6 +270,13 @@ Triangles calcTriangles(const Nodes& nodes)
         if (nodes[i].dist(nodes[j])<2.01 && nodes[j].dist(nodes[k])<2.01 && nodes[k].dist(nodes[i])<2.01)
         {
           cout << "triangle " << i << " " << j << " " << k << endl;
+
+	  if (nodeTriangs)
+	  {
+	    (*nodeTriangs)[i].push_back(ts.size()+0);
+	    (*nodeTriangs)[j].push_back(ts.size()+1);
+	    (*nodeTriangs)[k].push_back(ts.size()+2);
+	  }
 
           P3D p1 = nodes[i];
           P3D p2 = nodes[j];
@@ -526,12 +533,24 @@ void coordinates()
 {
   Nodes coords = sphereCoords(LATI1,LONG1);
   {
+
+    Nodes nodes = calcNodes();
+    map<int,vector<int> > nodeTriangs;
+    Triangles ts = calcTriangles(nodes, &nodeTriangs);
+
+    out.open("node_triangs.asm",ios_base::out);
+    for (int i=0; i<nodes.size(); ++i)
+    {
+      for (int j=0; j<5; ++j)
+      {
+        out << "\tbyt " << nodeTriangs[i][j] << "\t; node " << i << endl;
+      }
+    }
+    out.close();
+
     out.open("obj_coords.asm",ios_base::out);
     out << "LATI1 = " << LATI1 << endl;
     out << "LONG1 = " << LONG1 << endl;
-
-    Nodes nodes = calcNodes();
-    Triangles ts = calcTriangles(nodes);
     Nodes mids;
     for (size_t i = 0; i<ts.size(); ++i)
     {
