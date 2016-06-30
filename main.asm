@@ -97,15 +97,15 @@ obj_phases = $02
 	include scene_code.asm
 	include scene_data.asm
 
-	include !player.asm
-	include music.asm
-
-	include irq.asm
-	include scroll.asm
-
 	org $c000
 	include logo.asm
 
 	org $e000
 	include font.asm
+
+	include !player.asm
+	include music.asm
+
+	include irq.asm
+	include scroll.asm
 

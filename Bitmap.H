@@ -164,16 +164,17 @@ struct Bitmap
 
   void loadBMP(string file)
   {
-    byte data[8062];
+    byte data[9000];
     filebuf fb;
     fb.open (file.data(),ios::in);
     //header+bitmap
-    if (fb.sgetn((char*)data,8062)!=8062)
+    size_t p = fb.sgetn((char*)data,9000);
+    if (p<8062)
     {
       cerr << file << " is not in the expected format." << endl;
     }
     fb.close();
-    size_t p = 62;
+    p -= 8000;
     for (size_t y = 200; y-->0;)
     {
       size_t line = (y/8)*320+(y%8);
