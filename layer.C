@@ -39,7 +39,7 @@ size_t TEXT_LATI = 16;
 size_t TEXT_LONG = 32;
 
 
-Sphere ball = Sphere(eye,eye.z*30/screen);
+Sphere ball = Sphere(eye,eye.z*29/screen);
 
 fstream out;
 

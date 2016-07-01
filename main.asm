@@ -101,6 +101,7 @@ obj_phases = $02
 	include scroll.asm
 
 	if THREED
+	;include texture_side.asm
 	;include texture_sides.asm
 	include texture_thetra.asm
 	;include texture_cube.asm

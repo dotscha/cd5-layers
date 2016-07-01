@@ -76,9 +76,11 @@ anim_scenario:
 	sc_once init3d
 	sc_rept 10,render3dp
 	sc_rept 128,render3d
+
 	sc_rept 11,render3dp
 	sc_rept 128,render3d
 	sc_rept 11,render3dm
+
 	sc_rept 128,render3d
 	sc_rept 10,render3dm
 	endif

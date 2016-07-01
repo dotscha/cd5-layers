@@ -712,34 +712,33 @@
 	;ldy obj146_phase
 	and msk_obj146_layer7692_2709,y
 	ora bm_obj146_layer7692_2709,y
-	ldx obj137_phase
-	and msk_obj137_layer7728_2709,x
-	ora bm_obj137_layer7728_2709,x
+	ldy obj137_phase
+	and msk_obj137_layer7728_2709,y
+	ora bm_obj137_layer7728_2709,y
 	sta bitmap+2709
-	ldx obj50_phase
-	lda bm_obj50_layer6974_2710,x
-	ldx obj84_phase
+	ldy obj50_phase
+	lda bm_obj50_layer6974_2710,y
+	;ldx obj84_phase
 	and msk_obj84_layer7019_2710,x
 	ora bm_obj84_layer7019_2710,x
-	;ldy obj146_phase
-	and msk_obj146_layer7692_2710,y
-	ora bm_obj146_layer7692_2710,y
-	ldy obj137_phase
-	and msk_obj137_layer7728_2710,y
-	ora bm_obj137_layer7728_2710,y
-	sta bitmap+2710
-	lda #2
-	;ldx obj84_phase
-	and msk_obj84_layer7019_2711,x
-	ora bm_obj84_layer7019_2711,x
-	ldx obj142_phase
-	ora bm_obj142_layer7507_2711,x
 	ldx obj146_phase
-	and msk_obj146_layer7692_2711,x
-	ora bm_obj146_layer7692_2711,x
-	;ldy obj137_phase
-	and msk_obj137_layer7728_2711,y
-	ora bm_obj137_layer7728_2711,y
+	and msk_obj146_layer7692_2710,x
+	ora bm_obj146_layer7692_2710,x
+	ldx obj137_phase
+	and msk_obj137_layer7728_2710,x
+	ora bm_obj137_layer7728_2710,x
+	sta bitmap+2710
+	;ldy obj50_phase
+	lda bm_obj50_layer6974_2711,y
+	ldy obj84_phase
+	and msk_obj84_layer7019_2711,y
+	ora bm_obj84_layer7019_2711,y
+	ldy obj146_phase
+	and msk_obj146_layer7692_2711,y
+	ora bm_obj146_layer7692_2711,y
+	;ldx obj137_phase
+	and msk_obj137_layer7728_2711,x
+	ora bm_obj137_layer7728_2711,x
 	sta bitmap+2711
 	ldx obj50_phase
 	lda bm_obj50_layer6974_2712,x
@@ -810,21 +809,19 @@
 	and msk_obj137_layer7728_2717,x
 	ora bm_obj137_layer7728_2717,x
 	sta bitmap+2717
-	lda #127
 	;ldy obj50_phase
-	and msk_obj50_layer6974_2718,y
-	ora bm_obj50_layer6974_2718,y
-	ldy obj143_phase
-	ora bm_obj143_layer7455_2718,y
-	ldy obj142_phase
-	ora bm_obj142_layer7507_2718,y
+	lda bm_obj50_layer6974_2718,y
 	;ldx obj137_phase
 	and msk_obj137_layer7728_2718,x
 	ora bm_obj137_layer7728_2718,x
 	sta bitmap+2718
-	lda #171
-	;ldy obj142_phase
-	ora bm_obj142_layer7507_2719,y
+	lda #43
+	;ldy obj50_phase
+	ora bm_obj50_layer6974_2719,y
+	ldy obj143_phase
+	ora bm_obj143_layer7444_2719,y
+	ldy obj142_phase
+	ora bm_obj142_layer7503_2719,y
 	;ldx obj137_phase
 	and msk_obj137_layer7728_2719,x
 	ora bm_obj137_layer7728_2719,x
@@ -902,35 +899,36 @@
 	;ldy obj141_phase
 	and msk_obj141_layer7670_2725,y
 	ora bm_obj141_layer7670_2725,y
-	ldx obj140_phase
-	and msk_obj140_layer7685_2725,x
-	ora bm_obj140_layer7685_2725,x
-	sta bitmap+2725
-	lda #252
-	ldx obj52_phase
-	ora bm_obj52_layer7041_2726,x
-	ldx obj143_phase
-	ora bm_obj143_layer7455_2726,x
-	;ldy obj141_phase
-	ora bm_obj141_layer7670_2726,y
 	ldy obj140_phase
-	ora bm_obj140_layer7685_2726,y
-	ldy obj137_phase
-	ora bm_obj137_layer7728_2726,y
-	ldy obj160_phase
-	ora bm_obj160_layer7760_2726,y
-	ldy obj155_phase
-	ora bm_obj155_layer7797_2726,y
-	ldy obj159_phase
-	ora bm_obj159_layer7814_2726,y
+	and msk_obj140_layer7685_2725,y
+	ora bm_obj140_layer7685_2725,y
+	sta bitmap+2725
+	ldy obj50_phase
+	lda bm_obj50_layer6974_2726,y
+	ldy obj52_phase
+	ora bm_obj52_layer7041_2726,y
+	;ldx obj51_phase
+	ora bm_obj51_layer7055_2726,x
+	ldx obj141_phase
+	ora bm_obj141_layer7670_2726,x
+	ldx obj140_phase
+	ora bm_obj140_layer7685_2726,x
+	ldx obj137_phase
+	ora bm_obj137_layer7728_2726,x
+	ldx obj160_phase
+	ora bm_obj160_layer7760_2726,x
+	ldx obj155_phase
+	ora bm_obj155_layer7797_2726,x
+	ldx obj159_phase
+	ora bm_obj159_layer7814_2726,x
 	sta bitmap+2726
-	lda #127
-	ldy obj138_phase
-	ora bm_obj138_layer7450_2727,y
-	;ldx obj143_phase
-	ora bm_obj143_layer7455_2727,x
-	ldx obj142_phase
-	ora bm_obj142_layer7507_2727,x
+	lda #126
+	ldx obj53_phase
+	ora bm_obj53_layer6945_2727,x
+	;ldy obj52_phase
+	ora bm_obj52_layer7041_2727,y
+	ldx obj143_phase
+	ora bm_obj143_layer7444_2727,x
 	ldx obj160_phase
 	and msk_obj160_layer7760_2727,x
 	ora bm_obj160_layer7760_2727,x
@@ -940,57 +938,57 @@
 	ldx obj159_phase
 	ora bm_obj159_layer7814_2727,x
 	sta bitmap+2727
-	ldx obj52_phase
-	lda bm_obj52_layer7041_2728,x
-	ldy obj66_phase
-	and msk_obj66_layer7149_2728,y
-	ora bm_obj66_layer7149_2728,y
-	ldy obj139_phase
-	and msk_obj139_layer7594_2728,y
-	ora bm_obj139_layer7594_2728,y
-	ldy obj140_phase
-	and msk_obj140_layer7685_2728,y
-	ora bm_obj140_layer7685_2728,y
-	sta bitmap+2728
-	;ldx obj52_phase
-	lda bm_obj52_layer7041_2729,x
+	;ldy obj52_phase
+	lda bm_obj52_layer7041_2728,y
 	ldx obj66_phase
-	and msk_obj66_layer7149_2729,x
-	ora bm_obj66_layer7149_2729,x
+	and msk_obj66_layer7149_2728,x
+	ora bm_obj66_layer7149_2728,x
 	ldx obj139_phase
-	and msk_obj139_layer7594_2729,x
-	ora bm_obj139_layer7594_2729,x
-	;ldy obj140_phase
-	and msk_obj140_layer7685_2729,y
-	ora bm_obj140_layer7685_2729,y
-	sta bitmap+2729
-	ldy obj52_phase
-	lda bm_obj52_layer7041_2730,y
+	and msk_obj139_layer7594_2728,x
+	ora bm_obj139_layer7594_2728,x
+	ldx obj140_phase
+	and msk_obj140_layer7685_2728,x
+	ora bm_obj140_layer7685_2728,x
+	sta bitmap+2728
+	;ldy obj52_phase
+	lda bm_obj52_layer7041_2729,y
 	ldy obj66_phase
-	ora bm_obj66_layer7149_2730,y
-	;ldx obj139_phase
-	ora bm_obj139_layer7594_2730,x
+	and msk_obj66_layer7149_2729,y
+	ora bm_obj66_layer7149_2729,y
+	ldy obj139_phase
+	and msk_obj139_layer7594_2729,y
+	ora bm_obj139_layer7594_2729,y
+	;ldx obj140_phase
+	and msk_obj140_layer7685_2729,x
+	ora bm_obj140_layer7685_2729,x
+	sta bitmap+2729
+	ldx obj52_phase
+	lda bm_obj52_layer7041_2730,x
+	ldx obj66_phase
+	ora bm_obj66_layer7149_2730,x
+	;ldy obj139_phase
+	ora bm_obj139_layer7594_2730,y
 	ldx obj140_phase
 	and msk_obj140_layer7685_2730,x
 	ora bm_obj140_layer7685_2730,x
 	sta bitmap+2730
-	ldx obj52_phase
-	lda bm_obj52_layer7041_2731,x
-	;ldy obj66_phase
+	ldy obj52_phase
+	lda bm_obj52_layer7041_2731,y
+	ldy obj66_phase
 	ora bm_obj66_layer7149_2731,y
-	ldy obj140_phase
-	and msk_obj140_layer7685_2731,y
-	ora bm_obj140_layer7685_2731,y
+	;ldx obj140_phase
+	and msk_obj140_layer7685_2731,x
+	ora bm_obj140_layer7685_2731,x
 	sta bitmap+2731
-	;ldx obj52_phase
+	ldx obj52_phase
 	lda bm_obj52_layer7041_2732,x
-	ldx obj66_phase
-	ora bm_obj66_layer7149_2732,x
-	;ldy obj140_phase
+	;ldy obj66_phase
+	ora bm_obj66_layer7149_2732,y
+	ldy obj140_phase
 	and msk_obj140_layer7685_2732,y
 	ora bm_obj140_layer7685_2732,y
 	sta bitmap+2732
-	ldx obj52_phase
+	;ldx obj52_phase
 	lda bm_obj52_layer7041_2733,x
 	;ldy obj140_phase
 	and msk_obj140_layer7685_2733,y
@@ -1003,13 +1001,10 @@
 	ldy obj160_phase
 	ora bm_obj160_layer7760_2734,y
 	sta bitmap+2734
-	lda #192
 	ldy obj53_phase
-	ora bm_obj53_layer6945_2735,y
+	lda bm_obj53_layer6945_2735,y
 	;ldx obj52_phase
 	ora bm_obj52_layer7041_2735,x
-	ldx obj138_phase
-	ora bm_obj138_layer7450_2735,x
 	ldx obj160_phase
 	and msk_obj160_layer7760_2735,x
 	ora bm_obj160_layer7760_2735,x
@@ -1501,22 +1496,20 @@
 	lda bm_obj89_layer6964_3019,x
 	;ldy obj88_phase
 	ora bm_obj88_layer7031_3019,y
-	ldy obj151_phase
-	ora bm_obj151_layer7477_3019,y
 	ldy obj146_phase
 	ora bm_obj146_layer7692_3019,y
 	ldy obj164_phase
 	ora bm_obj164_layer7739_3019,y
 	sta bitmap+3019
-	lda #4
 	;ldx obj89_phase
-	and msk_obj89_layer6964_3020,x
-	ora bm_obj89_layer6964_3020,x
+	lda bm_obj89_layer6964_3020,x
 	ldx obj88_phase
 	and msk_obj88_layer7031_3020,x
 	ora bm_obj88_layer7031_3020,x
+	ldx obj152_phase
+	ora bm_obj152_layer7367_3020,x
 	ldx obj151_phase
-	ora bm_obj151_layer7477_3020,x
+	ora bm_obj151_layer7469_3020,x
 	;ldy obj164_phase
 	and msk_obj164_layer7739_3020,y
 	ora bm_obj164_layer7739_3020,y
@@ -1528,7 +1521,7 @@
 	ldy obj88_phase
 	ora bm_obj88_layer7031_3021,y
 	;ldx obj151_phase
-	ora bm_obj151_layer7477_3021,x
+	ora bm_obj151_layer7469_3021,x
 	ldx obj164_phase
 	and msk_obj164_layer7739_3021,x
 	ora bm_obj164_layer7739_3021,x
@@ -1542,9 +1535,7 @@
 	and msk_obj88_layer7031_3022,y
 	ora bm_obj88_layer7031_3022,y
 	ldy obj151_phase
-	ora bm_obj151_layer7477_3022,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3022,y
+	ora bm_obj151_layer7469_3022,y
 	ldy obj164_phase
 	and msk_obj164_layer7739_3022,y
 	ora bm_obj164_layer7739_3022,y
@@ -1556,8 +1547,10 @@
 	lda bm_obj89_layer6964_3023,x
 	ldx obj88_phase
 	ora bm_obj88_layer7031_3023,x
+	ldx obj151_phase
+	ora bm_obj151_layer7469_3023,x
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3023,x
+	ora bm_obj150_layer7505_3023,x
 	ldx obj164_phase
 	and msk_obj164_layer7739_3023,x
 	ora bm_obj164_layer7739_3023,x
@@ -1565,14 +1558,12 @@
 	and msk_obj173_layer7803_3023,y
 	ora bm_obj173_layer7803_3023,y
 	sta bitmap+3023
-	lda #17
+	lda #1
 	ldy obj84_phase
 	and msk_obj84_layer7019_3024,y
 	ora bm_obj84_layer7019_3024,y
-	ldx obj151_phase
-	ora bm_obj151_layer7477_3024,x
 	ldx obj142_phase
-	ora bm_obj142_layer7507_3024,x
+	ora bm_obj142_layer7503_3024,x
 	ldx obj146_phase
 	ora bm_obj146_layer7692_3024,x
 	ldx obj137_phase
@@ -1581,11 +1572,14 @@
 	sta bitmap+3024
 	lda #8
 	;ldy obj84_phase
+	and msk_obj84_layer7019_3025,y
 	ora bm_obj84_layer7019_3025,y
+	ldy obj152_phase
+	ora bm_obj152_layer7367_3025,y
 	ldy obj151_phase
-	ora bm_obj151_layer7477_3025,y
+	ora bm_obj151_layer7469_3025,y
 	ldy obj142_phase
-	ora bm_obj142_layer7507_3025,y
+	ora bm_obj142_layer7503_3025,y
 	ldy obj146_phase
 	ora bm_obj146_layer7692_3025,y
 	;ldx obj137_phase
@@ -1594,11 +1588,15 @@
 	ldx obj155_phase
 	ora bm_obj155_layer7797_3025,x
 	sta bitmap+3025
-	lda #130
+	lda #2
+	ldx obj89_phase
+	ora bm_obj89_layer6964_3026,x
+	ldx obj84_phase
+	ora bm_obj84_layer7019_3026,x
 	ldx obj151_phase
-	ora bm_obj151_layer7477_3026,x
+	ora bm_obj151_layer7469_3026,x
 	ldx obj142_phase
-	ora bm_obj142_layer7507_3026,x
+	ora bm_obj142_layer7503_3026,x
 	;ldy obj146_phase
 	ora bm_obj146_layer7692_3026,y
 	ldy obj137_phase
@@ -1610,9 +1608,9 @@
 	sta bitmap+3026
 	lda #17
 	ldy obj151_phase
-	ora bm_obj151_layer7477_3027,y
+	ora bm_obj151_layer7469_3027,y
 	;ldx obj142_phase
-	ora bm_obj142_layer7507_3027,x
+	ora bm_obj142_layer7503_3027,x
 	ldx obj146_phase
 	ora bm_obj146_layer7692_3027,x
 	ldx obj137_phase
@@ -1627,11 +1625,9 @@
 	sta bitmap+3027
 	lda #5
 	;ldy obj151_phase
-	ora bm_obj151_layer7477_3028,y
+	ora bm_obj151_layer7469_3028,y
 	ldy obj142_phase
-	ora bm_obj142_layer7507_3028,y
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3028,y
+	ora bm_obj142_layer7503_3028,y
 	ldy obj155_phase
 	and msk_obj155_layer7797_3028,y
 	ora bm_obj155_layer7797_3028,y
@@ -1641,11 +1637,9 @@
 	sta bitmap+3028
 	lda #74
 	ldx obj151_phase
-	ora bm_obj151_layer7477_3029,x
+	ora bm_obj151_layer7469_3029,x
 	ldx obj142_phase
-	ora bm_obj142_layer7507_3029,x
-	ldx obj141_phase
-	ora bm_obj141_layer7604_3029,x
+	ora bm_obj142_layer7503_3029,x
 	;ldy obj155_phase
 	and msk_obj155_layer7797_3029,y
 	ora bm_obj155_layer7797_3029,y
@@ -1654,16 +1648,12 @@
 	ora bm_obj173_layer7803_3029,y
 	sta bitmap+3029
 	lda #42
-	ldy obj142_phase
-	ora bm_obj142_layer7507_3030,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3030,y
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3030,y
-	;ldx obj141_phase
-	ora bm_obj141_layer7604_3030,x
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3030,x
+	ldy obj151_phase
+	ora bm_obj151_layer7469_3030,y
+	;ldx obj142_phase
+	ora bm_obj142_layer7503_3030,x
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3030,x
 	ldx obj155_phase
 	and msk_obj155_layer7797_3030,x
 	ora bm_obj155_layer7797_3030,x
@@ -1672,37 +1662,37 @@
 	ora bm_obj173_layer7803_3030,x
 	sta bitmap+3030
 	lda #42
-	ldx obj150_phase
-	ora bm_obj150_layer7517_3031,x
-	;ldy obj146_phase
-	ora bm_obj146_layer7602_3031,y
-	ldx obj141_phase
-	ora bm_obj141_layer7604_3031,x
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3031,x
+	;ldy obj151_phase
+	ora bm_obj151_layer7469_3031,y
+	ldy obj142_phase
+	ora bm_obj142_layer7503_3031,y
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3031,y
+	ldy obj141_phase
+	ora bm_obj141_layer7598_3031,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3031,y
 	ldy obj155_phase
 	and msk_obj155_layer7797_3031,y
 	ora bm_obj155_layer7797_3031,y
-	ldy obj173_phase
-	and msk_obj173_layer7803_3031,y
-	ora bm_obj173_layer7803_3031,y
+	;ldx obj173_phase
+	and msk_obj173_layer7803_3031,x
+	ora bm_obj173_layer7803_3031,x
 	sta bitmap+3031
 	lda #85
-	ldy obj142_phase
-	ora bm_obj142_layer7507_3032,y
-	;ldx obj137_phase
+	ldx obj142_phase
+	ora bm_obj142_layer7503_3032,x
+	ldx obj137_phase
 	and msk_obj137_layer7728_3032,x
 	ora bm_obj137_layer7728_3032,x
-	ldx obj155_phase
-	and msk_obj155_layer7797_3032,x
-	ora bm_obj155_layer7797_3032,x
+	;ldy obj155_phase
+	and msk_obj155_layer7797_3032,y
+	ora bm_obj155_layer7797_3032,y
 	sta bitmap+3032
 	lda #173
-	;ldy obj142_phase
-	ora bm_obj142_layer7507_3033,y
-	ldx obj141_phase
-	ora bm_obj141_layer7604_3033,x
-	ldx obj137_phase
+	ldy obj142_phase
+	ora bm_obj142_layer7503_3033,y
+	;ldx obj137_phase
 	ora bm_obj137_layer7728_3033,x
 	ldx obj155_phase
 	and msk_obj155_layer7797_3033,x
@@ -1710,9 +1700,9 @@
 	sta bitmap+3033
 	lda #170
 	;ldy obj142_phase
-	ora bm_obj142_layer7507_3034,y
+	ora bm_obj142_layer7503_3034,y
 	ldy obj141_phase
-	ora bm_obj141_layer7604_3034,y
+	ora bm_obj141_layer7598_3034,y
 	;ldx obj155_phase
 	and msk_obj155_layer7797_3034,x
 	ora bm_obj155_layer7797_3034,x
@@ -1720,204 +1710,206 @@
 	ora bm_obj159_layer7814_3034,x
 	sta bitmap+3034
 	lda #42
+	ldx obj142_phase
+	ora bm_obj142_layer7503_3035,x
 	;ldy obj141_phase
-	ora bm_obj141_layer7604_3035,y
-	ldy obj155_phase
-	and msk_obj155_layer7797_3035,y
-	ora bm_obj155_layer7797_3035,y
-	;ldx obj159_phase
+	ora bm_obj141_layer7598_3035,y
+	ldx obj155_phase
+	and msk_obj155_layer7797_3035,x
+	ora bm_obj155_layer7797_3035,x
+	ldx obj159_phase
 	ora bm_obj159_layer7814_3035,x
 	sta bitmap+3035
 	lda #85
-	ldx obj141_phase
-	ora bm_obj141_layer7604_3036,x
-	;ldy obj155_phase
+	;ldy obj141_phase
+	ora bm_obj141_layer7598_3036,y
+	ldy obj155_phase
 	and msk_obj155_layer7797_3036,y
 	ora bm_obj155_layer7797_3036,y
-	ldy obj159_phase
-	and msk_obj159_layer7814_3036,y
-	ora bm_obj159_layer7814_3036,y
+	;ldx obj159_phase
+	and msk_obj159_layer7814_3036,x
+	ora bm_obj159_layer7814_3036,x
 	sta bitmap+3036
 	lda #171
-	;ldx obj141_phase
-	ora bm_obj141_layer7604_3037,x
-	ldx obj155_phase
-	and msk_obj155_layer7797_3037,x
-	ora bm_obj155_layer7797_3037,x
-	;ldy obj159_phase
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3037,x
+	;ldy obj155_phase
+	and msk_obj155_layer7797_3037,y
+	ora bm_obj155_layer7797_3037,y
+	ldy obj159_phase
 	and msk_obj159_layer7814_3037,y
 	ora bm_obj159_layer7814_3037,y
 	sta bitmap+3037
 	lda #213
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3038,y
-	;ldx obj155_phase
+	;ldx obj141_phase
+	ora bm_obj141_layer7598_3038,x
+	ldx obj155_phase
 	and msk_obj155_layer7797_3038,x
 	ora bm_obj155_layer7797_3038,x
-	ldx obj159_phase
-	and msk_obj159_layer7814_3038,x
-	ora bm_obj159_layer7814_3038,x
+	;ldy obj159_phase
+	and msk_obj159_layer7814_3038,y
+	ora bm_obj159_layer7814_3038,y
 	sta bitmap+3038
 	lda #170
-	;ldy obj141_phase
-	ora bm_obj141_layer7604_3039,y
-	ldy obj155_phase
-	and msk_obj155_layer7797_3039,y
-	ora bm_obj155_layer7797_3039,y
-	;ldx obj159_phase
-	and msk_obj159_layer7814_3039,x
-	ora bm_obj159_layer7814_3039,x
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3039,x
+	ldx obj155_phase
+	and msk_obj155_layer7797_3039,x
+	ora bm_obj155_layer7797_3039,x
+	;ldy obj159_phase
+	and msk_obj159_layer7814_3039,y
+	ora bm_obj159_layer7814_3039,y
 	sta bitmap+3039
 	lda #183
-	ldx obj138_phase
-	ora bm_obj138_layer7450_3040,x
-	ldx obj143_phase
-	ora bm_obj143_layer7455_3040,x
-	ldx obj142_phase
-	ora bm_obj142_layer7507_3040,x
-	ldx obj160_phase
-	and msk_obj160_layer7760_3040,x
-	ora bm_obj160_layer7760_3040,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7797_3040,y
-	ldy obj159_phase
-	and msk_obj159_layer7814_3040,y
-	ora bm_obj159_layer7814_3040,y
+	ldy obj138_phase
+	ora bm_obj138_layer7441_3040,y
+	ldy obj143_phase
+	ora bm_obj143_layer7444_3040,y
+	ldy obj142_phase
+	ora bm_obj142_layer7503_3040,y
+	ldy obj160_phase
+	and msk_obj160_layer7760_3040,y
+	ora bm_obj160_layer7760_3040,y
+	;ldx obj155_phase
+	ora bm_obj155_layer7797_3040,x
+	ldx obj159_phase
+	and msk_obj159_layer7814_3040,x
+	ora bm_obj159_layer7814_3040,x
 	sta bitmap+3040
 	lda #93
-	ldy obj142_phase
-	ora bm_obj142_layer7507_3041,y
-	ldy obj139_phase
-	ora bm_obj139_layer7531_3041,y
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3041,y
-	ldy obj140_phase
-	ora bm_obj140_layer7613_3041,y
-	;ldx obj160_phase
-	and msk_obj160_layer7760_3041,x
-	ora bm_obj160_layer7760_3041,x
-	ldx obj155_phase
-	ora bm_obj155_layer7797_3041,x
-	ldx obj159_phase
-	and msk_obj159_layer7814_3041,x
-	ora bm_obj159_layer7814_3041,x
+	ldx obj138_phase
+	ora bm_obj138_layer7441_3041,x
+	ldx obj143_phase
+	ora bm_obj143_layer7444_3041,x
+	ldx obj142_phase
+	ora bm_obj142_layer7503_3041,x
+	;ldy obj160_phase
+	and msk_obj160_layer7760_3041,y
+	ora bm_obj160_layer7760_3041,y
+	ldy obj155_phase
+	ora bm_obj155_layer7797_3041,y
+	ldy obj159_phase
+	and msk_obj159_layer7814_3041,y
+	ora bm_obj159_layer7814_3041,y
 	sta bitmap+3041
 	lda #171
+	;ldx obj142_phase
+	ora bm_obj142_layer7503_3042,x
 	ldx obj139_phase
-	ora bm_obj139_layer7531_3042,x
+	ora bm_obj139_layer7520_3042,x
 	ldx obj141_phase
-	ora bm_obj141_layer7604_3042,x
-	;ldy obj140_phase
-	ora bm_obj140_layer7613_3042,y
-	ldy obj160_phase
-	and msk_obj160_layer7760_3042,y
-	ora bm_obj160_layer7760_3042,y
-	ldy obj159_phase
+	ora bm_obj141_layer7598_3042,x
+	ldx obj160_phase
+	and msk_obj160_layer7760_3042,x
+	ora bm_obj160_layer7760_3042,x
+	;ldy obj159_phase
 	and msk_obj159_layer7814_3042,y
 	ora bm_obj159_layer7814_3042,y
 	sta bitmap+3042
 	lda #237
-	;ldx obj141_phase
-	ora bm_obj141_layer7604_3043,x
-	ldx obj140_phase
-	ora bm_obj140_layer7613_3043,x
-	ldx obj160_phase
+	ldy obj139_phase
+	ora bm_obj139_layer7520_3043,y
+	ldy obj141_phase
+	ora bm_obj141_layer7598_3043,y
+	ldy obj140_phase
+	ora bm_obj140_layer7607_3043,y
+	;ldx obj160_phase
 	and msk_obj160_layer7760_3043,x
 	ora bm_obj160_layer7760_3043,x
-	;ldy obj159_phase
-	and msk_obj159_layer7814_3043,y
-	ora bm_obj159_layer7814_3043,y
+	ldx obj159_phase
+	and msk_obj159_layer7814_3043,x
+	ora bm_obj159_layer7814_3043,x
 	sta bitmap+3043
 	lda #91
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3044,y
-	ldy obj140_phase
-	ora bm_obj140_layer7613_3044,y
-	;ldx obj160_phase
-	ora bm_obj160_layer7760_3044,x
-	ldx obj159_phase
-	and msk_obj159_layer7814_3044,x
-	ora bm_obj159_layer7814_3044,x
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3044,x
+	;ldy obj140_phase
+	ora bm_obj140_layer7607_3044,y
+	ldy obj160_phase
+	ora bm_obj160_layer7760_3044,y
+	ldy obj159_phase
+	and msk_obj159_layer7814_3044,y
+	ora bm_obj159_layer7814_3044,y
 	sta bitmap+3044
 	lda #91
-	ldx obj141_phase
-	ora bm_obj141_layer7604_3045,x
-	;ldy obj140_phase
-	ora bm_obj140_layer7613_3045,y
-	ldy obj159_phase
+	;ldx obj141_phase
+	ora bm_obj141_layer7598_3045,x
+	ldx obj140_phase
+	ora bm_obj140_layer7607_3045,x
+	;ldy obj159_phase
 	and msk_obj159_layer7814_3045,y
 	ora bm_obj159_layer7814_3045,y
 	sta bitmap+3045
 	lda #238
-	;ldx obj141_phase
-	ora bm_obj141_layer7604_3046,x
-	ldx obj140_phase
-	ora bm_obj140_layer7613_3046,x
-	;ldy obj159_phase
-	and msk_obj159_layer7814_3046,y
-	ora bm_obj159_layer7814_3046,y
+	ldy obj141_phase
+	ora bm_obj141_layer7598_3046,y
+	;ldx obj140_phase
+	ora bm_obj140_layer7607_3046,x
+	ldx obj159_phase
+	and msk_obj159_layer7814_3046,x
+	ora bm_obj159_layer7814_3046,x
 	sta bitmap+3046
 	lda #117
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3047,y
-	;ldx obj140_phase
-	ora bm_obj140_layer7613_3047,x
-	ldx obj159_phase
+	;ldy obj141_phase
+	ora bm_obj141_layer7598_3047,y
+	ldy obj140_phase
+	ora bm_obj140_layer7607_3047,y
+	;ldx obj159_phase
 	and msk_obj159_layer7814_3047,x
 	ora bm_obj159_layer7814_3047,x
 	sta bitmap+3047
-	lda #240
+	lda #192
 	ldx obj53_phase
+	and msk_obj53_layer6945_3048,x
 	ora bm_obj53_layer6945_3048,x
 	ldy obj138_phase
-	ora bm_obj138_layer7450_3048,y
+	ora bm_obj138_layer7441_3048,y
 	ldy obj160_phase
 	and msk_obj160_layer7760_3048,y
 	ora bm_obj160_layer7760_3048,y
 	sta bitmap+3048
-	lda #252
+	lda #248
 	;ldx obj53_phase
+	and msk_obj53_layer6945_3049,x
 	ora bm_obj53_layer6945_3049,x
-	ldy obj138_phase
-	ora bm_obj138_layer7450_3049,y
-	ldx obj139_phase
-	ora bm_obj139_layer7531_3049,x
-	ldx obj160_phase
-	and msk_obj160_layer7760_3049,x
-	ora bm_obj160_layer7760_3049,x
+	ldx obj138_phase
+	ora bm_obj138_layer7441_3049,x
+	;ldy obj160_phase
+	and msk_obj160_layer7760_3049,y
+	ora bm_obj160_layer7760_3049,y
 	sta bitmap+3049
-	lda #127
-	;ldy obj138_phase
-	ora bm_obj138_layer7450_3050,y
+	lda #124
+	ldy obj53_phase
+	ora bm_obj53_layer6945_3050,y
+	;ldx obj138_phase
+	ora bm_obj138_layer7441_3050,x
 	ldy obj139_phase
-	ora bm_obj139_layer7531_3050,y
-	;ldx obj160_phase
-	and msk_obj160_layer7760_3050,x
-	ora bm_obj160_layer7760_3050,x
+	ora bm_obj139_layer7520_3050,y
+	ldy obj160_phase
+	and msk_obj160_layer7760_3050,y
+	ora bm_obj160_layer7760_3050,y
 	sta bitmap+3050
 	lda #183
-	;ldy obj139_phase
-	ora bm_obj139_layer7531_3051,y
-	ldy obj140_phase
-	ora bm_obj140_layer7613_3051,y
-	;ldx obj160_phase
-	and msk_obj160_layer7760_3051,x
-	ora bm_obj160_layer7760_3051,x
+	;ldx obj138_phase
+	ora bm_obj138_layer7441_3051,x
+	ldx obj139_phase
+	ora bm_obj139_layer7520_3051,x
+	;ldy obj160_phase
+	and msk_obj160_layer7760_3051,y
+	ora bm_obj160_layer7760_3051,y
 	sta bitmap+3051
 	lda #109
-	ldx obj139_phase
-	ora bm_obj139_layer7531_3052,x
-	;ldy obj140_phase
-	ora bm_obj140_layer7613_3052,y
-	ldy obj160_phase
+	;ldx obj139_phase
+	ora bm_obj139_layer7520_3052,x
+	;ldy obj160_phase
 	and msk_obj160_layer7760_3052,y
 	ora bm_obj160_layer7760_3052,y
 	sta bitmap+3052
 	lda #238
 	;ldx obj139_phase
-	ora bm_obj139_layer7531_3053,x
+	ora bm_obj139_layer7520_3053,x
 	ldx obj140_phase
-	ora bm_obj140_layer7613_3053,x
+	ora bm_obj140_layer7607_3053,x
 	;ldy obj160_phase
 	and msk_obj160_layer7760_3053,y
 	ora bm_obj160_layer7760_3053,y
@@ -1926,9 +1918,9 @@
 	sta bitmap+3053
 	lda #181
 	ldy obj139_phase
-	ora bm_obj139_layer7531_3054,y
+	ora bm_obj139_layer7520_3054,y
 	;ldx obj140_phase
-	ora bm_obj140_layer7613_3054,x
+	ora bm_obj140_layer7607_3054,x
 	ldx obj160_phase
 	and msk_obj160_layer7760_3054,x
 	ora bm_obj160_layer7760_3054,x
@@ -1937,9 +1929,9 @@
 	sta bitmap+3054
 	lda #213
 	;ldy obj139_phase
-	ora bm_obj139_layer7531_3055,y
+	ora bm_obj139_layer7520_3055,y
 	ldy obj140_phase
-	ora bm_obj140_layer7613_3055,y
+	ora bm_obj140_layer7607_3055,y
 	ldy obj160_phase
 	and msk_obj160_layer7760_3055,y
 	ora bm_obj160_layer7760_3055,y
@@ -2000,15 +1992,14 @@
 	and msk_obj160_layer7760_3058,y
 	ora bm_obj160_layer7760_3058,y
 	sta bitmap+3058
-	lda #128
+	ldy obj53_phase
+	lda bm_obj53_layer6945_3059,y
 	ldy obj45_phase
 	and msk_obj45_layer6957_3059,y
 	ora bm_obj45_layer6957_3059,y
 	;ldx obj63_phase
 	and msk_obj63_layer7056_3059,x
 	ora bm_obj63_layer7056_3059,x
-	ldx obj138_phase
-	ora bm_obj138_layer7450_3059,x
 	ldx obj161_phase
 	and msk_obj161_layer7738_3059,x
 	ora bm_obj161_layer7738_3059,x
@@ -2022,10 +2013,10 @@
 	ora bm_obj45_layer6957_3060,y
 	ldy obj63_phase
 	ora bm_obj63_layer7056_3060,y
+	ldy obj68_phase
+	ora bm_obj68_layer7367_3060,y
 	ldy obj138_phase
-	ora bm_obj138_layer7450_3060,y
-	ldy obj139_phase
-	ora bm_obj139_layer7531_3060,y
+	ora bm_obj138_layer7441_3060,y
 	ldy obj161_phase
 	and msk_obj161_layer7738_3060,y
 	ora bm_obj161_layer7738_3060,y
@@ -2038,8 +2029,10 @@
 	ora bm_obj45_layer6957_3061,x
 	ldx obj63_phase
 	ora bm_obj63_layer7056_3061,x
+	ldx obj138_phase
+	ora bm_obj138_layer7441_3061,x
 	ldx obj139_phase
-	ora bm_obj139_layer7531_3061,x
+	ora bm_obj139_layer7520_3061,x
 	;ldy obj161_phase
 	and msk_obj161_layer7738_3061,y
 	ora bm_obj161_layer7738_3061,y
@@ -2049,11 +2042,12 @@
 	sta bitmap+3061
 	lda #160
 	ldy obj45_phase
+	and msk_obj45_layer6957_3062,y
 	ora bm_obj45_layer6957_3062,y
 	ldy obj63_phase
 	ora bm_obj63_layer7056_3062,y
 	;ldx obj139_phase
-	ora bm_obj139_layer7531_3062,x
+	ora bm_obj139_layer7520_3062,x
 	ldx obj161_phase
 	and msk_obj161_layer7738_3062,x
 	ora bm_obj161_layer7738_3062,x
@@ -2067,62 +2061,62 @@
 	ora bm_obj45_layer6957_3063,x
 	;ldy obj63_phase
 	ora bm_obj63_layer7056_3063,y
-	ldx obj136_phase
-	ora bm_obj136_layer7506_3063,x
-	ldy obj139_phase
-	ora bm_obj139_layer7531_3063,y
-	ldy obj161_phase
-	and msk_obj161_layer7738_3063,y
-	ora bm_obj161_layer7738_3063,y
-	ldy obj160_phase
-	and msk_obj160_layer7760_3063,y
-	ora bm_obj160_layer7760_3063,y
+	ldx obj138_phase
+	ora bm_obj138_layer7441_3063,x
+	ldx obj139_phase
+	ora bm_obj139_layer7520_3063,x
+	ldx obj161_phase
+	and msk_obj161_layer7738_3063,x
+	ora bm_obj161_layer7738_3063,x
+	ldx obj160_phase
+	and msk_obj160_layer7760_3063,x
+	ora bm_obj160_layer7760_3063,x
 	sta bitmap+3063
-	ldy obj71_phase
-	lda bm_obj71_layer7152_3064,y
-	ldy obj70_phase
-	ora bm_obj70_layer7268_3064,y
-	ldy obj65_phase
-	ora bm_obj65_layer7485_3064,y
-	;ldx obj136_phase
+	ldx obj71_phase
+	lda bm_obj71_layer7152_3064,x
+	ldx obj70_phase
+	ora bm_obj70_layer7268_3064,x
+	ldx obj65_phase
+	ora bm_obj65_layer7485_3064,x
+	ldx obj136_phase
 	and msk_obj136_layer7587_3064,x
 	ora bm_obj136_layer7587_3064,x
 	ldx obj153_phase
 	and msk_obj153_layer7656_3064,x
 	ora bm_obj153_layer7656_3064,x
 	sta bitmap+3064
-	ldx obj63_phase
-	lda bm_obj63_layer7056_3065,x
+	;ldy obj63_phase
+	lda bm_obj63_layer7056_3065,y
 	ldx obj71_phase
 	and msk_obj71_layer7152_3065,x
 	ora bm_obj71_layer7152_3065,x
 	ldx obj70_phase
 	and msk_obj70_layer7268_3065,x
 	ora bm_obj70_layer7268_3065,x
-	;ldy obj65_phase
-	ora bm_obj65_layer7485_3065,y
-	ldy obj136_phase
-	ora bm_obj136_layer7587_3065,y
-	ldy obj153_phase
-	and msk_obj153_layer7656_3065,y
-	ora bm_obj153_layer7656_3065,y
+	ldx obj65_phase
+	ora bm_obj65_layer7485_3065,x
+	ldx obj136_phase
+	ora bm_obj136_layer7587_3065,x
+	ldx obj153_phase
+	and msk_obj153_layer7656_3065,x
+	ora bm_obj153_layer7656_3065,x
 	sta bitmap+3065
-	ldy obj63_phase
+	;ldy obj63_phase
 	lda bm_obj63_layer7056_3066,y
 	ldy obj71_phase
 	and msk_obj71_layer7152_3066,y
 	ora bm_obj71_layer7152_3066,y
-	;ldx obj70_phase
-	ora bm_obj70_layer7268_3066,x
-	ldx obj153_phase
+	ldy obj70_phase
+	ora bm_obj70_layer7268_3066,y
+	;ldx obj153_phase
 	and msk_obj153_layer7656_3066,x
 	ora bm_obj153_layer7656_3066,x
 	sta bitmap+3066
 	ldx obj63_phase
 	lda bm_obj63_layer7056_3067,x
-	;ldy obj71_phase
-	ora bm_obj71_layer7152_3067,y
-	ldy obj70_phase
+	ldx obj71_phase
+	ora bm_obj71_layer7152_3067,x
+	;ldy obj70_phase
 	ora bm_obj70_layer7268_3067,y
 	ldy obj153_phase
 	and msk_obj153_layer7656_3067,y
@@ -2130,11 +2124,11 @@
 	ldy obj161_phase
 	ora bm_obj161_layer7738_3067,y
 	sta bitmap+3067
-	;ldx obj63_phase
-	lda bm_obj63_layer7056_3068,x
-	ldx obj54_phase
-	ora bm_obj54_layer7062_3068,x
-	ldx obj71_phase
+	ldy obj63_phase
+	lda bm_obj63_layer7056_3068,y
+	ldy obj54_phase
+	ora bm_obj54_layer7062_3068,y
+	;ldx obj71_phase
 	ora bm_obj71_layer7152_3068,x
 	ldx obj62_phase
 	ora bm_obj62_layer7164_3068,x
@@ -2145,45 +2139,45 @@
 	ldx obj153_phase
 	and msk_obj153_layer7656_3068,x
 	ora bm_obj153_layer7656_3068,x
-	;ldy obj161_phase
-	and msk_obj161_layer7738_3068,y
-	ora bm_obj161_layer7738_3068,y
+	ldx obj161_phase
+	and msk_obj161_layer7738_3068,x
+	ora bm_obj161_layer7738_3068,x
 	sta bitmap+3068
 	ldx obj63_phase
 	lda bm_obj63_layer7056_3069,x
-	ldx obj54_phase
-	ora bm_obj54_layer7062_3069,x
-	ldx obj62_phase
-	ora bm_obj62_layer7164_3069,x
-	ldx obj61_phase
-	ora bm_obj61_layer7275_3069,x
-	ldx obj153_phase
-	and msk_obj153_layer7656_3069,x
-	ora bm_obj153_layer7656_3069,x
-	;ldy obj161_phase
+	;ldy obj54_phase
+	ora bm_obj54_layer7062_3069,y
+	ldy obj62_phase
+	ora bm_obj62_layer7164_3069,y
+	ldy obj61_phase
+	ora bm_obj61_layer7275_3069,y
+	ldy obj153_phase
+	and msk_obj153_layer7656_3069,y
+	ora bm_obj153_layer7656_3069,y
+	ldy obj161_phase
 	ora bm_obj161_layer7738_3069,y
 	sta bitmap+3069
-	ldy obj63_phase
-	lda bm_obj63_layer7056_3070,y
-	ldy obj54_phase
-	ora bm_obj54_layer7062_3070,y
-	ldy obj62_phase
-	ora bm_obj62_layer7164_3070,y
-	;ldx obj153_phase
+	;ldx obj63_phase
+	lda bm_obj63_layer7056_3070,x
+	ldx obj54_phase
+	ora bm_obj54_layer7062_3070,x
+	ldx obj62_phase
+	ora bm_obj62_layer7164_3070,x
+	ldx obj153_phase
 	and msk_obj153_layer7656_3070,x
 	ora bm_obj153_layer7656_3070,x
-	ldx obj161_phase
-	and msk_obj161_layer7738_3070,x
-	ora bm_obj161_layer7738_3070,x
+	;ldy obj161_phase
+	and msk_obj161_layer7738_3070,y
+	ora bm_obj161_layer7738_3070,y
 	sta bitmap+3070
-	ldx obj63_phase
-	lda bm_obj63_layer7056_3071,x
-	ldx obj54_phase
-	and msk_obj54_layer7062_3071,x
-	ora bm_obj54_layer7062_3071,x
-	;ldy obj62_phase
+	ldy obj63_phase
+	lda bm_obj63_layer7056_3071,y
+	ldy obj54_phase
+	and msk_obj54_layer7062_3071,y
+	ora bm_obj54_layer7062_3071,y
+	ldy obj62_phase
 	ora bm_obj62_layer7164_3071,y
-	ldx obj153_phase
+	;ldx obj153_phase
 	and msk_obj153_layer7656_3071,x
 	ora bm_obj153_layer7656_3071,x
 	ldx obj161_phase
@@ -2298,161 +2292,161 @@
 	ldx obj153_phase
 	ora bm_obj153_layer7656_3079,x
 	sta bitmap+3079
-	ldx obj118_phase
-	lda bm_obj118_layer7301_3318,x
-	ldy obj162_phase
-	ora bm_obj162_layer7397_3318,y
-	ldy obj170_phase
-	ora bm_obj170_layer7509_3318,y
-	sta bitmap+3318
-	;ldx obj118_phase
-	lda bm_obj118_layer7301_3319,x
-	ldx obj162_phase
-	ora bm_obj162_layer7397_3319,x
-	;ldy obj170_phase
-	ora bm_obj170_layer7509_3319,y
-	sta bitmap+3319
-	ldy obj87_phase
-	lda bm_obj87_layer7153_3320,y
-	ldy obj83_phase
-	and msk_obj83_layer7226_3320,y
-	ora bm_obj83_layer7226_3320,y
-	ldy obj145_phase
-	ora bm_obj145_layer7350_3320,y
-	;ldx obj162_phase
-	ora bm_obj162_layer7397_3320,x
-	ldx obj170_phase
-	ora bm_obj170_layer7509_3320,x
-	ldx obj169_phase
-	and msk_obj169_layer7589_3320,x
-	ora bm_obj169_layer7589_3320,x
-	sta bitmap+3320
-	ldx obj87_phase
-	lda bm_obj87_layer7153_3321,x
-	ldx obj83_phase
-	and msk_obj83_layer7226_3321,x
-	ora bm_obj83_layer7226_3321,x
-	;ldy obj145_phase
-	ora bm_obj145_layer7350_3321,y
-	ldy obj162_phase
-	ora bm_obj162_layer7397_3321,y
-	ldy obj170_phase
-	ora bm_obj170_layer7509_3321,y
-	ldy obj169_phase
-	and msk_obj169_layer7589_3321,y
-	ora bm_obj169_layer7589_3321,y
-	ldy obj168_phase
-	ora bm_obj168_layer7692_3321,y
-	sta bitmap+3321
-	ldy obj88_phase
-	lda bm_obj88_layer7031_3322,y
-	ldy obj87_phase
-	ora bm_obj87_layer7153_3322,y
-	;ldx obj83_phase
-	and msk_obj83_layer7226_3322,x
-	ora bm_obj83_layer7226_3322,x
-	ldx obj145_phase
-	ora bm_obj145_layer7350_3322,x
-	ldx obj162_phase
-	ora bm_obj162_layer7397_3322,x
-	ldx obj170_phase
-	ora bm_obj170_layer7509_3322,x
-	ldx obj169_phase
-	and msk_obj169_layer7589_3322,x
-	ora bm_obj169_layer7589_3322,x
-	ldx obj168_phase
-	ora bm_obj168_layer7692_3322,x
-	sta bitmap+3322
-	ldx obj79_phase
-	lda bm_obj79_layer6998_3323,x
-	ldx obj88_phase
-	ora bm_obj88_layer7031_3323,x
-	ldx obj78_phase
-	ora bm_obj78_layer7090_3323,x
-	;ldy obj87_phase
-	ora bm_obj87_layer7153_3323,y
-	ldy obj74_phase
-	ora bm_obj74_layer7196_3323,y
-	ldy obj83_phase
-	and msk_obj83_layer7226_3323,y
-	ora bm_obj83_layer7226_3323,y
-	ldy obj145_phase
-	ora bm_obj145_layer7350_3323,y
-	ldy obj162_phase
-	ora bm_obj162_layer7397_3323,y
-	ldy obj170_phase
-	ora bm_obj170_layer7509_3323,y
-	ldy obj169_phase
-	and msk_obj169_layer7589_3323,y
-	ora bm_obj169_layer7589_3323,y
-	ldy obj168_phase
-	and msk_obj168_layer7692_3323,y
-	ora bm_obj168_layer7692_3323,y
-	sta bitmap+3323
-	ldy obj79_phase
-	lda bm_obj79_layer6998_3324,y
-	;ldx obj78_phase
-	ora bm_obj78_layer7090_3324,x
-	ldx obj74_phase
-	ora bm_obj74_layer7196_3324,x
-	ldx obj83_phase
-	ora bm_obj83_layer7226_3324,x
-	ldx obj118_phase
-	ora bm_obj118_layer7301_3324,x
-	ldx obj145_phase
-	ora bm_obj145_layer7350_3324,x
-	ldx obj162_phase
-	ora bm_obj162_layer7397_3324,x
-	ldx obj170_phase
-	ora bm_obj170_layer7509_3324,x
-	ldx obj169_phase
-	and msk_obj169_layer7589_3324,x
-	ora bm_obj169_layer7589_3324,x
-	ldx obj168_phase
-	and msk_obj168_layer7692_3324,x
-	ora bm_obj168_layer7692_3324,x
-	sta bitmap+3324
-	;ldy obj79_phase
-	lda bm_obj79_layer6998_3325,y
-	ldy obj78_phase
-	and msk_obj78_layer7090_3325,y
-	ora bm_obj78_layer7090_3325,y
-	ldy obj74_phase
-	and msk_obj74_layer7196_3325,y
-	ora bm_obj74_layer7196_3325,y
 	ldy obj118_phase
-	ora bm_obj118_layer7301_3325,y
-	ldy obj162_phase
-	ora bm_obj162_layer7397_3325,y
-	ldy obj170_phase
-	ora bm_obj170_layer7509_3325,y
-	ldy obj169_phase
-	and msk_obj169_layer7589_3325,y
-	ora bm_obj169_layer7589_3325,y
-	;ldx obj168_phase
-	and msk_obj168_layer7692_3325,x
-	ora bm_obj168_layer7692_3325,x
-	sta bitmap+3325
-	ldx obj79_phase
-	lda bm_obj79_layer6998_3326,x
-	ldx obj78_phase
-	ora bm_obj78_layer7090_3326,x
-	ldx obj74_phase
-	and msk_obj74_layer7196_3326,x
-	ora bm_obj74_layer7196_3326,x
-	ldx obj118_phase
-	ora bm_obj118_layer7301_3326,x
+	lda bm_obj118_layer7301_3318,y
 	ldx obj162_phase
-	ora bm_obj162_layer7397_3326,x
+	ora bm_obj162_layer7397_3318,x
 	ldx obj170_phase
-	and msk_obj170_layer7509_3326,x
-	ora bm_obj170_layer7509_3326,x
-	;ldy obj169_phase
-	and msk_obj169_layer7589_3326,y
-	ora bm_obj169_layer7589_3326,y
+	ora bm_obj170_layer7509_3318,x
+	sta bitmap+3318
+	;ldy obj118_phase
+	lda bm_obj118_layer7301_3319,y
+	ldy obj162_phase
+	ora bm_obj162_layer7397_3319,y
+	;ldx obj170_phase
+	ora bm_obj170_layer7509_3319,x
+	sta bitmap+3319
+	ldx obj87_phase
+	lda bm_obj87_layer7153_3320,x
+	ldx obj83_phase
+	and msk_obj83_layer7226_3320,x
+	ora bm_obj83_layer7226_3320,x
+	ldx obj145_phase
+	ora bm_obj145_layer7350_3320,x
+	;ldy obj162_phase
+	ora bm_obj162_layer7397_3320,y
+	ldy obj170_phase
+	ora bm_obj170_layer7509_3320,y
+	ldy obj169_phase
+	and msk_obj169_layer7589_3320,y
+	ora bm_obj169_layer7589_3320,y
+	sta bitmap+3320
+	ldy obj87_phase
+	lda bm_obj87_layer7153_3321,y
+	ldy obj83_phase
+	and msk_obj83_layer7226_3321,y
+	ora bm_obj83_layer7226_3321,y
+	;ldx obj145_phase
+	ora bm_obj145_layer7350_3321,x
+	ldx obj162_phase
+	ora bm_obj162_layer7397_3321,x
+	ldx obj170_phase
+	ora bm_obj170_layer7509_3321,x
+	ldx obj169_phase
+	and msk_obj169_layer7589_3321,x
+	ora bm_obj169_layer7589_3321,x
+	ldx obj168_phase
+	ora bm_obj168_layer7692_3321,x
+	sta bitmap+3321
+	ldx obj88_phase
+	lda bm_obj88_layer7031_3322,x
+	ldx obj87_phase
+	ora bm_obj87_layer7153_3322,x
+	;ldy obj83_phase
+	and msk_obj83_layer7226_3322,y
+	ora bm_obj83_layer7226_3322,y
+	ldy obj145_phase
+	ora bm_obj145_layer7350_3322,y
+	ldy obj162_phase
+	ora bm_obj162_layer7397_3322,y
+	ldy obj170_phase
+	ora bm_obj170_layer7509_3322,y
+	ldy obj169_phase
+	and msk_obj169_layer7589_3322,y
+	ora bm_obj169_layer7589_3322,y
 	ldy obj168_phase
-	and msk_obj168_layer7692_3326,y
-	ora bm_obj168_layer7692_3326,y
+	ora bm_obj168_layer7692_3322,y
+	sta bitmap+3322
+	ldy obj79_phase
+	lda bm_obj79_layer6998_3323,y
+	ldy obj88_phase
+	ora bm_obj88_layer7031_3323,y
+	ldy obj78_phase
+	ora bm_obj78_layer7090_3323,y
+	;ldx obj87_phase
+	ora bm_obj87_layer7153_3323,x
+	ldx obj74_phase
+	ora bm_obj74_layer7196_3323,x
+	ldx obj83_phase
+	and msk_obj83_layer7226_3323,x
+	ora bm_obj83_layer7226_3323,x
+	ldx obj145_phase
+	ora bm_obj145_layer7350_3323,x
+	ldx obj162_phase
+	ora bm_obj162_layer7397_3323,x
+	ldx obj170_phase
+	ora bm_obj170_layer7509_3323,x
+	ldx obj169_phase
+	and msk_obj169_layer7589_3323,x
+	ora bm_obj169_layer7589_3323,x
+	ldx obj168_phase
+	and msk_obj168_layer7692_3323,x
+	ora bm_obj168_layer7692_3323,x
+	sta bitmap+3323
+	ldx obj79_phase
+	lda bm_obj79_layer6998_3324,x
+	;ldy obj78_phase
+	ora bm_obj78_layer7090_3324,y
+	ldy obj74_phase
+	ora bm_obj74_layer7196_3324,y
+	ldy obj83_phase
+	ora bm_obj83_layer7226_3324,y
+	ldy obj118_phase
+	ora bm_obj118_layer7301_3324,y
+	ldy obj145_phase
+	ora bm_obj145_layer7350_3324,y
+	ldy obj162_phase
+	ora bm_obj162_layer7397_3324,y
+	ldy obj170_phase
+	ora bm_obj170_layer7509_3324,y
+	ldy obj169_phase
+	and msk_obj169_layer7589_3324,y
+	ora bm_obj169_layer7589_3324,y
+	ldy obj168_phase
+	and msk_obj168_layer7692_3324,y
+	ora bm_obj168_layer7692_3324,y
+	sta bitmap+3324
+	;ldx obj79_phase
+	lda bm_obj79_layer6998_3325,x
+	ldx obj78_phase
+	and msk_obj78_layer7090_3325,x
+	ora bm_obj78_layer7090_3325,x
+	ldx obj74_phase
+	and msk_obj74_layer7196_3325,x
+	ora bm_obj74_layer7196_3325,x
+	ldx obj118_phase
+	ora bm_obj118_layer7301_3325,x
+	ldx obj162_phase
+	ora bm_obj162_layer7397_3325,x
+	ldx obj170_phase
+	ora bm_obj170_layer7509_3325,x
+	ldx obj169_phase
+	and msk_obj169_layer7589_3325,x
+	ora bm_obj169_layer7589_3325,x
+	;ldy obj168_phase
+	and msk_obj168_layer7692_3325,y
+	ora bm_obj168_layer7692_3325,y
+	sta bitmap+3325
+	ldy obj79_phase
+	lda bm_obj79_layer6998_3326,y
+	ldy obj78_phase
+	ora bm_obj78_layer7090_3326,y
+	ldy obj74_phase
+	and msk_obj74_layer7196_3326,y
+	ora bm_obj74_layer7196_3326,y
+	ldy obj118_phase
+	ora bm_obj118_layer7301_3326,y
+	ldy obj162_phase
+	ora bm_obj162_layer7397_3326,y
+	ldy obj170_phase
+	and msk_obj170_layer7509_3326,y
+	ora bm_obj170_layer7509_3326,y
+	;ldx obj169_phase
+	and msk_obj169_layer7589_3326,x
+	ora bm_obj169_layer7589_3326,x
+	ldx obj168_phase
+	and msk_obj168_layer7692_3326,x
+	ora bm_obj168_layer7692_3326,x
 	sta bitmap+3326
 	ldx obj79_phase
 	lda bm_obj79_layer6998_3327,x
@@ -2464,148 +2458,142 @@
 	ora bm_obj74_layer7196_3327,x
 	ldx obj118_phase
 	ora bm_obj118_layer7301_3327,x
-	ldx obj170_phase
-	ora bm_obj170_layer7509_3327,x
-	ldx obj169_phase
-	and msk_obj169_layer7589_3327,x
-	ora bm_obj169_layer7589_3327,x
-	;ldy obj168_phase
-	and msk_obj168_layer7692_3327,y
-	ora bm_obj168_layer7692_3327,y
+	;ldy obj170_phase
+	ora bm_obj170_layer7509_3327,y
+	ldy obj169_phase
+	and msk_obj169_layer7589_3327,y
+	ora bm_obj169_layer7589_3327,y
+	ldx obj168_phase
+	and msk_obj168_layer7692_3327,x
+	ora bm_obj168_layer7692_3327,x
 	sta bitmap+3327
-	ldy obj88_phase
-	lda bm_obj88_layer7031_3328,y
-	ldy obj87_phase
-	and msk_obj87_layer7153_3328,y
-	ora bm_obj87_layer7153_3328,y
-	;ldx obj169_phase
-	ora bm_obj169_layer7589_3328,x
-	ldx obj168_phase
-	and msk_obj168_layer7692_3328,x
-	ora bm_obj168_layer7692_3328,x
-	ldx obj164_phase
-	and msk_obj164_layer7739_3328,x
-	ora bm_obj164_layer7739_3328,x
+	ldx obj88_phase
+	lda bm_obj88_layer7031_3328,x
+	ldx obj87_phase
+	and msk_obj87_layer7153_3328,x
+	ora bm_obj87_layer7153_3328,x
+	;ldy obj169_phase
+	ora bm_obj169_layer7589_3328,y
+	ldy obj168_phase
+	and msk_obj168_layer7692_3328,y
+	ora bm_obj168_layer7692_3328,y
+	ldy obj164_phase
+	and msk_obj164_layer7739_3328,y
+	ora bm_obj164_layer7739_3328,y
 	sta bitmap+3328
-	ldx obj88_phase
-	lda bm_obj88_layer7031_3329,x
-	;ldy obj87_phase
-	ora bm_obj87_layer7153_3329,y
-	ldy obj168_phase
-	and msk_obj168_layer7692_3329,y
-	ora bm_obj168_layer7692_3329,y
-	ldy obj164_phase
-	and msk_obj164_layer7739_3329,y
-	ora bm_obj164_layer7739_3329,y
-	sta bitmap+3329
-	;ldx obj88_phase
-	lda bm_obj88_layer7031_3330,x
-	ldx obj150_phase
-	ora bm_obj150_layer7517_3330,x
-	ldx obj168_phase
-	and msk_obj168_layer7692_3330,x
-	ora bm_obj168_layer7692_3330,x
-	;ldy obj164_phase
-	and msk_obj164_layer7739_3330,y
-	ora bm_obj164_layer7739_3330,y
-	sta bitmap+3330
-	ldy obj79_phase
-	lda bm_obj79_layer6998_3331,y
 	ldy obj88_phase
-	and msk_obj88_layer7031_3331,y
-	ora bm_obj88_layer7031_3331,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3331,y
-	;ldx obj168_phase
-	and msk_obj168_layer7692_3331,x
-	ora bm_obj168_layer7692_3331,x
-	ldx obj164_phase
-	and msk_obj164_layer7739_3331,x
-	ora bm_obj164_layer7739_3331,x
-	sta bitmap+3331
-	ldx obj79_phase
-	lda bm_obj79_layer6998_3332,x
-	ldx obj88_phase
-	ora bm_obj88_layer7031_3332,x
-	ldx obj149_phase
-	ora bm_obj149_layer7457_3332,x
-	;ldy obj150_phase
-	ora bm_obj150_layer7517_3332,y
-	ldy obj168_phase
-	and msk_obj168_layer7692_3332,y
-	ora bm_obj168_layer7692_3332,y
-	ldy obj164_phase
-	and msk_obj164_layer7739_3332,y
-	ora bm_obj164_layer7739_3332,y
-	sta bitmap+3332
-	lda #4
-	ldy obj79_phase
-	and msk_obj79_layer6998_3333,y
-	ora bm_obj79_layer6998_3333,y
-	;ldx obj149_phase
-	ora bm_obj149_layer7457_3333,x
+	lda bm_obj88_layer7031_3329,y
+	;ldx obj87_phase
+	ora bm_obj87_layer7153_3329,x
 	ldx obj168_phase
-	and msk_obj168_layer7692_3333,x
-	ora bm_obj168_layer7692_3333,x
+	and msk_obj168_layer7692_3329,x
+	ora bm_obj168_layer7692_3329,x
 	ldx obj164_phase
+	and msk_obj164_layer7739_3329,x
+	ora bm_obj164_layer7739_3329,x
+	sta bitmap+3329
+	;ldy obj88_phase
+	lda bm_obj88_layer7031_3330,y
+	ldy obj168_phase
+	and msk_obj168_layer7692_3330,y
+	ora bm_obj168_layer7692_3330,y
+	;ldx obj164_phase
+	and msk_obj164_layer7739_3330,x
+	ora bm_obj164_layer7739_3330,x
+	sta bitmap+3330
+	ldx obj79_phase
+	lda bm_obj79_layer6998_3331,x
+	ldx obj88_phase
+	and msk_obj88_layer7031_3331,x
+	ora bm_obj88_layer7031_3331,x
+	;ldy obj168_phase
+	and msk_obj168_layer7692_3331,y
+	ora bm_obj168_layer7692_3331,y
+	ldy obj164_phase
+	and msk_obj164_layer7739_3331,y
+	ora bm_obj164_layer7739_3331,y
+	sta bitmap+3331
+	ldy obj79_phase
+	lda bm_obj79_layer6998_3332,y
+	;ldx obj88_phase
+	ora bm_obj88_layer7031_3332,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3332,x
+	ldx obj168_phase
+	and msk_obj168_layer7692_3332,x
+	ora bm_obj168_layer7692_3332,x
+	ldx obj164_phase
+	and msk_obj164_layer7739_3332,x
+	ora bm_obj164_layer7739_3332,x
+	sta bitmap+3332
+	;ldy obj79_phase
+	lda bm_obj79_layer6998_3333,y
+	ldy obj168_phase
+	and msk_obj168_layer7692_3333,y
+	ora bm_obj168_layer7692_3333,y
+	;ldx obj164_phase
 	and msk_obj164_layer7739_3333,x
 	ora bm_obj164_layer7739_3333,x
 	sta bitmap+3333
-	;ldy obj79_phase
-	lda bm_obj79_layer6998_3334,y
-	ldy obj149_phase
-	ora bm_obj149_layer7457_3334,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3334,y
-	ldy obj168_phase
+	ldx obj79_phase
+	lda bm_obj79_layer6998_3334,x
+	ldx obj149_phase
+	ora bm_obj149_layer7451_3334,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3334,x
+	;ldy obj168_phase
 	and msk_obj168_layer7692_3334,y
 	ora bm_obj168_layer7692_3334,y
-	;ldx obj164_phase
-	and msk_obj164_layer7739_3334,x
-	ora bm_obj164_layer7739_3334,x
+	ldy obj164_phase
+	and msk_obj164_layer7739_3334,y
+	ora bm_obj164_layer7739_3334,y
 	sta bitmap+3334
 	ldx obj79_phase
 	lda bm_obj79_layer6998_3335,x
-	ldx obj149_phase
-	ora bm_obj149_layer7457_3335,x
+	ldx obj148_phase
+	ora bm_obj148_layer7367_3335,x
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3335,x
-	;ldy obj168_phase
-	and msk_obj168_layer7692_3335,y
-	ora bm_obj168_layer7692_3335,y
-	ldx obj164_phase
-	and msk_obj164_layer7739_3335,x
-	ora bm_obj164_layer7739_3335,x
+	ora bm_obj150_layer7505_3335,x
+	ldx obj168_phase
+	and msk_obj168_layer7692_3335,x
+	ora bm_obj168_layer7692_3335,x
+	;ldy obj164_phase
+	and msk_obj164_layer7739_3335,y
+	ora bm_obj164_layer7739_3335,y
 	sta bitmap+3335
 	lda #9
-	ldy obj88_phase
-	and msk_obj88_layer7031_3336,y
-	ora bm_obj88_layer7031_3336,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3336,y
-	;ldx obj164_phase
-	and msk_obj164_layer7739_3336,x
-	ora bm_obj164_layer7739_3336,x
+	ldx obj89_phase
+	ora bm_obj89_layer6964_3336,x
+	ldx obj88_phase
+	and msk_obj88_layer7031_3336,x
+	ora bm_obj88_layer7031_3336,x
+	ldx obj151_phase
+	ora bm_obj151_layer7469_3336,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3336,x
+	;ldy obj164_phase
+	and msk_obj164_layer7739_3336,y
+	ora bm_obj164_layer7739_3336,y
 	ldx obj173_phase
 	and msk_obj173_layer7803_3336,x
 	ora bm_obj173_layer7803_3336,x
 	sta bitmap+3336
-	;ldy obj150_phase
-	lda bm_obj150_layer7517_3337,y
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3337,y
-	ldy obj164_phase
+	ldx obj88_phase
+	lda bm_obj88_layer7031_3337,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3337,x
+	;ldy obj164_phase
 	and msk_obj164_layer7739_3337,y
 	ora bm_obj164_layer7739_3337,y
-	;ldx obj173_phase
+	ldx obj173_phase
 	and msk_obj173_layer7803_3337,x
 	ora bm_obj173_layer7803_3337,x
 	sta bitmap+3337
 	lda #5
+	ldx obj151_phase
+	ora bm_obj151_layer7469_3338,x
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3338,x
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3338,x
+	ora bm_obj150_layer7505_3338,x
 	;ldy obj164_phase
 	and msk_obj164_layer7739_3338,y
 	ora bm_obj164_layer7739_3338,y
@@ -2614,35 +2602,35 @@
 	ora bm_obj173_layer7803_3338,y
 	sta bitmap+3338
 	lda #34
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3339,y
-	;ldx obj146_phase
-	ora bm_obj146_layer7602_3339,x
+	;ldx obj150_phase
+	ora bm_obj150_layer7505_3339,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3339,x
 	ldx obj164_phase
 	and msk_obj164_layer7739_3339,x
 	ora bm_obj164_layer7739_3339,x
-	ldx obj173_phase
-	and msk_obj173_layer7803_3339,x
-	ora bm_obj173_layer7803_3339,x
+	;ldy obj173_phase
+	and msk_obj173_layer7803_3339,y
+	ora bm_obj173_layer7803_3339,y
 	sta bitmap+3339
 	lda #9
-	;ldy obj150_phase
-	ora bm_obj150_layer7517_3340,y
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3340,y
 	ldy obj146_phase
-	ora bm_obj146_layer7602_3340,y
-	ldy obj164_phase
-	and msk_obj164_layer7739_3340,y
-	ora bm_obj164_layer7739_3340,y
-	;ldx obj173_phase
+	ora bm_obj146_layer7592_3340,y
+	;ldx obj164_phase
+	and msk_obj164_layer7739_3340,x
+	ora bm_obj164_layer7739_3340,x
+	ldx obj173_phase
 	and msk_obj173_layer7803_3340,x
 	ora bm_obj173_layer7803_3340,x
 	sta bitmap+3340
 	lda #10
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3341,x
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3341,x
-	;ldy obj164_phase
+	ora bm_obj150_layer7505_3341,x
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3341,y
+	ldy obj164_phase
 	and msk_obj164_layer7739_3341,y
 	ora bm_obj164_layer7739_3341,y
 	ldy obj173_phase
@@ -2650,60 +2638,64 @@
 	ora bm_obj173_layer7803_3341,y
 	sta bitmap+3341
 	lda #165
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3342,y
-	;ldx obj146_phase
-	ora bm_obj146_layer7602_3342,x
+	;ldx obj150_phase
+	ora bm_obj150_layer7505_3342,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3342,x
 	ldx obj164_phase
 	and msk_obj164_layer7739_3342,x
 	ora bm_obj164_layer7739_3342,x
-	ldx obj173_phase
-	and msk_obj173_layer7803_3342,x
-	ora bm_obj173_layer7803_3342,x
+	;ldy obj173_phase
+	and msk_obj173_layer7803_3342,y
+	ora bm_obj173_layer7803_3342,y
 	sta bitmap+3342
 	lda #10
-	;ldy obj150_phase
-	ora bm_obj150_layer7517_3343,y
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3343,x
-	ldx obj164_phase
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3343,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3343,y
+	;ldx obj164_phase
 	ora bm_obj164_layer7739_3343,x
 	ldx obj173_phase
 	and msk_obj173_layer7803_3343,x
 	ora bm_obj173_layer7803_3343,x
 	sta bitmap+3343
 	lda #85
-	;ldy obj150_phase
-	ora bm_obj150_layer7517_3344,y
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3344,y
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3344,x
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3344,y
+	ldy obj141_phase
+	ora bm_obj141_layer7598_3344,y
 	ldy obj137_phase
-	ora bm_obj137_layer7648_3344,y
+	ora bm_obj137_layer7641_3344,y
 	ldy obj155_phase
 	and msk_obj155_layer7797_3344,y
 	ora bm_obj155_layer7797_3344,y
-	;ldx obj173_phase
-	and msk_obj173_layer7803_3344,x
-	ora bm_obj173_layer7803_3344,x
+	ldy obj173_phase
+	and msk_obj173_layer7803_3344,y
+	ora bm_obj173_layer7803_3344,y
 	sta bitmap+3344
 	lda #170
+	;ldx obj150_phase
+	ora bm_obj150_layer7505_3345,x
 	ldx obj146_phase
-	ora bm_obj146_layer7602_3345,x
+	ora bm_obj146_layer7592_3345,x
 	ldx obj137_phase
-	ora bm_obj137_layer7648_3345,x
-	;ldy obj155_phase
-	and msk_obj155_layer7797_3345,y
-	ora bm_obj155_layer7797_3345,y
-	ldy obj173_phase
+	ora bm_obj137_layer7641_3345,x
+	ldx obj155_phase
+	and msk_obj155_layer7797_3345,x
+	ora bm_obj155_layer7797_3345,x
+	;ldy obj173_phase
 	and msk_obj173_layer7803_3345,y
 	ora bm_obj173_layer7803_3345,y
 	sta bitmap+3345
 	lda #85
 	ldy obj146_phase
-	ora bm_obj146_layer7602_3346,y
-	;ldx obj137_phase
-	ora bm_obj137_layer7648_3346,x
-	ldx obj155_phase
+	ora bm_obj146_layer7592_3346,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3346,y
+	;ldx obj155_phase
 	and msk_obj155_layer7797_3346,x
 	ora bm_obj155_layer7797_3346,x
 	ldx obj173_phase
@@ -2711,150 +2703,152 @@
 	ora bm_obj173_layer7803_3346,x
 	sta bitmap+3346
 	lda #85
-	;ldy obj146_phase
-	ora bm_obj146_layer7602_3347,y
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3347,y
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3347,x
+	;ldy obj137_phase
+	ora bm_obj137_layer7641_3347,y
 	ldy obj155_phase
 	and msk_obj155_layer7797_3347,y
 	ora bm_obj155_layer7797_3347,y
-	;ldx obj173_phase
-	and msk_obj173_layer7803_3347,x
-	ora bm_obj173_layer7803_3347,x
+	ldy obj173_phase
+	and msk_obj173_layer7803_3347,y
+	ora bm_obj173_layer7803_3347,y
 	sta bitmap+3347
 	lda #174
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3348,x
+	;ldx obj146_phase
+	ora bm_obj146_layer7592_3348,x
 	ldx obj137_phase
-	ora bm_obj137_layer7648_3348,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7797_3348,y
-	ldx obj173_phase
-	and msk_obj173_layer7803_3348,x
-	ora bm_obj173_layer7803_3348,x
+	ora bm_obj137_layer7641_3348,x
+	ldx obj155_phase
+	ora bm_obj155_layer7797_3348,x
+	;ldy obj173_phase
+	and msk_obj173_layer7803_3348,y
+	ora bm_obj173_layer7803_3348,y
 	sta bitmap+3348
 	lda #171
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3349,y
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3349,y
-	;ldx obj173_phase
-	and msk_obj173_layer7803_3349,x
-	ora bm_obj173_layer7803_3349,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3349,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3349,x
+	;ldy obj173_phase
+	and msk_obj173_layer7803_3349,y
+	ora bm_obj173_layer7803_3349,y
 	sta bitmap+3349
 	lda #118
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3350,x
-	;ldy obj137_phase
-	ora bm_obj137_layer7648_3350,y
-	ldy obj173_phase
-	and msk_obj173_layer7803_3350,y
-	ora bm_obj173_layer7803_3350,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3350,y
+	;ldx obj137_phase
+	ora bm_obj137_layer7641_3350,x
+	ldx obj173_phase
+	and msk_obj173_layer7803_3350,x
+	ora bm_obj173_layer7803_3350,x
 	sta bitmap+3350
 	lda #187
-	;ldx obj146_phase
-	ora bm_obj146_layer7602_3351,x
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3351,x
-	;ldy obj173_phase
-	and msk_obj173_layer7803_3351,y
-	ora bm_obj173_layer7803_3351,y
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3351,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3351,y
+	;ldx obj173_phase
+	and msk_obj173_layer7803_3351,x
+	ora bm_obj173_layer7803_3351,x
 	sta bitmap+3351
 	lda #85
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3352,y
-	;ldx obj137_phase
-	ora bm_obj137_layer7648_3352,x
-	ldx obj155_phase
-	and msk_obj155_layer7797_3352,x
-	ora bm_obj155_layer7797_3352,x
-	ldx obj159_phase
-	and msk_obj159_layer7814_3352,x
-	ora bm_obj159_layer7814_3352,x
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3352,x
+	ldy obj155_phase
+	and msk_obj155_layer7797_3352,y
+	ora bm_obj155_layer7797_3352,y
+	ldy obj159_phase
+	and msk_obj159_layer7814_3352,y
+	ora bm_obj159_layer7814_3352,y
 	sta bitmap+3352
 	lda #214
-	;ldy obj141_phase
-	ora bm_obj141_layer7604_3353,y
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3353,y
-	ldy obj155_phase
-	and msk_obj155_layer7797_3353,y
-	ora bm_obj155_layer7797_3353,y
-	;ldx obj159_phase
-	and msk_obj159_layer7814_3353,x
-	ora bm_obj159_layer7814_3353,x
+	;ldx obj141_phase
+	ora bm_obj141_layer7598_3353,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3353,x
+	ldx obj155_phase
+	and msk_obj155_layer7797_3353,x
+	ora bm_obj155_layer7797_3353,x
+	;ldy obj159_phase
+	and msk_obj159_layer7814_3353,y
+	ora bm_obj159_layer7814_3353,y
 	sta bitmap+3353
 	lda #107
-	ldx obj141_phase
-	ora bm_obj141_layer7604_3354,x
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3354,x
-	;ldy obj155_phase
-	and msk_obj155_layer7797_3354,y
-	ora bm_obj155_layer7797_3354,y
-	ldy obj159_phase
-	and msk_obj159_layer7814_3354,y
-	ora bm_obj159_layer7814_3354,y
+	ldy obj141_phase
+	ora bm_obj141_layer7598_3354,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3354,y
+	;ldx obj155_phase
+	and msk_obj155_layer7797_3354,x
+	ora bm_obj155_layer7797_3354,x
+	ldx obj159_phase
+	and msk_obj159_layer7814_3354,x
+	ora bm_obj159_layer7814_3354,x
 	sta bitmap+3354
 	lda #171
-	ldy obj141_phase
-	ora bm_obj141_layer7604_3355,y
-	;ldx obj137_phase
-	ora bm_obj137_layer7648_3355,x
-	ldx obj155_phase
-	and msk_obj155_layer7797_3355,x
-	ora bm_obj155_layer7797_3355,x
-	ldx obj159_phase
-	and msk_obj159_layer7814_3355,x
-	ora bm_obj159_layer7814_3355,x
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3355,x
+	;ldy obj137_phase
+	ora bm_obj137_layer7641_3355,y
+	ldy obj155_phase
+	and msk_obj155_layer7797_3355,y
+	ora bm_obj155_layer7797_3355,y
+	ldy obj159_phase
+	and msk_obj159_layer7814_3355,y
+	ora bm_obj159_layer7814_3355,y
 	sta bitmap+3355
 	lda #245
-	;ldy obj141_phase
-	ora bm_obj141_layer7604_3356,y
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3356,y
-	ldy obj155_phase
-	and msk_obj155_layer7797_3356,y
-	ora bm_obj155_layer7797_3356,y
-	;ldx obj159_phase
-	and msk_obj159_layer7814_3356,x
-	ora bm_obj159_layer7814_3356,x
+	;ldx obj141_phase
+	ora bm_obj141_layer7598_3356,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3356,x
+	ldx obj155_phase
+	and msk_obj155_layer7797_3356,x
+	ora bm_obj155_layer7797_3356,x
+	;ldy obj159_phase
+	and msk_obj159_layer7814_3356,y
+	ora bm_obj159_layer7814_3356,y
 	sta bitmap+3356
 	lda #94
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3357,x
-	;ldy obj155_phase
-	and msk_obj155_layer7797_3357,y
-	ora bm_obj155_layer7797_3357,y
-	ldy obj173_phase
-	ora bm_obj173_layer7803_3357,y
-	ldy obj159_phase
-	and msk_obj159_layer7814_3357,y
-	ora bm_obj159_layer7814_3357,y
+	ldy obj141_phase
+	ora bm_obj141_layer7598_3357,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3357,y
+	;ldx obj155_phase
+	and msk_obj155_layer7797_3357,x
+	ora bm_obj155_layer7797_3357,x
+	ldx obj173_phase
+	ora bm_obj173_layer7803_3357,x
+	ldx obj159_phase
+	and msk_obj159_layer7814_3357,x
+	ora bm_obj159_layer7814_3357,x
 	sta bitmap+3357
 	lda #235
-	;ldx obj137_phase
-	ora bm_obj137_layer7648_3358,x
-	ldx obj155_phase
-	ora bm_obj155_layer7797_3358,x
-	ldx obj173_phase
-	and msk_obj173_layer7803_3358,x
-	ora bm_obj173_layer7803_3358,x
-	;ldy obj159_phase
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3358,x
+	;ldy obj137_phase
+	ora bm_obj137_layer7641_3358,y
+	ldy obj155_phase
+	ora bm_obj155_layer7797_3358,y
+	ldy obj173_phase
+	and msk_obj173_layer7803_3358,y
+	ora bm_obj173_layer7803_3358,y
+	ldy obj159_phase
 	and msk_obj159_layer7814_3358,y
 	ora bm_obj159_layer7814_3358,y
 	sta bitmap+3358
 	lda #121
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3359,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3359,y
-	;ldy obj155_phase
-	ora bm_obj155_layer7797_3359,y
-	;ldx obj173_phase
+	;ldx obj141_phase
+	ora bm_obj141_layer7598_3359,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3359,x
+	ldx obj155_phase
+	ora bm_obj155_layer7797_3359,x
+	ldx obj173_phase
 	and msk_obj173_layer7803_3359,x
 	ora bm_obj173_layer7803_3359,x
-	ldy obj159_phase
+	;ldy obj159_phase
 	ora bm_obj159_layer7814_3359,y
 	ldx obj177_phase
 	ora bm_obj177_layer7827_3359,x
@@ -2865,81 +2859,77 @@
 	sta bitmap+3359
 	lda #190
 	ldx obj141_phase
-	ora bm_obj141_layer7604_3360,x
+	ora bm_obj141_layer7598_3360,x
 	ldx obj140_phase
-	ora bm_obj140_layer7613_3360,x
+	ora bm_obj140_layer7607_3360,x
 	;ldy obj159_phase
 	and msk_obj159_layer7814_3360,y
 	ora bm_obj159_layer7814_3360,y
 	sta bitmap+3360
 	lda #215
 	ldy obj141_phase
-	ora bm_obj141_layer7604_3361,y
+	ora bm_obj141_layer7598_3361,y
 	;ldx obj140_phase
-	ora bm_obj140_layer7613_3361,x
+	ora bm_obj140_layer7607_3361,x
 	ldx obj159_phase
 	and msk_obj159_layer7814_3361,x
 	ora bm_obj159_layer7814_3361,x
 	sta bitmap+3361
 	lda #122
 	;ldy obj141_phase
-	ora bm_obj141_layer7604_3362,y
+	ora bm_obj141_layer7598_3362,y
 	ldy obj140_phase
-	ora bm_obj140_layer7613_3362,y
+	ora bm_obj140_layer7607_3362,y
 	;ldx obj159_phase
 	and msk_obj159_layer7814_3362,x
 	ora bm_obj159_layer7814_3362,x
 	sta bitmap+3362
 	lda #86
 	ldx obj141_phase
-	ora bm_obj141_layer7604_3363,x
+	ora bm_obj141_layer7598_3363,x
 	;ldy obj140_phase
-	ora bm_obj140_layer7613_3363,y
+	ora bm_obj140_layer7607_3363,y
 	ldy obj159_phase
 	and msk_obj159_layer7814_3363,y
 	ora bm_obj159_layer7814_3363,y
 	sta bitmap+3363
 	lda #181
 	;ldx obj141_phase
-	ora bm_obj141_layer7604_3364,x
+	ora bm_obj141_layer7598_3364,x
 	ldx obj140_phase
-	ora bm_obj140_layer7613_3364,x
+	ora bm_obj140_layer7607_3364,x
 	;ldy obj159_phase
 	and msk_obj159_layer7814_3364,y
 	ora bm_obj159_layer7814_3364,y
 	sta bitmap+3364
 	lda #214
 	ldy obj141_phase
-	ora bm_obj141_layer7604_3365,y
+	ora bm_obj141_layer7598_3365,y
 	;ldx obj140_phase
-	ora bm_obj140_layer7613_3365,x
-	ldx obj160_phase
-	ora bm_obj160_layer7663_3365,x
+	ora bm_obj140_layer7607_3365,x
 	ldx obj159_phase
 	and msk_obj159_layer7814_3365,x
 	ora bm_obj159_layer7814_3365,x
 	sta bitmap+3365
 	lda #90
 	;ldy obj141_phase
-	ora bm_obj141_layer7604_3366,y
+	ora bm_obj141_layer7598_3366,y
 	ldy obj140_phase
-	ora bm_obj140_layer7613_3366,y
-	ldy obj160_phase
-	ora bm_obj160_layer7663_3366,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3366,y
+	ora bm_obj140_layer7607_3366,y
 	;ldx obj159_phase
 	and msk_obj159_layer7814_3366,x
 	ora bm_obj159_layer7814_3366,x
-	ldy obj158_phase
-	ora bm_obj158_layer7846_3366,y
+	ldx obj158_phase
+	ora bm_obj158_layer7846_3366,x
 	sta bitmap+3366
 	lda #170
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3367,y
-	ldy obj160_phase
-	ora bm_obj160_layer7663_3367,y
-	;ldx obj159_phase
+	ldx obj141_phase
+	ora bm_obj141_layer7598_3367,x
+	;ldy obj140_phase
+	ora bm_obj140_layer7607_3367,y
+	ldx obj160_phase
+	ora bm_obj160_layer7651_3367,x
+	ldx obj159_phase
 	ora bm_obj159_layer7814_3367,x
 	ldx obj158_phase
 	and msk_obj158_layer7846_3367,x
@@ -2947,10 +2937,10 @@
 	sta bitmap+3367
 	lda #170
 	ldx obj139_phase
-	ora bm_obj139_layer7531_3368,x
-	ldx obj140_phase
-	ora bm_obj140_layer7613_3368,x
-	;ldy obj160_phase
+	ora bm_obj139_layer7520_3368,x
+	;ldy obj140_phase
+	ora bm_obj140_layer7607_3368,y
+	ldy obj160_phase
 	and msk_obj160_layer7760_3368,y
 	ora bm_obj160_layer7760_3368,y
 	ldy obj159_phase
@@ -2958,8 +2948,10 @@
 	ora bm_obj159_layer7814_3368,y
 	sta bitmap+3368
 	lda #213
-	;ldx obj140_phase
-	ora bm_obj140_layer7613_3369,x
+	;ldx obj139_phase
+	ora bm_obj139_layer7520_3369,x
+	ldx obj140_phase
+	ora bm_obj140_layer7607_3369,x
 	ldx obj160_phase
 	and msk_obj160_layer7760_3369,x
 	ora bm_obj160_layer7760_3369,x
@@ -2969,7 +2961,7 @@
 	sta bitmap+3369
 	lda #161
 	ldy obj140_phase
-	ora bm_obj140_layer7613_3370,y
+	ora bm_obj140_layer7607_3370,y
 	;ldx obj160_phase
 	and msk_obj160_layer7760_3370,x
 	ora bm_obj160_layer7760_3370,x
@@ -2979,7 +2971,7 @@
 	sta bitmap+3370
 	lda #168
 	;ldy obj140_phase
-	ora bm_obj140_layer7613_3371,y
+	ora bm_obj140_layer7607_3371,y
 	ldy obj160_phase
 	and msk_obj160_layer7760_3371,y
 	ora bm_obj160_layer7760_3371,y
@@ -2989,24 +2981,22 @@
 	sta bitmap+3371
 	lda #64
 	ldx obj140_phase
-	ora bm_obj140_layer7613_3372,x
+	ora bm_obj140_layer7607_3372,x
 	ldx obj161_phase
 	ora bm_obj161_layer7738_3372,x
 	;ldy obj160_phase
 	ora bm_obj160_layer7760_3372,y
-	ldx obj159_phase
-	and msk_obj159_layer7814_3372,x
-	ora bm_obj159_layer7814_3372,x
+	ldy obj159_phase
+	and msk_obj159_layer7814_3372,y
+	ora bm_obj159_layer7814_3372,y
 	sta bitmap+3372
 	lda #168
-	ldx obj140_phase
-	ora bm_obj140_layer7613_3373,x
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_3373,y
-	ldx obj161_phase
+	ldy obj140_phase
+	ora bm_obj140_layer7607_3373,y
+	;ldx obj161_phase
 	ora bm_obj161_layer7738_3373,x
-	;ldy obj160_phase
-	ora bm_obj160_layer7760_3373,y
+	ldx obj160_phase
+	ora bm_obj160_layer7760_3373,x
 	ldx obj156_phase
 	ora bm_obj156_layer7770_3373,x
 	ldx obj159_phase
@@ -3018,109 +3008,113 @@
 	ora bm_obj158_layer7846_3373,x
 	sta bitmap+3373
 	lda #160
-	ldx obj140_phase
-	ora bm_obj140_layer7613_3374,x
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_3374,y
-	ldx obj159_phase
-	ora bm_obj159_layer7814_3374,x
-	ldx obj157_phase
-	ora bm_obj157_layer7824_3374,x
-	ldx obj158_phase
+	;ldy obj140_phase
+	ora bm_obj140_layer7607_3374,y
+	ldy obj160_phase
+	ora bm_obj160_layer7651_3374,y
+	ldy obj159_phase
+	ora bm_obj159_layer7814_3374,y
+	ldy obj157_phase
+	ora bm_obj157_layer7824_3374,y
+	;ldx obj158_phase
 	and msk_obj158_layer7846_3374,x
 	ora bm_obj158_layer7846_3374,x
 	sta bitmap+3374
 	lda #148
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_3375,y
-	ldy obj157_phase
+	ldx obj140_phase
+	ora bm_obj140_layer7607_3375,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_3375,x
+	;ldy obj157_phase
 	and msk_obj157_layer7824_3375,y
 	ora bm_obj157_layer7824_3375,y
-	;ldx obj158_phase
-	and msk_obj158_layer7846_3375,x
-	ora bm_obj158_layer7846_3375,x
+	ldy obj158_phase
+	and msk_obj158_layer7846_3375,y
+	ora bm_obj158_layer7846_3375,y
 	sta bitmap+3375
 	lda #192
-	ldx obj45_phase
-	ora bm_obj45_layer6957_3376,x
+	ldy obj45_phase
+	ora bm_obj45_layer6957_3376,y
 	ldy obj136_phase
-	ora bm_obj136_layer7506_3376,y
-	ldx obj139_phase
-	ora bm_obj139_layer7531_3376,x
-	ldx obj161_phase
-	and msk_obj161_layer7738_3376,x
-	ora bm_obj161_layer7738_3376,x
-	ldx obj160_phase
+	ora bm_obj136_layer7489_3376,y
+	ldy obj139_phase
+	ora bm_obj139_layer7520_3376,y
+	ldy obj161_phase
+	and msk_obj161_layer7738_3376,y
+	ora bm_obj161_layer7738_3376,y
+	;ldx obj160_phase
 	and msk_obj160_layer7760_3376,x
 	ora bm_obj160_layer7760_3376,x
 	sta bitmap+3376
 	lda #124
-	;ldy obj136_phase
-	ora bm_obj136_layer7506_3377,y
-	ldy obj139_phase
-	ora bm_obj139_layer7531_3377,y
-	ldy obj161_phase
+	ldx obj1_phase
+	ora bm_obj1_layer6902_3377,x
+	ldx obj45_phase
+	ora bm_obj45_layer6957_3377,x
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3377,x
+	ldx obj139_phase
+	ora bm_obj139_layer7520_3377,x
+	;ldy obj161_phase
 	and msk_obj161_layer7738_3377,y
 	ora bm_obj161_layer7738_3377,y
-	;ldx obj160_phase
-	ora bm_obj160_layer7760_3377,x
+	ldy obj160_phase
+	ora bm_obj160_layer7760_3377,y
 	sta bitmap+3377
 	lda #38
-	ldx obj136_phase
-	ora bm_obj136_layer7506_3378,x
-	ldx obj139_phase
-	ora bm_obj139_layer7531_3378,x
-	;ldy obj161_phase
-	and msk_obj161_layer7738_3378,y
-	ora bm_obj161_layer7738_3378,y
-	ldy obj160_phase
-	ora bm_obj160_layer7760_3378,y
+	ldy obj65_phase
+	ora bm_obj65_layer7395_3378,y
+	ldy obj136_phase
+	ora bm_obj136_layer7489_3378,y
+	;ldx obj139_phase
+	ora bm_obj139_layer7520_3378,x
+	ldx obj161_phase
+	and msk_obj161_layer7738_3378,x
+	ora bm_obj161_layer7738_3378,x
+	ldx obj160_phase
+	ora bm_obj160_layer7760_3378,x
 	sta bitmap+3378
 	lda #183
-	ldy obj136_phase
-	ora bm_obj136_layer7506_3379,y
-	;ldx obj139_phase
-	ora bm_obj139_layer7531_3379,x
-	ldx obj161_phase
-	and msk_obj161_layer7738_3379,x
-	ora bm_obj161_layer7738_3379,x
-	ldx obj160_phase
+	;ldy obj136_phase
+	ora bm_obj136_layer7489_3379,y
+	ldy obj139_phase
+	ora bm_obj139_layer7520_3379,y
+	ldy obj161_phase
+	and msk_obj161_layer7738_3379,y
+	ora bm_obj161_layer7738_3379,y
+	;ldx obj160_phase
 	ora bm_obj160_layer7760_3379,x
 	sta bitmap+3379
 	lda #191
-	;ldy obj136_phase
-	ora bm_obj136_layer7506_3380,y
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3380,x
 	ldx obj139_phase
-	ora bm_obj139_layer7531_3380,x
+	ora bm_obj139_layer7520_3380,x
 	ldx obj140_phase
-	ora bm_obj140_layer7613_3380,x
-	ldx obj161_phase
-	and msk_obj161_layer7738_3380,x
-	ora bm_obj161_layer7738_3380,x
+	ora bm_obj140_layer7607_3380,x
+	;ldy obj161_phase
+	and msk_obj161_layer7738_3380,y
+	ora bm_obj161_layer7738_3380,y
 	sta bitmap+3380
 	lda #11
-	;ldy obj136_phase
-	ora bm_obj136_layer7506_3381,y
+	ldy obj136_phase
+	ora bm_obj136_layer7489_3381,y
 	ldy obj139_phase
-	ora bm_obj139_layer7531_3381,y
-	ldy obj140_phase
-	ora bm_obj140_layer7613_3381,y
-	ldy obj160_phase
-	ora bm_obj160_layer7663_3381,y
-	;ldx obj161_phase
+	ora bm_obj139_layer7520_3381,y
+	;ldx obj140_phase
+	ora bm_obj140_layer7607_3381,x
+	ldx obj161_phase
 	ora bm_obj161_layer7738_3381,x
 	ldx obj156_phase
 	ora bm_obj156_layer7770_3381,x
 	sta bitmap+3381
 	lda #255
 	ldx obj136_phase
-	ora bm_obj136_layer7506_3382,x
-	ldx obj139_phase
-	ora bm_obj139_layer7531_3382,x
-	ldx obj140_phase
-	ora bm_obj140_layer7613_3382,x
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_3382,y
+	ora bm_obj136_layer7489_3382,x
+	;ldy obj139_phase
+	ora bm_obj139_layer7520_3382,y
+	ldy obj140_phase
+	ora bm_obj140_layer7607_3382,y
 	ldy obj156_phase
 	and msk_obj156_layer7770_3382,y
 	ora bm_obj156_layer7770_3382,y
@@ -3128,17 +3122,17 @@
 	ora bm_obj157_layer7824_3382,y
 	sta bitmap+3382
 	lda #75
-	ldy obj136_phase
-	ora bm_obj136_layer7506_3383,y
-	;ldx obj140_phase
-	ora bm_obj140_layer7613_3383,x
-	ldx obj160_phase
-	ora bm_obj160_layer7663_3383,x
+	;ldx obj136_phase
+	ora bm_obj136_layer7489_3383,x
+	ldx obj139_phase
+	ora bm_obj139_layer7520_3383,x
+	ldx obj140_phase
+	ora bm_obj140_layer7607_3383,x
 	ldx obj156_phase
 	and msk_obj156_layer7770_3383,x
 	ora bm_obj156_layer7770_3383,x
-	ldx obj157_phase
-	ora bm_obj157_layer7824_3383,x
+	;ldy obj157_phase
+	ora bm_obj157_layer7824_3383,y
 	sta bitmap+3383
 	ldx obj45_phase
 	lda bm_obj45_layer6957_3384,x
@@ -3183,8 +3177,6 @@
 	ldy obj54_phase
 	and msk_obj54_layer7062_3386,y
 	ora bm_obj54_layer7062_3386,y
-	ldy obj65_phase
-	ora bm_obj65_layer7420_3386,y
 	ldy obj153_phase
 	and msk_obj153_layer7656_3386,y
 	ora bm_obj153_layer7656_3386,y
@@ -3199,8 +3191,6 @@
 	ldx obj54_phase
 	and msk_obj54_layer7062_3387,x
 	ora bm_obj54_layer7062_3387,x
-	ldx obj136_phase
-	ora bm_obj136_layer7506_3387,x
 	;ldy obj153_phase
 	and msk_obj153_layer7656_3387,y
 	ora bm_obj153_layer7656_3387,y
@@ -3210,176 +3200,173 @@
 	sta bitmap+3387
 	ldy obj10_phase
 	lda bm_obj10_layer6967_3388,y
-	ldy obj54_phase
-	and msk_obj54_layer7062_3388,y
-	ora bm_obj54_layer7062_3388,y
-	ldy obj65_phase
-	ora bm_obj65_layer7420_3388,y
-	;ldx obj136_phase
-	ora bm_obj136_layer7506_3388,x
+	;ldx obj54_phase
+	and msk_obj54_layer7062_3388,x
+	ora bm_obj54_layer7062_3388,x
+	ldx obj65_phase
+	ora bm_obj65_layer7395_3388,x
 	ldx obj153_phase
 	ora bm_obj153_layer7656_3388,x
 	ldx obj161_phase
 	and msk_obj161_layer7738_3388,x
 	ora bm_obj161_layer7738_3388,x
 	sta bitmap+3388
-	lda #192
-	ldx obj10_phase
-	ora bm_obj10_layer6967_3389,x
-	ldx obj54_phase
-	and msk_obj54_layer7062_3389,x
-	ora bm_obj54_layer7062_3389,x
-	;ldy obj65_phase
-	ora bm_obj65_layer7420_3389,y
+	lda #128
+	;ldy obj10_phase
+	and msk_obj10_layer6967_3389,y
+	ora bm_obj10_layer6967_3389,y
+	ldy obj54_phase
+	and msk_obj54_layer7062_3389,y
+	ora bm_obj54_layer7062_3389,y
 	ldy obj136_phase
-	ora bm_obj136_layer7506_3389,y
-	ldy obj161_phase
-	ora bm_obj161_layer7738_3389,y
-	ldy obj156_phase
-	ora bm_obj156_layer7770_3389,y
+	ora bm_obj136_layer7489_3389,y
+	;ldx obj161_phase
+	ora bm_obj161_layer7738_3389,x
+	ldx obj156_phase
+	ora bm_obj156_layer7770_3389,x
 	sta bitmap+3389
 	lda #64
-	ldy obj10_phase
-	and msk_obj10_layer6967_3390,y
-	ora bm_obj10_layer6967_3390,y
-	;ldx obj54_phase
+	ldx obj10_phase
+	and msk_obj10_layer6967_3390,x
+	ora bm_obj10_layer6967_3390,x
+	ldx obj54_phase
 	ora bm_obj54_layer7062_3390,x
 	ldx obj65_phase
-	ora bm_obj65_layer7420_3390,x
-	ldx obj136_phase
-	ora bm_obj136_layer7506_3390,x
-	ldx obj156_phase
-	and msk_obj156_layer7770_3390,x
-	ora bm_obj156_layer7770_3390,x
+	ora bm_obj65_layer7395_3390,x
+	;ldy obj136_phase
+	ora bm_obj136_layer7489_3390,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_3390,y
+	ora bm_obj156_layer7770_3390,y
 	sta bitmap+3390
 	lda #160
-	;ldy obj10_phase
+	ldy obj10_phase
 	ora bm_obj10_layer6967_3391,y
 	ldy obj54_phase
 	ora bm_obj54_layer7062_3391,y
-	ldy obj65_phase
-	ora bm_obj65_layer7420_3391,y
-	ldy obj136_phase
-	ora bm_obj136_layer7506_3391,y
-	ldy obj104_phase
-	ora bm_obj104_layer7705_3391,y
-	;ldx obj156_phase
+	;ldx obj65_phase
+	ora bm_obj65_layer7395_3391,x
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3391,x
+	ldx obj104_phase
+	ora bm_obj104_layer7705_3391,x
+	ldx obj156_phase
 	and msk_obj156_layer7770_3391,x
 	ora bm_obj156_layer7770_3391,x
 	sta bitmap+3391
 	ldx obj62_phase
 	lda bm_obj62_layer7164_3392,x
-	ldy obj61_phase
-	and msk_obj61_layer7275_3392,y
-	ora bm_obj61_layer7275_3392,y
-	ldy obj60_phase
-	ora bm_obj60_layer7394_3392,y
-	ldy obj56_phase
-	ora bm_obj56_layer7491_3392,y
-	ldy obj100_phase
-	and msk_obj100_layer7596_3392,y
-	ora bm_obj100_layer7596_3392,y
-	ldy obj153_phase
-	ora bm_obj153_layer7656_3392,y
-	sta bitmap+3392
-	ldy obj54_phase
-	lda bm_obj54_layer7062_3393,y
-	;ldx obj62_phase
-	ora bm_obj62_layer7164_3393,x
 	ldx obj61_phase
-	ora bm_obj61_layer7275_3393,x
+	and msk_obj61_layer7275_3392,x
+	ora bm_obj61_layer7275_3392,x
 	ldx obj60_phase
-	ora bm_obj60_layer7394_3393,x
+	ora bm_obj60_layer7394_3392,x
 	ldx obj56_phase
-	ora bm_obj56_layer7491_3393,x
+	ora bm_obj56_layer7491_3392,x
 	ldx obj100_phase
-	and msk_obj100_layer7596_3393,x
-	ora bm_obj100_layer7596_3393,x
+	and msk_obj100_layer7596_3392,x
+	ora bm_obj100_layer7596_3392,x
 	ldx obj153_phase
+	ora bm_obj153_layer7656_3392,x
+	sta bitmap+3392
+	;ldy obj54_phase
+	lda bm_obj54_layer7062_3393,y
+	ldy obj62_phase
+	ora bm_obj62_layer7164_3393,y
+	ldy obj61_phase
+	ora bm_obj61_layer7275_3393,y
+	ldy obj60_phase
+	ora bm_obj60_layer7394_3393,y
+	ldy obj56_phase
+	ora bm_obj56_layer7491_3393,y
+	ldy obj100_phase
+	and msk_obj100_layer7596_3393,y
+	ora bm_obj100_layer7596_3393,y
+	;ldx obj153_phase
 	ora bm_obj153_layer7656_3393,x
 	sta bitmap+3393
-	;ldy obj54_phase
-	lda bm_obj54_layer7062_3394,y
-	ldy obj62_phase
-	ora bm_obj62_layer7164_3394,y
-	ldy obj61_phase
-	and msk_obj61_layer7275_3394,y
-	ora bm_obj61_layer7275_3394,y
-	ldy obj60_phase
-	ora bm_obj60_layer7394_3394,y
-	ldy obj56_phase
-	ora bm_obj56_layer7491_3394,y
-	ldy obj100_phase
+	ldx obj54_phase
+	lda bm_obj54_layer7062_3394,x
+	ldx obj62_phase
+	ora bm_obj62_layer7164_3394,x
+	ldx obj61_phase
+	and msk_obj61_layer7275_3394,x
+	ora bm_obj61_layer7275_3394,x
+	ldx obj60_phase
+	ora bm_obj60_layer7394_3394,x
+	ldx obj56_phase
+	ora bm_obj56_layer7491_3394,x
+	;ldy obj100_phase
 	and msk_obj100_layer7596_3394,y
 	ora bm_obj100_layer7596_3394,y
-	;ldx obj153_phase
-	ora bm_obj153_layer7656_3394,x
+	ldy obj153_phase
+	ora bm_obj153_layer7656_3394,y
 	sta bitmap+3394
-	ldx obj54_phase
-	lda bm_obj54_layer7062_3395,x
-	ldx obj62_phase
-	and msk_obj62_layer7164_3395,x
-	ora bm_obj62_layer7164_3395,x
-	ldx obj61_phase
-	ora bm_obj61_layer7275_3395,x
-	ldx obj60_phase
-	ora bm_obj60_layer7394_3395,x
-	ldx obj56_phase
-	ora bm_obj56_layer7491_3395,x
-	;ldy obj100_phase
-	and msk_obj100_layer7596_3395,y
-	ora bm_obj100_layer7596_3395,y
-	ldy obj153_phase
-	ora bm_obj153_layer7656_3395,y
-	sta bitmap+3395
 	ldy obj54_phase
-	lda bm_obj54_layer7062_3396,y
+	lda bm_obj54_layer7062_3395,y
 	ldy obj62_phase
-	and msk_obj62_layer7164_3396,y
-	ora bm_obj62_layer7164_3396,y
+	and msk_obj62_layer7164_3395,y
+	ora bm_obj62_layer7164_3395,y
 	ldy obj61_phase
-	ora bm_obj61_layer7275_3396,y
+	ora bm_obj61_layer7275_3395,y
 	ldy obj60_phase
-	ora bm_obj60_layer7394_3396,y
+	ora bm_obj60_layer7394_3395,y
 	;ldx obj56_phase
-	ora bm_obj56_layer7491_3396,x
+	ora bm_obj56_layer7491_3395,x
 	ldx obj100_phase
-	and msk_obj100_layer7596_3396,x
-	ora bm_obj100_layer7596_3396,x
+	and msk_obj100_layer7596_3395,x
+	ora bm_obj100_layer7596_3395,x
 	ldx obj153_phase
-	ora bm_obj153_layer7656_3396,x
-	sta bitmap+3396
+	ora bm_obj153_layer7656_3395,x
+	sta bitmap+3395
 	ldx obj54_phase
-	lda bm_obj54_layer7062_3397,x
+	lda bm_obj54_layer7062_3396,x
 	ldx obj62_phase
-	and msk_obj62_layer7164_3397,x
-	ora bm_obj62_layer7164_3397,x
+	and msk_obj62_layer7164_3396,x
+	ora bm_obj62_layer7164_3396,x
 	ldx obj61_phase
-	ora bm_obj61_layer7275_3397,x
+	ora bm_obj61_layer7275_3396,x
 	;ldy obj60_phase
-	ora bm_obj60_layer7394_3397,y
+	ora bm_obj60_layer7394_3396,y
 	ldy obj56_phase
-	ora bm_obj56_layer7491_3397,y
+	ora bm_obj56_layer7491_3396,y
 	ldy obj100_phase
-	and msk_obj100_layer7596_3397,y
-	ora bm_obj100_layer7596_3397,y
-	ldy obj103_phase
-	ora bm_obj103_layer7614_3397,y
+	and msk_obj100_layer7596_3396,y
+	ora bm_obj100_layer7596_3396,y
 	ldy obj153_phase
-	ora bm_obj153_layer7656_3397,y
-	ldy obj104_phase
-	ora bm_obj104_layer7705_3397,y
-	ldy obj161_phase
-	ora bm_obj161_layer7738_3397,y
-	ldy obj156_phase
-	ora bm_obj156_layer7770_3397,y
-	sta bitmap+3397
+	ora bm_obj153_layer7656_3396,y
+	sta bitmap+3396
 	ldy obj54_phase
-	lda bm_obj54_layer7062_3398,y
+	lda bm_obj54_layer7062_3397,y
 	ldy obj62_phase
+	and msk_obj62_layer7164_3397,y
+	ora bm_obj62_layer7164_3397,y
+	;ldx obj61_phase
+	ora bm_obj61_layer7275_3397,x
+	ldx obj60_phase
+	ora bm_obj60_layer7394_3397,x
+	ldx obj56_phase
+	ora bm_obj56_layer7491_3397,x
+	ldx obj100_phase
+	and msk_obj100_layer7596_3397,x
+	ora bm_obj100_layer7596_3397,x
+	ldx obj103_phase
+	ora bm_obj103_layer7614_3397,x
+	ldx obj153_phase
+	ora bm_obj153_layer7656_3397,x
+	ldx obj104_phase
+	ora bm_obj104_layer7705_3397,x
+	ldx obj161_phase
+	ora bm_obj161_layer7738_3397,x
+	ldx obj156_phase
+	ora bm_obj156_layer7770_3397,x
+	sta bitmap+3397
+	ldx obj54_phase
+	lda bm_obj54_layer7062_3398,x
+	;ldy obj62_phase
 	and msk_obj62_layer7164_3398,y
 	ora bm_obj62_layer7164_3398,y
-	;ldx obj61_phase
+	ldx obj61_phase
 	ora bm_obj61_layer7275_3398,x
 	ldx obj60_phase
 	ora bm_obj60_layer7394_3398,x
@@ -3580,23 +3567,23 @@
 	ora bm_obj169_layer7589_3644,y
 	ldy obj166_phase
 	ora bm_obj166_layer7636_3644,y
-	ldy obj168_phase
-	ora bm_obj168_layer7692_3644,y
-	ldy obj167_phase
-	and msk_obj167_layer7716_3644,y
-	ora bm_obj167_layer7716_3644,y
+	ldx obj168_phase
+	ora bm_obj168_layer7692_3644,x
+	ldx obj167_phase
+	and msk_obj167_layer7716_3644,x
+	ora bm_obj167_layer7716_3644,x
 	sta bitmap+3644
-	ldy obj78_phase
-	lda bm_obj78_layer7090_3645,y
-	ldy obj74_phase
-	ora bm_obj74_layer7196_3645,y
-	ldy obj118_phase
-	ora bm_obj118_layer7301_3645,y
-	ldy obj170_phase
-	ora bm_obj170_layer7509_3645,y
-	;ldx obj165_phase
+	ldx obj78_phase
+	lda bm_obj78_layer7090_3645,x
+	ldx obj74_phase
+	ora bm_obj74_layer7196_3645,x
+	ldx obj118_phase
+	ora bm_obj118_layer7301_3645,x
+	ldx obj170_phase
+	ora bm_obj170_layer7509_3645,x
+	ldx obj165_phase
 	ora bm_obj165_layer7533_3645,x
-	ldy obj166_phase
+	;ldy obj166_phase
 	ora bm_obj166_layer7636_3645,y
 	ldy obj167_phase
 	and msk_obj167_layer7716_3645,y
@@ -3631,107 +3618,104 @@
 	and msk_obj167_layer7716_3647,x
 	ora bm_obj167_layer7716_3647,x
 	sta bitmap+3647
-	ldx obj79_phase
-	lda bm_obj79_layer6998_3648,x
-	ldy obj149_phase
-	ora bm_obj149_layer7457_3648,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3648,y
-	ldy obj168_phase
-	and msk_obj168_layer7692_3648,y
-	ora bm_obj168_layer7692_3648,y
-	ldy obj164_phase
-	ora bm_obj164_layer7739_3648,y
-	ldy obj173_phase
-	ora bm_obj173_layer7803_3648,y
-	sta bitmap+3648
-	;ldx obj79_phase
-	lda bm_obj79_layer6998_3649,x
+	ldy obj79_phase
+	lda bm_obj79_layer6998_3648,y
 	ldx obj149_phase
-	ora bm_obj149_layer7457_3649,x
+	ora bm_obj149_layer7451_3648,x
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3649,x
+	ora bm_obj150_layer7505_3648,x
 	ldx obj168_phase
-	and msk_obj168_layer7692_3649,x
-	ora bm_obj168_layer7692_3649,x
+	and msk_obj168_layer7692_3648,x
+	ora bm_obj168_layer7692_3648,x
 	ldx obj164_phase
-	ora bm_obj164_layer7739_3649,x
-	;ldy obj173_phase
-	ora bm_obj173_layer7803_3649,y
+	ora bm_obj164_layer7739_3648,x
+	ldx obj173_phase
+	ora bm_obj173_layer7803_3648,x
+	sta bitmap+3648
+	;ldy obj79_phase
+	lda bm_obj79_layer6998_3649,y
+	ldy obj149_phase
+	ora bm_obj149_layer7451_3649,y
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3649,y
+	ldy obj168_phase
+	and msk_obj168_layer7692_3649,y
+	ora bm_obj168_layer7692_3649,y
+	ldy obj164_phase
+	ora bm_obj164_layer7739_3649,y
+	;ldx obj173_phase
+	ora bm_obj173_layer7803_3649,x
 	sta bitmap+3649
 	lda #2
-	ldy obj79_phase
-	and msk_obj79_layer6998_3650,y
-	ora bm_obj79_layer6998_3650,y
-	ldy obj149_phase
-	ora bm_obj149_layer7457_3650,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3650,y
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3650,y
-	ldy obj168_phase
-	and msk_obj168_layer7692_3650,y
-	ora bm_obj168_layer7692_3650,y
-	ldy obj167_phase
-	ora bm_obj167_layer7716_3650,y
-	;ldx obj164_phase
-	ora bm_obj164_layer7739_3650,x
-	ldx obj176_phase
-	ora bm_obj176_layer7787_3650,x
-	ldx obj173_phase
-	ora bm_obj173_layer7803_3650,x
-	ldx obj177_phase
-	ora bm_obj177_layer7827_3650,x
-	sta bitmap+3650
 	ldx obj79_phase
-	lda bm_obj79_layer6998_3651,x
-	ldx obj78_phase
-	ora bm_obj78_layer7090_3651,x
+	and msk_obj79_layer6998_3650,x
+	ora bm_obj79_layer6998_3650,x
 	ldx obj149_phase
-	ora bm_obj149_layer7457_3651,x
+	ora bm_obj149_layer7451_3650,x
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3651,x
+	ora bm_obj150_layer7505_3650,x
 	ldx obj168_phase
-	ora bm_obj168_layer7692_3651,x
-	;ldy obj167_phase
-	and msk_obj167_layer7716_3651,y
-	ora bm_obj167_layer7716_3651,y
-	ldx obj176_phase
-	ora bm_obj176_layer7787_3651,x
-	ldx obj177_phase
-	ora bm_obj177_layer7827_3651,x
+	and msk_obj168_layer7692_3650,x
+	ora bm_obj168_layer7692_3650,x
+	ldx obj167_phase
+	ora bm_obj167_layer7716_3650,x
+	;ldy obj164_phase
+	ora bm_obj164_layer7739_3650,y
+	ldy obj176_phase
+	ora bm_obj176_layer7787_3650,y
+	ldy obj173_phase
+	ora bm_obj173_layer7803_3650,y
+	ldy obj177_phase
+	ora bm_obj177_layer7827_3650,y
+	sta bitmap+3650
+	ldy obj79_phase
+	lda bm_obj79_layer6998_3651,y
+	ldy obj78_phase
+	ora bm_obj78_layer7090_3651,y
+	ldy obj149_phase
+	ora bm_obj149_layer7451_3651,y
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3651,y
+	ldy obj168_phase
+	ora bm_obj168_layer7692_3651,y
+	;ldx obj167_phase
+	and msk_obj167_layer7716_3651,x
+	ora bm_obj167_layer7716_3651,x
+	ldy obj176_phase
+	ora bm_obj176_layer7787_3651,y
+	ldy obj177_phase
+	ora bm_obj177_layer7827_3651,y
 	sta bitmap+3651
 	lda #1
-	ldx obj79_phase
-	ora bm_obj79_layer6998_3652,x
-	ldx obj78_phase
-	ora bm_obj78_layer7090_3652,x
-	ldx obj149_phase
-	ora bm_obj149_layer7457_3652,x
-	ldx obj150_phase
-	ora bm_obj150_layer7517_3652,x
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3652,x
-	;ldy obj167_phase
-	and msk_obj167_layer7716_3652,y
-	ora bm_obj167_layer7716_3652,y
-	ldy obj176_phase
-	and msk_obj176_layer7787_3652,y
-	ora bm_obj176_layer7787_3652,y
-	ldy obj177_phase
-	ora bm_obj177_layer7827_3652,y
+	ldy obj79_phase
+	ora bm_obj79_layer6998_3652,y
+	ldy obj78_phase
+	ora bm_obj78_layer7090_3652,y
+	ldy obj149_phase
+	ora bm_obj149_layer7451_3652,y
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3652,y
+	;ldx obj167_phase
+	and msk_obj167_layer7716_3652,x
+	ora bm_obj167_layer7716_3652,x
+	ldx obj176_phase
+	and msk_obj176_layer7787_3652,x
+	ora bm_obj176_layer7787_3652,x
+	ldx obj177_phase
+	ora bm_obj177_layer7827_3652,x
 	sta bitmap+3652
 	lda #1
-	ldy obj79_phase
-	ora bm_obj79_layer6998_3653,y
-	ldy obj78_phase
-	ora bm_obj78_layer7090_3653,y
-	ldy obj149_phase
-	ora bm_obj149_layer7457_3653,y
-	ldy obj150_phase
-	ora bm_obj150_layer7517_3653,y
-	;ldx obj146_phase
-	ora bm_obj146_layer7602_3653,x
+	ldx obj79_phase
+	and msk_obj79_layer6998_3653,x
+	ora bm_obj79_layer6998_3653,x
+	ldx obj78_phase
+	ora bm_obj78_layer7090_3653,x
+	ldx obj149_phase
+	ora bm_obj149_layer7451_3653,x
+	;ldy obj150_phase
+	ora bm_obj150_layer7505_3653,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3653,y
 	ldy obj167_phase
 	and msk_obj167_layer7716_3653,y
 	ora bm_obj167_layer7716_3653,y
@@ -3739,15 +3723,15 @@
 	and msk_obj176_layer7787_3653,y
 	ora bm_obj176_layer7787_3653,y
 	sta bitmap+3653
-	lda #36
+	lda #4
 	ldy obj79_phase
 	ora bm_obj79_layer6998_3654,y
 	ldy obj78_phase
 	ora bm_obj78_layer7090_3654,y
-	ldy obj149_phase
-	ora bm_obj149_layer7457_3654,y
-	;ldx obj146_phase
-	ora bm_obj146_layer7602_3654,x
+	;ldx obj149_phase
+	ora bm_obj149_layer7451_3654,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3654,x
 	ldx obj167_phase
 	and msk_obj167_layer7716_3654,x
 	ora bm_obj167_layer7716_3654,x
@@ -3755,35 +3739,37 @@
 	and msk_obj176_layer7787_3654,x
 	ora bm_obj176_layer7787_3654,x
 	sta bitmap+3654
+	ldx obj80_phase
+	lda bm_obj80_layer6901_3655,x
 	ldx obj79_phase
-	lda bm_obj79_layer6998_3655,x
-	ldx obj78_phase
-	ora bm_obj78_layer7090_3655,x
-	;ldy obj149_phase
-	ora bm_obj149_layer7457_3655,y
+	ora bm_obj79_layer6998_3655,x
+	;ldy obj78_phase
+	ora bm_obj78_layer7090_3655,y
+	ldx obj149_phase
+	ora bm_obj149_layer7451_3655,x
 	ldx obj150_phase
-	ora bm_obj150_layer7517_3655,x
+	ora bm_obj150_layer7505_3655,x
 	ldy obj146_phase
-	ora bm_obj146_layer7602_3655,y
-	ldy obj167_phase
-	and msk_obj167_layer7716_3655,y
-	ora bm_obj167_layer7716_3655,y
-	ldy obj176_phase
-	and msk_obj176_layer7787_3655,y
-	ora bm_obj176_layer7787_3655,y
+	ora bm_obj146_layer7592_3655,y
+	ldx obj167_phase
+	and msk_obj167_layer7716_3655,x
+	ora bm_obj167_layer7716_3655,x
+	ldx obj176_phase
+	and msk_obj176_layer7787_3655,x
+	ora bm_obj176_layer7787_3655,x
 	sta bitmap+3655
 	lda #149
-	;ldx obj150_phase
-	ora bm_obj150_layer7517_3656,x
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3656,y
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3656,x
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3656,y
 	ldx obj173_phase
 	and msk_obj173_layer7803_3656,x
 	ora bm_obj173_layer7803_3656,x
 	sta bitmap+3656
 	lda #5
 	;ldy obj146_phase
-	ora bm_obj146_layer7602_3657,y
+	ora bm_obj146_layer7592_3657,y
 	;ldx obj173_phase
 	and msk_obj173_layer7803_3657,x
 	ora bm_obj173_layer7803_3657,x
@@ -3791,8 +3777,10 @@
 	ora bm_obj177_layer7827_3657,x
 	sta bitmap+3657
 	lda #180
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3658,x
 	;ldy obj146_phase
-	ora bm_obj146_layer7602_3658,y
+	ora bm_obj146_layer7592_3658,y
 	ldx obj173_phase
 	ora bm_obj173_layer7803_3658,x
 	ldx obj177_phase
@@ -3801,180 +3789,172 @@
 	sta bitmap+3658
 	lda #4
 	;ldy obj146_phase
-	ora bm_obj146_layer7602_3659,y
+	ora bm_obj146_layer7592_3659,y
 	;ldx obj177_phase
 	and msk_obj177_layer7827_3659,x
 	ora bm_obj177_layer7827_3659,x
 	sta bitmap+3659
 	lda #116
 	;ldy obj146_phase
-	ora bm_obj146_layer7602_3660,y
+	ora bm_obj146_layer7592_3660,y
 	;ldx obj177_phase
 	and msk_obj177_layer7827_3660,x
 	ora bm_obj177_layer7827_3660,x
 	sta bitmap+3660
 	lda #10
-	ldx obj164_phase
-	ora bm_obj164_layer7601_3661,x
 	;ldy obj146_phase
-	ora bm_obj146_layer7602_3661,y
+	ora bm_obj146_layer7592_3661,y
 	ldy obj176_phase
 	ora bm_obj176_layer7787_3661,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3661,y
-	ora bm_obj177_layer7827_3661,y
+	;ldx obj177_phase
+	and msk_obj177_layer7827_3661,x
+	ora bm_obj177_layer7827_3661,x
 	sta bitmap+3661
 	lda #169
-	;ldx obj164_phase
-	ora bm_obj164_layer7601_3662,x
 	ldx obj146_phase
-	ora bm_obj146_layer7602_3662,x
-	ldx obj176_phase
-	ora bm_obj176_layer7787_3662,x
-	;ldy obj177_phase
-	and msk_obj177_layer7827_3662,y
-	ora bm_obj177_layer7827_3662,y
+	ora bm_obj146_layer7592_3662,x
+	;ldy obj176_phase
+	ora bm_obj176_layer7787_3662,y
+	ldx obj177_phase
+	and msk_obj177_layer7827_3662,x
+	ora bm_obj177_layer7827_3662,x
 	sta bitmap+3662
 	lda #169
-	ldy obj164_phase
-	ora bm_obj164_layer7601_3663,y
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3663,y
-	;ldx obj176_phase
-	ora bm_obj176_layer7787_3663,x
-	ldx obj177_phase
-	and msk_obj177_layer7827_3663,x
-	ora bm_obj177_layer7827_3663,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3663,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3663,x
+	;ldy obj176_phase
+	ora bm_obj176_layer7787_3663,y
+	ldy obj177_phase
+	and msk_obj177_layer7827_3663,y
+	ora bm_obj177_layer7827_3663,y
 	sta bitmap+3663
 	lda #90
-	;ldy obj146_phase
-	ora bm_obj146_layer7602_3664,y
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3664,y
-	ldy obj173_phase
-	and msk_obj173_layer7803_3664,y
-	ora bm_obj173_layer7803_3664,y
-	;ldx obj177_phase
-	ora bm_obj177_layer7827_3664,x
+	;ldx obj146_phase
+	ora bm_obj146_layer7592_3664,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3664,x
+	ldx obj173_phase
+	and msk_obj173_layer7803_3664,x
+	ora bm_obj173_layer7803_3664,x
+	;ldy obj177_phase
+	ora bm_obj177_layer7827_3664,y
 	sta bitmap+3664
 	lda #90
-	ldx obj146_phase
-	ora bm_obj146_layer7602_3665,x
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3665,x
-	;ldy obj173_phase
-	ora bm_obj173_layer7803_3665,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3665,y
-	ora bm_obj177_layer7827_3665,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3665,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3665,y
+	;ldx obj173_phase
+	ora bm_obj173_layer7803_3665,x
+	ldx obj177_phase
+	and msk_obj177_layer7827_3665,x
+	ora bm_obj177_layer7827_3665,x
 	sta bitmap+3665
 	lda #149
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3666,y
-	;ldx obj137_phase
-	ora bm_obj137_layer7648_3666,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3666,x
-	ldx obj177_phase
-	and msk_obj177_layer7827_3666,x
-	ora bm_obj177_layer7827_3666,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3666,x
+	;ldy obj137_phase
+	ora bm_obj137_layer7641_3666,y
+	ldy obj177_phase
+	and msk_obj177_layer7827_3666,y
+	ora bm_obj177_layer7827_3666,y
 	sta bitmap+3666
 	lda #170
-	;ldy obj146_phase
-	ora bm_obj146_layer7602_3667,y
-	ldy obj137_phase
-	ora bm_obj137_layer7648_3667,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3667,y
-	;ldx obj177_phase
-	and msk_obj177_layer7827_3667,x
-	ora bm_obj177_layer7827_3667,x
+	;ldx obj146_phase
+	ora bm_obj146_layer7592_3667,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3667,x
+	;ldy obj177_phase
+	and msk_obj177_layer7827_3667,y
+	ora bm_obj177_layer7827_3667,y
 	sta bitmap+3667
 	lda #87
-	ldx obj137_phase
-	ora bm_obj137_layer7648_3668,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3668,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3668,y
-	ora bm_obj177_layer7827_3668,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3668,y
+	;ldx obj137_phase
+	ora bm_obj137_layer7641_3668,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3668,x
+	ldx obj177_phase
+	and msk_obj177_layer7827_3668,x
+	ora bm_obj177_layer7827_3668,x
 	sta bitmap+3668
 	lda #149
-	ldy obj164_phase
-	ora bm_obj164_layer7601_3669,y
-	;ldx obj137_phase
-	ora bm_obj137_layer7648_3669,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3669,x
-	ldx obj177_phase
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3669,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3669,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_3669,y
+	;ldx obj177_phase
 	and msk_obj177_layer7827_3669,x
 	ora bm_obj177_layer7827_3669,x
 	ldx obj178_phase
 	ora bm_obj178_layer7853_3669,x
 	sta bitmap+3669
 	lda #95
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_3670,y
-	ldy obj173_phase
-	ora bm_obj173_layer7656_3670,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3670,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3670,y
-	ora bm_obj177_layer7827_3670,y
-	;ldx obj178_phase
-	ora bm_obj178_layer7853_3670,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3670,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3670,x
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_3670,y
+	ldx obj177_phase
+	and msk_obj177_layer7827_3670,x
+	ora bm_obj177_layer7827_3670,x
+	ldy obj178_phase
+	ora bm_obj178_layer7853_3670,y
 	sta bitmap+3670
 	lda #42
-	ldx obj173_phase
-	ora bm_obj173_layer7656_3671,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3671,x
 	ldx obj155_phase
-	ora bm_obj155_layer7688_3671,x
-	;ldy obj177_phase
-	and msk_obj177_layer7827_3671,y
-	ora bm_obj177_layer7827_3671,y
-	ldy obj178_phase
+	ora bm_obj155_layer7674_3671,x
+	ldx obj177_phase
+	and msk_obj177_layer7827_3671,x
+	ora bm_obj177_layer7827_3671,x
+	;ldy obj178_phase
 	and msk_obj178_layer7853_3671,y
 	ora bm_obj178_layer7853_3671,y
 	sta bitmap+3671
 	lda #174
 	ldy obj137_phase
-	ora bm_obj137_layer7648_3672,y
-	;ldx obj155_phase
-	ora bm_obj155_layer7688_3672,x
-	ldx obj173_phase
-	ora bm_obj173_layer7803_3672,x
-	ldx obj177_phase
+	ora bm_obj137_layer7641_3672,y
+	ldy obj173_phase
+	ora bm_obj173_layer7803_3672,y
+	;ldx obj177_phase
 	ora bm_obj177_layer7827_3672,x
-	ldx obj158_phase
-	and msk_obj158_layer7846_3672,x
-	ora bm_obj158_layer7846_3672,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_3672,x
-	ora bm_obj178_layer7853_3672,x
+	ldy obj158_phase
+	and msk_obj158_layer7846_3672,y
+	ora bm_obj158_layer7846_3672,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_3672,y
+	ora bm_obj178_layer7853_3672,y
 	sta bitmap+3672
 	lda #246
-	;ldy obj137_phase
-	ora bm_obj137_layer7648_3673,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3673,y
 	ldy obj155_phase
-	ora bm_obj155_layer7688_3673,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3673,y
-	ora bm_obj177_layer7827_3673,y
-	ldy obj158_phase
-	and msk_obj158_layer7846_3673,y
-	ora bm_obj158_layer7846_3673,y
-	;ldx obj178_phase
+	ora bm_obj155_layer7674_3673,y
+	;ldx obj177_phase
+	and msk_obj177_layer7827_3673,x
+	ora bm_obj177_layer7827_3673,x
+	ldx obj158_phase
+	and msk_obj158_layer7846_3673,x
+	ora bm_obj158_layer7846_3673,x
+	ldx obj178_phase
 	ora bm_obj178_layer7853_3673,x
 	sta bitmap+3673
 	lda #191
 	ldx obj137_phase
-	ora bm_obj137_layer7648_3674,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3674,x
-	ldx obj177_phase
-	ora bm_obj177_layer7827_3674,x
-	;ldy obj158_phase
+	ora bm_obj137_layer7641_3674,x
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_3674,y
+	ldy obj177_phase
+	ora bm_obj177_layer7827_3674,y
+	ldy obj158_phase
 	and msk_obj158_layer7846_3674,y
 	ora bm_obj158_layer7846_3674,y
 	ldy obj178_phase
@@ -3982,124 +3962,132 @@
 	ora bm_obj178_layer7853_3674,y
 	sta bitmap+3674
 	lda #218
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3675,y
-	;ldx obj177_phase
+	;ldx obj137_phase
+	ora bm_obj137_layer7641_3675,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3675,x
+	ldx obj177_phase
 	ora bm_obj177_layer7827_3675,x
 	ldx obj158_phase
 	and msk_obj158_layer7846_3675,x
 	ora bm_obj158_layer7846_3675,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_3675,x
-	ora bm_obj178_layer7853_3675,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_3675,y
+	ora bm_obj178_layer7853_3675,y
 	sta bitmap+3675
 	lda #255
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3676,y
-	ldy obj177_phase
-	ora bm_obj177_layer7827_3676,y
-	ldy obj158_phase
-	and msk_obj158_layer7846_3676,y
-	ora bm_obj158_layer7846_3676,y
-	;ldx obj178_phase
-	and msk_obj178_layer7853_3676,x
-	ora bm_obj178_layer7853_3676,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3676,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3676,x
+	ldx obj177_phase
+	ora bm_obj177_layer7827_3676,x
+	ldx obj158_phase
+	and msk_obj158_layer7846_3676,x
+	ora bm_obj158_layer7846_3676,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_3676,y
+	ora bm_obj178_layer7853_3676,y
 	sta bitmap+3676
 	lda #109
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3677,x
-	;ldy obj158_phase
-	ora bm_obj158_layer7846_3677,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_3677,y
-	ora bm_obj178_layer7853_3677,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_3677,y
+	;ldx obj158_phase
+	ora bm_obj158_layer7846_3677,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_3677,x
+	ora bm_obj178_layer7853_3677,x
 	sta bitmap+3677
 	lda #223
-	;ldx obj155_phase
-	ora bm_obj155_layer7688_3678,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_3678,x
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_3678,y
 	ldx obj158_phase
 	ora bm_obj158_layer7846_3678,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3678,y
-	ora bm_obj178_layer7853_3678,y
+	ldx obj178_phase
+	and msk_obj178_layer7853_3678,x
+	ora bm_obj178_layer7853_3678,x
 	sta bitmap+3678
 	lda #237
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3679,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_3679,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3679,y
-	ora bm_obj178_layer7853_3679,y
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_3679,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_3679,y
+	;ldx obj178_phase
+	and msk_obj178_layer7853_3679,x
+	ora bm_obj178_layer7853_3679,x
 	sta bitmap+3679
 	lda #213
-	ldy obj160_phase
-	ora bm_obj160_layer7663_3680,y
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_3680,x
-	ldx obj158_phase
-	and msk_obj158_layer7846_3680,x
-	ora bm_obj158_layer7846_3680,x
+	ldx obj140_phase
+	ora bm_obj140_layer7607_3680,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_3680,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3680,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_3680,y
+	ldy obj158_phase
+	and msk_obj158_layer7846_3680,y
+	ora bm_obj158_layer7846_3680,y
 	sta bitmap+3680
 	lda #170
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_3681,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3681,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_3681,y
-	;ldx obj158_phase
+	ldy obj160_phase
+	ora bm_obj160_layer7651_3681,y
+	;ldx obj155_phase
+	ora bm_obj155_layer7674_3681,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_3681,x
+	ldx obj158_phase
 	and msk_obj158_layer7846_3681,x
 	ora bm_obj158_layer7846_3681,x
 	sta bitmap+3681
 	lda #212
-	ldx obj160_phase
-	ora bm_obj160_layer7663_3682,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_3682,y
-	ldy obj158_phase
-	and msk_obj158_layer7846_3682,y
-	ora bm_obj158_layer7846_3682,y
+	;ldy obj160_phase
+	ora bm_obj160_layer7651_3682,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_3682,y
+	;ldx obj158_phase
+	and msk_obj158_layer7846_3682,x
+	ora bm_obj158_layer7846_3682,x
 	sta bitmap+3682
 	lda #210
-	;ldx obj160_phase
-	ora bm_obj160_layer7663_3683,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_3683,x
-	;ldy obj158_phase
+	ldx obj160_phase
+	ora bm_obj160_layer7651_3683,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_3683,y
+	ldy obj158_phase
 	and msk_obj158_layer7846_3683,y
 	ora bm_obj158_layer7846_3683,y
 	sta bitmap+3683
 	lda #170
-	ldy obj160_phase
-	ora bm_obj160_layer7663_3684,y
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_3684,x
-	ldx obj158_phase
-	and msk_obj158_layer7846_3684,x
-	ora bm_obj158_layer7846_3684,x
+	;ldx obj160_phase
+	ora bm_obj160_layer7651_3684,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_3684,x
+	;ldy obj158_phase
+	and msk_obj158_layer7846_3684,y
+	ora bm_obj158_layer7846_3684,y
 	sta bitmap+3684
 	lda #245
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_3685,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_3685,y
-	;ldx obj158_phase
+	ldy obj160_phase
+	ora bm_obj160_layer7651_3685,y
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_3685,x
+	ldx obj158_phase
 	and msk_obj158_layer7846_3685,x
 	ora bm_obj158_layer7846_3685,x
 	sta bitmap+3685
 	lda #164
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_3686,y
+	;ldy obj160_phase
+	ora bm_obj160_layer7651_3686,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_3686,y
 	;ldx obj158_phase
 	and msk_obj158_layer7846_3686,x
 	ora bm_obj158_layer7846_3686,x
 	sta bitmap+3686
 	lda #250
 	;ldy obj159_phase
-	ora bm_obj159_layer7689_3687,y
+	ora bm_obj159_layer7675_3687,y
 	;ldx obj158_phase
 	and msk_obj158_layer7846_3687,x
 	ora bm_obj158_layer7846_3687,x
@@ -4108,7 +4096,7 @@
 	sta bitmap+3687
 	lda #82
 	ldy obj160_phase
-	ora bm_obj160_layer7663_3688,y
+	ora bm_obj160_layer7651_3688,y
 	ldy obj157_phase
 	and msk_obj157_layer7824_3688,y
 	ora bm_obj157_layer7824_3688,y
@@ -4118,7 +4106,7 @@
 	sta bitmap+3688
 	lda #149
 	ldx obj160_phase
-	ora bm_obj160_layer7663_3689,x
+	ora bm_obj160_layer7651_3689,x
 	;ldy obj157_phase
 	and msk_obj157_layer7824_3689,y
 	ora bm_obj157_layer7824_3689,y
@@ -4128,7 +4116,7 @@
 	sta bitmap+3689
 	lda #170
 	;ldx obj160_phase
-	ora bm_obj160_layer7663_3690,x
+	ora bm_obj160_layer7651_3690,x
 	ldx obj157_phase
 	and msk_obj157_layer7824_3690,x
 	ora bm_obj157_layer7824_3690,x
@@ -4138,7 +4126,7 @@
 	sta bitmap+3690
 	lda #69
 	ldy obj160_phase
-	ora bm_obj160_layer7663_3691,y
+	ora bm_obj160_layer7651_3691,y
 	;ldx obj157_phase
 	and msk_obj157_layer7824_3691,x
 	ora bm_obj157_layer7824_3691,x
@@ -4148,7 +4136,7 @@
 	sta bitmap+3691
 	lda #186
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_3692,y
+	ora bm_obj160_layer7651_3692,y
 	ldy obj157_phase
 	and msk_obj157_layer7824_3692,y
 	ora bm_obj157_layer7824_3692,y
@@ -4158,7 +4146,7 @@
 	sta bitmap+3692
 	lda #14
 	ldx obj160_phase
-	ora bm_obj160_layer7663_3693,x
+	ora bm_obj160_layer7651_3693,x
 	;ldy obj157_phase
 	and msk_obj157_layer7824_3693,y
 	ora bm_obj157_layer7824_3693,y
@@ -4168,7 +4156,7 @@
 	sta bitmap+3693
 	lda #181
 	;ldx obj160_phase
-	ora bm_obj160_layer7663_3694,x
+	ora bm_obj160_layer7651_3694,x
 	ldx obj157_phase
 	and msk_obj157_layer7824_3694,x
 	ora bm_obj157_layer7824_3694,x
@@ -4178,7 +4166,7 @@
 	sta bitmap+3694
 	lda #171
 	ldy obj160_phase
-	ora bm_obj160_layer7663_3695,y
+	ora bm_obj160_layer7651_3695,y
 	;ldx obj157_phase
 	and msk_obj157_layer7824_3695,x
 	ora bm_obj157_layer7824_3695,x
@@ -4188,11 +4176,11 @@
 	sta bitmap+3695
 	lda #183
 	ldx obj136_phase
-	ora bm_obj136_layer7506_3696,x
-	ldx obj161_phase
-	ora bm_obj161_layer7611_3696,x
+	ora bm_obj136_layer7489_3696,x
+	ldx obj153_phase
+	ora bm_obj153_layer7522_3696,x
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_3696,y
+	ora bm_obj160_layer7651_3696,y
 	ldy obj156_phase
 	and msk_obj156_layer7770_3696,y
 	ora bm_obj156_layer7770_3696,y
@@ -4200,12 +4188,12 @@
 	ora bm_obj157_layer7824_3696,y
 	sta bitmap+3696
 	lda #85
-	ldy obj153_phase
-	ora bm_obj153_layer7524_3697,y
-	;ldx obj161_phase
-	ora bm_obj161_layer7611_3697,x
+	ldy obj136_phase
+	ora bm_obj136_layer7489_3697,y
+	;ldx obj153_phase
+	ora bm_obj153_layer7522_3697,x
 	ldx obj160_phase
-	ora bm_obj160_layer7663_3697,x
+	ora bm_obj160_layer7651_3697,x
 	ldx obj156_phase
 	and msk_obj156_layer7770_3697,x
 	ora bm_obj156_layer7770_3697,x
@@ -4214,12 +4202,14 @@
 	ora bm_obj157_layer7824_3697,x
 	sta bitmap+3697
 	lda #223
-	;ldy obj153_phase
-	ora bm_obj153_layer7524_3698,y
+	;ldy obj136_phase
+	ora bm_obj136_layer7489_3698,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_3698,y
 	ldy obj161_phase
-	ora bm_obj161_layer7611_3698,y
+	ora bm_obj161_layer7597_3698,y
 	ldy obj160_phase
-	ora bm_obj160_layer7663_3698,y
+	ora bm_obj160_layer7651_3698,y
 	ldy obj156_phase
 	and msk_obj156_layer7770_3698,y
 	ora bm_obj156_layer7770_3698,y
@@ -4228,12 +4218,14 @@
 	ora bm_obj157_layer7824_3698,x
 	sta bitmap+3698
 	lda #106
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3699,x
 	ldx obj153_phase
-	ora bm_obj153_layer7524_3699,x
+	ora bm_obj153_layer7522_3699,x
 	ldx obj161_phase
-	ora bm_obj161_layer7611_3699,x
+	ora bm_obj161_layer7597_3699,x
 	ldx obj160_phase
-	ora bm_obj160_layer7663_3699,x
+	ora bm_obj160_layer7651_3699,x
 	;ldy obj156_phase
 	and msk_obj156_layer7770_3699,y
 	ora bm_obj156_layer7770_3699,y
@@ -4243,11 +4235,11 @@
 	sta bitmap+3699
 	lda #219
 	ldy obj153_phase
-	ora bm_obj153_layer7524_3700,y
+	ora bm_obj153_layer7522_3700,y
 	ldy obj161_phase
-	ora bm_obj161_layer7611_3700,y
+	ora bm_obj161_layer7597_3700,y
 	;ldx obj160_phase
-	ora bm_obj160_layer7663_3700,x
+	ora bm_obj160_layer7651_3700,x
 	ldx obj156_phase
 	and msk_obj156_layer7770_3700,x
 	ora bm_obj156_layer7770_3700,x
@@ -4257,84 +4249,83 @@
 	sta bitmap+3700
 	lda #219
 	ldx obj153_phase
-	ora bm_obj153_layer7524_3701,x
+	ora bm_obj153_layer7522_3701,x
 	;ldy obj161_phase
-	ora bm_obj161_layer7611_3701,y
-	ldx obj160_phase
-	ora bm_obj160_layer7663_3701,x
-	ldx obj156_phase
-	and msk_obj156_layer7770_3701,x
-	ora bm_obj156_layer7770_3701,x
-	ldx obj157_phase
-	and msk_obj157_layer7824_3701,x
-	ora bm_obj157_layer7824_3701,x
+	ora bm_obj161_layer7597_3701,y
+	ldy obj160_phase
+	ora bm_obj160_layer7651_3701,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_3701,y
+	ora bm_obj156_layer7770_3701,y
+	ldy obj157_phase
+	and msk_obj157_layer7824_3701,y
+	ora bm_obj157_layer7824_3701,y
 	sta bitmap+3701
 	lda #118
-	;ldy obj161_phase
-	ora bm_obj161_layer7611_3702,y
-	ldy obj160_phase
-	ora bm_obj160_layer7663_3702,y
-	ldy obj156_phase
-	and msk_obj156_layer7770_3702,y
-	ora bm_obj156_layer7770_3702,y
-	;ldx obj157_phase
-	and msk_obj157_layer7824_3702,x
-	ora bm_obj157_layer7824_3702,x
+	;ldx obj153_phase
+	ora bm_obj153_layer7522_3702,x
+	ldx obj161_phase
+	ora bm_obj161_layer7597_3702,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_3702,x
+	ldx obj156_phase
+	and msk_obj156_layer7770_3702,x
+	ora bm_obj156_layer7770_3702,x
+	;ldy obj157_phase
+	and msk_obj157_layer7824_3702,y
+	ora bm_obj157_layer7824_3702,y
 	sta bitmap+3702
 	lda #91
-	ldx obj161_phase
-	ora bm_obj161_layer7611_3703,x
-	ldx obj160_phase
-	ora bm_obj160_layer7663_3703,x
-	;ldy obj156_phase
-	and msk_obj156_layer7770_3703,y
-	ora bm_obj156_layer7770_3703,y
-	ldx obj157_phase
-	and msk_obj157_layer7824_3703,x
-	ora bm_obj157_layer7824_3703,x
+	ldy obj153_phase
+	ora bm_obj153_layer7522_3703,y
+	ldy obj161_phase
+	ora bm_obj161_layer7597_3703,y
+	ldy obj160_phase
+	ora bm_obj160_layer7651_3703,y
+	;ldx obj156_phase
+	and msk_obj156_layer7770_3703,x
+	ora bm_obj156_layer7770_3703,x
+	ldy obj157_phase
+	and msk_obj157_layer7824_3703,y
+	ora bm_obj157_layer7824_3703,y
 	sta bitmap+3703
 	lda #160
-	ldx obj10_phase
-	and msk_obj10_layer6967_3704,x
-	ora bm_obj10_layer6967_3704,x
-	ldx obj54_phase
-	ora bm_obj54_layer7062_3704,x
-	ldx obj65_phase
-	ora bm_obj65_layer7420_3704,x
-	ldx obj136_phase
-	ora bm_obj136_layer7506_3704,x
-	ldx obj104_phase
-	ora bm_obj104_layer7705_3704,x
-	;ldy obj156_phase
-	and msk_obj156_layer7770_3704,y
-	ora bm_obj156_layer7770_3704,y
+	ldy obj10_phase
+	and msk_obj10_layer6967_3704,y
+	ora bm_obj10_layer6967_3704,y
+	ldy obj54_phase
+	ora bm_obj54_layer7062_3704,y
+	ldy obj136_phase
+	ora bm_obj136_layer7489_3704,y
+	ldy obj104_phase
+	ora bm_obj104_layer7705_3704,y
+	;ldx obj156_phase
+	and msk_obj156_layer7770_3704,x
+	ora bm_obj156_layer7770_3704,x
 	sta bitmap+3704
 	lda #160
-	ldy obj10_phase
-	and msk_obj10_layer6967_3705,y
-	ora bm_obj10_layer6967_3705,y
-	ldy obj54_phase
-	ora bm_obj54_layer7062_3705,y
-	ldy obj136_phase
-	ora bm_obj136_layer7506_3705,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_3705,y
-	;ldx obj104_phase
-	ora bm_obj104_layer7705_3705,x
+	ldx obj10_phase
+	and msk_obj10_layer6967_3705,x
+	ora bm_obj10_layer6967_3705,x
+	ldx obj54_phase
+	ora bm_obj54_layer7062_3705,x
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3705,x
+	;ldy obj104_phase
+	ora bm_obj104_layer7705_3705,y
 	ldx obj156_phase
 	and msk_obj156_layer7770_3705,x
 	ora bm_obj156_layer7770_3705,x
 	sta bitmap+3705
 	lda #208
 	ldx obj10_phase
+	and msk_obj10_layer6967_3706,x
 	ora bm_obj10_layer6967_3706,x
 	ldx obj65_phase
-	ora bm_obj65_layer7420_3706,x
+	ora bm_obj65_layer7395_3706,x
 	ldx obj136_phase
-	ora bm_obj136_layer7506_3706,x
-	;ldy obj153_phase
-	ora bm_obj153_layer7524_3706,y
-	ldy obj104_phase
+	ora bm_obj136_layer7489_3706,x
+	;ldy obj104_phase
 	and msk_obj104_layer7705_3706,y
 	ora bm_obj104_layer7705_3706,y
 	ldy obj156_phase
@@ -4346,57 +4337,55 @@
 	ora bm_obj13_layer6965_3707,y
 	ldy obj10_phase
 	ora bm_obj10_layer6967_3707,y
-	ldy obj65_phase
-	ora bm_obj65_layer7420_3707,y
 	;ldx obj136_phase
-	ora bm_obj136_layer7506_3707,x
-	ldy obj153_phase
-	ora bm_obj153_layer7524_3707,y
-	ldy obj104_phase
-	and msk_obj104_layer7705_3707,y
-	ora bm_obj104_layer7705_3707,y
-	ldy obj156_phase
-	and msk_obj156_layer7770_3707,y
-	ora bm_obj156_layer7770_3707,y
+	ora bm_obj136_layer7489_3707,x
+	ldx obj104_phase
+	and msk_obj104_layer7705_3707,x
+	ora bm_obj104_layer7705_3707,x
+	ldx obj156_phase
+	and msk_obj156_layer7770_3707,x
+	ora bm_obj156_layer7770_3707,x
 	sta bitmap+3707
 	lda #80
-	ldy obj13_phase
-	ora bm_obj13_layer6965_3708,y
-	ldy obj10_phase
+	ldx obj13_phase
+	ora bm_obj13_layer6965_3708,x
+	;ldy obj10_phase
 	ora bm_obj10_layer6967_3708,y
-	;ldx obj136_phase
-	ora bm_obj136_layer7506_3708,x
+	ldy obj136_phase
+	ora bm_obj136_layer7489_3708,y
 	ldy obj153_phase
-	ora bm_obj153_layer7524_3708,y
-	ldx obj104_phase
-	ora bm_obj104_layer7705_3708,x
-	ldx obj156_phase
-	and msk_obj156_layer7770_3708,x
-	ora bm_obj156_layer7770_3708,x
+	ora bm_obj153_layer7522_3708,y
+	ldy obj104_phase
+	ora bm_obj104_layer7705_3708,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_3708,y
+	ora bm_obj156_layer7770_3708,y
 	sta bitmap+3708
 	lda #80
-	ldx obj13_phase
+	;ldx obj13_phase
 	and msk_obj13_layer6965_3709,x
 	ora bm_obj13_layer6965_3709,x
-	ldx obj65_phase
-	ora bm_obj65_layer7420_3709,x
-	;ldy obj153_phase
-	ora bm_obj153_layer7524_3709,y
-	ldy obj104_phase
-	and msk_obj104_layer7705_3709,y
-	ora bm_obj104_layer7705_3709,y
-	ldy obj156_phase
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3709,x
+	ldx obj153_phase
+	ora bm_obj153_layer7522_3709,x
+	ldx obj104_phase
+	and msk_obj104_layer7705_3709,x
+	ora bm_obj104_layer7705_3709,x
+	;ldy obj156_phase
 	and msk_obj156_layer7770_3709,y
 	ora bm_obj156_layer7770_3709,y
 	sta bitmap+3709
 	lda #136
 	ldy obj13_phase
 	ora bm_obj13_layer6965_3710,y
-	;ldx obj65_phase
-	ora bm_obj65_layer7420_3710,x
-	ldx obj153_phase
-	ora bm_obj153_layer7524_3710,x
-	ldx obj104_phase
+	ldy obj65_phase
+	ora bm_obj65_layer7395_3710,y
+	ldy obj136_phase
+	ora bm_obj136_layer7489_3710,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_3710,y
+	;ldx obj104_phase
 	and msk_obj104_layer7705_3710,x
 	ora bm_obj104_layer7705_3710,x
 	ldx obj156_phase
@@ -4404,17 +4393,17 @@
 	ora bm_obj156_layer7770_3710,x
 	sta bitmap+3710
 	lda #160
-	;ldy obj13_phase
-	and msk_obj13_layer6965_3711,y
-	ora bm_obj13_layer6965_3711,y
-	ldy obj65_phase
-	ora bm_obj65_layer7420_3711,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_3711,y
+	ldx obj13_phase
+	and msk_obj13_layer6965_3711,x
+	ora bm_obj13_layer6965_3711,x
+	ldx obj136_phase
+	ora bm_obj136_layer7489_3711,x
+	;ldy obj153_phase
+	ora bm_obj153_layer7522_3711,y
 	ldy obj104_phase
 	and msk_obj104_layer7705_3711,y
 	ora bm_obj104_layer7705_3711,y
-	;ldx obj156_phase
+	ldx obj156_phase
 	and msk_obj156_layer7770_3711,x
 	ora bm_obj156_layer7770_3711,x
 	sta bitmap+3711
@@ -4699,124 +4688,124 @@
 	ora bm_obj121_layer7310_3959,y
 	;ldx obj122_phase
 	ora bm_obj122_layer7429_3959,x
-	ldy obj165_phase
-	ora bm_obj165_layer7533_3959,y
+	ldx obj165_phase
+	ora bm_obj165_layer7533_3959,x
 	sta bitmap+3959
-	ldx obj78_phase
-	lda bm_obj78_layer7090_3960,x
-	ldx obj74_phase
-	ora bm_obj74_layer7196_3960,x
-	ldx obj118_phase
-	ora bm_obj118_layer7301_3960,x
-	;ldy obj165_phase
-	ora bm_obj165_layer7533_3960,y
-	ldy obj166_phase
-	and msk_obj166_layer7636_3960,y
-	ora bm_obj166_layer7636_3960,y
-	ldy obj167_phase
-	and msk_obj167_layer7716_3960,y
-	ora bm_obj167_layer7716_3960,y
-	sta bitmap+3960
-	ldy obj77_phase
-	lda bm_obj77_layer7084_3961,y
 	ldy obj78_phase
-	ora bm_obj78_layer7090_3961,y
+	lda bm_obj78_layer7090_3960,y
 	ldy obj74_phase
-	ora bm_obj74_layer7196_3961,y
-	ldy obj120_phase
-	ora bm_obj120_layer7199_3961,y
-	;ldx obj118_phase
-	ora bm_obj118_layer7301_3961,x
-	ldx obj121_phase
-	ora bm_obj121_layer7310_3961,x
-	ldx obj165_phase
-	ora bm_obj165_layer7533_3961,x
+	ora bm_obj74_layer7196_3960,y
+	ldy obj118_phase
+	ora bm_obj118_layer7301_3960,y
+	;ldx obj165_phase
+	ora bm_obj165_layer7533_3960,x
 	ldx obj166_phase
-	and msk_obj166_layer7636_3961,x
-	ora bm_obj166_layer7636_3961,x
+	and msk_obj166_layer7636_3960,x
+	ora bm_obj166_layer7636_3960,x
 	ldx obj167_phase
-	and msk_obj167_layer7716_3961,x
-	ora bm_obj167_layer7716_3961,x
+	and msk_obj167_layer7716_3960,x
+	ora bm_obj167_layer7716_3960,x
+	sta bitmap+3960
+	ldx obj77_phase
+	lda bm_obj77_layer7084_3961,x
+	ldx obj78_phase
+	ora bm_obj78_layer7090_3961,x
+	ldx obj74_phase
+	ora bm_obj74_layer7196_3961,x
+	ldx obj120_phase
+	ora bm_obj120_layer7199_3961,x
+	;ldy obj118_phase
+	ora bm_obj118_layer7301_3961,y
+	ldy obj121_phase
+	ora bm_obj121_layer7310_3961,y
+	ldy obj165_phase
+	ora bm_obj165_layer7533_3961,y
+	ldy obj166_phase
+	and msk_obj166_layer7636_3961,y
+	ora bm_obj166_layer7636_3961,y
+	ldy obj167_phase
+	and msk_obj167_layer7716_3961,y
+	ora bm_obj167_layer7716_3961,y
 	sta bitmap+3961
-	ldx obj77_phase
-	lda bm_obj77_layer7084_3962,x
-	;ldy obj120_phase
-	ora bm_obj120_layer7199_3962,y
-	ldy obj121_phase
-	ora bm_obj121_layer7310_3962,y
-	ldy obj165_phase
-	ora bm_obj165_layer7533_3962,y
-	ldy obj166_phase
-	and msk_obj166_layer7636_3962,y
-	ora bm_obj166_layer7636_3962,y
-	ldy obj167_phase
-	and msk_obj167_layer7716_3962,y
-	ora bm_obj167_layer7716_3962,y
-	sta bitmap+3962
-	;ldx obj77_phase
-	lda bm_obj77_layer7084_3963,x
-	ldx obj120_phase
-	ora bm_obj120_layer7199_3963,x
-	ldx obj121_phase
-	ora bm_obj121_layer7310_3963,x
-	ldx obj165_phase
-	ora bm_obj165_layer7533_3963,x
-	ldx obj166_phase
-	ora bm_obj166_layer7636_3963,x
-	;ldy obj167_phase
-	and msk_obj167_layer7716_3963,y
-	ora bm_obj167_layer7716_3963,y
-	sta bitmap+3963
 	ldy obj77_phase
-	lda bm_obj77_layer7084_3964,y
-	ldy obj120_phase
-	ora bm_obj120_layer7199_3964,y
-	ldy obj121_phase
-	ora bm_obj121_layer7310_3964,y
-	ldy obj165_phase
-	ora bm_obj165_layer7533_3964,y
-	;ldx obj166_phase
-	and msk_obj166_layer7636_3964,x
-	ora bm_obj166_layer7636_3964,x
-	ldx obj167_phase
-	and msk_obj167_layer7716_3964,x
-	ora bm_obj167_layer7716_3964,x
-	sta bitmap+3964
-	ldx obj77_phase
-	lda bm_obj77_layer7084_3965,x
-	ldx obj120_phase
-	ora bm_obj120_layer7199_3965,x
-	;ldy obj165_phase
-	ora bm_obj165_layer7533_3965,y
-	ldy obj166_phase
-	and msk_obj166_layer7636_3965,y
-	ora bm_obj166_layer7636_3965,y
-	ldy obj167_phase
-	and msk_obj167_layer7716_3965,y
-	ora bm_obj167_layer7716_3965,y
-	sta bitmap+3965
-	ldy obj76_phase
-	lda bm_obj76_layer6987_3966,y
-	ldy obj77_phase
-	and msk_obj77_layer7084_3966,y
-	ora bm_obj77_layer7084_3966,y
+	lda bm_obj77_layer7084_3962,y
 	;ldx obj120_phase
-	and msk_obj120_layer7199_3966,x
-	ora bm_obj120_layer7199_3966,x
+	ora bm_obj120_layer7199_3962,x
+	ldx obj121_phase
+	ora bm_obj121_layer7310_3962,x
 	ldx obj165_phase
-	ora bm_obj165_layer7533_3966,x
+	ora bm_obj165_layer7533_3962,x
 	ldx obj166_phase
-	and msk_obj166_layer7636_3966,x
-	ora bm_obj166_layer7636_3966,x
+	and msk_obj166_layer7636_3962,x
+	ora bm_obj166_layer7636_3962,x
 	ldx obj167_phase
-	and msk_obj167_layer7716_3966,x
-	ora bm_obj167_layer7716_3966,x
-	sta bitmap+3966
-	ldx obj76_phase
-	lda bm_obj76_layer6987_3967,x
+	and msk_obj167_layer7716_3962,x
+	ora bm_obj167_layer7716_3962,x
+	sta bitmap+3962
 	;ldy obj77_phase
-	and msk_obj77_layer7084_3967,y
-	ora bm_obj77_layer7084_3967,y
+	lda bm_obj77_layer7084_3963,y
+	ldy obj120_phase
+	ora bm_obj120_layer7199_3963,y
+	ldy obj121_phase
+	ora bm_obj121_layer7310_3963,y
+	ldy obj165_phase
+	ora bm_obj165_layer7533_3963,y
+	ldy obj166_phase
+	ora bm_obj166_layer7636_3963,y
+	;ldx obj167_phase
+	and msk_obj167_layer7716_3963,x
+	ora bm_obj167_layer7716_3963,x
+	sta bitmap+3963
+	ldx obj77_phase
+	lda bm_obj77_layer7084_3964,x
+	ldx obj120_phase
+	ora bm_obj120_layer7199_3964,x
+	ldx obj121_phase
+	ora bm_obj121_layer7310_3964,x
+	ldx obj165_phase
+	ora bm_obj165_layer7533_3964,x
+	;ldy obj166_phase
+	and msk_obj166_layer7636_3964,y
+	ora bm_obj166_layer7636_3964,y
+	ldy obj167_phase
+	and msk_obj167_layer7716_3964,y
+	ora bm_obj167_layer7716_3964,y
+	sta bitmap+3964
+	ldy obj77_phase
+	lda bm_obj77_layer7084_3965,y
+	ldy obj120_phase
+	ora bm_obj120_layer7199_3965,y
+	;ldx obj165_phase
+	ora bm_obj165_layer7533_3965,x
+	ldx obj166_phase
+	and msk_obj166_layer7636_3965,x
+	ora bm_obj166_layer7636_3965,x
+	ldx obj167_phase
+	and msk_obj167_layer7716_3965,x
+	ora bm_obj167_layer7716_3965,x
+	sta bitmap+3965
+	ldx obj76_phase
+	lda bm_obj76_layer6987_3966,x
+	ldx obj77_phase
+	and msk_obj77_layer7084_3966,x
+	ora bm_obj77_layer7084_3966,x
+	;ldy obj120_phase
+	and msk_obj120_layer7199_3966,y
+	ora bm_obj120_layer7199_3966,y
+	ldy obj165_phase
+	ora bm_obj165_layer7533_3966,y
+	ldy obj166_phase
+	and msk_obj166_layer7636_3966,y
+	ora bm_obj166_layer7636_3966,y
+	ldy obj167_phase
+	and msk_obj167_layer7716_3966,y
+	ora bm_obj167_layer7716_3966,y
+	sta bitmap+3966
+	ldy obj76_phase
+	lda bm_obj76_layer6987_3967,y
+	;ldx obj77_phase
+	and msk_obj77_layer7084_3967,x
+	ora bm_obj77_layer7084_3967,x
 	ldx obj120_phase
 	ora bm_obj120_layer7199_3967,x
 	ldx obj165_phase
@@ -4837,11 +4826,11 @@
 	and msk_obj78_layer7090_3968,y
 	ora bm_obj78_layer7090_3968,y
 	ldy obj149_phase
-	ora bm_obj149_layer7457_3968,y
+	ora bm_obj149_layer7451_3968,y
 	ldy obj150_phase
-	ora bm_obj150_layer7517_3968,y
-	ldy obj164_phase
-	ora bm_obj164_layer7601_3968,y
+	ora bm_obj150_layer7505_3968,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3968,y
 	;ldx obj167_phase
 	and msk_obj167_layer7716_3968,x
 	ora bm_obj167_layer7716_3968,x
@@ -4849,9 +4838,8 @@
 	and msk_obj176_layer7787_3968,x
 	ora bm_obj176_layer7787_3968,x
 	sta bitmap+3968
-	lda #32
 	ldx obj75_phase
-	ora bm_obj75_layer6896_3969,x
+	lda bm_obj75_layer6896_3969,x
 	ldx obj80_phase
 	ora bm_obj80_layer6901_3969,x
 	ldx obj76_phase
@@ -4863,9 +4851,9 @@
 	ldx obj78_phase
 	ora bm_obj78_layer7090_3969,x
 	ldx obj149_phase
-	ora bm_obj149_layer7457_3969,x
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_3969,y
+	ora bm_obj149_layer7451_3969,x
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3969,y
 	ldy obj167_phase
 	and msk_obj167_layer7716_3969,y
 	ora bm_obj167_layer7716_3969,y
@@ -4881,11 +4869,11 @@
 	ldy obj77_phase
 	ora bm_obj77_layer7084_3970,y
 	;ldx obj149_phase
-	ora bm_obj149_layer7457_3970,x
-	ldx obj168_phase
-	ora bm_obj168_layer7525_3970,x
+	ora bm_obj149_layer7451_3970,x
 	ldx obj164_phase
-	ora bm_obj164_layer7601_3970,x
+	ora bm_obj164_layer7588_3970,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3970,x
 	ldx obj167_phase
 	and msk_obj167_layer7716_3970,x
 	ora bm_obj167_layer7716_3970,x
@@ -4893,18 +4881,16 @@
 	and msk_obj176_layer7787_3970,x
 	ora bm_obj176_layer7787_3970,x
 	sta bitmap+3970
+	ldx obj75_phase
+	lda bm_obj75_layer6896_3971,x
 	ldx obj76_phase
-	lda bm_obj76_layer6987_3971,x
+	ora bm_obj76_layer6987_3971,x
 	;ldy obj77_phase
 	ora bm_obj77_layer7084_3971,y
 	ldy obj149_phase
-	ora bm_obj149_layer7457_3971,y
-	ldy obj169_phase
-	ora bm_obj169_layer7475_3971,y
-	ldy obj168_phase
-	ora bm_obj168_layer7525_3971,y
+	ora bm_obj149_layer7451_3971,y
 	ldy obj164_phase
-	ora bm_obj164_layer7601_3971,y
+	ora bm_obj164_layer7588_3971,y
 	ldy obj167_phase
 	and msk_obj167_layer7716_3971,y
 	ora bm_obj167_layer7716_3971,y
@@ -4913,52 +4899,57 @@
 	ora bm_obj176_layer7787_3971,y
 	sta bitmap+3971
 	lda #10
+	ldy obj75_phase
+	ora bm_obj75_layer6896_3972,y
 	;ldx obj76_phase
 	ora bm_obj76_layer6987_3972,x
-	ldx obj77_phase
-	ora bm_obj77_layer7084_3972,x
-	ldx obj169_phase
-	ora bm_obj169_layer7475_3972,x
-	ldx obj168_phase
-	ora bm_obj168_layer7525_3972,x
-	ldx obj164_phase
-	ora bm_obj164_layer7601_3972,x
-	ldx obj167_phase
-	and msk_obj167_layer7716_3972,x
-	ora bm_obj167_layer7716_3972,x
-	;ldy obj176_phase
+	ldy obj77_phase
+	ora bm_obj77_layer7084_3972,y
+	ldy obj149_phase
+	ora bm_obj149_layer7451_3972,y
+	ldy obj150_phase
+	ora bm_obj150_layer7505_3972,y
+	ldy obj164_phase
+	ora bm_obj164_layer7588_3972,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3972,y
+	ldy obj167_phase
+	and msk_obj167_layer7716_3972,y
+	ora bm_obj167_layer7716_3972,y
+	ldy obj176_phase
 	and msk_obj176_layer7787_3972,y
 	ora bm_obj176_layer7787_3972,y
 	sta bitmap+3972
 	lda #1
-	ldy obj76_phase
-	ora bm_obj76_layer6987_3973,y
-	ldy obj77_phase
-	ora bm_obj77_layer7084_3973,y
-	ldy obj149_phase
-	ora bm_obj149_layer7457_3973,y
-	ldy obj169_phase
-	ora bm_obj169_layer7475_3973,y
-	ldy obj164_phase
-	ora bm_obj164_layer7601_3973,y
-	;ldx obj167_phase
+	;ldx obj76_phase
+	and msk_obj76_layer6987_3973,x
+	ora bm_obj76_layer6987_3973,x
+	ldx obj77_phase
+	ora bm_obj77_layer7084_3973,x
+	ldx obj149_phase
+	ora bm_obj149_layer7451_3973,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3973,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3973,x
+	ldx obj167_phase
 	and msk_obj167_layer7716_3973,x
 	ora bm_obj167_layer7716_3973,x
-	ldx obj176_phase
-	and msk_obj176_layer7787_3973,x
-	ora bm_obj176_layer7787_3973,x
+	;ldy obj176_phase
+	and msk_obj176_layer7787_3973,y
+	ora bm_obj176_layer7787_3973,y
 	sta bitmap+3973
 	lda #10
-	ldx obj76_phase
-	and msk_obj76_layer6987_3974,x
-	ora bm_obj76_layer6987_3974,x
-	ldx obj149_phase
-	ora bm_obj149_layer7457_3974,x
-	ldx obj168_phase
-	ora bm_obj168_layer7525_3974,x
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_3974,y
-	ldx obj167_phase
+	ldy obj76_phase
+	and msk_obj76_layer6987_3974,y
+	ora bm_obj76_layer6987_3974,y
+	ldy obj169_phase
+	ora bm_obj169_layer7465_3974,y
+	ldy obj168_phase
+	ora bm_obj168_layer7504_3974,y
+	ldy obj164_phase
+	ora bm_obj164_layer7588_3974,y
+	;ldx obj167_phase
 	and msk_obj167_layer7716_3974,x
 	ora bm_obj167_layer7716_3974,x
 	ldx obj176_phase
@@ -4967,11 +4958,14 @@
 	sta bitmap+3974
 	lda #1
 	ldx obj76_phase
+	and msk_obj76_layer6987_3975,x
 	ora bm_obj76_layer6987_3975,x
-	ldx obj169_phase
-	ora bm_obj169_layer7475_3975,x
+	ldx obj149_phase
+	ora bm_obj149_layer7451_3975,x
+	ldx obj150_phase
+	ora bm_obj150_layer7505_3975,x
 	;ldy obj164_phase
-	ora bm_obj164_layer7601_3975,y
+	ora bm_obj164_layer7588_3975,y
 	ldx obj167_phase
 	and msk_obj167_layer7716_3975,x
 	ora bm_obj167_layer7716_3975,x
@@ -4981,7 +4975,9 @@
 	sta bitmap+3975
 	lda #82
 	;ldy obj164_phase
-	ora bm_obj164_layer7601_3976,y
+	ora bm_obj164_layer7588_3976,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3976,y
 	;ldx obj176_phase
 	and msk_obj176_layer7787_3976,x
 	ora bm_obj176_layer7787_3976,x
@@ -4990,377 +4986,377 @@
 	ora bm_obj177_layer7827_3976,x
 	sta bitmap+3976
 	lda #169
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_3977,y
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3977,x
+	;ldy obj146_phase
+	ora bm_obj146_layer7592_3977,y
 	ldy obj176_phase
 	and msk_obj176_layer7787_3977,y
 	ora bm_obj176_layer7787_3977,y
-	;ldx obj177_phase
-	and msk_obj177_layer7827_3977,x
-	ora bm_obj177_layer7827_3977,x
+	ldy obj177_phase
+	and msk_obj177_layer7827_3977,y
+	ora bm_obj177_layer7827_3977,y
 	sta bitmap+3977
 	lda #212
-	ldx obj164_phase
-	ora bm_obj164_layer7601_3978,x
-	ldx obj173_phase
-	ora bm_obj173_layer7656_3978,x
-	;ldy obj176_phase
-	and msk_obj176_layer7787_3978,y
-	ora bm_obj176_layer7787_3978,y
-	ldy obj177_phase
+	;ldx obj164_phase
+	ora bm_obj164_layer7588_3978,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3978,x
+	ldx obj176_phase
+	and msk_obj176_layer7787_3978,x
+	ora bm_obj176_layer7787_3978,x
+	;ldy obj177_phase
 	and msk_obj177_layer7827_3978,y
 	ora bm_obj177_layer7827_3978,y
 	sta bitmap+3978
 	lda #170
-	ldy obj164_phase
-	ora bm_obj164_layer7601_3979,y
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_3979,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3979,x
+	ldx obj173_phase
+	ora bm_obj173_layer7639_3979,x
 	ldx obj176_phase
 	and msk_obj176_layer7787_3979,x
 	ora bm_obj176_layer7787_3979,x
-	ldx obj177_phase
-	and msk_obj177_layer7827_3979,x
-	ora bm_obj177_layer7827_3979,x
+	;ldy obj177_phase
+	and msk_obj177_layer7827_3979,y
+	ora bm_obj177_layer7827_3979,y
 	sta bitmap+3979
 	lda #106
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_3980,y
-	ldy obj173_phase
-	ora bm_obj173_layer7656_3980,y
-	ldy obj176_phase
-	and msk_obj176_layer7787_3980,y
-	ora bm_obj176_layer7787_3980,y
-	;ldx obj177_phase
+	ldy obj164_phase
+	ora bm_obj164_layer7588_3980,y
+	;ldx obj176_phase
+	and msk_obj176_layer7787_3980,x
+	ora bm_obj176_layer7787_3980,x
+	ldx obj177_phase
 	and msk_obj177_layer7827_3980,x
 	ora bm_obj177_layer7827_3980,x
 	sta bitmap+3980
 	lda #42
-	ldx obj164_phase
-	ora bm_obj164_layer7601_3981,x
-	ldx obj173_phase
-	ora bm_obj173_layer7656_3981,x
-	;ldy obj176_phase
+	;ldy obj164_phase
+	ora bm_obj164_layer7588_3981,y
+	ldy obj176_phase
 	and msk_obj176_layer7787_3981,y
 	ora bm_obj176_layer7787_3981,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3981,y
-	ora bm_obj177_layer7827_3981,y
+	;ldx obj177_phase
+	and msk_obj177_layer7827_3981,x
+	ora bm_obj177_layer7827_3981,x
 	sta bitmap+3981
 	lda #170
-	ldy obj164_phase
-	ora bm_obj164_layer7601_3982,y
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_3982,x
-	ldx obj176_phase
-	and msk_obj176_layer7787_3982,x
-	ora bm_obj176_layer7787_3982,x
-	ldx obj177_phase
-	and msk_obj177_layer7827_3982,x
-	ora bm_obj177_layer7827_3982,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3982,x
+	;ldy obj176_phase
+	and msk_obj176_layer7787_3982,y
+	ora bm_obj176_layer7787_3982,y
+	ldy obj177_phase
+	and msk_obj177_layer7827_3982,y
+	ora bm_obj177_layer7827_3982,y
 	sta bitmap+3982
 	lda #85
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_3983,y
-	ldy obj173_phase
-	ora bm_obj173_layer7656_3983,y
-	ldy obj176_phase
-	and msk_obj176_layer7787_3983,y
-	ora bm_obj176_layer7787_3983,y
-	;ldx obj177_phase
-	ora bm_obj177_layer7827_3983,x
+	;ldx obj164_phase
+	ora bm_obj164_layer7588_3983,x
+	ldx obj176_phase
+	and msk_obj176_layer7787_3983,x
+	ora bm_obj176_layer7787_3983,x
+	;ldy obj177_phase
+	ora bm_obj177_layer7827_3983,y
 	sta bitmap+3983
 	lda #127
-	ldy obj146_phase
-	ora bm_obj146_layer7602_3984,y
-	ldy obj173_phase
-	ora bm_obj173_layer7656_3984,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3984,y
-	;ldx obj177_phase
-	and msk_obj177_layer7827_3984,x
-	ora bm_obj177_layer7827_3984,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_3984,x
-	ora bm_obj178_layer7853_3984,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3984,x
+	ldx obj146_phase
+	ora bm_obj146_layer7592_3984,x
+	ldx obj137_phase
+	ora bm_obj137_layer7641_3984,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3984,x
+	;ldy obj177_phase
+	and msk_obj177_layer7827_3984,y
+	ora bm_obj177_layer7827_3984,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_3984,y
+	ora bm_obj178_layer7853_3984,y
 	sta bitmap+3984
 	lda #42
-	ldx obj164_phase
-	ora bm_obj164_layer7601_3985,x
-	ldx obj173_phase
-	ora bm_obj173_layer7656_3985,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3985,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3985,y
-	ora bm_obj177_layer7827_3985,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_3985,y
-	ora bm_obj178_layer7853_3985,y
+	ldy obj164_phase
+	ora bm_obj164_layer7588_3985,y
+	ldy obj146_phase
+	ora bm_obj146_layer7592_3985,y
+	ldy obj137_phase
+	ora bm_obj137_layer7641_3985,y
+	;ldx obj155_phase
+	ora bm_obj155_layer7674_3985,x
+	ldx obj177_phase
+	and msk_obj177_layer7827_3985,x
+	ora bm_obj177_layer7827_3985,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_3985,x
+	ora bm_obj178_layer7853_3985,x
 	sta bitmap+3985
 	lda #191
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_3986,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3986,x
-	ldx obj177_phase
-	and msk_obj177_layer7827_3986,x
-	ora bm_obj177_layer7827_3986,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3986,y
-	ora bm_obj178_layer7853_3986,y
+	;ldy obj137_phase
+	ora bm_obj137_layer7641_3986,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_3986,y
+	ldy obj177_phase
+	and msk_obj177_layer7827_3986,y
+	ora bm_obj177_layer7827_3986,y
+	;ldx obj178_phase
+	and msk_obj178_layer7853_3986,x
+	ora bm_obj178_layer7853_3986,x
 	sta bitmap+3986
 	lda #138
-	ldy obj173_phase
-	ora bm_obj173_layer7656_3987,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3987,y
-	;ldx obj177_phase
-	and msk_obj177_layer7827_3987,x
-	ora bm_obj177_layer7827_3987,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_3987,x
-	ora bm_obj178_layer7853_3987,x
+	ldx obj173_phase
+	ora bm_obj173_layer7639_3987,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3987,x
+	;ldy obj177_phase
+	and msk_obj177_layer7827_3987,y
+	ora bm_obj177_layer7827_3987,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_3987,y
+	ora bm_obj178_layer7853_3987,y
 	sta bitmap+3987
 	lda #111
-	ldx obj173_phase
-	ora bm_obj173_layer7656_3988,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3988,y
-	ldy obj177_phase
-	and msk_obj177_layer7827_3988,y
-	ora bm_obj177_layer7827_3988,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_3988,y
-	ora bm_obj178_layer7853_3988,y
+	ldy obj173_phase
+	ora bm_obj173_layer7639_3988,y
+	;ldx obj155_phase
+	ora bm_obj155_layer7674_3988,x
+	ldx obj177_phase
+	and msk_obj177_layer7827_3988,x
+	ora bm_obj177_layer7827_3988,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_3988,x
+	ora bm_obj178_layer7853_3988,x
 	sta bitmap+3988
 	lda #85
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_3989,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_3989,x
+	;ldy obj173_phase
+	ora bm_obj173_layer7639_3989,y
 	ldx obj155_phase
-	ora bm_obj155_layer7688_3989,x
+	ora bm_obj155_layer7674_3989,x
 	ldx obj177_phase
 	and msk_obj177_layer7827_3989,x
 	ora bm_obj177_layer7827_3989,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3989,y
-	ora bm_obj178_layer7853_3989,y
+	ldx obj178_phase
+	and msk_obj178_layer7853_3989,x
+	ora bm_obj178_layer7853_3989,x
 	sta bitmap+3989
 	lda #171
-	ldy obj173_phase
-	ora bm_obj173_layer7656_3990,y
+	;ldy obj173_phase
+	ora bm_obj173_layer7639_3990,y
 	ldy obj155_phase
-	ora bm_obj155_layer7688_3990,y
-	;ldx obj177_phase
-	and msk_obj177_layer7827_3990,x
-	ora bm_obj177_layer7827_3990,x
-	ldx obj178_phase
+	ora bm_obj155_layer7674_3990,y
+	ldy obj177_phase
+	and msk_obj177_layer7827_3990,y
+	ora bm_obj177_layer7827_3990,y
+	;ldx obj178_phase
 	and msk_obj178_layer7853_3990,x
 	ora bm_obj178_layer7853_3990,x
 	sta bitmap+3990
 	lda #90
 	ldx obj173_phase
-	ora bm_obj173_layer7656_3991,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3991,y
-	ldx obj177_phase
-	and msk_obj177_layer7827_3991,x
-	ora bm_obj177_layer7827_3991,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_3991,x
-	ora bm_obj178_layer7853_3991,x
+	ora bm_obj173_layer7639_3991,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3991,x
+	;ldy obj177_phase
+	and msk_obj177_layer7827_3991,y
+	ora bm_obj177_layer7827_3991,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_3991,y
+	ora bm_obj178_layer7853_3991,y
 	sta bitmap+3991
 	lda #255
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3992,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_3992,y
-	;ldx obj178_phase
-	and msk_obj178_layer7853_3992,x
-	ora bm_obj178_layer7853_3992,x
+	;ldx obj155_phase
+	ora bm_obj155_layer7674_3992,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_3992,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_3992,y
+	ora bm_obj178_layer7853_3992,y
 	sta bitmap+3992
 	lda #219
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3993,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_3993,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_3993,y
-	ora bm_obj178_layer7853_3993,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_3993,y
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_3993,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_3993,x
+	ora bm_obj178_layer7853_3993,x
 	sta bitmap+3993
 	lda #255
-	;ldx obj155_phase
-	ora bm_obj155_layer7688_3994,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_3994,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3994,y
-	ora bm_obj178_layer7853_3994,y
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_3994,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_3994,y
+	;ldx obj178_phase
+	and msk_obj178_layer7853_3994,x
+	ora bm_obj178_layer7853_3994,x
 	sta bitmap+3994
 	lda #183
-	ldy obj155_phase
-	ora bm_obj155_layer7688_3995,y
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_3995,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_3995,x
-	ora bm_obj178_layer7853_3995,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_3995,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_3995,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_3995,y
+	ora bm_obj178_layer7853_3995,y
 	sta bitmap+3995
 	lda #255
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_3996,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_3996,y
-	;ldx obj178_phase
-	and msk_obj178_layer7853_3996,x
-	ora bm_obj178_layer7853_3996,x
+	;ldx obj155_phase
+	ora bm_obj155_layer7674_3996,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_3996,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_3996,y
+	ora bm_obj178_layer7853_3996,y
 	sta bitmap+3996
 	lda #90
-	ldx obj155_phase
-	ora bm_obj155_layer7688_3997,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_3997,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_3997,y
-	ora bm_obj178_layer7853_3997,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_3997,y
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_3997,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_3997,x
+	ora bm_obj178_layer7853_3997,x
 	sta bitmap+3997
 	lda #247
-	;ldx obj155_phase
-	ora bm_obj155_layer7688_3998,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_3998,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3998,y
-	ora bm_obj178_layer7853_3998,y
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_3998,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_3998,y
+	;ldx obj178_phase
+	and msk_obj178_layer7853_3998,x
+	ora bm_obj178_layer7853_3998,x
 	sta bitmap+3998
 	lda #186
 	ldx obj155_phase
-	ora bm_obj155_layer7688_3999,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_3999,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_3999,y
-	ora bm_obj178_layer7853_3999,y
+	ora bm_obj155_layer7674_3999,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_3999,y
+	ldx obj178_phase
+	and msk_obj178_layer7853_3999,x
+	ora bm_obj178_layer7853_3999,x
 	sta bitmap+3999
 	lda #170
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4000,x
-	ldx obj158_phase
-	and msk_obj158_layer7846_4000,x
-	ora bm_obj158_layer7846_4000,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_4000,y
-	ora bm_obj178_layer7853_4000,y
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4000,y
+	ldy obj158_phase
+	and msk_obj158_layer7846_4000,y
+	ora bm_obj158_layer7846_4000,y
+	;ldx obj178_phase
+	and msk_obj178_layer7853_4000,x
+	ora bm_obj178_layer7853_4000,x
 	sta bitmap+4000
 	lda #253
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4001,y
-	;ldx obj158_phase
-	and msk_obj158_layer7846_4001,x
-	ora bm_obj158_layer7846_4001,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_4001,x
-	ora bm_obj178_layer7853_4001,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_4001,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4001,x
+	;ldy obj158_phase
+	and msk_obj158_layer7846_4001,y
+	ora bm_obj158_layer7846_4001,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_4001,y
+	ora bm_obj178_layer7853_4001,y
 	sta bitmap+4001
 	lda #86
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4002,y
-	ldy obj158_phase
-	and msk_obj158_layer7846_4002,y
-	ora bm_obj158_layer7846_4002,y
-	;ldx obj178_phase
-	and msk_obj178_layer7853_4002,x
-	ora bm_obj178_layer7853_4002,x
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4002,x
+	ldx obj158_phase
+	and msk_obj158_layer7846_4002,x
+	ora bm_obj158_layer7846_4002,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_4002,y
+	ora bm_obj178_layer7853_4002,y
 	sta bitmap+4002
 	lda #250
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4003,x
-	;ldy obj158_phase
-	and msk_obj158_layer7846_4003,y
-	ora bm_obj158_layer7846_4003,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_4003,y
-	ora bm_obj178_layer7853_4003,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4003,y
+	;ldx obj158_phase
+	and msk_obj158_layer7846_4003,x
+	ora bm_obj158_layer7846_4003,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_4003,x
+	ora bm_obj178_layer7853_4003,x
 	sta bitmap+4003
 	lda #221
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4004,x
-	ldx obj158_phase
-	and msk_obj158_layer7846_4004,x
-	ora bm_obj158_layer7846_4004,x
-	;ldy obj178_phase
-	and msk_obj178_layer7853_4004,y
-	ora bm_obj178_layer7853_4004,y
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4004,y
+	ldy obj158_phase
+	and msk_obj158_layer7846_4004,y
+	ora bm_obj158_layer7846_4004,y
+	;ldx obj178_phase
+	and msk_obj178_layer7853_4004,x
+	ora bm_obj178_layer7853_4004,x
 	sta bitmap+4004
 	lda #246
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4005,y
-	;ldx obj158_phase
-	and msk_obj158_layer7846_4005,x
-	ora bm_obj158_layer7846_4005,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_4005,x
-	ora bm_obj178_layer7853_4005,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4005,x
+	;ldy obj158_phase
+	and msk_obj158_layer7846_4005,y
+	ora bm_obj158_layer7846_4005,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_4005,y
+	ora bm_obj178_layer7853_4005,y
 	sta bitmap+4005
 	lda #217
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4006,y
-	ldy obj158_phase
-	and msk_obj158_layer7846_4006,y
-	ora bm_obj158_layer7846_4006,y
-	;ldx obj178_phase
-	and msk_obj178_layer7853_4006,x
-	ora bm_obj178_layer7853_4006,x
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4006,x
+	ldx obj158_phase
+	and msk_obj158_layer7846_4006,x
+	ora bm_obj158_layer7846_4006,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_4006,y
+	ora bm_obj178_layer7853_4006,y
 	sta bitmap+4006
 	lda #234
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4007,x
-	ldx obj157_phase
-	ora bm_obj157_layer7824_4007,x
-	;ldy obj158_phase
-	ora bm_obj158_layer7846_4007,y
-	ldy obj178_phase
-	and msk_obj178_layer7853_4007,y
-	ora bm_obj178_layer7853_4007,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4007,y
+	ldy obj157_phase
+	ora bm_obj157_layer7824_4007,y
+	;ldx obj158_phase
+	ora bm_obj158_layer7846_4007,x
+	ldx obj178_phase
+	and msk_obj178_layer7853_4007,x
+	ora bm_obj178_layer7853_4007,x
 	sta bitmap+4007
 	lda #173
-	ldy obj160_phase
-	ora bm_obj160_layer7663_4008,y
-	;ldx obj157_phase
-	and msk_obj157_layer7824_4008,x
-	ora bm_obj157_layer7824_4008,x
-	ldx obj158_phase
-	and msk_obj158_layer7846_4008,x
-	ora bm_obj158_layer7846_4008,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_4008,x
+	;ldy obj157_phase
+	and msk_obj157_layer7824_4008,y
+	ora bm_obj157_layer7824_4008,y
+	ldy obj158_phase
+	and msk_obj158_layer7846_4008,y
+	ora bm_obj158_layer7846_4008,y
 	sta bitmap+4008
 	lda #84
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_4009,y
-	ldy obj157_phase
-	and msk_obj157_layer7824_4009,y
-	ora bm_obj157_layer7824_4009,y
-	;ldx obj158_phase
-	and msk_obj158_layer7846_4009,x
-	ora bm_obj158_layer7846_4009,x
+	;ldx obj160_phase
+	ora bm_obj160_layer7651_4009,x
+	ldx obj157_phase
+	and msk_obj157_layer7824_4009,x
+	ora bm_obj157_layer7824_4009,x
+	;ldy obj158_phase
+	and msk_obj158_layer7846_4009,y
+	ora bm_obj158_layer7846_4009,y
 	sta bitmap+4009
 	lda #170
 	ldx obj160_phase
-	ora bm_obj160_layer7663_4010,x
+	ora bm_obj160_layer7651_4010,x
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4010,x
-	;ldy obj157_phase
-	and msk_obj157_layer7824_4010,y
-	ora bm_obj157_layer7824_4010,y
-	ldy obj158_phase
+	ora bm_obj159_layer7675_4010,x
+	ldx obj157_phase
+	and msk_obj157_layer7824_4010,x
+	ora bm_obj157_layer7824_4010,x
+	;ldy obj158_phase
 	and msk_obj158_layer7846_4010,y
 	ora bm_obj158_layer7846_4010,y
 	sta bitmap+4010
 	lda #170
 	ldy obj160_phase
-	ora bm_obj160_layer7663_4011,y
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4011,x
-	ldx obj157_phase
+	ora bm_obj160_layer7651_4011,y
+	;ldx obj157_phase
 	and msk_obj157_layer7824_4011,x
 	ora bm_obj157_layer7824_4011,x
 	ldx obj158_phase
@@ -5369,11 +5365,11 @@
 	sta bitmap+4011
 	lda #85
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4012,x
+	ora bm_obj161_layer7597_4012,x
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_4012,y
+	ora bm_obj160_layer7651_4012,y
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4012,x
+	ora bm_obj159_layer7675_4012,x
 	ldx obj157_phase
 	and msk_obj157_layer7824_4012,x
 	ora bm_obj157_layer7824_4012,x
@@ -5382,9 +5378,9 @@
 	sta bitmap+4012
 	lda #165
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_4013,y
+	ora bm_obj160_layer7651_4013,y
 	ldy obj159_phase
-	ora bm_obj159_layer7689_4013,y
+	ora bm_obj159_layer7675_4013,y
 	ldy obj157_phase
 	and msk_obj157_layer7824_4013,y
 	ora bm_obj157_layer7824_4013,y
@@ -5393,11 +5389,11 @@
 	sta bitmap+4013
 	lda #86
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4014,x
+	ora bm_obj161_layer7597_4014,x
 	ldx obj160_phase
-	ora bm_obj160_layer7663_4014,x
+	ora bm_obj160_layer7651_4014,x
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4014,x
+	ora bm_obj159_layer7675_4014,x
 	;ldy obj157_phase
 	and msk_obj157_layer7824_4014,y
 	ora bm_obj157_layer7824_4014,y
@@ -5406,84 +5402,94 @@
 	sta bitmap+4014
 	lda #171
 	ldy obj160_phase
-	ora bm_obj160_layer7663_4015,y
+	ora bm_obj160_layer7651_4015,y
 	;ldx obj159_phase
-	ora bm_obj159_layer7689_4015,x
+	ora bm_obj159_layer7675_4015,x
 	ldx obj157_phase
 	and msk_obj157_layer7824_4015,x
 	ora bm_obj157_layer7824_4015,x
 	sta bitmap+4015
 	lda #253
+	ldx obj153_phase
+	ora bm_obj153_layer7522_4016,x
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4016,x
+	ora bm_obj161_layer7597_4016,x
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_4016,y
-	ldy obj156_phase
-	ora bm_obj156_layer7770_4016,y
-	ldy obj157_phase
-	and msk_obj157_layer7824_4016,y
-	ora bm_obj157_layer7824_4016,y
+	ora bm_obj160_layer7651_4016,y
+	ldx obj156_phase
+	ora bm_obj156_layer7770_4016,x
+	ldx obj157_phase
+	and msk_obj157_layer7824_4016,x
+	ora bm_obj157_layer7824_4016,x
 	sta bitmap+4016
 	lda #173
-	;ldx obj161_phase
-	ora bm_obj161_layer7611_4017,x
-	ldx obj160_phase
-	ora bm_obj160_layer7663_4017,x
-	ldx obj156_phase
-	and msk_obj156_layer7770_4017,x
-	ora bm_obj156_layer7770_4017,x
-	;ldy obj157_phase
+	ldx obj153_phase
+	ora bm_obj153_layer7522_4017,x
+	ldx obj161_phase
+	ora bm_obj161_layer7597_4017,x
+	;ldy obj160_phase
+	ora bm_obj160_layer7651_4017,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_4017,y
+	ora bm_obj156_layer7770_4017,y
+	ldy obj157_phase
 	and msk_obj157_layer7824_4017,y
 	ora bm_obj157_layer7824_4017,y
 	sta bitmap+4017
 	lda #182
-	ldy obj161_phase
-	ora bm_obj161_layer7611_4018,y
-	;ldx obj156_phase
+	;ldx obj161_phase
+	ora bm_obj161_layer7597_4018,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_4018,x
+	ldx obj156_phase
 	ora bm_obj156_layer7770_4018,x
-	ldx obj157_phase
-	and msk_obj157_layer7824_4018,x
-	ora bm_obj157_layer7824_4018,x
+	;ldy obj157_phase
+	and msk_obj157_layer7824_4018,y
+	ora bm_obj157_layer7824_4018,y
 	sta bitmap+4018
 	lda #187
-	;ldy obj161_phase
-	ora bm_obj161_layer7611_4019,y
-	ldy obj160_phase
-	ora bm_obj160_layer7663_4019,y
-	;ldx obj157_phase
-	and msk_obj157_layer7824_4019,x
-	ora bm_obj157_layer7824_4019,x
+	ldx obj153_phase
+	ora bm_obj153_layer7522_4019,x
+	ldx obj161_phase
+	ora bm_obj161_layer7597_4019,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_4019,x
+	;ldy obj157_phase
+	and msk_obj157_layer7824_4019,y
+	ora bm_obj157_layer7824_4019,y
 	sta bitmap+4019
 	lda #84
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4020,x
-	;ldy obj160_phase
-	ora bm_obj160_layer7663_4020,y
-	ldy obj157_phase
-	and msk_obj157_layer7824_4020,y
-	ora bm_obj157_layer7824_4020,y
+	ldy obj161_phase
+	ora bm_obj161_layer7597_4020,y
+	;ldx obj160_phase
+	ora bm_obj160_layer7651_4020,x
+	ldx obj157_phase
+	and msk_obj157_layer7824_4020,x
+	ora bm_obj157_layer7824_4020,x
 	sta bitmap+4020
 	lda #181
-	;ldx obj161_phase
-	ora bm_obj161_layer7611_4021,x
-	ldx obj160_phase
-	ora bm_obj160_layer7663_4021,x
-	;ldy obj157_phase
-	and msk_obj157_layer7824_4021,y
-	ora bm_obj157_layer7824_4021,y
+	;ldy obj161_phase
+	ora bm_obj161_layer7597_4021,y
+	ldy obj160_phase
+	ora bm_obj160_layer7651_4021,y
+	;ldx obj157_phase
+	and msk_obj157_layer7824_4021,x
+	ora bm_obj157_layer7824_4021,x
 	sta bitmap+4021
 	lda #104
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4022,x
-	;ldy obj157_phase
+	ora bm_obj161_layer7597_4022,x
+	;ldy obj160_phase
+	ora bm_obj160_layer7651_4022,y
+	ldy obj157_phase
 	and msk_obj157_layer7824_4022,y
 	ora bm_obj157_layer7824_4022,y
 	sta bitmap+4022
 	lda #106
 	;ldx obj161_phase
-	ora bm_obj161_layer7611_4023,x
+	ora bm_obj161_layer7597_4023,x
 	ldx obj160_phase
-	ora bm_obj160_layer7663_4023,x
+	ora bm_obj160_layer7651_4023,x
 	ldx obj154_phase
 	ora bm_obj154_layer7817_4023,x
 	;ldy obj157_phase
@@ -5491,345 +5497,337 @@
 	ora bm_obj157_layer7824_4023,y
 	sta bitmap+4023
 	lda #72
-	ldy obj13_phase
-	ora bm_obj13_layer6965_4024,y
-	ldx obj153_phase
-	ora bm_obj153_layer7524_4024,x
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4024,x
-	ldx obj104_phase
-	and msk_obj104_layer7705_4024,x
-	ora bm_obj104_layer7705_4024,x
-	ldx obj156_phase
-	and msk_obj156_layer7770_4024,x
-	ora bm_obj156_layer7770_4024,x
+	ldx obj13_phase
+	ora bm_obj13_layer6965_4024,x
+	ldy obj136_phase
+	ora bm_obj136_layer7489_4024,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_4024,y
+	ldy obj104_phase
+	and msk_obj104_layer7705_4024,y
+	ora bm_obj104_layer7705_4024,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_4024,y
+	ora bm_obj156_layer7770_4024,y
 	sta bitmap+4024
 	lda #144
-	;ldy obj13_phase
-	and msk_obj13_layer6965_4025,y
-	ora bm_obj13_layer6965_4025,y
-	ldy obj136_phase
-	ora bm_obj136_layer7506_4025,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_4025,y
-	ldy obj104_phase
-	and msk_obj104_layer7705_4025,y
-	ora bm_obj104_layer7705_4025,y
-	;ldx obj156_phase
-	and msk_obj156_layer7770_4025,x
-	ora bm_obj156_layer7770_4025,x
+	;ldx obj13_phase
+	and msk_obj13_layer6965_4025,x
+	ora bm_obj13_layer6965_4025,x
+	ldx obj136_phase
+	ora bm_obj136_layer7489_4025,x
+	ldx obj153_phase
+	ora bm_obj153_layer7522_4025,x
+	ldx obj104_phase
+	and msk_obj104_layer7705_4025,x
+	ora bm_obj104_layer7705_4025,x
+	;ldy obj156_phase
+	and msk_obj156_layer7770_4025,y
+	ora bm_obj156_layer7770_4025,y
 	sta bitmap+4025
 	lda #8
-	ldx obj13_phase
-	ora bm_obj13_layer6965_4026,x
-	ldx obj14_phase
-	ora bm_obj14_layer7068_4026,x
-	ldx obj153_phase
-	ora bm_obj153_layer7524_4026,x
-	;ldy obj104_phase
-	and msk_obj104_layer7705_4026,y
-	ora bm_obj104_layer7705_4026,y
-	ldy obj156_phase
-	and msk_obj156_layer7770_4026,y
-	ora bm_obj156_layer7770_4026,y
+	ldy obj13_phase
+	ora bm_obj13_layer6965_4026,y
+	ldy obj14_phase
+	ora bm_obj14_layer7068_4026,y
+	ldy obj136_phase
+	ora bm_obj136_layer7489_4026,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_4026,y
+	;ldx obj104_phase
+	and msk_obj104_layer7705_4026,x
+	ora bm_obj104_layer7705_4026,x
+	ldx obj156_phase
+	and msk_obj156_layer7770_4026,x
+	ora bm_obj156_layer7770_4026,x
 	sta bitmap+4026
 	lda #64
-	ldy obj13_phase
-	and msk_obj13_layer6965_4027,y
-	ora bm_obj13_layer6965_4027,y
-	ldy obj14_phase
-	ora bm_obj14_layer7068_4027,y
-	;ldx obj153_phase
-	ora bm_obj153_layer7524_4027,x
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4027,x
-	ldx obj104_phase
-	and msk_obj104_layer7705_4027,x
-	ora bm_obj104_layer7705_4027,x
-	ldx obj156_phase
-	and msk_obj156_layer7770_4027,x
-	ora bm_obj156_layer7770_4027,x
-	ldx obj157_phase
-	ora bm_obj157_layer7824_4027,x
+	ldx obj13_phase
+	and msk_obj13_layer6965_4027,x
+	ora bm_obj13_layer6965_4027,x
+	ldx obj14_phase
+	ora bm_obj14_layer7068_4027,x
+	;ldy obj153_phase
+	ora bm_obj153_layer7522_4027,y
+	ldy obj104_phase
+	and msk_obj104_layer7705_4027,y
+	ora bm_obj104_layer7705_4027,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_4027,y
+	ora bm_obj156_layer7770_4027,y
+	ldy obj157_phase
+	ora bm_obj157_layer7824_4027,y
 	sta bitmap+4027
 	lda #24
-	ldx obj13_phase
-	ora bm_obj13_layer6965_4028,x
-	;ldy obj14_phase
-	ora bm_obj14_layer7068_4028,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_4028,y
-	ldy obj161_phase
-	ora bm_obj161_layer7611_4028,y
-	ldy obj104_phase
-	and msk_obj104_layer7705_4028,y
-	ora bm_obj104_layer7705_4028,y
-	ldy obj156_phase
-	and msk_obj156_layer7770_4028,y
-	ora bm_obj156_layer7770_4028,y
-	ldy obj157_phase
-	ora bm_obj157_layer7824_4028,y
-	sta bitmap+4028
-	;ldx obj13_phase
-	lda bm_obj13_layer6965_4029,x
-	ldx obj14_phase
-	ora bm_obj14_layer7068_4029,x
-	ldx obj100_phase
-	ora bm_obj100_layer7449_4029,x
+	ldy obj13_phase
+	ora bm_obj13_layer6965_4028,y
+	;ldx obj14_phase
+	ora bm_obj14_layer7068_4028,x
 	ldx obj153_phase
-	ora bm_obj153_layer7524_4029,x
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4029,x
+	ora bm_obj153_layer7522_4028,x
 	ldx obj104_phase
-	and msk_obj104_layer7705_4029,x
-	ora bm_obj104_layer7705_4029,x
+	and msk_obj104_layer7705_4028,x
+	ora bm_obj104_layer7705_4028,x
 	ldx obj156_phase
-	and msk_obj156_layer7770_4029,x
-	ora bm_obj156_layer7770_4029,x
-	;ldy obj157_phase
-	and msk_obj157_layer7824_4029,y
-	ora bm_obj157_layer7824_4029,y
+	and msk_obj156_layer7770_4028,x
+	ora bm_obj156_layer7770_4028,x
+	ldx obj157_phase
+	ora bm_obj157_layer7824_4028,x
+	sta bitmap+4028
+	;ldy obj13_phase
+	lda bm_obj13_layer6965_4029,y
+	ldy obj14_phase
+	ora bm_obj14_layer7068_4029,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_4029,y
+	ldy obj104_phase
+	and msk_obj104_layer7705_4029,y
+	ora bm_obj104_layer7705_4029,y
+	ldy obj156_phase
+	and msk_obj156_layer7770_4029,y
+	ora bm_obj156_layer7770_4029,y
+	;ldx obj157_phase
+	and msk_obj157_layer7824_4029,x
+	ora bm_obj157_layer7824_4029,x
 	sta bitmap+4029
 	lda #88
-	ldy obj13_phase
-	ora bm_obj13_layer6965_4030,y
-	ldy obj14_phase
-	ora bm_obj14_layer7068_4030,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_4030,y
-	ldy obj161_phase
-	ora bm_obj161_layer7611_4030,y
-	ldy obj104_phase
-	and msk_obj104_layer7705_4030,y
-	ora bm_obj104_layer7705_4030,y
-	;ldx obj156_phase
-	ora bm_obj156_layer7770_4030,x
-	ldx obj157_phase
-	and msk_obj157_layer7824_4030,x
-	ora bm_obj157_layer7824_4030,x
-	sta bitmap+4030
 	ldx obj13_phase
-	lda bm_obj13_layer6965_4031,x
+	ora bm_obj13_layer6965_4030,x
 	ldx obj14_phase
-	ora bm_obj14_layer7068_4031,x
+	ora bm_obj14_layer7068_4030,x
 	ldx obj153_phase
-	ora bm_obj153_layer7524_4031,x
+	ora bm_obj153_layer7522_4030,x
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4031,x
-	ldx obj105_phase
-	ora bm_obj105_layer7700_4031,x
-	;ldy obj104_phase
-	ora bm_obj104_layer7705_4031,y
-	ldx obj101_phase
-	ora bm_obj101_layer7757_4031,x
-	ldx obj156_phase
-	ora bm_obj156_layer7770_4031,x
-	ldx obj154_phase
-	ora bm_obj154_layer7817_4031,x
-	ldx obj157_phase
-	ora bm_obj157_layer7824_4031,x
-	sta bitmap+4031
-	ldx obj13_phase
-	lda bm_obj13_layer6965_4032,x
-	ldx obj14_phase
-	ora bm_obj14_layer7068_4032,x
-	ldx obj57_phase
-	ora bm_obj57_layer7172_4032,x
-	ldx obj58_phase
-	ora bm_obj58_layer7291_4032,x
-	ldx obj102_phase
-	ora bm_obj102_layer7517_4032,x
-	ldx obj103_phase
-	and msk_obj103_layer7614_4032,x
-	ora bm_obj103_layer7614_4032,x
-	;ldy obj104_phase
-	and msk_obj104_layer7705_4032,y
-	ora bm_obj104_layer7705_4032,y
-	sta bitmap+4032
+	ora bm_obj161_layer7597_4030,x
+	ldx obj104_phase
+	and msk_obj104_layer7705_4030,x
+	ora bm_obj104_layer7705_4030,x
+	;ldy obj156_phase
+	ora bm_obj156_layer7770_4030,y
+	ldy obj157_phase
+	and msk_obj157_layer7824_4030,y
+	ora bm_obj157_layer7824_4030,y
+	sta bitmap+4030
 	ldy obj13_phase
-	lda bm_obj13_layer6965_4033,y
+	lda bm_obj13_layer6965_4031,y
 	ldy obj14_phase
-	and msk_obj14_layer7068_4033,y
-	ora bm_obj14_layer7068_4033,y
+	ora bm_obj14_layer7068_4031,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_4031,y
+	ldy obj105_phase
+	ora bm_obj105_layer7700_4031,y
+	;ldx obj104_phase
+	ora bm_obj104_layer7705_4031,x
+	ldy obj101_phase
+	ora bm_obj101_layer7757_4031,y
+	ldy obj156_phase
+	ora bm_obj156_layer7770_4031,y
+	ldy obj154_phase
+	ora bm_obj154_layer7817_4031,y
+	ldy obj157_phase
+	ora bm_obj157_layer7824_4031,y
+	sta bitmap+4031
+	ldy obj13_phase
+	lda bm_obj13_layer6965_4032,y
+	ldy obj14_phase
+	ora bm_obj14_layer7068_4032,y
 	ldy obj57_phase
-	and msk_obj57_layer7172_4033,y
-	ora bm_obj57_layer7172_4033,y
+	ora bm_obj57_layer7172_4032,y
 	ldy obj58_phase
-	ora bm_obj58_layer7291_4033,y
+	ora bm_obj58_layer7291_4032,y
 	ldy obj102_phase
-	ora bm_obj102_layer7517_4033,y
-	;ldx obj103_phase
-	and msk_obj103_layer7614_4033,x
-	ora bm_obj103_layer7614_4033,x
-	ldx obj104_phase
-	and msk_obj104_layer7705_4033,x
-	ora bm_obj104_layer7705_4033,x
+	ora bm_obj102_layer7517_4032,y
+	ldy obj103_phase
+	and msk_obj103_layer7614_4032,y
+	ora bm_obj103_layer7614_4032,y
+	;ldx obj104_phase
+	and msk_obj104_layer7705_4032,x
+	ora bm_obj104_layer7705_4032,x
+	sta bitmap+4032
+	ldx obj13_phase
+	lda bm_obj13_layer6965_4033,x
+	ldx obj14_phase
+	and msk_obj14_layer7068_4033,x
+	ora bm_obj14_layer7068_4033,x
+	ldx obj57_phase
+	and msk_obj57_layer7172_4033,x
+	ora bm_obj57_layer7172_4033,x
+	ldx obj58_phase
+	ora bm_obj58_layer7291_4033,x
+	ldx obj102_phase
+	ora bm_obj102_layer7517_4033,x
+	;ldy obj103_phase
+	and msk_obj103_layer7614_4033,y
+	ora bm_obj103_layer7614_4033,y
+	ldy obj104_phase
+	and msk_obj104_layer7705_4033,y
+	ora bm_obj104_layer7705_4033,y
 	sta bitmap+4033
-	ldx obj14_phase
-	lda bm_obj14_layer7068_4034,x
-	ldx obj57_phase
-	ora bm_obj57_layer7172_4034,x
-	ldx obj58_phase
-	ora bm_obj58_layer7291_4034,x
-	;ldy obj102_phase
-	ora bm_obj102_layer7517_4034,y
-	ldy obj103_phase
-	ora bm_obj103_layer7614_4034,y
-	ldy obj104_phase
-	and msk_obj104_layer7705_4034,y
-	ora bm_obj104_layer7705_4034,y
+	ldy obj14_phase
+	lda bm_obj14_layer7068_4034,y
+	ldy obj57_phase
+	ora bm_obj57_layer7172_4034,y
+	ldy obj58_phase
+	ora bm_obj58_layer7291_4034,y
+	;ldx obj102_phase
+	ora bm_obj102_layer7517_4034,x
+	ldx obj103_phase
+	ora bm_obj103_layer7614_4034,x
+	ldx obj104_phase
+	and msk_obj104_layer7705_4034,x
+	ora bm_obj104_layer7705_4034,x
 	sta bitmap+4034
-	ldy obj14_phase
-	lda bm_obj14_layer7068_4035,y
-	ldy obj57_phase
-	and msk_obj57_layer7172_4035,y
-	ora bm_obj57_layer7172_4035,y
-	;ldx obj58_phase
-	ora bm_obj58_layer7291_4035,x
-	ldx obj102_phase
-	ora bm_obj102_layer7517_4035,x
-	ldx obj103_phase
-	ora bm_obj103_layer7614_4035,x
-	ldx obj104_phase
-	and msk_obj104_layer7705_4035,x
-	ora bm_obj104_layer7705_4035,x
-	sta bitmap+4035
 	ldx obj14_phase
-	lda bm_obj14_layer7068_4036,x
-	;ldy obj57_phase
-	ora bm_obj57_layer7172_4036,y
-	ldy obj58_phase
-	ora bm_obj58_layer7291_4036,y
+	lda bm_obj14_layer7068_4035,x
+	ldx obj57_phase
+	and msk_obj57_layer7172_4035,x
+	ora bm_obj57_layer7172_4035,x
+	;ldy obj58_phase
+	ora bm_obj58_layer7291_4035,y
 	ldy obj102_phase
-	ora bm_obj102_layer7517_4036,y
+	ora bm_obj102_layer7517_4035,y
 	ldy obj103_phase
-	ora bm_obj103_layer7614_4036,y
+	ora bm_obj103_layer7614_4035,y
 	ldy obj104_phase
-	and msk_obj104_layer7705_4036,y
-	ora bm_obj104_layer7705_4036,y
-	sta bitmap+4036
-	;ldx obj14_phase
-	lda bm_obj14_layer7068_4037,x
-	ldx obj57_phase
-	ora bm_obj57_layer7172_4037,x
-	ldx obj58_phase
-	ora bm_obj58_layer7291_4037,x
-	ldx obj102_phase
-	ora bm_obj102_layer7517_4037,x
-	ldx obj103_phase
-	ora bm_obj103_layer7614_4037,x
-	;ldy obj104_phase
-	and msk_obj104_layer7705_4037,y
-	ora bm_obj104_layer7705_4037,y
-	sta bitmap+4037
+	and msk_obj104_layer7705_4035,y
+	ora bm_obj104_layer7705_4035,y
+	sta bitmap+4035
 	ldy obj14_phase
-	lda bm_obj14_layer7068_4038,y
-	ldy obj57_phase
-	ora bm_obj57_layer7172_4038,y
-	ldy obj58_phase
-	ora bm_obj58_layer7291_4038,y
-	ldy obj102_phase
-	ora bm_obj102_layer7517_4038,y
-	;ldx obj103_phase
-	ora bm_obj103_layer7614_4038,x
-	ldx obj104_phase
-	and msk_obj104_layer7705_4038,x
-	ora bm_obj104_layer7705_4038,x
-	sta bitmap+4038
-	ldx obj14_phase
-	lda bm_obj14_layer7068_4039,x
-	ldx obj15_phase
-	ora bm_obj15_layer7092_4039,x
-	ldx obj57_phase
-	ora bm_obj57_layer7172_4039,x
-	ldx obj11_phase
-	ora bm_obj11_layer7204_4039,x
+	lda bm_obj14_layer7068_4036,y
+	;ldx obj57_phase
+	ora bm_obj57_layer7172_4036,x
 	ldx obj58_phase
-	ora bm_obj58_layer7291_4039,x
-	ldx obj55_phase
-	ora bm_obj55_layer7300_4039,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4039,x
-	;ldy obj102_phase
-	ora bm_obj102_layer7517_4039,y
-	ldx obj106_phase
-	ora bm_obj106_layer7603_4039,x
+	ora bm_obj58_layer7291_4036,x
+	ldx obj102_phase
+	ora bm_obj102_layer7517_4036,x
 	ldx obj103_phase
-	ora bm_obj103_layer7614_4039,x
-	ldx obj105_phase
-	ora bm_obj105_layer7700_4039,x
+	ora bm_obj103_layer7614_4036,x
 	ldx obj104_phase
-	ora bm_obj104_layer7705_4039,x
-	sta bitmap+4039
-	ldx obj58_phase
-	lda bm_obj58_layer7291_4040,x
-	ldx obj59_phase
-	ora bm_obj59_layer7402_4040,x
-	;ldy obj102_phase
-	and msk_obj102_layer7517_4040,y
-	ora bm_obj102_layer7517_4040,y
-	sta bitmap+4040
+	and msk_obj104_layer7705_4036,x
+	ora bm_obj104_layer7705_4036,x
+	sta bitmap+4036
+	;ldy obj14_phase
+	lda bm_obj14_layer7068_4037,y
+	ldy obj57_phase
+	ora bm_obj57_layer7172_4037,y
 	ldy obj58_phase
-	lda bm_obj58_layer7291_4041,y
-	;ldx obj59_phase
-	ora bm_obj59_layer7402_4041,x
-	ldx obj102_phase
-	ora bm_obj102_layer7517_4041,x
-	sta bitmap+4041
-	;ldy obj58_phase
-	lda bm_obj58_layer7291_4042,y
-	ldy obj59_phase
-	ora bm_obj59_layer7402_4042,y
-	;ldx obj102_phase
-	and msk_obj102_layer7517_4042,x
-	ora bm_obj102_layer7517_4042,x
-	sta bitmap+4042
-	ldx obj58_phase
-	lda bm_obj58_layer7291_4043,x
-	;ldy obj59_phase
-	ora bm_obj59_layer7402_4043,y
+	ora bm_obj58_layer7291_4037,y
 	ldy obj102_phase
-	and msk_obj102_layer7517_4043,y
-	ora bm_obj102_layer7517_4043,y
-	sta bitmap+4043
-	;ldx obj58_phase
-	lda bm_obj58_layer7291_4044,x
-	ldx obj59_phase
-	ora bm_obj59_layer7402_4044,x
-	;ldy obj102_phase
-	and msk_obj102_layer7517_4044,y
-	ora bm_obj102_layer7517_4044,y
-	sta bitmap+4044
-	ldy obj58_phase
-	lda bm_obj58_layer7291_4045,y
-	;ldx obj59_phase
-	ora bm_obj59_layer7402_4045,x
-	ldx obj102_phase
-	and msk_obj102_layer7517_4045,x
-	ora bm_obj102_layer7517_4045,x
-	sta bitmap+4045
-	;ldy obj58_phase
-	lda bm_obj58_layer7291_4046,y
-	ldy obj55_phase
-	ora bm_obj55_layer7300_4046,y
-	ldy obj59_phase
-	ora bm_obj59_layer7402_4046,y
-	ldy obj99_phase
-	ora bm_obj99_layer7405_4046,y
-	ldy obj107_phase
-	ora bm_obj107_layer7511_4046,y
-	;ldx obj102_phase
-	and msk_obj102_layer7517_4046,x
-	ora bm_obj102_layer7517_4046,x
-	sta bitmap+4046
+	ora bm_obj102_layer7517_4037,y
+	ldy obj103_phase
+	ora bm_obj103_layer7614_4037,y
+	;ldx obj104_phase
+	and msk_obj104_layer7705_4037,x
+	ora bm_obj104_layer7705_4037,x
+	sta bitmap+4037
+	ldx obj14_phase
+	lda bm_obj14_layer7068_4038,x
+	ldx obj57_phase
+	ora bm_obj57_layer7172_4038,x
 	ldx obj58_phase
-	lda bm_obj58_layer7291_4047,x
+	ora bm_obj58_layer7291_4038,x
+	ldx obj102_phase
+	ora bm_obj102_layer7517_4038,x
+	;ldy obj103_phase
+	ora bm_obj103_layer7614_4038,y
+	ldy obj104_phase
+	and msk_obj104_layer7705_4038,y
+	ora bm_obj104_layer7705_4038,y
+	sta bitmap+4038
+	ldy obj14_phase
+	lda bm_obj14_layer7068_4039,y
+	ldy obj15_phase
+	ora bm_obj15_layer7092_4039,y
+	ldy obj57_phase
+	ora bm_obj57_layer7172_4039,y
+	ldy obj11_phase
+	ora bm_obj11_layer7204_4039,y
+	ldy obj58_phase
+	ora bm_obj58_layer7291_4039,y
+	ldy obj55_phase
+	ora bm_obj55_layer7300_4039,y
+	ldy obj107_phase
+	ora bm_obj107_layer7511_4039,y
+	;ldx obj102_phase
+	ora bm_obj102_layer7517_4039,x
+	ldy obj106_phase
+	ora bm_obj106_layer7603_4039,y
+	ldy obj103_phase
+	ora bm_obj103_layer7614_4039,y
+	ldy obj105_phase
+	ora bm_obj105_layer7700_4039,y
+	ldy obj104_phase
+	ora bm_obj104_layer7705_4039,y
+	sta bitmap+4039
+	ldy obj58_phase
+	lda bm_obj58_layer7291_4040,y
+	ldy obj59_phase
+	ora bm_obj59_layer7402_4040,y
+	;ldx obj102_phase
+	and msk_obj102_layer7517_4040,x
+	ora bm_obj102_layer7517_4040,x
+	sta bitmap+4040
+	ldx obj58_phase
+	lda bm_obj58_layer7291_4041,x
+	;ldy obj59_phase
+	ora bm_obj59_layer7402_4041,y
+	ldy obj102_phase
+	ora bm_obj102_layer7517_4041,y
+	sta bitmap+4041
+	;ldx obj58_phase
+	lda bm_obj58_layer7291_4042,x
+	ldx obj59_phase
+	ora bm_obj59_layer7402_4042,x
+	;ldy obj102_phase
+	and msk_obj102_layer7517_4042,y
+	ora bm_obj102_layer7517_4042,y
+	sta bitmap+4042
+	ldy obj58_phase
+	lda bm_obj58_layer7291_4043,y
+	;ldx obj59_phase
+	ora bm_obj59_layer7402_4043,x
+	ldx obj102_phase
+	and msk_obj102_layer7517_4043,x
+	ora bm_obj102_layer7517_4043,x
+	sta bitmap+4043
+	;ldy obj58_phase
+	lda bm_obj58_layer7291_4044,y
+	ldy obj59_phase
+	ora bm_obj59_layer7402_4044,y
+	;ldx obj102_phase
+	and msk_obj102_layer7517_4044,x
+	ora bm_obj102_layer7517_4044,x
+	sta bitmap+4044
+	ldx obj58_phase
+	lda bm_obj58_layer7291_4045,x
+	;ldy obj59_phase
+	ora bm_obj59_layer7402_4045,y
+	ldy obj102_phase
+	and msk_obj102_layer7517_4045,y
+	ora bm_obj102_layer7517_4045,y
+	sta bitmap+4045
+	;ldx obj58_phase
+	lda bm_obj58_layer7291_4046,x
 	ldx obj55_phase
-	ora bm_obj55_layer7300_4047,x
+	ora bm_obj55_layer7300_4046,x
+	ldx obj59_phase
+	ora bm_obj59_layer7402_4046,x
 	ldx obj99_phase
-	ora bm_obj99_layer7405_4047,x
-	;ldy obj107_phase
-	ora bm_obj107_layer7511_4047,y
+	ora bm_obj99_layer7405_4046,x
+	ldx obj107_phase
+	ora bm_obj107_layer7511_4046,x
+	;ldy obj102_phase
+	and msk_obj102_layer7517_4046,y
+	ora bm_obj102_layer7517_4046,y
+	sta bitmap+4046
+	ldy obj58_phase
+	lda bm_obj58_layer7291_4047,y
+	ldy obj55_phase
+	ora bm_obj55_layer7300_4047,y
+	ldy obj99_phase
+	ora bm_obj99_layer7405_4047,y
+	;ldx obj107_phase
+	ora bm_obj107_layer7511_4047,x
 	ldx obj102_phase
 	ora bm_obj102_layer7517_4047,x
 	sta bitmap+4047
@@ -6043,16 +6041,14 @@
 	;ldx obj163_phase
 	ora bm_obj163_layer7634_4287,x
 	sta bitmap+4287
-	lda #32
 	ldx obj76_phase
-	and msk_obj76_layer6987_4288,x
-	ora bm_obj76_layer6987_4288,x
+	lda bm_obj76_layer6987_4288,x
 	ldy obj169_phase
-	ora bm_obj169_layer7475_4288,y
+	ora bm_obj169_layer7465_4288,y
 	ldy obj168_phase
-	ora bm_obj168_layer7525_4288,y
+	ora bm_obj168_layer7504_4288,y
 	ldy obj164_phase
-	ora bm_obj164_layer7601_4288,y
+	ora bm_obj164_layer7588_4288,y
 	ldy obj167_phase
 	and msk_obj167_layer7716_4288,y
 	ora bm_obj167_layer7716_4288,y
@@ -6062,13 +6058,12 @@
 	sta bitmap+4288
 	lda #20
 	;ldx obj76_phase
+	and msk_obj76_layer6987_4289,x
 	ora bm_obj76_layer6987_4289,x
 	ldx obj169_phase
-	ora bm_obj169_layer7475_4289,x
-	ldx obj168_phase
-	ora bm_obj168_layer7525_4289,x
+	ora bm_obj169_layer7465_4289,x
 	ldx obj164_phase
-	ora bm_obj164_layer7601_4289,x
+	ora bm_obj164_layer7588_4289,x
 	ldx obj167_phase
 	and msk_obj167_layer7716_4289,x
 	ora bm_obj167_layer7716_4289,x
@@ -6076,16 +6071,14 @@
 	and msk_obj176_layer7787_4289,y
 	ora bm_obj176_layer7787_4289,y
 	sta bitmap+4289
-	lda #41
+	lda #9
 	ldy obj76_phase
 	and msk_obj76_layer6987_4290,y
 	ora bm_obj76_layer6987_4290,y
 	ldy obj169_phase
-	ora bm_obj169_layer7475_4290,y
-	ldy obj168_phase
-	ora bm_obj168_layer7525_4290,y
+	ora bm_obj169_layer7465_4290,y
 	ldy obj164_phase
-	ora bm_obj164_layer7601_4290,y
+	ora bm_obj164_layer7588_4290,y
 	;ldx obj167_phase
 	ora bm_obj167_layer7716_4290,x
 	ldx obj176_phase
@@ -6097,23 +6090,21 @@
 	and msk_obj76_layer6987_4291,x
 	ora bm_obj76_layer6987_4291,x
 	ldx obj168_phase
-	ora bm_obj168_layer7525_4291,x
+	ora bm_obj168_layer7504_4291,x
 	;ldy obj164_phase
-	ora bm_obj164_layer7601_4291,y
+	ora bm_obj164_layer7588_4291,y
 	ldy obj167_phase
 	ora bm_obj167_layer7716_4291,y
 	ldy obj176_phase
 	and msk_obj176_layer7787_4291,y
 	ora bm_obj176_layer7787_4291,y
 	sta bitmap+4291
-	lda #26
+	lda #10
 	ldy obj76_phase
 	and msk_obj76_layer6987_4292,y
 	ora bm_obj76_layer6987_4292,y
 	;ldx obj168_phase
-	ora bm_obj168_layer7525_4292,x
-	ldx obj164_phase
-	ora bm_obj164_layer7601_4292,x
+	ora bm_obj168_layer7504_4292,x
 	ldx obj167_phase
 	ora bm_obj167_layer7716_4292,x
 	ldx obj175_phase
@@ -6125,8 +6116,6 @@
 	;ldy obj76_phase
 	and msk_obj76_layer6987_4293,y
 	ora bm_obj76_layer6987_4293,y
-	ldy obj164_phase
-	ora bm_obj164_layer7601_4293,y
 	ldy obj163_phase
 	ora bm_obj163_layer7634_4293,y
 	ldy obj166_phase
@@ -6141,7 +6130,7 @@
 	;ldx obj176_phase
 	ora bm_obj176_layer7787_4293,x
 	sta bitmap+4293
-	lda #15
+	lda #7
 	ldx obj76_phase
 	ora bm_obj76_layer6987_4294,x
 	ldx obj73_phase
@@ -6167,48 +6156,48 @@
 	ora bm_obj175_layer7771_4295,x
 	sta bitmap+4295
 	lda #170
-	ldy obj164_phase
-	ora bm_obj164_layer7601_4296,y
+	ldx obj164_phase
+	ora bm_obj164_layer7588_4296,x
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4296,x
-	ldx obj176_phase
-	and msk_obj176_layer7787_4296,x
-	ora bm_obj176_layer7787_4296,x
-	ldx obj177_phase
-	ora bm_obj177_layer7827_4296,x
+	ora bm_obj173_layer7639_4296,x
+	ldy obj176_phase
+	and msk_obj176_layer7787_4296,y
+	ora bm_obj176_layer7787_4296,y
+	ldy obj177_phase
+	ora bm_obj177_layer7827_4296,y
 	sta bitmap+4296
 	lda #137
-	;ldy obj164_phase
-	ora bm_obj164_layer7601_4297,y
-	ldx obj173_phase
-	ora bm_obj173_layer7656_4297,x
+	ldy obj164_phase
+	ora bm_obj164_layer7588_4297,y
+	;ldx obj173_phase
+	ora bm_obj173_layer7639_4297,x
 	ldx obj176_phase
 	and msk_obj176_layer7787_4297,x
 	ora bm_obj176_layer7787_4297,x
 	sta bitmap+4297
 	lda #84
 	;ldy obj164_phase
-	ora bm_obj164_layer7601_4298,y
+	ora bm_obj164_layer7588_4298,y
 	ldy obj173_phase
-	ora bm_obj173_layer7656_4298,y
+	ora bm_obj173_layer7639_4298,y
 	;ldx obj176_phase
 	and msk_obj176_layer7787_4298,x
 	ora bm_obj176_layer7787_4298,x
 	sta bitmap+4298
 	lda #166
 	ldx obj164_phase
-	ora bm_obj164_layer7601_4299,x
+	ora bm_obj164_layer7588_4299,x
 	;ldy obj173_phase
-	ora bm_obj173_layer7656_4299,y
+	ora bm_obj173_layer7639_4299,y
 	ldy obj176_phase
 	and msk_obj176_layer7787_4299,y
 	ora bm_obj176_layer7787_4299,y
 	sta bitmap+4299
 	lda #85
 	;ldx obj164_phase
-	ora bm_obj164_layer7601_4300,x
+	ora bm_obj164_layer7588_4300,x
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4300,x
+	ora bm_obj173_layer7639_4300,x
 	ldx obj175_phase
 	ora bm_obj175_layer7771_4300,x
 	;ldy obj176_phase
@@ -6216,36 +6205,36 @@
 	sta bitmap+4300
 	lda #18
 	ldy obj164_phase
-	ora bm_obj164_layer7601_4301,y
+	ora bm_obj164_layer7588_4301,y
 	ldy obj173_phase
-	ora bm_obj173_layer7656_4301,y
+	ora bm_obj173_layer7639_4301,y
 	;ldx obj175_phase
 	and msk_obj175_layer7771_4301,x
 	ora bm_obj175_layer7771_4301,x
 	sta bitmap+4301
 	lda #165
 	ldx obj164_phase
-	ora bm_obj164_layer7601_4302,x
+	ora bm_obj164_layer7588_4302,x
 	;ldy obj173_phase
-	ora bm_obj173_layer7656_4302,y
+	ora bm_obj173_layer7639_4302,y
 	ldy obj175_phase
 	and msk_obj175_layer7771_4302,y
 	ora bm_obj175_layer7771_4302,y
 	sta bitmap+4302
 	lda #233
 	;ldx obj164_phase
-	ora bm_obj164_layer7601_4303,x
+	ora bm_obj164_layer7588_4303,x
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4303,x
+	ora bm_obj173_layer7639_4303,x
 	;ldy obj175_phase
 	and msk_obj175_layer7771_4303,y
 	ora bm_obj175_layer7771_4303,y
 	sta bitmap+4303
 	lda #170
 	;ldx obj173_phase
-	ora bm_obj173_layer7656_4304,x
+	ora bm_obj173_layer7639_4304,x
 	ldy obj155_phase
-	ora bm_obj155_layer7688_4304,y
+	ora bm_obj155_layer7674_4304,y
 	ldy obj177_phase
 	and msk_obj177_layer7827_4304,y
 	ora bm_obj177_layer7827_4304,y
@@ -6255,9 +6244,9 @@
 	sta bitmap+4304
 	lda #109
 	;ldx obj173_phase
-	ora bm_obj173_layer7656_4305,x
+	ora bm_obj173_layer7639_4305,x
 	ldx obj155_phase
-	ora bm_obj155_layer7688_4305,x
+	ora bm_obj155_layer7674_4305,x
 	ldx obj176_phase
 	ora bm_obj176_layer7787_4305,x
 	ldx obj177_phase
@@ -6268,9 +6257,9 @@
 	sta bitmap+4305
 	lda #149
 	ldy obj173_phase
-	ora bm_obj173_layer7656_4306,y
+	ora bm_obj173_layer7639_4306,y
 	ldy obj155_phase
-	ora bm_obj155_layer7688_4306,y
+	ora bm_obj155_layer7674_4306,y
 	ldy obj176_phase
 	and msk_obj176_layer7787_4306,y
 	ora bm_obj176_layer7787_4306,y
@@ -6282,7 +6271,9 @@
 	sta bitmap+4306
 	lda #85
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4307,x
+	ora bm_obj173_layer7639_4307,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_4307,x
 	ldx obj175_phase
 	ora bm_obj175_layer7771_4307,x
 	;ldy obj176_phase
@@ -6299,9 +6290,9 @@
 	sta bitmap+4307
 	lda #85
 	ldy obj173_phase
-	ora bm_obj173_layer7656_4308,y
+	ora bm_obj173_layer7639_4308,y
 	ldy obj155_phase
-	ora bm_obj155_layer7688_4308,y
+	ora bm_obj155_layer7674_4308,y
 	;ldx obj175_phase
 	ora bm_obj175_layer7771_4308,x
 	ldx obj176_phase
@@ -6314,9 +6305,9 @@
 	sta bitmap+4308
 	lda #174
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4309,x
+	ora bm_obj173_layer7639_4309,x
 	;ldy obj155_phase
-	ora bm_obj155_layer7688_4309,y
+	ora bm_obj155_layer7674_4309,y
 	ldy obj175_phase
 	and msk_obj175_layer7771_4309,y
 	ora bm_obj175_layer7771_4309,y
@@ -6329,9 +6320,9 @@
 	sta bitmap+4309
 	lda #90
 	;ldx obj173_phase
-	ora bm_obj173_layer7656_4310,x
+	ora bm_obj173_layer7639_4310,x
 	ldx obj155_phase
-	ora bm_obj155_layer7688_4310,x
+	ora bm_obj155_layer7674_4310,x
 	ldx obj175_phase
 	ora bm_obj175_layer7771_4310,x
 	ldx obj174_phase
@@ -6342,13 +6333,13 @@
 	ora bm_obj179_layer7838_4310,y
 	sta bitmap+4310
 	lda #107
-	ldx obj173_phase
-	ora bm_obj173_layer7656_4311,x
+	ldy obj173_phase
+	ora bm_obj173_layer7639_4311,y
 	ldy obj155_phase
-	ora bm_obj155_layer7688_4311,y
-	ldx obj175_phase
-	ora bm_obj175_layer7771_4311,x
-	ldx obj174_phase
+	ora bm_obj155_layer7674_4311,y
+	ldy obj175_phase
+	ora bm_obj175_layer7771_4311,y
+	;ldx obj174_phase
 	and msk_obj174_layer7797_4311,x
 	ora bm_obj174_layer7797_4311,x
 	ldx obj179_phase
@@ -6356,204 +6347,192 @@
 	ora bm_obj179_layer7838_4311,x
 	sta bitmap+4311
 	lda #171
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_4312,y
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4312,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_4312,x
-	ora bm_obj178_layer7853_4312,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_4312,x
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4312,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_4312,y
+	ora bm_obj178_layer7853_4312,y
 	sta bitmap+4312
 	lda #107
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_4313,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4313,y
-	;ldx obj178_phase
-	and msk_obj178_layer7853_4313,x
-	ora bm_obj178_layer7853_4313,x
+	;ldx obj155_phase
+	ora bm_obj155_layer7674_4313,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4313,x
+	;ldy obj178_phase
+	and msk_obj178_layer7853_4313,y
+	ora bm_obj178_layer7853_4313,y
 	sta bitmap+4313
 	lda #85
-	ldx obj155_phase
-	ora bm_obj155_layer7688_4314,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4314,y
-	ldy obj179_phase
-	ora bm_obj179_layer7838_4314,y
-	ldy obj178_phase
-	ora bm_obj178_layer7853_4314,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_4314,y
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4314,x
+	ldx obj179_phase
+	ora bm_obj179_layer7838_4314,x
+	ldx obj178_phase
+	ora bm_obj178_layer7853_4314,x
 	sta bitmap+4314
 	lda #86
-	ldy obj173_phase
-	ora bm_obj173_layer7656_4315,y
-	;ldx obj155_phase
-	ora bm_obj155_layer7688_4315,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4315,x
-	ldx obj179_phase
-	and msk_obj179_layer7838_4315,x
-	ora bm_obj179_layer7838_4315,x
-	ldx obj178_phase
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_4315,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4315,y
+	ldy obj179_phase
+	and msk_obj179_layer7838_4315,y
+	ora bm_obj179_layer7838_4315,y
+	;ldx obj178_phase
 	ora bm_obj178_layer7853_4315,x
 	sta bitmap+4315
 	lda #85
-	;ldy obj173_phase
-	ora bm_obj173_layer7656_4316,y
 	ldx obj155_phase
-	ora bm_obj155_layer7688_4316,x
+	ora bm_obj155_layer7674_4316,x
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4316,x
-	ldx obj179_phase
-	and msk_obj179_layer7838_4316,x
-	ora bm_obj179_layer7838_4316,x
+	ora bm_obj159_layer7675_4316,x
+	;ldy obj179_phase
+	and msk_obj179_layer7838_4316,y
+	ora bm_obj179_layer7838_4316,y
 	sta bitmap+4316
 	lda #215
-	;ldy obj173_phase
-	ora bm_obj173_layer7656_4317,y
-	ldx obj155_phase
-	ora bm_obj155_layer7688_4317,x
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4317,y
-	ldy obj179_phase
-	and msk_obj179_layer7838_4317,y
-	ora bm_obj179_layer7838_4317,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_4317,y
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4317,x
+	ldx obj179_phase
+	and msk_obj179_layer7838_4317,x
+	ora bm_obj179_layer7838_4317,x
 	sta bitmap+4317
 	lda #170
-	;ldx obj155_phase
-	ora bm_obj155_layer7688_4318,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4318,x
-	;ldy obj179_phase
-	and msk_obj179_layer7838_4318,y
-	ora bm_obj179_layer7838_4318,y
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_4318,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4318,y
+	;ldx obj179_phase
+	and msk_obj179_layer7838_4318,x
+	ora bm_obj179_layer7838_4318,x
 	sta bitmap+4318
 	lda #110
-	ldx obj173_phase
-	ora bm_obj173_layer7656_4319,x
 	ldx obj155_phase
-	ora bm_obj155_layer7688_4319,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4319,x
-	;ldy obj179_phase
-	and msk_obj179_layer7838_4319,y
-	ora bm_obj179_layer7838_4319,y
+	ora bm_obj155_layer7674_4319,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4319,y
+	ldx obj179_phase
+	and msk_obj179_layer7838_4319,x
+	ora bm_obj179_layer7838_4319,x
 	sta bitmap+4319
 	lda #93
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4320,x
-	ldx obj154_phase
-	ora bm_obj154_layer7817_4320,x
-	ldx obj171_phase
-	ora bm_obj171_layer7823_4320,x
-	ldx obj157_phase
-	ora bm_obj157_layer7824_4320,x
-	;ldy obj179_phase
-	ora bm_obj179_layer7838_4320,y
-	ldx obj158_phase
-	ora bm_obj158_layer7846_4320,x
-	ldx obj178_phase
-	and msk_obj178_layer7853_4320,x
-	ora bm_obj178_layer7853_4320,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4320,y
+	ldy obj154_phase
+	ora bm_obj154_layer7817_4320,y
+	ldy obj171_phase
+	ora bm_obj171_layer7823_4320,y
+	ldy obj157_phase
+	ora bm_obj157_layer7824_4320,y
+	;ldx obj179_phase
+	ora bm_obj179_layer7838_4320,x
+	ldy obj158_phase
+	ora bm_obj158_layer7846_4320,y
+	ldy obj178_phase
+	and msk_obj178_layer7853_4320,y
+	ora bm_obj178_layer7853_4320,y
 	sta bitmap+4320
 	lda #119
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4321,x
-	ldx obj154_phase
-	ora bm_obj154_layer7817_4321,x
-	ldx obj171_phase
-	ora bm_obj171_layer7823_4321,x
-	;ldy obj179_phase
-	ora bm_obj179_layer7838_4321,y
-	ldy obj178_phase
-	ora bm_obj178_layer7853_4321,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4321,y
+	ldy obj154_phase
+	ora bm_obj154_layer7817_4321,y
+	ldy obj171_phase
+	ora bm_obj171_layer7823_4321,y
+	;ldx obj179_phase
+	ora bm_obj179_layer7838_4321,x
+	ldx obj178_phase
+	ora bm_obj178_layer7853_4321,x
 	sta bitmap+4321
 	lda #173
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4322,y
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4322,x
-	ora bm_obj171_layer7823_4322,x
-	ldx obj179_phase
-	and msk_obj179_layer7838_4322,x
-	ora bm_obj179_layer7838_4322,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4322,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4322,y
+	ora bm_obj171_layer7823_4322,y
+	ldy obj179_phase
+	and msk_obj179_layer7838_4322,y
+	ora bm_obj179_layer7838_4322,y
 	sta bitmap+4322
 	lda #255
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4323,y
-	ldy obj171_phase
-	ora bm_obj171_layer7823_4323,y
-	;ldx obj179_phase
-	and msk_obj179_layer7838_4323,x
-	ora bm_obj179_layer7838_4323,x
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4323,x
+	ldx obj171_phase
+	ora bm_obj171_layer7823_4323,x
+	;ldy obj179_phase
+	and msk_obj179_layer7838_4323,y
+	ora bm_obj179_layer7838_4323,y
 	sta bitmap+4323
 	lda #170
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4324,x
-	;ldy obj171_phase
-	and msk_obj171_layer7823_4324,y
-	ora bm_obj171_layer7823_4324,y
-	ldy obj179_phase
-	and msk_obj179_layer7838_4324,y
-	ora bm_obj179_layer7838_4324,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4324,y
+	;ldx obj171_phase
+	and msk_obj171_layer7823_4324,x
+	ora bm_obj171_layer7823_4324,x
+	ldx obj179_phase
+	and msk_obj179_layer7838_4324,x
+	ora bm_obj179_layer7838_4324,x
 	sta bitmap+4324
 	lda #254
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4325,x
-	ldx obj171_phase
-	and msk_obj171_layer7823_4325,x
-	ora bm_obj171_layer7823_4325,x
-	;ldy obj179_phase
-	and msk_obj179_layer7838_4325,y
-	ora bm_obj179_layer7838_4325,y
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4325,y
+	ldy obj171_phase
+	and msk_obj171_layer7823_4325,y
+	ora bm_obj171_layer7823_4325,y
+	;ldx obj179_phase
+	and msk_obj179_layer7838_4325,x
+	ora bm_obj179_layer7838_4325,x
 	sta bitmap+4325
 	lda #215
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4326,y
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4326,x
-	ora bm_obj171_layer7823_4326,x
-	ldx obj179_phase
-	and msk_obj179_layer7838_4326,x
-	ora bm_obj179_layer7838_4326,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4326,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4326,y
+	ora bm_obj171_layer7823_4326,y
+	ldy obj179_phase
+	and msk_obj179_layer7838_4326,y
+	ora bm_obj179_layer7838_4326,y
 	sta bitmap+4326
 	lda #245
-	ldx obj158_phase
-	ora bm_obj158_layer7662_4327,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4327,y
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4327,x
 	ldx obj171_phase
 	and msk_obj171_layer7823_4327,x
 	ora bm_obj171_layer7823_4327,x
-	ldx obj179_phase
-	and msk_obj179_layer7838_4327,x
-	ora bm_obj179_layer7838_4327,x
+	;ldy obj179_phase
+	and msk_obj179_layer7838_4327,y
+	ora bm_obj179_layer7838_4327,y
 	sta bitmap+4327
 	lda #109
 	ldx obj160_phase
-	ora bm_obj160_layer7663_4328,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4328,y
+	ora bm_obj160_layer7651_4328,x
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4328,y
 	ldx obj154_phase
 	ora bm_obj154_layer7817_4328,x
 	ldx obj157_phase
 	ora bm_obj157_layer7824_4328,x
 	sta bitmap+4328
 	lda #109
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4329,x
 	ldx obj160_phase
-	ora bm_obj160_layer7663_4329,x
+	ora bm_obj160_layer7651_4329,x
 	;ldy obj159_phase
-	ora bm_obj159_layer7689_4329,y
+	ora bm_obj159_layer7675_4329,y
 	ldy obj154_phase
 	and msk_obj154_layer7817_4329,y
 	ora bm_obj154_layer7817_4329,y
 	sta bitmap+4329
 	lda #183
 	;ldx obj160_phase
-	ora bm_obj160_layer7663_4330,x
+	ora bm_obj160_layer7651_4330,x
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4330,x
+	ora bm_obj159_layer7675_4330,x
 	;ldy obj154_phase
 	and msk_obj154_layer7817_4330,y
 	ora bm_obj154_layer7817_4330,y
@@ -6562,9 +6541,9 @@
 	sta bitmap+4330
 	lda #181
 	ldy obj160_phase
-	ora bm_obj160_layer7663_4331,y
+	ora bm_obj160_layer7651_4331,y
 	;ldx obj159_phase
-	ora bm_obj159_layer7689_4331,x
+	ora bm_obj159_layer7675_4331,x
 	ldx obj154_phase
 	and msk_obj154_layer7817_4331,x
 	ora bm_obj154_layer7817_4331,x
@@ -6574,9 +6553,9 @@
 	sta bitmap+4331
 	lda #221
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_4332,y
+	ora bm_obj160_layer7651_4332,y
 	ldy obj159_phase
-	ora bm_obj159_layer7689_4332,y
+	ora bm_obj159_layer7675_4332,y
 	ldy obj154_phase
 	and msk_obj154_layer7817_4332,y
 	ora bm_obj154_layer7817_4332,y
@@ -6586,11 +6565,11 @@
 	sta bitmap+4332
 	lda #214
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4333,x
+	ora bm_obj161_layer7597_4333,x
 	ldx obj160_phase
-	ora bm_obj160_layer7663_4333,x
+	ora bm_obj160_layer7651_4333,x
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4333,x
+	ora bm_obj159_layer7675_4333,x
 	;ldy obj154_phase
 	and msk_obj154_layer7817_4333,y
 	ora bm_obj154_layer7817_4333,y
@@ -6600,9 +6579,9 @@
 	sta bitmap+4333
 	lda #117
 	ldy obj160_phase
-	ora bm_obj160_layer7663_4334,y
+	ora bm_obj160_layer7651_4334,y
 	;ldx obj159_phase
-	ora bm_obj159_layer7689_4334,x
+	ora bm_obj159_layer7675_4334,x
 	ldx obj154_phase
 	and msk_obj154_layer7817_4334,x
 	ora bm_obj154_layer7817_4334,x
@@ -6611,54 +6590,54 @@
 	ora bm_obj171_layer7823_4334,x
 	sta bitmap+4334
 	lda #170
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4335,x
-	ldx obj158_phase
-	ora bm_obj158_layer7662_4335,x
 	;ldy obj160_phase
-	ora bm_obj160_layer7663_4335,y
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4335,x
+	ora bm_obj160_layer7651_4335,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4335,y
 	ldy obj154_phase
 	and msk_obj154_layer7817_4335,y
 	ora bm_obj154_layer7817_4335,y
-	ldx obj171_phase
+	;ldx obj171_phase
 	and msk_obj171_layer7823_4335,x
 	ora bm_obj171_layer7823_4335,x
 	sta bitmap+4335
 	lda #160
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4336,x
+	ora bm_obj161_layer7597_4336,x
 	;ldy obj154_phase
 	and msk_obj154_layer7817_4336,y
 	ora bm_obj154_layer7817_4336,y
-	ldx obj157_phase
-	ora bm_obj157_layer7824_4336,x
+	ldy obj157_phase
+	ora bm_obj157_layer7824_4336,y
 	sta bitmap+4336
 	lda #250
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4337,x
-	;ldy obj154_phase
+	;ldx obj161_phase
+	ora bm_obj161_layer7597_4337,x
+	ldy obj160_phase
+	ora bm_obj160_layer7651_4337,y
+	ldy obj154_phase
 	and msk_obj154_layer7817_4337,y
 	ora bm_obj154_layer7817_4337,y
 	sta bitmap+4337
 	lda #64
 	;ldx obj161_phase
-	ora bm_obj161_layer7611_4338,x
+	ora bm_obj161_layer7597_4338,x
 	;ldy obj154_phase
 	and msk_obj154_layer7817_4338,y
 	ora bm_obj154_layer7817_4338,y
 	sta bitmap+4338
 	lda #104
 	;ldx obj161_phase
-	ora bm_obj161_layer7611_4339,x
+	ora bm_obj161_layer7597_4339,x
 	;ldy obj154_phase
 	and msk_obj154_layer7817_4339,y
 	ora bm_obj154_layer7817_4339,y
 	sta bitmap+4339
 	lda #128
 	;ldx obj161_phase
-	ora bm_obj161_layer7611_4340,x
+	ora bm_obj161_layer7597_4340,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_4340,x
 	ldx obj101_phase
 	ora bm_obj101_layer7757_4340,x
 	;ldy obj154_phase
@@ -6667,7 +6646,7 @@
 	sta bitmap+4340
 	lda #232
 	ldy obj161_phase
-	ora bm_obj161_layer7611_4341,y
+	ora bm_obj161_layer7597_4341,y
 	;ldx obj101_phase
 	ora bm_obj101_layer7757_4341,x
 	ldx obj154_phase
@@ -6675,7 +6654,7 @@
 	ora bm_obj154_layer7817_4341,x
 	sta bitmap+4341
 	;ldy obj161_phase
-	lda bm_obj161_layer7611_4342,y
+	lda bm_obj161_layer7597_4342,y
 	ldy obj101_phase
 	and msk_obj101_layer7757_4342,y
 	ora bm_obj101_layer7757_4342,y
@@ -6685,130 +6664,136 @@
 	sta bitmap+4342
 	lda #208
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4343,x
+	ora bm_obj161_layer7597_4343,x
 	;ldy obj101_phase
 	and msk_obj101_layer7757_4343,y
 	ora bm_obj101_layer7757_4343,y
-	ldy obj154_phase
-	and msk_obj154_layer7817_4343,y
-	ora bm_obj154_layer7817_4343,y
+	ldx obj154_phase
+	and msk_obj154_layer7817_4343,x
+	ora bm_obj154_layer7817_4343,x
 	sta bitmap+4343
 	lda #24
-	ldy obj13_phase
-	ora bm_obj13_layer6965_4344,y
-	ldy obj14_phase
-	ora bm_obj14_layer7068_4344,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_4344,y
-	;ldx obj161_phase
-	ora bm_obj161_layer7611_4344,x
+	ldx obj12_phase
+	ora bm_obj12_layer6885_4344,x
+	ldx obj13_phase
+	ora bm_obj13_layer6965_4344,x
+	ldx obj14_phase
+	ora bm_obj14_layer7068_4344,x
+	ldx obj153_phase
+	ora bm_obj153_layer7522_4344,x
 	ldx obj105_phase
 	and msk_obj105_layer7700_4344,x
 	ora bm_obj105_layer7700_4344,x
-	ldx obj101_phase
-	ora bm_obj101_layer7757_4344,x
-	ldx obj154_phase
-	and msk_obj154_layer7817_4344,x
-	ora bm_obj154_layer7817_4344,x
-	sta bitmap+4344
-	ldx obj12_phase
-	lda bm_obj12_layer6885_4345,x
-	ldx obj17_phase
-	ora bm_obj17_layer6909_4345,x
-	ldx obj13_phase
-	ora bm_obj13_layer6965_4345,x
-	ldx obj16_phase
-	ora bm_obj16_layer7012_4345,x
-	ldx obj14_phase
-	ora bm_obj14_layer7068_4345,x
-	ldx obj15_phase
-	ora bm_obj15_layer7092_4345,x
-	;ldy obj153_phase
-	ora bm_obj153_layer7524_4345,y
-	ldy obj161_phase
-	ora bm_obj161_layer7611_4345,y
-	ldy obj105_phase
-	and msk_obj105_layer7700_4345,y
-	ora bm_obj105_layer7700_4345,y
-	ldy obj101_phase
-	ora bm_obj101_layer7757_4345,y
+	;ldy obj101_phase
+	ora bm_obj101_layer7757_4344,y
 	ldy obj154_phase
-	ora bm_obj154_layer7817_4345,y
+	and msk_obj154_layer7817_4344,y
+	ora bm_obj154_layer7817_4344,y
+	sta bitmap+4344
+	ldy obj12_phase
+	lda bm_obj12_layer6885_4345,y
+	ldy obj17_phase
+	ora bm_obj17_layer6909_4345,y
+	ldy obj13_phase
+	ora bm_obj13_layer6965_4345,y
+	ldy obj16_phase
+	ora bm_obj16_layer7012_4345,y
+	ldy obj14_phase
+	ora bm_obj14_layer7068_4345,y
+	ldy obj15_phase
+	ora bm_obj15_layer7092_4345,y
+	ldy obj100_phase
+	ora bm_obj100_layer7409_4345,y
+	ldy obj153_phase
+	ora bm_obj153_layer7522_4345,y
+	;ldx obj105_phase
+	and msk_obj105_layer7700_4345,x
+	ora bm_obj105_layer7700_4345,x
+	ldx obj101_phase
+	ora bm_obj101_layer7757_4345,x
+	ldx obj154_phase
+	ora bm_obj154_layer7817_4345,x
 	sta bitmap+4345
 	lda #48
-	ldy obj16_phase
-	ora bm_obj16_layer7012_4346,y
-	;ldx obj15_phase
+	ldx obj17_phase
+	ora bm_obj17_layer6909_4346,x
+	ldx obj16_phase
+	ora bm_obj16_layer7012_4346,x
+	ldx obj15_phase
 	ora bm_obj15_layer7092_4346,x
-	ldx obj153_phase
-	ora bm_obj153_layer7524_4346,x
-	ldx obj161_phase
-	ora bm_obj161_layer7611_4346,x
-	ldx obj105_phase
-	and msk_obj105_layer7700_4346,x
-	ora bm_obj105_layer7700_4346,x
-	ldx obj101_phase
-	and msk_obj101_layer7757_4346,x
-	ora bm_obj101_layer7757_4346,x
-	ldx obj154_phase
-	ora bm_obj154_layer7817_4346,x
+	;ldy obj153_phase
+	ora bm_obj153_layer7522_4346,y
+	ldy obj161_phase
+	ora bm_obj161_layer7597_4346,y
+	ldy obj105_phase
+	and msk_obj105_layer7700_4346,y
+	ora bm_obj105_layer7700_4346,y
+	ldy obj101_phase
+	and msk_obj101_layer7757_4346,y
+	ora bm_obj101_layer7757_4346,y
+	ldy obj154_phase
+	ora bm_obj154_layer7817_4346,y
 	sta bitmap+4346
 	lda #16
-	;ldy obj16_phase
+	ldy obj17_phase
+	ora bm_obj17_layer6909_4347,y
+	ldy obj16_phase
 	ora bm_obj16_layer7012_4347,y
-	ldy obj15_phase
-	ora bm_obj15_layer7092_4347,y
-	ldy obj153_phase
-	ora bm_obj153_layer7524_4347,y
-	ldy obj105_phase
-	and msk_obj105_layer7700_4347,y
-	ora bm_obj105_layer7700_4347,y
-	ldy obj101_phase
-	and msk_obj101_layer7757_4347,y
-	ora bm_obj101_layer7757_4347,y
-	;ldx obj154_phase
+	;ldx obj15_phase
+	ora bm_obj15_layer7092_4347,x
+	ldx obj153_phase
+	ora bm_obj153_layer7522_4347,x
+	ldx obj105_phase
+	and msk_obj105_layer7700_4347,x
+	ora bm_obj105_layer7700_4347,x
+	ldx obj101_phase
+	and msk_obj101_layer7757_4347,x
+	ora bm_obj101_layer7757_4347,x
+	ldx obj154_phase
 	ora bm_obj154_layer7817_4347,x
 	sta bitmap+4347
 	lda #32
-	ldx obj16_phase
-	ora bm_obj16_layer7012_4348,x
+	ldx obj17_phase
+	ora bm_obj17_layer6909_4348,x
+	;ldy obj16_phase
+	ora bm_obj16_layer7012_4348,y
 	ldx obj15_phase
 	ora bm_obj15_layer7092_4348,x
 	ldx obj153_phase
-	ora bm_obj153_layer7524_4348,x
+	ora bm_obj153_layer7522_4348,x
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4348,x
+	ora bm_obj161_layer7597_4348,x
 	ldx obj105_phase
 	and msk_obj105_layer7700_4348,x
 	ora bm_obj105_layer7700_4348,x
-	;ldy obj101_phase
-	and msk_obj101_layer7757_4348,y
-	ora bm_obj101_layer7757_4348,y
+	ldx obj101_phase
+	and msk_obj101_layer7757_4348,x
+	ora bm_obj101_layer7757_4348,x
 	sta bitmap+4348
 	lda #32
-	ldx obj16_phase
-	and msk_obj16_layer7012_4349,x
-	ora bm_obj16_layer7012_4349,x
-	ldx obj15_phase
-	ora bm_obj15_layer7092_4349,x
-	ldx obj153_phase
-	ora bm_obj153_layer7524_4349,x
-	ldx obj105_phase
-	and msk_obj105_layer7700_4349,x
-	ora bm_obj105_layer7700_4349,x
-	;ldy obj101_phase
-	and msk_obj101_layer7757_4349,y
-	ora bm_obj101_layer7757_4349,y
+	;ldy obj16_phase
+	and msk_obj16_layer7012_4349,y
+	ora bm_obj16_layer7012_4349,y
+	ldy obj15_phase
+	ora bm_obj15_layer7092_4349,y
+	ldy obj105_phase
+	and msk_obj105_layer7700_4349,y
+	ora bm_obj105_layer7700_4349,y
+	;ldx obj101_phase
+	and msk_obj101_layer7757_4349,x
+	ora bm_obj101_layer7757_4349,x
 	sta bitmap+4349
 	lda #64
-	ldy obj16_phase
-	and msk_obj16_layer7012_4350,y
-	ora bm_obj16_layer7012_4350,y
-	ldy obj15_phase
-	ora bm_obj15_layer7092_4350,y
-	;ldx obj105_phase
-	and msk_obj105_layer7700_4350,x
-	ora bm_obj105_layer7700_4350,x
+	ldx obj17_phase
+	ora bm_obj17_layer6909_4350,x
+	ldx obj16_phase
+	and msk_obj16_layer7012_4350,x
+	ora bm_obj16_layer7012_4350,x
+	ldx obj15_phase
+	ora bm_obj15_layer7092_4350,x
+	;ldy obj105_phase
+	and msk_obj105_layer7700_4350,y
+	ora bm_obj105_layer7700_4350,y
 	ldx obj101_phase
 	and msk_obj101_layer7757_4350,x
 	ora bm_obj101_layer7757_4350,x
@@ -6817,192 +6802,192 @@
 	ldx obj16_phase
 	and msk_obj16_layer7012_4351,x
 	ora bm_obj16_layer7012_4351,x
-	;ldy obj15_phase
-	ora bm_obj15_layer7092_4351,y
-	ldx obj105_phase
-	and msk_obj105_layer7700_4351,x
-	ora bm_obj105_layer7700_4351,x
-	ldx obj101_phase
-	and msk_obj101_layer7757_4351,x
-	ora bm_obj101_layer7757_4351,x
+	ldx obj15_phase
+	ora bm_obj15_layer7092_4351,x
+	;ldy obj105_phase
+	and msk_obj105_layer7700_4351,y
+	ora bm_obj105_layer7700_4351,y
+	ldy obj101_phase
+	and msk_obj101_layer7757_4351,y
+	ora bm_obj101_layer7757_4351,y
 	sta bitmap+4351
-	ldx obj14_phase
-	lda bm_obj14_layer7068_4352,x
-	;ldy obj15_phase
-	ora bm_obj15_layer7092_4352,y
-	ldy obj11_phase
-	ora bm_obj11_layer7204_4352,y
-	ldy obj55_phase
-	ora bm_obj55_layer7300_4352,y
-	ldy obj107_phase
-	ora bm_obj107_layer7511_4352,y
-	ldy obj106_phase
-	ora bm_obj106_layer7603_4352,y
-	ldy obj105_phase
-	and msk_obj105_layer7700_4352,y
-	ora bm_obj105_layer7700_4352,y
-	sta bitmap+4352
-	;ldx obj14_phase
-	lda bm_obj14_layer7068_4353,x
-	ldx obj15_phase
-	and msk_obj15_layer7092_4353,x
-	ora bm_obj15_layer7092_4353,x
-	ldx obj11_phase
-	ora bm_obj11_layer7204_4353,x
-	ldx obj55_phase
-	ora bm_obj55_layer7300_4353,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4353,x
-	ldx obj106_phase
-	ora bm_obj106_layer7603_4353,x
-	;ldy obj105_phase
-	and msk_obj105_layer7700_4353,y
-	ora bm_obj105_layer7700_4353,y
-	sta bitmap+4353
-	ldy obj15_phase
-	lda bm_obj15_layer7092_4354,y
-	ldy obj11_phase
-	ora bm_obj11_layer7204_4354,y
-	ldy obj55_phase
-	ora bm_obj55_layer7300_4354,y
-	ldy obj107_phase
-	ora bm_obj107_layer7511_4354,y
-	;ldx obj106_phase
-	ora bm_obj106_layer7603_4354,x
-	ldx obj105_phase
-	and msk_obj105_layer7700_4354,x
-	ora bm_obj105_layer7700_4354,x
-	sta bitmap+4354
-	ldx obj15_phase
-	lda bm_obj15_layer7092_4355,x
-	ldx obj11_phase
-	and msk_obj11_layer7204_4355,x
-	ora bm_obj11_layer7204_4355,x
-	ldx obj55_phase
-	ora bm_obj55_layer7300_4355,x
-	;ldy obj107_phase
-	ora bm_obj107_layer7511_4355,y
-	ldy obj106_phase
-	ora bm_obj106_layer7603_4355,y
-	ldy obj105_phase
-	and msk_obj105_layer7700_4355,y
-	ora bm_obj105_layer7700_4355,y
-	sta bitmap+4355
-	ldy obj15_phase
-	lda bm_obj15_layer7092_4356,y
-	ldy obj11_phase
-	ora bm_obj11_layer7204_4356,y
-	;ldx obj55_phase
-	ora bm_obj55_layer7300_4356,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4356,x
-	ldx obj106_phase
-	ora bm_obj106_layer7603_4356,x
-	ldx obj105_phase
-	and msk_obj105_layer7700_4356,x
-	ora bm_obj105_layer7700_4356,x
-	sta bitmap+4356
-	ldx obj15_phase
-	lda bm_obj15_layer7092_4357,x
-	;ldy obj11_phase
-	and msk_obj11_layer7204_4357,y
-	ora bm_obj11_layer7204_4357,y
-	ldy obj55_phase
-	ora bm_obj55_layer7300_4357,y
-	ldy obj107_phase
-	and msk_obj107_layer7511_4357,y
-	ora bm_obj107_layer7511_4357,y
-	ldy obj106_phase
-	ora bm_obj106_layer7603_4357,y
-	ldy obj105_phase
-	and msk_obj105_layer7700_4357,y
-	ora bm_obj105_layer7700_4357,y
-	sta bitmap+4357
+	ldy obj14_phase
+	lda bm_obj14_layer7068_4352,y
 	;ldx obj15_phase
-	lda bm_obj15_layer7092_4358,x
+	ora bm_obj15_layer7092_4352,x
 	ldx obj11_phase
-	ora bm_obj11_layer7204_4358,x
+	ora bm_obj11_layer7204_4352,x
 	ldx obj55_phase
-	ora bm_obj55_layer7300_4358,x
+	ora bm_obj55_layer7300_4352,x
 	ldx obj107_phase
-	ora bm_obj107_layer7511_4358,x
+	ora bm_obj107_layer7511_4352,x
 	ldx obj106_phase
-	and msk_obj106_layer7603_4358,x
-	ora bm_obj106_layer7603_4358,x
-	;ldy obj105_phase
-	and msk_obj105_layer7700_4358,y
-	ora bm_obj105_layer7700_4358,y
-	sta bitmap+4358
-	ldy obj15_phase
-	lda bm_obj15_layer7092_4359,y
-	ldy obj11_phase
-	and msk_obj11_layer7204_4359,y
-	ora bm_obj11_layer7204_4359,y
-	ldy obj55_phase
-	ora bm_obj55_layer7300_4359,y
-	ldy obj107_phase
-	ora bm_obj107_layer7511_4359,y
-	;ldx obj106_phase
-	and msk_obj106_layer7603_4359,x
-	ora bm_obj106_layer7603_4359,x
+	ora bm_obj106_layer7603_4352,x
 	ldx obj105_phase
-	and msk_obj105_layer7700_4359,x
-	ora bm_obj105_layer7700_4359,x
-	sta bitmap+4359
-	ldx obj55_phase
-	lda bm_obj55_layer7300_4360,x
-	ldx obj99_phase
-	ora bm_obj99_layer7405_4360,x
-	;ldy obj107_phase
-	and msk_obj107_layer7511_4360,y
-	ora bm_obj107_layer7511_4360,y
-	sta bitmap+4360
+	and msk_obj105_layer7700_4352,x
+	ora bm_obj105_layer7700_4352,x
+	sta bitmap+4352
+	;ldy obj14_phase
+	lda bm_obj14_layer7068_4353,y
+	ldy obj15_phase
+	and msk_obj15_layer7092_4353,y
+	ora bm_obj15_layer7092_4353,y
+	ldy obj11_phase
+	ora bm_obj11_layer7204_4353,y
 	ldy obj55_phase
-	lda bm_obj55_layer7300_4361,y
-	;ldx obj99_phase
-	ora bm_obj99_layer7405_4361,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4361,x
-	sta bitmap+4361
-	;ldy obj55_phase
-	lda bm_obj55_layer7300_4362,y
-	ldy obj99_phase
-	ora bm_obj99_layer7405_4362,y
-	;ldx obj107_phase
-	ora bm_obj107_layer7511_4362,x
-	sta bitmap+4362
-	ldx obj55_phase
-	lda bm_obj55_layer7300_4363,x
-	;ldy obj99_phase
-	ora bm_obj99_layer7405_4363,y
+	ora bm_obj55_layer7300_4353,y
 	ldy obj107_phase
-	ora bm_obj107_layer7511_4363,y
-	sta bitmap+4363
-	;ldx obj55_phase
-	lda bm_obj55_layer7300_4364,x
-	ldx obj99_phase
-	ora bm_obj99_layer7405_4364,x
-	;ldy obj107_phase
-	ora bm_obj107_layer7511_4364,y
-	sta bitmap+4364
-	ldy obj55_phase
-	lda bm_obj55_layer7300_4365,y
-	;ldx obj99_phase
-	ora bm_obj99_layer7405_4365,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4365,x
-	sta bitmap+4365
-	;ldy obj55_phase
-	lda bm_obj55_layer7300_4366,y
-	ldy obj99_phase
-	ora bm_obj99_layer7405_4366,y
-	;ldx obj107_phase
-	ora bm_obj107_layer7511_4366,x
-	sta bitmap+4366
+	ora bm_obj107_layer7511_4353,y
+	ldy obj106_phase
+	ora bm_obj106_layer7603_4353,y
+	;ldx obj105_phase
+	and msk_obj105_layer7700_4353,x
+	ora bm_obj105_layer7700_4353,x
+	sta bitmap+4353
+	ldx obj15_phase
+	lda bm_obj15_layer7092_4354,x
+	ldx obj11_phase
+	ora bm_obj11_layer7204_4354,x
 	ldx obj55_phase
-	lda bm_obj55_layer7300_4367,x
+	ora bm_obj55_layer7300_4354,x
+	ldx obj107_phase
+	ora bm_obj107_layer7511_4354,x
+	;ldy obj106_phase
+	ora bm_obj106_layer7603_4354,y
+	ldy obj105_phase
+	and msk_obj105_layer7700_4354,y
+	ora bm_obj105_layer7700_4354,y
+	sta bitmap+4354
+	ldy obj15_phase
+	lda bm_obj15_layer7092_4355,y
+	ldy obj11_phase
+	and msk_obj11_layer7204_4355,y
+	ora bm_obj11_layer7204_4355,y
+	ldy obj55_phase
+	ora bm_obj55_layer7300_4355,y
+	;ldx obj107_phase
+	ora bm_obj107_layer7511_4355,x
+	ldx obj106_phase
+	ora bm_obj106_layer7603_4355,x
+	ldx obj105_phase
+	and msk_obj105_layer7700_4355,x
+	ora bm_obj105_layer7700_4355,x
+	sta bitmap+4355
+	ldx obj15_phase
+	lda bm_obj15_layer7092_4356,x
+	ldx obj11_phase
+	ora bm_obj11_layer7204_4356,x
+	;ldy obj55_phase
+	ora bm_obj55_layer7300_4356,y
+	ldy obj107_phase
+	ora bm_obj107_layer7511_4356,y
+	ldy obj106_phase
+	ora bm_obj106_layer7603_4356,y
+	ldy obj105_phase
+	and msk_obj105_layer7700_4356,y
+	ora bm_obj105_layer7700_4356,y
+	sta bitmap+4356
+	ldy obj15_phase
+	lda bm_obj15_layer7092_4357,y
+	;ldx obj11_phase
+	and msk_obj11_layer7204_4357,x
+	ora bm_obj11_layer7204_4357,x
+	ldx obj55_phase
+	ora bm_obj55_layer7300_4357,x
+	ldx obj107_phase
+	and msk_obj107_layer7511_4357,x
+	ora bm_obj107_layer7511_4357,x
+	ldx obj106_phase
+	ora bm_obj106_layer7603_4357,x
+	ldx obj105_phase
+	and msk_obj105_layer7700_4357,x
+	ora bm_obj105_layer7700_4357,x
+	sta bitmap+4357
+	;ldy obj15_phase
+	lda bm_obj15_layer7092_4358,y
+	ldy obj11_phase
+	ora bm_obj11_layer7204_4358,y
+	ldy obj55_phase
+	ora bm_obj55_layer7300_4358,y
+	ldy obj107_phase
+	ora bm_obj107_layer7511_4358,y
+	ldy obj106_phase
+	and msk_obj106_layer7603_4358,y
+	ora bm_obj106_layer7603_4358,y
+	;ldx obj105_phase
+	and msk_obj105_layer7700_4358,x
+	ora bm_obj105_layer7700_4358,x
+	sta bitmap+4358
+	ldx obj15_phase
+	lda bm_obj15_layer7092_4359,x
+	ldx obj11_phase
+	and msk_obj11_layer7204_4359,x
+	ora bm_obj11_layer7204_4359,x
+	ldx obj55_phase
+	ora bm_obj55_layer7300_4359,x
+	ldx obj107_phase
+	ora bm_obj107_layer7511_4359,x
+	;ldy obj106_phase
+	and msk_obj106_layer7603_4359,y
+	ora bm_obj106_layer7603_4359,y
+	ldy obj105_phase
+	and msk_obj105_layer7700_4359,y
+	ora bm_obj105_layer7700_4359,y
+	sta bitmap+4359
+	ldy obj55_phase
+	lda bm_obj55_layer7300_4360,y
+	ldy obj99_phase
+	ora bm_obj99_layer7405_4360,y
+	;ldx obj107_phase
+	and msk_obj107_layer7511_4360,x
+	ora bm_obj107_layer7511_4360,x
+	sta bitmap+4360
+	ldx obj55_phase
+	lda bm_obj55_layer7300_4361,x
 	;ldy obj99_phase
-	ora bm_obj99_layer7405_4367,y
+	ora bm_obj99_layer7405_4361,y
+	ldy obj107_phase
+	ora bm_obj107_layer7511_4361,y
+	sta bitmap+4361
+	;ldx obj55_phase
+	lda bm_obj55_layer7300_4362,x
+	ldx obj99_phase
+	ora bm_obj99_layer7405_4362,x
+	;ldy obj107_phase
+	ora bm_obj107_layer7511_4362,y
+	sta bitmap+4362
+	ldy obj55_phase
+	lda bm_obj55_layer7300_4363,y
+	;ldx obj99_phase
+	ora bm_obj99_layer7405_4363,x
+	ldx obj107_phase
+	ora bm_obj107_layer7511_4363,x
+	sta bitmap+4363
+	;ldy obj55_phase
+	lda bm_obj55_layer7300_4364,y
+	ldy obj99_phase
+	ora bm_obj99_layer7405_4364,y
+	;ldx obj107_phase
+	ora bm_obj107_layer7511_4364,x
+	sta bitmap+4364
+	ldx obj55_phase
+	lda bm_obj55_layer7300_4365,x
+	;ldy obj99_phase
+	ora bm_obj99_layer7405_4365,y
+	ldy obj107_phase
+	ora bm_obj107_layer7511_4365,y
+	sta bitmap+4365
+	;ldx obj55_phase
+	lda bm_obj55_layer7300_4366,x
+	ldx obj99_phase
+	ora bm_obj99_layer7405_4366,x
+	;ldy obj107_phase
+	ora bm_obj107_layer7511_4366,y
+	sta bitmap+4366
+	ldy obj55_phase
+	lda bm_obj55_layer7300_4367,y
+	;ldx obj99_phase
+	ora bm_obj99_layer7405_4367,x
 	ldx obj107_phase
 	ora bm_obj107_layer7511_4367,x
 	sta bitmap+4367
@@ -7136,136 +7121,137 @@
 	ora bm_obj123_layer7437_4607,x
 	ldx obj119_phase
 	ora bm_obj119_layer7539_4607,x
-	ldx obj163_phase
-	ora bm_obj163_layer7634_4607,x
-	ldy obj172_phase
-	ora bm_obj172_layer7699_4607,y
-	sta bitmap+4607
-	lda #15
-	ldy obj73_phase
-	and msk_obj73_layer7005_4608,y
-	ora bm_obj73_layer7005_4608,y
-	;ldx obj163_phase
-	ora bm_obj163_layer7634_4608,x
-	ldx obj172_phase
-	ora bm_obj172_layer7699_4608,x
-	ldx obj175_phase
-	and msk_obj175_layer7771_4608,x
-	ora bm_obj175_layer7771_4608,x
-	sta bitmap+4608
-	lda #7
-	;ldy obj73_phase
-	and msk_obj73_layer7005_4609,y
-	ora bm_obj73_layer7005_4609,y
 	ldy obj163_phase
-	ora bm_obj163_layer7634_4609,y
-	ldy obj172_phase
-	and msk_obj172_layer7699_4609,y
-	ora bm_obj172_layer7699_4609,y
-	;ldx obj175_phase
-	and msk_obj175_layer7771_4609,x
-	ora bm_obj175_layer7771_4609,x
-	sta bitmap+4609
-	lda #3
+	ora bm_obj163_layer7634_4607,y
+	ldx obj172_phase
+	ora bm_obj172_layer7699_4607,x
+	sta bitmap+4607
+	lda #7
 	ldx obj73_phase
-	and msk_obj73_layer7005_4610,x
-	ora bm_obj73_layer7005_4610,x
-	ldx obj163_phase
-	ora bm_obj163_layer7634_4610,x
-	;ldy obj172_phase
-	ora bm_obj172_layer7699_4610,y
+	and msk_obj73_layer7005_4608,x
+	ora bm_obj73_layer7005_4608,x
+	;ldy obj163_phase
+	ora bm_obj163_layer7634_4608,y
+	ldy obj172_phase
+	ora bm_obj172_layer7699_4608,y
 	ldy obj175_phase
-	and msk_obj175_layer7771_4610,y
-	ora bm_obj175_layer7771_4610,y
+	and msk_obj175_layer7771_4608,y
+	ora bm_obj175_layer7771_4608,y
+	sta bitmap+4608
+	lda #3
+	;ldx obj73_phase
+	and msk_obj73_layer7005_4609,x
+	ora bm_obj73_layer7005_4609,x
+	ldx obj163_phase
+	ora bm_obj163_layer7634_4609,x
+	ldx obj172_phase
+	and msk_obj172_layer7699_4609,x
+	ora bm_obj172_layer7699_4609,x
+	;ldy obj175_phase
+	and msk_obj175_layer7771_4609,y
+	ora bm_obj175_layer7771_4609,y
+	sta bitmap+4609
+	lda #1
+	ldy obj73_phase
+	and msk_obj73_layer7005_4610,y
+	ora bm_obj73_layer7005_4610,y
+	ldy obj163_phase
+	ora bm_obj163_layer7634_4610,y
+	;ldx obj172_phase
+	ora bm_obj172_layer7699_4610,x
+	ldx obj175_phase
+	and msk_obj175_layer7771_4610,x
+	ora bm_obj175_layer7771_4610,x
 	sta bitmap+4610
 	lda #1
-	ldy obj73_phase
-	and msk_obj73_layer7005_4611,y
-	ora bm_obj73_layer7005_4611,y
-	ldy obj117_phase
-	ora bm_obj117_layer7110_4611,y
-	;ldx obj163_phase
-	ora bm_obj163_layer7634_4611,x
-	ldx obj172_phase
-	and msk_obj172_layer7699_4611,x
-	ora bm_obj172_layer7699_4611,x
-	ldx obj175_phase
-	and msk_obj175_layer7771_4611,x
-	ora bm_obj175_layer7771_4611,x
-	sta bitmap+4611
-	lda #1
 	ldx obj20_phase
-	ora bm_obj20_layer6945_4612,x
+	ora bm_obj20_layer6945_4611,x
 	ldx obj73_phase
-	and msk_obj73_layer7005_4612,x
-	ora bm_obj73_layer7005_4612,x
-	;ldy obj117_phase
-	and msk_obj117_layer7110_4612,y
-	ora bm_obj117_layer7110_4612,y
-	ldy obj163_phase
-	ora bm_obj163_layer7634_4612,y
+	and msk_obj73_layer7005_4611,x
+	ora bm_obj73_layer7005_4611,x
+	ldx obj117_phase
+	ora bm_obj117_layer7110_4611,x
+	;ldy obj163_phase
+	ora bm_obj163_layer7634_4611,y
 	ldy obj172_phase
-	ora bm_obj172_layer7699_4612,y
+	and msk_obj172_layer7699_4611,y
+	ora bm_obj172_layer7699_4611,y
 	ldy obj175_phase
-	ora bm_obj175_layer7771_4612,y
-	sta bitmap+4612
+	and msk_obj175_layer7771_4611,y
+	ora bm_obj175_layer7771_4611,y
+	sta bitmap+4611
 	ldy obj20_phase
-	lda bm_obj20_layer6945_4613,y
-	;ldx obj73_phase
-	ora bm_obj73_layer7005_4613,x
-	ldx obj117_phase
-	ora bm_obj117_layer7110_4613,x
-	ldx obj172_phase
-	ora bm_obj172_layer7699_4613,x
-	ldx obj175_phase
-	ora bm_obj175_layer7771_4613,x
-	sta bitmap+4613
-	;ldy obj20_phase
-	lda bm_obj20_layer6945_4614,y
+	lda bm_obj20_layer6945_4612,y
 	ldy obj73_phase
-	and msk_obj73_layer7005_4614,y
-	ora bm_obj73_layer7005_4614,y
-	ldy obj117_phase
-	and msk_obj117_layer7110_4614,y
-	ora bm_obj117_layer7110_4614,y
-	ldy obj172_phase
-	and msk_obj172_layer7699_4614,y
-	ora bm_obj172_layer7699_4614,y
-	;ldx obj175_phase
-	ora bm_obj175_layer7771_4614,x
-	sta bitmap+4614
-	ldx obj20_phase
-	lda bm_obj20_layer6945_4615,x
-	ldx obj73_phase
-	ora bm_obj73_layer7005_4615,x
-	ldx obj117_phase
-	and msk_obj117_layer7110_4615,x
-	ora bm_obj117_layer7110_4615,x
-	;ldy obj172_phase
-	ora bm_obj172_layer7699_4615,y
+	and msk_obj73_layer7005_4612,y
+	ora bm_obj73_layer7005_4612,y
+	;ldx obj117_phase
+	and msk_obj117_layer7110_4612,x
+	ora bm_obj117_layer7110_4612,x
+	ldx obj163_phase
+	ora bm_obj163_layer7634_4612,x
+	ldx obj172_phase
+	ora bm_obj172_layer7699_4612,x
 	ldx obj175_phase
-	ora bm_obj175_layer7771_4615,x
+	ora bm_obj175_layer7771_4612,x
+	sta bitmap+4612
+	ldx obj20_phase
+	lda bm_obj20_layer6945_4613,x
+	;ldy obj73_phase
+	ora bm_obj73_layer7005_4613,y
+	ldy obj117_phase
+	ora bm_obj117_layer7110_4613,y
+	ldy obj172_phase
+	ora bm_obj172_layer7699_4613,y
+	ldy obj175_phase
+	ora bm_obj175_layer7771_4613,y
+	sta bitmap+4613
+	;ldx obj20_phase
+	lda bm_obj20_layer6945_4614,x
+	ldx obj73_phase
+	and msk_obj73_layer7005_4614,x
+	ora bm_obj73_layer7005_4614,x
+	ldx obj117_phase
+	and msk_obj117_layer7110_4614,x
+	ora bm_obj117_layer7110_4614,x
+	ldx obj172_phase
+	and msk_obj172_layer7699_4614,x
+	ora bm_obj172_layer7699_4614,x
+	;ldy obj175_phase
+	ora bm_obj175_layer7771_4614,y
+	sta bitmap+4614
+	ldy obj20_phase
+	lda bm_obj20_layer6945_4615,y
+	ldy obj73_phase
+	ora bm_obj73_layer7005_4615,y
+	ldy obj117_phase
+	and msk_obj117_layer7110_4615,y
+	ora bm_obj117_layer7110_4615,y
+	;ldx obj172_phase
+	ora bm_obj172_layer7699_4615,x
+	ldy obj175_phase
+	ora bm_obj175_layer7771_4615,y
 	sta bitmap+4615
 	lda #245
-	ldy obj173_phase
-	ora bm_obj173_layer7656_4616,y
-	;ldx obj175_phase
-	and msk_obj175_layer7771_4616,x
-	ora bm_obj175_layer7771_4616,x
+	ldx obj164_phase
+	ora bm_obj164_layer7588_4616,x
+	ldx obj173_phase
+	ora bm_obj173_layer7639_4616,x
+	;ldy obj175_phase
+	and msk_obj175_layer7771_4616,y
+	ora bm_obj175_layer7771_4616,y
 	sta bitmap+4616
 	lda #253
-	;ldy obj173_phase
-	ora bm_obj173_layer7656_4617,y
-	;ldx obj175_phase
-	and msk_obj175_layer7771_4617,x
-	ora bm_obj175_layer7771_4617,x
+	;ldx obj173_phase
+	ora bm_obj173_layer7639_4617,x
+	;ldy obj175_phase
+	and msk_obj175_layer7771_4617,y
+	ora bm_obj175_layer7771_4617,y
 	ldx obj174_phase
 	ora bm_obj174_layer7797_4617,x
 	sta bitmap+4617
 	lda #255
-	;ldy obj173_phase
-	ora bm_obj173_layer7656_4618,y
-	ldy obj175_phase
+	;ldy obj175_phase
 	and msk_obj175_layer7771_4618,y
 	ora bm_obj175_layer7771_4618,y
 	;ldx obj174_phase
@@ -7293,27 +7279,30 @@
 	ora bm_obj174_layer7797_4621,x
 	sta bitmap+4621
 	lda #13
+	ldx obj20_phase
+	and msk_obj20_layer6945_4622,x
+	ora bm_obj20_layer6945_4622,x
 	;ldy obj175_phase
 	ora bm_obj175_layer7771_4622,y
-	;ldx obj174_phase
-	ora bm_obj174_layer7797_4622,x
+	ldy obj174_phase
+	ora bm_obj174_layer7797_4622,y
 	sta bitmap+4622
-	lda #71
-	ldx obj20_phase
+	lda #7
+	;ldx obj20_phase
 	ora bm_obj20_layer6945_4623,x
-	;ldy obj175_phase
-	and msk_obj175_layer7771_4623,y
-	ora bm_obj175_layer7771_4623,y
-	ldx obj174_phase
-	ora bm_obj174_layer7797_4623,x
+	ldx obj175_phase
+	and msk_obj175_layer7771_4623,x
+	ora bm_obj175_layer7771_4623,x
+	;ldy obj174_phase
+	ora bm_obj174_layer7797_4623,y
 	sta bitmap+4623
 	lda #28
-	ldx obj173_phase
-	ora bm_obj173_layer7656_4624,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_4624,x
-	;ldy obj175_phase
-	ora bm_obj175_layer7771_4624,y
+	ldy obj173_phase
+	ora bm_obj173_layer7639_4624,y
+	ldy obj155_phase
+	ora bm_obj155_layer7674_4624,y
+	;ldx obj175_phase
+	ora bm_obj175_layer7771_4624,x
 	ldx obj174_phase
 	and msk_obj174_layer7797_4624,x
 	ora bm_obj174_layer7797_4624,x
@@ -7322,7 +7311,7 @@
 	sta bitmap+4624
 	lda #66
 	ldy obj173_phase
-	ora bm_obj173_layer7656_4625,y
+	ora bm_obj173_layer7639_4625,y
 	;ldx obj174_phase
 	and msk_obj174_layer7797_4625,x
 	ora bm_obj174_layer7797_4625,x
@@ -7332,7 +7321,7 @@
 	sta bitmap+4625
 	lda #168
 	;ldy obj173_phase
-	ora bm_obj173_layer7656_4626,y
+	ora bm_obj173_layer7639_4626,y
 	ldy obj174_phase
 	and msk_obj174_layer7797_4626,y
 	ora bm_obj174_layer7797_4626,y
@@ -7341,14 +7330,12 @@
 	sta bitmap+4626
 	lda #255
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4627,x
+	ora bm_obj173_layer7639_4627,x
 	;ldy obj174_phase
 	and msk_obj174_layer7797_4627,y
 	ora bm_obj174_layer7797_4627,y
 	sta bitmap+4627
 	lda #215
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_4628,x
 	;ldy obj174_phase
 	and msk_obj174_layer7797_4628,y
 	ora bm_obj174_layer7797_4628,y
@@ -7369,59 +7356,49 @@
 	ora bm_obj174_layer7797_4631,y
 	sta bitmap+4631
 	lda #183
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_4632,x
 	ldy obj155_phase
-	ora bm_obj155_layer7688_4632,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4632,y
-	ldy obj179_phase
-	and msk_obj179_layer7838_4632,y
-	ora bm_obj179_layer7838_4632,y
+	ora bm_obj155_layer7674_4632,y
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4632,x
+	ldx obj179_phase
+	and msk_obj179_layer7838_4632,x
+	ora bm_obj179_layer7838_4632,x
 	sta bitmap+4632
 	lda #182
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_4633,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_4633,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4633,x
-	;ldy obj179_phase
-	and msk_obj179_layer7838_4633,y
-	ora bm_obj179_layer7838_4633,y
+	;ldy obj155_phase
+	ora bm_obj155_layer7674_4633,y
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4633,y
+	;ldx obj179_phase
+	and msk_obj179_layer7838_4633,x
+	ora bm_obj179_layer7838_4633,x
 	sta bitmap+4633
 	lda #74
-	ldy obj173_phase
-	ora bm_obj173_layer7656_4634,y
-	ldy obj155_phase
-	ora bm_obj155_layer7688_4634,y
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4634,x
-	ldx obj179_phase
-	and msk_obj179_layer7838_4634,x
-	ora bm_obj179_layer7838_4634,x
+	ldx obj173_phase
+	ora bm_obj173_layer7639_4634,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_4634,x
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4634,y
+	ldy obj179_phase
+	and msk_obj179_layer7838_4634,y
+	ora bm_obj179_layer7838_4634,y
 	sta bitmap+4634
 	lda #85
 	ldx obj173_phase
-	ora bm_obj173_layer7656_4635,x
-	;ldy obj155_phase
-	ora bm_obj155_layer7688_4635,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4635,y
-	ldy obj174_phase
-	ora bm_obj174_layer7797_4635,y
-	ldy obj179_phase
+	ora bm_obj173_layer7639_4635,x
+	ldx obj155_phase
+	ora bm_obj155_layer7674_4635,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4635,x
+	ldx obj174_phase
+	ora bm_obj174_layer7797_4635,x
+	;ldy obj179_phase
 	and msk_obj179_layer7838_4635,y
 	ora bm_obj179_layer7838_4635,y
 	sta bitmap+4635
 	lda #254
-	;ldx obj173_phase
-	ora bm_obj173_layer7656_4636,x
-	ldx obj155_phase
-	ora bm_obj155_layer7688_4636,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4636,x
-	ldx obj174_phase
+	;ldx obj174_phase
 	and msk_obj174_layer7797_4636,x
 	ora bm_obj174_layer7797_4636,x
 	;ldy obj179_phase
@@ -7451,35 +7428,29 @@
 	ora bm_obj179_layer7838_4639,y
 	sta bitmap+4639
 	lda #186
-	ldx obj158_phase
-	ora bm_obj158_layer7662_4640,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4640,x
+	ldy obj159_phase
+	ora bm_obj159_layer7675_4640,y
 	ldx obj171_phase
 	and msk_obj171_layer7823_4640,x
 	ora bm_obj171_layer7823_4640,x
-	;ldy obj179_phase
-	and msk_obj179_layer7838_4640,y
-	ora bm_obj179_layer7838_4640,y
+	ldx obj179_phase
+	and msk_obj179_layer7838_4640,x
+	ora bm_obj179_layer7838_4640,x
 	sta bitmap+4640
 	lda #213
-	ldy obj158_phase
-	ora bm_obj158_layer7662_4641,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4641,y
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4641,x
-	ora bm_obj171_layer7823_4641,x
-	ldx obj179_phase
+	;ldy obj159_phase
+	ora bm_obj159_layer7675_4641,y
+	ldy obj171_phase
+	and msk_obj171_layer7823_4641,y
+	ora bm_obj171_layer7823_4641,y
+	;ldx obj179_phase
 	and msk_obj179_layer7838_4641,x
 	ora bm_obj179_layer7838_4641,x
 	sta bitmap+4641
 	lda #138
-	ldx obj158_phase
-	ora bm_obj158_layer7662_4642,x
-	;ldy obj159_phase
-	ora bm_obj159_layer7689_4642,y
-	ldy obj171_phase
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4642,x
+	;ldy obj171_phase
 	and msk_obj171_layer7823_4642,y
 	ora bm_obj171_layer7823_4642,y
 	ldy obj179_phase
@@ -7487,10 +7458,8 @@
 	ora bm_obj179_layer7838_4642,y
 	sta bitmap+4642
 	lda #107
-	;ldx obj158_phase
-	ora bm_obj158_layer7662_4643,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4643,x
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4643,x
 	ldx obj171_phase
 	and msk_obj171_layer7823_4643,x
 	ora bm_obj171_layer7823_4643,x
@@ -7499,11 +7468,7 @@
 	ora bm_obj179_layer7838_4643,y
 	sta bitmap+4643
 	lda #222
-	ldx obj158_phase
-	ora bm_obj158_layer7662_4644,x
-	ldx obj159_phase
-	ora bm_obj159_layer7689_4644,x
-	ldx obj171_phase
+	;ldx obj171_phase
 	and msk_obj171_layer7823_4644,x
 	ora bm_obj171_layer7823_4644,x
 	;ldy obj179_phase
@@ -7533,11 +7498,11 @@
 	sta bitmap+4647
 	lda #82
 	ldy obj161_phase
-	ora bm_obj161_layer7611_4648,y
+	ora bm_obj161_layer7597_4648,y
 	ldy obj160_phase
-	ora bm_obj160_layer7663_4648,y
+	ora bm_obj160_layer7651_4648,y
 	ldy obj159_phase
-	ora bm_obj159_layer7689_4648,y
+	ora bm_obj159_layer7675_4648,y
 	ldy obj154_phase
 	and msk_obj154_layer7817_4648,y
 	ora bm_obj154_layer7817_4648,y
@@ -7547,74 +7512,70 @@
 	sta bitmap+4648
 	lda #42
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4649,x
-	ldx obj158_phase
-	ora bm_obj158_layer7662_4649,x
+	ora bm_obj161_layer7597_4649,x
+	ldx obj160_phase
+	ora bm_obj160_layer7651_4649,x
 	ldx obj159_phase
-	ora bm_obj159_layer7689_4649,x
+	ora bm_obj159_layer7675_4649,x
 	;ldy obj154_phase
 	and msk_obj154_layer7817_4649,y
 	ora bm_obj154_layer7817_4649,y
-	ldy obj171_phase
-	and msk_obj171_layer7823_4649,y
-	ora bm_obj171_layer7823_4649,y
+	ldx obj171_phase
+	and msk_obj171_layer7823_4649,x
+	ora bm_obj171_layer7823_4649,x
 	sta bitmap+4649
 	lda #186
-	ldy obj161_phase
-	ora bm_obj161_layer7611_4650,y
-	ldy obj158_phase
-	ora bm_obj158_layer7662_4650,y
-	;ldx obj159_phase
-	ora bm_obj159_layer7689_4650,x
-	ldx obj154_phase
-	and msk_obj154_layer7817_4650,x
-	ora bm_obj154_layer7817_4650,x
-	ldx obj171_phase
-	and msk_obj171_layer7823_4650,x
-	ora bm_obj171_layer7823_4650,x
+	ldx obj161_phase
+	ora bm_obj161_layer7597_4650,x
+	ldx obj159_phase
+	ora bm_obj159_layer7675_4650,x
+	;ldy obj154_phase
+	and msk_obj154_layer7817_4650,y
+	ora bm_obj154_layer7817_4650,y
+	ldy obj171_phase
+	and msk_obj171_layer7823_4650,y
+	ora bm_obj171_layer7823_4650,y
 	sta bitmap+4650
 	lda #237
-	;ldy obj158_phase
-	ora bm_obj158_layer7662_4651,y
-	ldy obj159_phase
-	ora bm_obj159_layer7689_4651,y
-	ldy obj154_phase
-	ora bm_obj154_layer7817_4651,y
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4651,x
-	ora bm_obj171_layer7823_4651,x
+	;ldx obj159_phase
+	ora bm_obj159_layer7675_4651,x
+	ldx obj154_phase
+	ora bm_obj154_layer7817_4651,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4651,y
+	ora bm_obj171_layer7823_4651,y
 	sta bitmap+4651
 	lda #186
-	;ldy obj154_phase
-	ora bm_obj154_layer7817_4652,y
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4652,x
-	ora bm_obj171_layer7823_4652,x
+	;ldx obj154_phase
+	ora bm_obj154_layer7817_4652,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4652,y
+	ora bm_obj171_layer7823_4652,y
 	sta bitmap+4652
 	lda #253
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4653,x
-	ora bm_obj171_layer7823_4653,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4653,y
+	ora bm_obj171_layer7823_4653,y
 	sta bitmap+4653
 	lda #218
-	;ldx obj171_phase
-	and msk_obj171_layer7823_4654,x
-	ora bm_obj171_layer7823_4654,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4654,y
+	ora bm_obj171_layer7823_4654,y
 	sta bitmap+4654
 	lda #250
 	ldx obj127_phase
 	ora bm_obj127_layer7768_4655,x
-	ldx obj171_phase
-	and msk_obj171_layer7823_4655,x
-	ora bm_obj171_layer7823_4655,x
+	;ldy obj171_phase
+	and msk_obj171_layer7823_4655,y
+	ora bm_obj171_layer7823_4655,y
 	sta bitmap+4655
 	lda #161
 	ldx obj161_phase
-	ora bm_obj161_layer7611_4656,x
+	ora bm_obj161_layer7597_4656,x
 	ldx obj101_phase
 	and msk_obj101_layer7757_4656,x
 	ora bm_obj101_layer7757_4656,x
-	;ldy obj154_phase
+	ldy obj154_phase
 	and msk_obj154_layer7817_4656,y
 	ora bm_obj154_layer7817_4656,y
 	sta bitmap+4656
@@ -7659,41 +7620,47 @@
 	ora bm_obj171_layer7823_4661,y
 	sta bitmap+4661
 	lda #20
+	ldy obj16_phase
+	ora bm_obj16_layer7012_4662,y
+	ldy obj30_phase
+	ora bm_obj30_layer7063_4662,y
 	ldy obj92_phase
 	ora bm_obj92_layer7727_4662,y
 	;ldx obj101_phase
 	and msk_obj101_layer7757_4662,x
 	ora bm_obj101_layer7757_4662,x
-	ldy obj127_phase
-	ora bm_obj127_layer7768_4662,y
+	ldx obj127_phase
+	ora bm_obj127_layer7768_4662,x
 	ldx obj154_phase
 	ora bm_obj154_layer7817_4662,x
 	ldx obj171_phase
 	ora bm_obj171_layer7823_4662,x
 	sta bitmap+4662
 	lda #8
+	ldx obj35_phase
+	ora bm_obj35_layer7006_4663,x
 	ldx obj30_phase
 	ora bm_obj30_layer7063_4663,x
-	ldx obj92_phase
-	and msk_obj92_layer7727_4663,x
-	ora bm_obj92_layer7727_4663,x
-	ldx obj101_phase
-	ora bm_obj101_layer7757_4663,x
-	;ldy obj127_phase
-	ora bm_obj127_layer7768_4663,y
+	;ldy obj92_phase
+	and msk_obj92_layer7727_4663,y
+	ora bm_obj92_layer7727_4663,y
+	ldy obj101_phase
+	ora bm_obj101_layer7757_4663,y
+	ldx obj127_phase
+	ora bm_obj127_layer7768_4663,x
 	sta bitmap+4663
 	lda #64
-	ldy obj16_phase
-	and msk_obj16_layer7012_4664,y
-	ora bm_obj16_layer7012_4664,y
-	ldy obj15_phase
-	ora bm_obj15_layer7092_4664,y
-	ldy obj105_phase
-	and msk_obj105_layer7700_4664,y
-	ora bm_obj105_layer7700_4664,y
-	;ldx obj101_phase
-	and msk_obj101_layer7757_4664,x
-	ora bm_obj101_layer7757_4664,x
+	ldx obj16_phase
+	and msk_obj16_layer7012_4664,x
+	ora bm_obj16_layer7012_4664,x
+	ldx obj15_phase
+	ora bm_obj15_layer7092_4664,x
+	ldx obj105_phase
+	and msk_obj105_layer7700_4664,x
+	ora bm_obj105_layer7700_4664,x
+	;ldy obj101_phase
+	and msk_obj101_layer7757_4664,y
+	ora bm_obj101_layer7757_4664,y
 	sta bitmap+4664
 	lda #128
 	ldx obj16_phase
@@ -7701,194 +7668,194 @@
 	ora bm_obj16_layer7012_4665,x
 	ldx obj15_phase
 	ora bm_obj15_layer7092_4665,x
-	;ldy obj105_phase
-	and msk_obj105_layer7700_4665,y
-	ora bm_obj105_layer7700_4665,y
-	ldx obj101_phase
-	and msk_obj101_layer7757_4665,x
-	ora bm_obj101_layer7757_4665,x
+	ldx obj105_phase
+	and msk_obj105_layer7700_4665,x
+	ora bm_obj105_layer7700_4665,x
+	;ldy obj101_phase
+	and msk_obj101_layer7757_4665,y
+	ora bm_obj101_layer7757_4665,y
 	sta bitmap+4665
 	lda #128
-	ldx obj16_phase
-	and msk_obj16_layer7012_4666,x
-	ora bm_obj16_layer7012_4666,x
-	;ldy obj105_phase
-	and msk_obj105_layer7700_4666,y
-	ora bm_obj105_layer7700_4666,y
-	ldy obj101_phase
-	and msk_obj101_layer7757_4666,y
-	ora bm_obj101_layer7757_4666,y
+	ldy obj16_phase
+	and msk_obj16_layer7012_4666,y
+	ora bm_obj16_layer7012_4666,y
+	;ldx obj105_phase
+	and msk_obj105_layer7700_4666,x
+	ora bm_obj105_layer7700_4666,x
+	ldx obj101_phase
+	and msk_obj101_layer7757_4666,x
+	ora bm_obj101_layer7757_4666,x
 	sta bitmap+4666
 	lda #128
-	;ldx obj16_phase
-	and msk_obj16_layer7012_4667,x
-	ora bm_obj16_layer7012_4667,x
-	ldx obj105_phase
-	ora bm_obj105_layer7700_4667,x
-	;ldy obj101_phase
-	and msk_obj101_layer7757_4667,y
-	ora bm_obj101_layer7757_4667,y
-	sta bitmap+4667
-	ldy obj16_phase
-	lda bm_obj16_layer7012_4668,y
-	;ldx obj105_phase
-	and msk_obj105_layer7700_4668,x
-	ora bm_obj105_layer7700_4668,x
-	ldx obj101_phase
-	and msk_obj101_layer7757_4668,x
-	ora bm_obj101_layer7757_4668,x
-	sta bitmap+4668
 	;ldy obj16_phase
-	lda bm_obj16_layer7012_4669,y
-	ldy obj106_phase
-	ora bm_obj106_layer7603_4669,y
+	and msk_obj16_layer7012_4667,y
+	ora bm_obj16_layer7012_4667,y
 	ldy obj105_phase
-	ora bm_obj105_layer7700_4669,y
+	ora bm_obj105_layer7700_4667,y
 	;ldx obj101_phase
-	and msk_obj101_layer7757_4669,x
-	ora bm_obj101_layer7757_4669,x
-	sta bitmap+4669
+	and msk_obj101_layer7757_4667,x
+	ora bm_obj101_layer7757_4667,x
+	sta bitmap+4667
 	ldx obj16_phase
-	lda bm_obj16_layer7012_4670,x
-	ldx obj30_phase
-	ora bm_obj30_layer7063_4670,x
-	ldx obj106_phase
-	ora bm_obj106_layer7603_4670,x
+	lda bm_obj16_layer7012_4668,x
 	;ldy obj105_phase
-	ora bm_obj105_layer7700_4670,y
+	and msk_obj105_layer7700_4668,y
+	ora bm_obj105_layer7700_4668,y
 	ldy obj101_phase
-	and msk_obj101_layer7757_4670,y
-	ora bm_obj101_layer7757_4670,y
+	and msk_obj101_layer7757_4668,y
+	ora bm_obj101_layer7757_4668,y
+	sta bitmap+4668
+	;ldx obj16_phase
+	lda bm_obj16_layer7012_4669,x
+	ldx obj106_phase
+	ora bm_obj106_layer7603_4669,x
+	ldx obj105_phase
+	ora bm_obj105_layer7700_4669,x
+	;ldy obj101_phase
+	and msk_obj101_layer7757_4669,y
+	ora bm_obj101_layer7757_4669,y
+	sta bitmap+4669
+	ldy obj16_phase
+	lda bm_obj16_layer7012_4670,y
+	ldy obj30_phase
+	ora bm_obj30_layer7063_4670,y
+	ldy obj106_phase
+	ora bm_obj106_layer7603_4670,y
+	;ldx obj105_phase
+	ora bm_obj105_layer7700_4670,x
+	ldx obj101_phase
+	and msk_obj101_layer7757_4670,x
+	ora bm_obj101_layer7757_4670,x
 	sta bitmap+4670
-	ldy obj30_phase
-	lda bm_obj30_layer7063_4671,y
-	;ldx obj106_phase
-	ora bm_obj106_layer7603_4671,x
-	ldy obj105_phase
-	ora bm_obj105_layer7700_4671,y
-	ldy obj92_phase
-	ora bm_obj92_layer7727_4671,y
-	ldy obj101_phase
-	ora bm_obj101_layer7757_4671,y
+	ldx obj30_phase
+	lda bm_obj30_layer7063_4671,x
+	;ldy obj106_phase
+	ora bm_obj106_layer7603_4671,y
+	ldx obj105_phase
+	ora bm_obj105_layer7700_4671,x
+	ldx obj92_phase
+	ora bm_obj92_layer7727_4671,x
+	ldx obj101_phase
+	ora bm_obj101_layer7757_4671,x
 	sta bitmap+4671
-	ldy obj15_phase
-	lda bm_obj15_layer7092_4672,y
-	ldy obj11_phase
-	and msk_obj11_layer7204_4672,y
-	ora bm_obj11_layer7204_4672,y
-	ldy obj55_phase
-	ora bm_obj55_layer7300_4672,y
-	ldy obj107_phase
-	and msk_obj107_layer7511_4672,y
-	ora bm_obj107_layer7511_4672,y
-	;ldx obj106_phase
-	and msk_obj106_layer7603_4672,x
-	ora bm_obj106_layer7603_4672,x
-	ldx obj105_phase
-	ora bm_obj105_layer7700_4672,x
-	sta bitmap+4672
 	ldx obj15_phase
-	lda bm_obj15_layer7092_4673,x
+	lda bm_obj15_layer7092_4672,x
 	ldx obj11_phase
-	and msk_obj11_layer7204_4673,x
-	ora bm_obj11_layer7204_4673,x
+	and msk_obj11_layer7204_4672,x
+	ora bm_obj11_layer7204_4672,x
 	ldx obj55_phase
-	ora bm_obj55_layer7300_4673,x
-	ldx obj99_phase
-	ora bm_obj99_layer7405_4673,x
-	;ldy obj107_phase
-	ora bm_obj107_layer7511_4673,y
-	ldy obj106_phase
-	ora bm_obj106_layer7603_4673,y
+	ora bm_obj55_layer7300_4672,x
+	ldx obj107_phase
+	and msk_obj107_layer7511_4672,x
+	ora bm_obj107_layer7511_4672,x
+	;ldy obj106_phase
+	and msk_obj106_layer7603_4672,y
+	ora bm_obj106_layer7603_4672,y
 	ldy obj105_phase
-	and msk_obj105_layer7700_4673,y
-	ora bm_obj105_layer7700_4673,y
-	sta bitmap+4673
-	ldy obj16_phase
-	lda bm_obj16_layer7012_4674,y
+	ora bm_obj105_layer7700_4672,y
+	sta bitmap+4672
 	ldy obj15_phase
-	ora bm_obj15_layer7092_4674,y
+	lda bm_obj15_layer7092_4673,y
 	ldy obj11_phase
-	and msk_obj11_layer7204_4674,y
-	ora bm_obj11_layer7204_4674,y
+	and msk_obj11_layer7204_4673,y
+	ora bm_obj11_layer7204_4673,y
 	ldy obj55_phase
-	ora bm_obj55_layer7300_4674,y
-	;ldx obj99_phase
-	ora bm_obj99_layer7405_4674,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4674,x
+	ora bm_obj55_layer7300_4673,y
+	ldy obj99_phase
+	ora bm_obj99_layer7405_4673,y
+	;ldx obj107_phase
+	ora bm_obj107_layer7511_4673,x
 	ldx obj106_phase
-	and msk_obj106_layer7603_4674,x
-	ora bm_obj106_layer7603_4674,x
+	ora bm_obj106_layer7603_4673,x
 	ldx obj105_phase
-	ora bm_obj105_layer7700_4674,x
-	sta bitmap+4674
+	and msk_obj105_layer7700_4673,x
+	ora bm_obj105_layer7700_4673,x
+	sta bitmap+4673
 	ldx obj16_phase
-	lda bm_obj16_layer7012_4675,x
+	lda bm_obj16_layer7012_4674,x
 	ldx obj15_phase
-	ora bm_obj15_layer7092_4675,x
+	ora bm_obj15_layer7092_4674,x
 	ldx obj11_phase
-	ora bm_obj11_layer7204_4675,x
-	ldx obj28_phase
-	ora bm_obj28_layer7251_4675,x
-	;ldy obj55_phase
-	ora bm_obj55_layer7300_4675,y
-	ldy obj90_phase
-	ora bm_obj90_layer7375_4675,y
-	ldy obj99_phase
-	ora bm_obj99_layer7405_4675,y
+	and msk_obj11_layer7204_4674,x
+	ora bm_obj11_layer7204_4674,x
+	ldx obj55_phase
+	ora bm_obj55_layer7300_4674,x
+	;ldy obj99_phase
+	ora bm_obj99_layer7405_4674,y
 	ldy obj107_phase
-	ora bm_obj107_layer7511_4675,y
+	ora bm_obj107_layer7511_4674,y
 	ldy obj106_phase
-	and msk_obj106_layer7603_4675,y
-	ora bm_obj106_layer7603_4675,y
+	and msk_obj106_layer7603_4674,y
+	ora bm_obj106_layer7603_4674,y
 	ldy obj105_phase
-	ora bm_obj105_layer7700_4675,y
-	sta bitmap+4675
+	ora bm_obj105_layer7700_4674,y
+	sta bitmap+4674
 	ldy obj16_phase
-	lda bm_obj16_layer7012_4676,y
+	lda bm_obj16_layer7012_4675,y
 	ldy obj15_phase
-	ora bm_obj15_layer7092_4676,y
+	ora bm_obj15_layer7092_4675,y
 	ldy obj11_phase
-	ora bm_obj11_layer7204_4676,y
-	;ldx obj28_phase
-	ora bm_obj28_layer7251_4676,x
-	ldx obj90_phase
-	ora bm_obj90_layer7375_4676,x
-	ldx obj99_phase
-	ora bm_obj99_layer7405_4676,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4676,x
-	ldx obj106_phase
-	and msk_obj106_layer7603_4676,x
-	ora bm_obj106_layer7603_4676,x
-	ldx obj105_phase
-	ora bm_obj105_layer7700_4676,x
-	sta bitmap+4676
-	ldx obj16_phase
-	lda bm_obj16_layer7012_4677,x
-	ldx obj15_phase
-	ora bm_obj15_layer7092_4677,x
-	;ldy obj11_phase
-	ora bm_obj11_layer7204_4677,y
+	ora bm_obj11_layer7204_4675,y
 	ldy obj28_phase
-	ora bm_obj28_layer7251_4677,y
+	ora bm_obj28_layer7251_4675,y
+	;ldx obj55_phase
+	ora bm_obj55_layer7300_4675,x
+	ldx obj90_phase
+	ora bm_obj90_layer7375_4675,x
+	ldx obj99_phase
+	ora bm_obj99_layer7405_4675,x
+	ldx obj107_phase
+	ora bm_obj107_layer7511_4675,x
+	ldx obj106_phase
+	and msk_obj106_layer7603_4675,x
+	ora bm_obj106_layer7603_4675,x
+	ldx obj105_phase
+	ora bm_obj105_layer7700_4675,x
+	sta bitmap+4675
+	ldx obj16_phase
+	lda bm_obj16_layer7012_4676,x
+	ldx obj15_phase
+	ora bm_obj15_layer7092_4676,x
+	ldx obj11_phase
+	ora bm_obj11_layer7204_4676,x
+	;ldy obj28_phase
+	ora bm_obj28_layer7251_4676,y
 	ldy obj90_phase
-	ora bm_obj90_layer7375_4677,y
+	ora bm_obj90_layer7375_4676,y
 	ldy obj99_phase
-	ora bm_obj99_layer7405_4677,y
+	ora bm_obj99_layer7405_4676,y
 	ldy obj107_phase
-	ora bm_obj107_layer7511_4677,y
+	ora bm_obj107_layer7511_4676,y
 	ldy obj106_phase
-	and msk_obj106_layer7603_4677,y
-	ora bm_obj106_layer7603_4677,y
-	sta bitmap+4677
+	and msk_obj106_layer7603_4676,y
+	ora bm_obj106_layer7603_4676,y
+	ldy obj105_phase
+	ora bm_obj105_layer7700_4676,y
+	sta bitmap+4676
 	ldy obj16_phase
-	lda bm_obj16_layer7012_4678,y
-	ldy obj30_phase
-	ora bm_obj30_layer7063_4678,y
-	;ldx obj15_phase
-	ora bm_obj15_layer7092_4678,x
+	lda bm_obj16_layer7012_4677,y
+	ldy obj15_phase
+	ora bm_obj15_layer7092_4677,y
+	;ldx obj11_phase
+	ora bm_obj11_layer7204_4677,x
+	ldx obj28_phase
+	ora bm_obj28_layer7251_4677,x
+	ldx obj90_phase
+	ora bm_obj90_layer7375_4677,x
+	ldx obj99_phase
+	ora bm_obj99_layer7405_4677,x
+	ldx obj107_phase
+	ora bm_obj107_layer7511_4677,x
+	ldx obj106_phase
+	and msk_obj106_layer7603_4677,x
+	ora bm_obj106_layer7603_4677,x
+	sta bitmap+4677
+	ldx obj16_phase
+	lda bm_obj16_layer7012_4678,x
+	ldx obj30_phase
+	ora bm_obj30_layer7063_4678,x
+	;ldy obj15_phase
+	ora bm_obj15_layer7092_4678,y
 	ldx obj31_phase
 	ora bm_obj31_layer7189_4678,x
 	ldx obj11_phase
@@ -7896,34 +7863,34 @@
 	ldx obj28_phase
 	and msk_obj28_layer7251_4678,x
 	ora bm_obj28_layer7251_4678,x
-	ldx obj90_phase
-	ora bm_obj90_layer7375_4678,x
-	ldx obj99_phase
-	ora bm_obj99_layer7405_4678,x
-	ldx obj98_phase
-	ora bm_obj98_layer7448_4678,x
-	ldx obj107_phase
-	ora bm_obj107_layer7511_4678,x
-	ldx obj97_phase
-	ora bm_obj97_layer7570_4678,x
-	ldx obj106_phase
-	and msk_obj106_layer7603_4678,x
-	ora bm_obj106_layer7603_4678,x
+	ldy obj90_phase
+	ora bm_obj90_layer7375_4678,y
+	ldy obj99_phase
+	ora bm_obj99_layer7405_4678,y
+	ldy obj98_phase
+	ora bm_obj98_layer7448_4678,y
+	ldy obj107_phase
+	ora bm_obj107_layer7511_4678,y
+	ldy obj97_phase
+	ora bm_obj97_layer7570_4678,y
+	ldy obj106_phase
+	and msk_obj106_layer7603_4678,y
+	ora bm_obj106_layer7603_4678,y
 	sta bitmap+4678
-	;ldy obj30_phase
+	ldy obj30_phase
 	lda bm_obj30_layer7063_4679,y
 	ldy obj31_phase
 	ora bm_obj31_layer7189_4679,y
-	ldy obj28_phase
-	and msk_obj28_layer7251_4679,y
-	ora bm_obj28_layer7251_4679,y
-	ldy obj90_phase
-	ora bm_obj90_layer7375_4679,y
-	ldy obj98_phase
-	ora bm_obj98_layer7448_4679,y
-	ldy obj97_phase
-	ora bm_obj97_layer7570_4679,y
-	;ldx obj106_phase
+	;ldx obj28_phase
+	and msk_obj28_layer7251_4679,x
+	ora bm_obj28_layer7251_4679,x
+	ldx obj90_phase
+	ora bm_obj90_layer7375_4679,x
+	ldx obj98_phase
+	ora bm_obj98_layer7448_4679,x
+	ldx obj97_phase
+	ora bm_obj97_layer7570_4679,x
+	ldx obj106_phase
 	ora bm_obj106_layer7603_4679,x
 	sta bitmap+4679
 	ldx obj55_phase
@@ -8148,84 +8115,87 @@
 	ora bm_obj128_layer7644_4935,x
 	sta bitmap+4935
 	lda #23
-	ldx obj20_phase
-	and msk_obj20_layer6945_4936,x
-	ora bm_obj20_layer6945_4936,x
-	ldy obj172_phase
-	ora bm_obj172_layer7699_4936,y
-	ldy obj175_phase
-	ora bm_obj175_layer7771_4936,y
-	ldy obj174_phase
-	and msk_obj174_layer7797_4936,y
-	ora bm_obj174_layer7797_4936,y
+	ldy obj20_phase
+	and msk_obj20_layer6945_4936,y
+	ora bm_obj20_layer6945_4936,y
+	ldx obj172_phase
+	ora bm_obj172_layer7699_4936,x
+	ldx obj175_phase
+	ora bm_obj175_layer7771_4936,x
+	ldx obj174_phase
+	and msk_obj174_layer7797_4936,x
+	ora bm_obj174_layer7797_4936,x
 	sta bitmap+4936
 	lda #1
-	;ldx obj20_phase
-	ora bm_obj20_layer6945_4937,x
-	ldx obj37_phase
-	ora bm_obj37_layer7014_4937,x
-	ldx obj172_phase
-	ora bm_obj172_layer7699_4937,x
-	ldx obj175_phase
-	ora bm_obj175_layer7771_4937,x
-	;ldy obj174_phase
-	ora bm_obj174_layer7797_4937,y
-	sta bitmap+4937
-	lda #10
+	;ldy obj20_phase
+	ora bm_obj20_layer6945_4937,y
 	ldy obj37_phase
-	and msk_obj37_layer7014_4938,y
-	ora bm_obj37_layer7014_4938,y
+	ora bm_obj37_layer7014_4937,y
 	ldy obj172_phase
-	ora bm_obj172_layer7699_4938,y
-	;ldx obj175_phase
-	ora bm_obj175_layer7771_4938,x
-	ldx obj174_phase
-	ora bm_obj174_layer7797_4938,x
-	sta bitmap+4938
+	ora bm_obj172_layer7699_4937,y
+	ldy obj175_phase
+	ora bm_obj175_layer7771_4937,y
+	;ldx obj174_phase
+	ora bm_obj174_layer7797_4937,x
+	sta bitmap+4937
 	lda #2
 	ldx obj37_phase
-	and msk_obj37_layer7014_4939,x
-	ora bm_obj37_layer7014_4939,x
-	;ldy obj172_phase
-	ora bm_obj172_layer7699_4939,y
-	ldy obj175_phase
-	ora bm_obj175_layer7771_4939,y
-	ldy obj174_phase
-	ora bm_obj174_layer7797_4939,y
-	sta bitmap+4939
-	;ldx obj37_phase
-	lda bm_obj37_layer7014_4940,x
-	ldx obj128_phase
-	ora bm_obj128_layer7644_4940,x
+	and msk_obj37_layer7014_4938,x
+	ora bm_obj37_layer7014_4938,x
 	ldx obj172_phase
-	ora bm_obj172_layer7699_4940,x
+	ora bm_obj172_layer7699_4938,x
+	;ldy obj175_phase
+	ora bm_obj175_layer7771_4938,y
+	ldy obj174_phase
+	ora bm_obj174_layer7797_4938,y
+	sta bitmap+4938
+	lda #2
+	ldy obj37_phase
+	and msk_obj37_layer7014_4939,y
+	ora bm_obj37_layer7014_4939,y
+	;ldx obj172_phase
+	ora bm_obj172_layer7699_4939,x
 	ldx obj175_phase
-	ora bm_obj175_layer7771_4940,x
-	;ldy obj174_phase
+	ora bm_obj175_layer7771_4939,x
+	ldx obj174_phase
+	ora bm_obj174_layer7797_4939,x
+	sta bitmap+4939
+	ldx obj40_phase
+	lda bm_obj40_layer7007_4940,x
+	;ldy obj37_phase
+	and msk_obj37_layer7014_4940,y
+	ora bm_obj37_layer7014_4940,y
+	ldy obj128_phase
+	ora bm_obj128_layer7644_4940,y
+	ldy obj172_phase
+	ora bm_obj172_layer7699_4940,y
+	ldy obj175_phase
+	ora bm_obj175_layer7771_4940,y
+	ldy obj174_phase
 	ora bm_obj174_layer7797_4940,y
 	sta bitmap+4940
-	ldy obj40_phase
-	lda bm_obj40_layer7007_4941,y
-	ldy obj37_phase
-	and msk_obj37_layer7014_4941,y
-	ora bm_obj37_layer7014_4941,y
-	ldy obj108_phase
-	ora bm_obj108_layer7116_4941,y
-	ldy obj128_phase
-	ora bm_obj128_layer7644_4941,y
-	ldy obj132_phase
-	ora bm_obj132_layer7656_4941,y
-	ldy obj172_phase
-	ora bm_obj172_layer7699_4941,y
-	ldy obj131_phase
-	ora bm_obj131_layer7737_4941,y
-	;ldx obj175_phase
+	;ldx obj40_phase
+	lda bm_obj40_layer7007_4941,x
+	ldx obj37_phase
+	and msk_obj37_layer7014_4941,x
+	ora bm_obj37_layer7014_4941,x
+	ldx obj108_phase
+	ora bm_obj108_layer7116_4941,x
+	ldx obj128_phase
+	ora bm_obj128_layer7644_4941,x
+	ldx obj132_phase
+	ora bm_obj132_layer7656_4941,x
+	ldx obj172_phase
+	ora bm_obj172_layer7699_4941,x
+	ldx obj131_phase
+	ora bm_obj131_layer7737_4941,x
+	ldx obj175_phase
 	ora bm_obj175_layer7771_4941,x
-	ldx obj174_phase
-	ora bm_obj174_layer7797_4941,x
+	;ldy obj174_phase
+	ora bm_obj174_layer7797_4941,y
 	sta bitmap+4941
-	ldx obj40_phase
-	lda bm_obj40_layer7007_4942,x
+	ldy obj40_phase
+	lda bm_obj40_layer7007_4942,y
 	ldx obj37_phase
 	and msk_obj37_layer7014_4942,x
 	ora bm_obj37_layer7014_4942,x
@@ -8236,10 +8206,10 @@
 	ora bm_obj128_layer7644_4942,x
 	ldx obj132_phase
 	ora bm_obj132_layer7656_4942,x
-	;ldy obj131_phase
-	ora bm_obj131_layer7737_4942,y
+	ldx obj131_phase
+	ora bm_obj131_layer7737_4942,x
 	sta bitmap+4942
-	ldy obj40_phase
+	;ldy obj40_phase
 	lda bm_obj40_layer7007_4943,y
 	ldy obj37_phase
 	and msk_obj37_layer7014_4943,y
@@ -8248,9 +8218,9 @@
 	ora bm_obj108_layer7116_4943,y
 	ldy obj128_phase
 	ora bm_obj128_layer7644_4943,y
-	;ldx obj132_phase
-	ora bm_obj132_layer7656_4943,x
-	ldx obj131_phase
+	ldy obj132_phase
+	ora bm_obj132_layer7656_4943,y
+	;ldx obj131_phase
 	ora bm_obj131_layer7737_4943,x
 	sta bitmap+4943
 	lda #255
@@ -8280,19 +8250,21 @@
 	ora bm_obj174_layer7797_4948,y
 	sta bitmap+4948
 	lda #23
+	ldy obj40_phase
+	ora bm_obj40_layer7007_4949,y
 	;ldx obj131_phase
 	ora bm_obj131_layer7737_4949,x
-	;ldy obj174_phase
-	ora bm_obj174_layer7797_4949,y
+	ldx obj174_phase
+	ora bm_obj174_layer7797_4949,x
 	sta bitmap+4949
-	lda #42
-	ldy obj40_phase
+	lda #10
+	;ldy obj40_phase
 	and msk_obj40_layer7007_4950,y
 	ora bm_obj40_layer7007_4950,y
-	;ldx obj131_phase
+	ldx obj131_phase
 	ora bm_obj131_layer7737_4950,x
 	sta bitmap+4950
-	lda #5
+	lda #1
 	;ldy obj40_phase
 	and msk_obj40_layer7007_4951,y
 	ora bm_obj40_layer7007_4951,y
@@ -8452,23 +8424,36 @@
 	ora bm_obj127_layer7768_4972,x
 	sta bitmap+4972
 	lda #104
+	ldx obj35_phase
+	and msk_obj35_layer7006_4973,x
+	ora bm_obj35_layer7006_4973,x
 	;ldy obj92_phase
 	ora bm_obj92_layer7727_4973,y
-	;ldx obj127_phase
-	ora bm_obj127_layer7768_4973,x
+	ldy obj127_phase
+	ora bm_obj127_layer7768_4973,y
 	sta bitmap+4973
 	lda #80
-	ldx obj35_phase
+	;ldx obj35_phase
 	ora bm_obj35_layer7006_4974,x
-	;ldy obj92_phase
-	ora bm_obj92_layer7727_4974,y
-	ldy obj127_phase
+	ldx obj92_phase
+	ora bm_obj92_layer7727_4974,x
+	;ldy obj127_phase
 	ora bm_obj127_layer7768_4974,y
 	sta bitmap+4974
 	lda #128
-	;ldx obj35_phase
+	ldx obj36_phase
+	ora bm_obj36_layer6873_4975,x
+	ldx obj27_phase
+	ora bm_obj27_layer6909_4975,x
+	ldx obj44_phase
+	ora bm_obj44_layer6931_4975,x
+	ldx obj35_phase
 	and msk_obj35_layer7006_4975,x
 	ora bm_obj35_layer7006_4975,x
+	ldx obj43_phase
+	ora bm_obj43_layer7036_4975,x
+	ldx obj34_phase
+	ora bm_obj34_layer7075_4975,x
 	ldx obj92_phase
 	ora bm_obj92_layer7727_4975,x
 	;ldy obj127_phase
@@ -8952,8 +8937,11 @@
 	ldx obj132_phase
 	ora bm_obj132_layer7656_5263,x
 	sta bitmap+5263
+	ldy obj39_phase
+	lda bm_obj39_layer6916_5264,y
 	ldy obj40_phase
-	lda bm_obj40_layer7007_5264,y
+	and msk_obj40_layer7007_5264,y
+	ora bm_obj40_layer7007_5264,y
 	;ldx obj132_phase
 	ora bm_obj132_layer7656_5264,x
 	ldx obj131_phase
@@ -9008,9 +8996,9 @@
 	ldy obj131_phase
 	ora bm_obj131_layer7737_5270,y
 	sta bitmap+5270
-	ldx obj41_phase
-	lda bm_obj41_layer7112_5271,x
-	ldx obj111_phase
+	ldy obj41_phase
+	lda bm_obj41_layer7112_5271,y
+	;ldx obj111_phase
 	ora bm_obj111_layer7223_5271,x
 	ldx obj133_phase
 	ora bm_obj133_layer7560_5271,x
@@ -9019,185 +9007,201 @@
 	ora bm_obj132_layer7656_5271,x
 	sta bitmap+5271
 	lda #91
-	ldx obj130_phase
-	ora bm_obj130_layer7722_5272,x
-	;ldy obj131_phase
+	ldx obj39_phase
+	and msk_obj39_layer6916_5272,x
+	ora bm_obj39_layer6916_5272,x
+	ldy obj130_phase
+	ora bm_obj130_layer7722_5272,y
+	ldy obj131_phase
 	ora bm_obj131_layer7737_5272,y
 	sta bitmap+5272
-	ldy obj39_phase
-	lda bm_obj39_layer6916_5273,y
-	ldy obj40_phase
-	ora bm_obj40_layer7007_5273,y
-	;ldx obj130_phase
-	ora bm_obj130_layer7722_5273,x
-	ldx obj131_phase
-	ora bm_obj131_layer7737_5273,x
-	sta bitmap+5273
-	ldx obj39_phase
-	lda bm_obj39_layer6916_5274,x
+	;ldx obj39_phase
+	lda bm_obj39_layer6916_5273,x
 	ldx obj44_phase
-	ora bm_obj44_layer6931_5274,x
-	;ldy obj40_phase
+	and msk_obj44_layer6931_5273,x
+	ora bm_obj44_layer6931_5273,x
+	ldx obj40_phase
+	ora bm_obj40_layer7007_5273,x
+	ldx obj130_phase
+	ora bm_obj130_layer7722_5273,x
+	;ldy obj131_phase
+	ora bm_obj131_layer7737_5273,y
+	sta bitmap+5273
+	ldy obj39_phase
+	lda bm_obj39_layer6916_5274,y
+	ldy obj44_phase
+	ora bm_obj44_layer6931_5274,y
+	ldy obj40_phase
 	and msk_obj40_layer7007_5274,y
 	ora bm_obj40_layer7007_5274,y
-	ldy obj130_phase
-	ora bm_obj130_layer7722_5274,y
-	ldy obj131_phase
-	ora bm_obj131_layer7737_5274,y
-	sta bitmap+5274
-	ldy obj39_phase
-	lda bm_obj39_layer6916_5275,y
-	;ldx obj44_phase
-	ora bm_obj44_layer6931_5275,x
-	ldx obj40_phase
-	ora bm_obj40_layer7007_5275,x
-	ldx obj43_phase
-	ora bm_obj43_layer7036_5275,x
-	ldx obj130_phase
-	ora bm_obj130_layer7722_5275,x
+	;ldx obj130_phase
+	ora bm_obj130_layer7722_5274,x
 	ldx obj131_phase
-	ora bm_obj131_layer7737_5275,x
+	ora bm_obj131_layer7737_5274,x
+	sta bitmap+5274
+	ldx obj39_phase
+	lda bm_obj39_layer6916_5275,x
+	ldx obj44_phase
+	ora bm_obj44_layer6931_5275,x
+	;ldy obj40_phase
+	ora bm_obj40_layer7007_5275,y
+	ldy obj43_phase
+	ora bm_obj43_layer7036_5275,y
+	ldy obj130_phase
+	ora bm_obj130_layer7722_5275,y
+	ldy obj131_phase
+	ora bm_obj131_layer7737_5275,y
 	sta bitmap+5275
-	;ldy obj39_phase
+	ldy obj39_phase
 	lda bm_obj39_layer6916_5276,y
-	ldy obj44_phase
-	ora bm_obj44_layer6931_5276,y
-	ldy obj40_phase
-	ora bm_obj40_layer7007_5276,y
+	;ldx obj44_phase
+	ora bm_obj44_layer6931_5276,x
+	ldx obj40_phase
+	ora bm_obj40_layer7007_5276,x
 	ldy obj43_phase
 	ora bm_obj43_layer7036_5276,y
-	ldy obj41_phase
-	ora bm_obj41_layer7112_5276,y
-	ldy obj42_phase
-	ora bm_obj42_layer7126_5276,y
-	ldy obj130_phase
-	ora bm_obj130_layer7722_5276,y
-	;ldx obj131_phase
+	ldx obj41_phase
+	ora bm_obj41_layer7112_5276,x
+	ldx obj42_phase
+	ora bm_obj42_layer7126_5276,x
+	ldx obj130_phase
+	ora bm_obj130_layer7722_5276,x
+	ldx obj131_phase
 	ora bm_obj131_layer7737_5276,x
 	sta bitmap+5276
-	ldx obj43_phase
-	lda bm_obj43_layer7036_5277,x
-	ldx obj41_phase
-	and msk_obj41_layer7112_5277,x
-	ora bm_obj41_layer7112_5277,x
-	ldx obj42_phase
-	ora bm_obj42_layer7126_5277,x
-	;ldy obj130_phase
+	;ldy obj43_phase
+	lda bm_obj43_layer7036_5277,y
+	ldy obj41_phase
+	and msk_obj41_layer7112_5277,y
+	ora bm_obj41_layer7112_5277,y
+	ldy obj42_phase
+	ora bm_obj42_layer7126_5277,y
+	ldy obj130_phase
 	and msk_obj130_layer7722_5277,y
 	ora bm_obj130_layer7722_5277,y
-	ldy obj131_phase
-	ora bm_obj131_layer7737_5277,y
+	;ldx obj131_phase
+	ora bm_obj131_layer7737_5277,x
 	sta bitmap+5277
-	ldy obj43_phase
-	lda bm_obj43_layer7036_5278,y
-	ldy obj41_phase
-	and msk_obj41_layer7112_5278,y
-	ora bm_obj41_layer7112_5278,y
-	;ldx obj42_phase
+	ldx obj43_phase
+	lda bm_obj43_layer7036_5278,x
+	ldx obj41_phase
+	and msk_obj41_layer7112_5278,x
+	ora bm_obj41_layer7112_5278,x
+	ldx obj42_phase
 	and msk_obj42_layer7126_5278,x
 	ora bm_obj42_layer7126_5278,x
-	ldx obj130_phase
-	ora bm_obj130_layer7722_5278,x
+	;ldy obj130_phase
+	ora bm_obj130_layer7722_5278,y
 	ldx obj131_phase
 	ora bm_obj131_layer7737_5278,x
 	sta bitmap+5278
-	;ldy obj41_phase
-	lda bm_obj41_layer7112_5279,y
-	ldy obj42_phase
-	and msk_obj42_layer7126_5279,y
-	ora bm_obj42_layer7126_5279,y
-	ldy obj132_phase
-	ora bm_obj132_layer7656_5279,y
-	ldy obj130_phase
+	ldx obj41_phase
+	lda bm_obj41_layer7112_5279,x
+	ldx obj42_phase
+	and msk_obj42_layer7126_5279,x
+	ora bm_obj42_layer7126_5279,x
+	ldx obj132_phase
+	ora bm_obj132_layer7656_5279,x
+	;ldy obj130_phase
 	ora bm_obj130_layer7722_5279,y
-	;ldx obj131_phase
+	ldx obj131_phase
 	ora bm_obj131_layer7737_5279,x
 	sta bitmap+5279
-	lda #177
+	lda #176
+	ldx obj44_phase
+	ora bm_obj44_layer6931_5280,x
+	ldx obj43_phase
+	ora bm_obj43_layer7036_5280,x
 	;ldy obj130_phase
 	ora bm_obj130_layer7722_5280,y
-	ldx obj127_phase
-	ora bm_obj127_layer7768_5280,x
+	ldy obj127_phase
+	ora bm_obj127_layer7768_5280,y
 	sta bitmap+5280
-	ldx obj43_phase
-	lda bm_obj43_layer7036_5281,x
-	;ldy obj130_phase
-	and msk_obj130_layer7722_5281,y
-	ora bm_obj130_layer7722_5281,y
+	ldy obj44_phase
+	lda bm_obj44_layer6931_5281,y
+	;ldx obj43_phase
+	ora bm_obj43_layer7036_5281,x
+	ldx obj130_phase
+	and msk_obj130_layer7722_5281,x
+	ora bm_obj130_layer7722_5281,x
 	sta bitmap+5281
-	ldx obj44_phase
-	lda bm_obj44_layer6931_5282,x
-	ldx obj43_phase
-	and msk_obj43_layer7036_5282,x
-	ora bm_obj43_layer7036_5282,x
-	;ldy obj130_phase
-	ora bm_obj130_layer7722_5282,y
-	sta bitmap+5282
-	;ldx obj43_phase
-	lda bm_obj43_layer7036_5283,x
-	;ldy obj130_phase
-	ora bm_obj130_layer7722_5283,y
-	sta bitmap+5283
-	;ldx obj43_phase
-	lda bm_obj43_layer7036_5284,x
-	;ldy obj130_phase
-	ora bm_obj130_layer7722_5284,y
-	sta bitmap+5284
-	;ldx obj43_phase
-	lda bm_obj43_layer7036_5285,x
-	;ldy obj130_phase
-	and msk_obj130_layer7722_5285,y
-	ora bm_obj130_layer7722_5285,y
-	sta bitmap+5285
-	;ldx obj43_phase
-	lda bm_obj43_layer7036_5286,x
-	ldx obj42_phase
-	ora bm_obj42_layer7126_5286,x
-	ldx obj129_phase
-	ora bm_obj129_layer7627_5286,x
-	;ldy obj130_phase
-	ora bm_obj130_layer7722_5286,y
-	sta bitmap+5286
+	;ldy obj44_phase
+	lda bm_obj44_layer6931_5282,y
 	ldy obj43_phase
-	lda bm_obj43_layer7036_5287,y
+	and msk_obj43_layer7036_5282,y
+	ora bm_obj43_layer7036_5282,y
+	;ldx obj130_phase
+	ora bm_obj130_layer7722_5282,x
+	sta bitmap+5282
+	;ldy obj43_phase
+	lda bm_obj43_layer7036_5283,y
+	;ldx obj130_phase
+	ora bm_obj130_layer7722_5283,x
+	sta bitmap+5283
+	;ldy obj43_phase
+	lda bm_obj43_layer7036_5284,y
+	;ldx obj130_phase
+	ora bm_obj130_layer7722_5284,x
+	sta bitmap+5284
+	;ldy obj43_phase
+	lda bm_obj43_layer7036_5285,y
+	;ldx obj130_phase
+	and msk_obj130_layer7722_5285,x
+	ora bm_obj130_layer7722_5285,x
+	sta bitmap+5285
+	;ldy obj43_phase
+	lda bm_obj43_layer7036_5286,y
 	ldy obj42_phase
-	ora bm_obj42_layer7126_5287,y
-	;ldx obj129_phase
-	ora bm_obj129_layer7627_5287,x
+	ora bm_obj42_layer7126_5286,y
+	ldy obj129_phase
+	ora bm_obj129_layer7627_5286,y
+	;ldx obj130_phase
+	ora bm_obj130_layer7722_5286,x
+	sta bitmap+5286
+	ldx obj43_phase
+	lda bm_obj43_layer7036_5287,x
+	ldx obj42_phase
+	ora bm_obj42_layer7126_5287,x
+	;ldy obj129_phase
+	ora bm_obj129_layer7627_5287,y
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5287,x
 	sta bitmap+5287
+	ldx obj44_phase
+	lda bm_obj44_layer6931_5288,x
 	ldx obj35_phase
-	lda bm_obj35_layer7006_5288,x
-	ldx obj34_phase
-	ora bm_obj34_layer7075_5288,x
+	ora bm_obj35_layer7006_5288,x
+	ldx obj43_phase
+	ora bm_obj43_layer7036_5288,x
+	ldy obj34_phase
+	ora bm_obj34_layer7075_5288,y
 	ldy obj92_phase
 	ora bm_obj92_layer7727_5288,y
 	ldy obj127_phase
 	ora bm_obj127_layer7768_5288,y
 	sta bitmap+5288
-	ldy obj43_phase
-	lda bm_obj43_layer7036_5289,y
-	;ldx obj34_phase
+	;ldx obj43_phase
+	lda bm_obj43_layer7036_5289,x
+	ldx obj34_phase
 	and msk_obj34_layer7075_5289,x
 	ora bm_obj34_layer7075_5289,x
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5289,x
 	ldx obj92_phase
 	ora bm_obj92_layer7727_5289,x
-	ldx obj127_phase
-	ora bm_obj127_layer7768_5289,x
+	;ldy obj127_phase
+	ora bm_obj127_layer7768_5289,y
 	sta bitmap+5289
-	;ldy obj43_phase
+	ldy obj43_phase
 	lda bm_obj43_layer7036_5290,y
 	ldy obj34_phase
 	and msk_obj34_layer7075_5290,y
 	ora bm_obj34_layer7075_5290,y
 	ldy obj130_phase
 	ora bm_obj130_layer7722_5290,y
-	ldy obj92_phase
-	ora bm_obj92_layer7727_5290,y
-	;ldx obj127_phase
+	;ldx obj92_phase
+	ora bm_obj92_layer7727_5290,x
+	ldx obj127_phase
 	ora bm_obj127_layer7768_5290,x
 	sta bitmap+5290
 	ldx obj43_phase
@@ -9207,9 +9211,9 @@
 	ora bm_obj34_layer7075_5291,x
 	ldx obj96_phase
 	ora bm_obj96_layer7637_5291,x
-	ldx obj130_phase
-	ora bm_obj130_layer7722_5291,x
-	;ldy obj92_phase
+	;ldy obj130_phase
+	ora bm_obj130_layer7722_5291,y
+	ldy obj92_phase
 	ora bm_obj92_layer7727_5291,y
 	ldy obj127_phase
 	ora bm_obj127_layer7768_5291,y
@@ -9223,54 +9227,54 @@
 	ora bm_obj95_layer7582_5292,y
 	ldy obj129_phase
 	ora bm_obj129_layer7627_5292,y
-	ldy obj96_phase
-	ora bm_obj96_layer7637_5292,y
-	;ldx obj130_phase
+	;ldx obj96_phase
+	ora bm_obj96_layer7637_5292,x
+	ldx obj130_phase
 	and msk_obj130_layer7722_5292,x
 	ora bm_obj130_layer7722_5292,x
-	ldy obj92_phase
-	ora bm_obj92_layer7727_5292,y
-	ldy obj127_phase
-	ora bm_obj127_layer7768_5292,y
+	ldx obj92_phase
+	ora bm_obj92_layer7727_5292,x
+	ldx obj127_phase
+	ora bm_obj127_layer7768_5292,x
 	sta bitmap+5292
-	ldy obj43_phase
-	lda bm_obj43_layer7036_5293,y
-	ldy obj34_phase
-	and msk_obj34_layer7075_5293,y
-	ora bm_obj34_layer7075_5293,y
-	ldy obj33_phase
-	ora bm_obj33_layer7201_5293,y
-	ldy obj95_phase
-	ora bm_obj95_layer7582_5293,y
-	ldy obj129_phase
-	ora bm_obj129_layer7627_5293,y
-	;ldx obj130_phase
-	ora bm_obj130_layer7722_5293,x
-	sta bitmap+5293
 	ldx obj43_phase
-	lda bm_obj43_layer7036_5294,x
+	lda bm_obj43_layer7036_5293,x
 	ldx obj34_phase
-	and msk_obj34_layer7075_5294,x
-	ora bm_obj34_layer7075_5294,x
+	and msk_obj34_layer7075_5293,x
+	ora bm_obj34_layer7075_5293,x
 	ldx obj33_phase
-	ora bm_obj33_layer7201_5294,x
+	ora bm_obj33_layer7201_5293,x
 	ldx obj95_phase
+	ora bm_obj95_layer7582_5293,x
+	;ldy obj129_phase
+	ora bm_obj129_layer7627_5293,y
+	ldy obj130_phase
+	ora bm_obj130_layer7722_5293,y
+	sta bitmap+5293
+	ldy obj43_phase
+	lda bm_obj43_layer7036_5294,y
+	ldy obj34_phase
+	and msk_obj34_layer7075_5294,y
+	ora bm_obj34_layer7075_5294,y
+	ldy obj33_phase
+	ora bm_obj33_layer7201_5294,y
+	;ldx obj95_phase
 	and msk_obj95_layer7582_5294,x
 	ora bm_obj95_layer7582_5294,x
-	;ldy obj129_phase
-	ora bm_obj129_layer7627_5294,y
-	ldy obj130_phase
-	ora bm_obj130_layer7722_5294,y
+	ldx obj129_phase
+	ora bm_obj129_layer7627_5294,x
+	ldx obj130_phase
+	ora bm_obj130_layer7722_5294,x
 	sta bitmap+5294
-	ldy obj43_phase
-	lda bm_obj43_layer7036_5295,y
-	ldy obj34_phase
-	and msk_obj34_layer7075_5295,y
-	ora bm_obj34_layer7075_5295,y
-	ldy obj33_phase
+	ldx obj43_phase
+	lda bm_obj43_layer7036_5295,x
+	ldx obj34_phase
+	and msk_obj34_layer7075_5295,x
+	ora bm_obj34_layer7075_5295,x
+	;ldy obj33_phase
 	and msk_obj33_layer7201_5295,y
 	ora bm_obj33_layer7201_5295,y
-	;ldx obj95_phase
+	ldx obj95_phase
 	ora bm_obj95_layer7582_5295,x
 	ldx obj129_phase
 	ora bm_obj129_layer7627_5295,x
@@ -9571,25 +9575,25 @@
 	ldx obj133_phase
 	ora bm_obj133_layer7560_5590,x
 	sta bitmap+5590
-	ldy obj41_phase
-	lda bm_obj41_layer7112_5592,y
-	ldx obj42_phase
-	and msk_obj42_layer7126_5592,x
-	ora bm_obj42_layer7126_5592,x
-	ldx obj129_phase
-	ora bm_obj129_layer7627_5592,x
-	ldx obj132_phase
-	ora bm_obj132_layer7656_5592,x
-	ldx obj130_phase
-	ora bm_obj130_layer7722_5592,x
-	ldx obj131_phase
-	ora bm_obj131_layer7737_5592,x
-	sta bitmap+5592
-	;ldy obj41_phase
-	lda bm_obj41_layer7112_5593,y
+	ldx obj41_phase
+	lda bm_obj41_layer7112_5592,x
 	ldy obj42_phase
-	and msk_obj42_layer7126_5593,y
-	ora bm_obj42_layer7126_5593,y
+	and msk_obj42_layer7126_5592,y
+	ora bm_obj42_layer7126_5592,y
+	ldy obj129_phase
+	ora bm_obj129_layer7627_5592,y
+	ldy obj132_phase
+	ora bm_obj132_layer7656_5592,y
+	ldy obj130_phase
+	ora bm_obj130_layer7722_5592,y
+	ldy obj131_phase
+	ora bm_obj131_layer7737_5592,y
+	sta bitmap+5592
+	;ldx obj41_phase
+	lda bm_obj41_layer7112_5593,x
+	ldx obj42_phase
+	and msk_obj42_layer7126_5593,x
+	ora bm_obj42_layer7126_5593,x
 	ldx obj134_phase
 	ora bm_obj134_layer7546_5593,x
 	ldx obj133_phase
@@ -9600,12 +9604,12 @@
 	ora bm_obj132_layer7656_5593,x
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5593,x
-	ldx obj131_phase
-	ora bm_obj131_layer7737_5593,x
+	;ldy obj131_phase
+	ora bm_obj131_layer7737_5593,y
 	sta bitmap+5593
 	ldx obj41_phase
 	lda bm_obj41_layer7112_5594,x
-	;ldy obj42_phase
+	ldy obj42_phase
 	and msk_obj42_layer7126_5594,y
 	ora bm_obj42_layer7126_5594,y
 	ldx obj38_phase
