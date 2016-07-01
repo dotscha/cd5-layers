@@ -55,6 +55,7 @@
 	ldx obj151_phase
 	ora bm_obj151_layer7526_2386,x
 	ldx obj142_phase
+	and msk_obj142_layer7565_2386,x
 	ora bm_obj142_layer7565_2386,x
 	sta bitmap+2386
 	ldx obj82_phase
@@ -330,7 +331,6 @@
 	ldx obj68_phase
 	ora bm_obj68_layer7378_2410,x
 	;ldy obj138_phase
-	and msk_obj138_layer7489_2410,y
 	ora bm_obj138_layer7489_2410,y
 	sta bitmap+2410
 	ldy obj67_phase
@@ -372,7 +372,6 @@
 	and msk_obj139_layer7594_2414,y
 	ora bm_obj139_layer7594_2414,y
 	ldx obj140_phase
-	and msk_obj140_layer7685_2414,x
 	ora bm_obj140_layer7685_2414,x
 	sta bitmap+2414
 	ldx obj52_phase
@@ -492,7 +491,6 @@
 	ldy obj148_phase
 	ora bm_obj148_layer7412_2693,y
 	;ldx obj149_phase
-	and msk_obj149_layer7538_2693,x
 	ora bm_obj149_layer7538_2693,x
 	ldx obj150_phase
 	and msk_obj150_layer7595_2693,x
@@ -1180,7 +1178,6 @@
 	;ldx obj69_phase
 	ora bm_obj69_layer7382_2747,x
 	ldx obj65_phase
-	and msk_obj65_layer7485_2747,x
 	ora bm_obj65_layer7485_2747,x
 	ldx obj136_phase
 	and msk_obj136_layer7587_2747,x
@@ -1221,7 +1218,6 @@
 	ldy obj69_phase
 	ora bm_obj69_layer7382_2750,y
 	;ldx obj65_phase
-	and msk_obj65_layer7485_2750,x
 	ora bm_obj65_layer7485_2750,x
 	ldx obj136_phase
 	and msk_obj136_layer7587_2750,x
@@ -1235,7 +1231,6 @@
 	;ldy obj69_phase
 	ora bm_obj69_layer7382_2751,y
 	ldx obj65_phase
-	and msk_obj65_layer7485_2751,x
 	ora bm_obj65_layer7485_2751,x
 	ldx obj136_phase
 	and msk_obj136_layer7587_2751,x
@@ -1949,6 +1944,7 @@
 	and msk_obj160_layer7760_3055,y
 	ora bm_obj160_layer7760_3055,y
 	;ldx obj159_phase
+	and msk_obj159_layer7814_3055,x
 	ora bm_obj159_layer7814_3055,x
 	sta bitmap+3055
 	ldx obj53_phase
@@ -2087,7 +2083,6 @@
 	ldy obj70_phase
 	ora bm_obj70_layer7268_3064,y
 	ldy obj65_phase
-	and msk_obj65_layer7485_3064,y
 	ora bm_obj65_layer7485_3064,y
 	;ldx obj136_phase
 	and msk_obj136_layer7587_3064,x
@@ -2151,6 +2146,7 @@
 	and msk_obj153_layer7656_3068,x
 	ora bm_obj153_layer7656_3068,x
 	;ldy obj161_phase
+	and msk_obj161_layer7738_3068,y
 	ora bm_obj161_layer7738_3068,y
 	sta bitmap+3068
 	ldx obj63_phase
@@ -2165,7 +2161,6 @@
 	and msk_obj153_layer7656_3069,x
 	ora bm_obj153_layer7656_3069,x
 	;ldy obj161_phase
-	and msk_obj161_layer7738_3069,y
 	ora bm_obj161_layer7738_3069,y
 	sta bitmap+3069
 	ldy obj63_phase
@@ -2386,7 +2381,6 @@
 	ldy obj162_phase
 	ora bm_obj162_layer7397_3323,y
 	ldy obj170_phase
-	and msk_obj170_layer7509_3323,y
 	ora bm_obj170_layer7509_3323,y
 	ldy obj169_phase
 	and msk_obj169_layer7589_3323,y
@@ -2471,7 +2465,6 @@
 	ldx obj118_phase
 	ora bm_obj118_layer7301_3327,x
 	ldx obj170_phase
-	and msk_obj170_layer7509_3327,x
 	ora bm_obj170_layer7509_3327,x
 	ldx obj169_phase
 	and msk_obj169_layer7589_3327,x
@@ -2650,6 +2643,7 @@
 	ldx obj146_phase
 	ora bm_obj146_layer7602_3341,x
 	;ldy obj164_phase
+	and msk_obj164_layer7739_3341,y
 	ora bm_obj164_layer7739_3341,y
 	ldy obj173_phase
 	and msk_obj173_layer7803_3341,y
@@ -2722,6 +2716,7 @@
 	ldy obj137_phase
 	ora bm_obj137_layer7648_3347,y
 	ldy obj155_phase
+	and msk_obj155_layer7797_3347,y
 	ora bm_obj155_layer7797_3347,y
 	;ldx obj173_phase
 	and msk_obj173_layer7803_3347,x
@@ -3412,7 +3407,6 @@
 	and msk_obj103_layer7614_3399,y
 	ora bm_obj103_layer7614_3399,y
 	ldy obj104_phase
-	and msk_obj104_layer7705_3399,y
 	ora bm_obj104_layer7705_3399,y
 	sta bitmap+3399
 	;ldx obj60_phase
@@ -3445,7 +3439,6 @@
 	ldy obj162_phase
 	ora bm_obj162_layer7397_3633,y
 	;ldx obj170_phase
-	and msk_obj170_layer7509_3633,x
 	ora bm_obj170_layer7509_3633,x
 	sta bitmap+3633
 	ldx obj118_phase
@@ -3453,6 +3446,7 @@
 	;ldy obj162_phase
 	ora bm_obj162_layer7397_3634,y
 	ldy obj170_phase
+	and msk_obj170_layer7509_3634,y
 	ora bm_obj170_layer7509_3634,y
 	sta bitmap+3634
 	;ldx obj118_phase
@@ -3460,7 +3454,6 @@
 	ldx obj162_phase
 	ora bm_obj162_layer7397_3635,x
 	;ldy obj170_phase
-	and msk_obj170_layer7509_3635,y
 	ora bm_obj170_layer7509_3635,y
 	sta bitmap+3635
 	ldy obj118_phase
@@ -3476,7 +3469,6 @@
 	ldy obj162_phase
 	ora bm_obj162_layer7397_3637,y
 	;ldx obj170_phase
-	and msk_obj170_layer7509_3637,x
 	ora bm_obj170_layer7509_3637,x
 	ldx obj165_phase
 	ora bm_obj165_layer7533_3637,x
@@ -3488,7 +3480,6 @@
 	ldy obj170_phase
 	ora bm_obj170_layer7509_3638,y
 	ldy obj165_phase
-	and msk_obj165_layer7533_3638,y
 	ora bm_obj165_layer7533_3638,y
 	sta bitmap+3638
 	;ldx obj118_phase
@@ -3514,7 +3505,6 @@
 	ldy obj118_phase
 	ora bm_obj118_layer7301_3640,y
 	;ldx obj170_phase
-	and msk_obj170_layer7509_3640,x
 	ora bm_obj170_layer7509_3640,x
 	ldx obj169_phase
 	ora bm_obj169_layer7589_3640,x
@@ -3535,7 +3525,6 @@
 	ldy obj170_phase
 	ora bm_obj170_layer7509_3641,y
 	ldy obj169_phase
-	and msk_obj169_layer7589_3641,y
 	ora bm_obj169_layer7589_3641,y
 	ldy obj168_phase
 	and msk_obj168_layer7692_3641,y
@@ -3567,7 +3556,6 @@
 	ldy obj118_phase
 	ora bm_obj118_layer7301_3643,y
 	ldy obj170_phase
-	and msk_obj170_layer7509_3643,y
 	ora bm_obj170_layer7509_3643,y
 	ldy obj169_phase
 	ora bm_obj169_layer7589_3643,y
@@ -3584,6 +3572,7 @@
 	ldx obj118_phase
 	ora bm_obj118_layer7301_3644,x
 	ldx obj170_phase
+	and msk_obj170_layer7509_3644,x
 	ora bm_obj170_layer7509_3644,x
 	ldx obj165_phase
 	ora bm_obj165_layer7533_3644,x
@@ -3620,7 +3609,6 @@
 	ldy obj118_phase
 	ora bm_obj118_layer7301_3646,y
 	;ldx obj165_phase
-	and msk_obj165_layer7533_3646,x
 	ora bm_obj165_layer7533_3646,x
 	ldx obj166_phase
 	ora bm_obj166_layer7636_3646,x
@@ -3635,6 +3623,7 @@
 	;ldy obj118_phase
 	ora bm_obj118_layer7301_3647,y
 	ldx obj165_phase
+	and msk_obj165_layer7533_3647,x
 	ora bm_obj165_layer7533_3647,x
 	ldx obj166_phase
 	ora bm_obj166_layer7636_3647,x
@@ -3841,7 +3830,6 @@
 	ldx obj146_phase
 	ora bm_obj146_layer7602_3662,x
 	ldx obj176_phase
-	and msk_obj176_layer7787_3662,x
 	ora bm_obj176_layer7787_3662,x
 	;ldy obj177_phase
 	and msk_obj177_layer7827_3662,y
@@ -4021,7 +4009,6 @@
 	ldx obj155_phase
 	ora bm_obj155_layer7688_3677,x
 	;ldy obj158_phase
-	and msk_obj158_layer7846_3677,y
 	ora bm_obj158_layer7846_3677,y
 	ldy obj178_phase
 	and msk_obj178_layer7853_3677,y
@@ -4382,7 +4369,6 @@
 	ldy obj153_phase
 	ora bm_obj153_layer7524_3708,y
 	ldx obj104_phase
-	and msk_obj104_layer7705_3708,x
 	ora bm_obj104_layer7705_3708,x
 	ldx obj156_phase
 	and msk_obj156_layer7770_3708,x
@@ -4645,6 +4631,7 @@
 	;ldx obj59_phase
 	ora bm_obj59_layer7402_3727,x
 	ldx obj102_phase
+	and msk_obj102_layer7517_3727,x
 	ora bm_obj102_layer7517_3727,x
 	sta bitmap+3727
 	ldx obj118_phase
@@ -4662,7 +4649,6 @@
 	ldy obj122_phase
 	ora bm_obj122_layer7429_3953,y
 	;ldx obj165_phase
-	and msk_obj165_layer7533_3953,x
 	ora bm_obj165_layer7533_3953,x
 	sta bitmap+3953
 	ldx obj121_phase
@@ -4678,7 +4664,6 @@
 	ldx obj122_phase
 	ora bm_obj122_layer7429_3955,x
 	;ldy obj165_phase
-	and msk_obj165_layer7533_3955,y
 	ora bm_obj165_layer7533_3955,y
 	sta bitmap+3955
 	ldy obj121_phase
@@ -4697,7 +4682,6 @@
 	ldy obj122_phase
 	ora bm_obj122_layer7429_3957,y
 	ldy obj165_phase
-	and msk_obj165_layer7533_3957,y
 	ora bm_obj165_layer7533_3957,y
 	sta bitmap+3957
 	;ldx obj120_phase
@@ -4716,7 +4700,6 @@
 	;ldx obj122_phase
 	ora bm_obj122_layer7429_3959,x
 	ldy obj165_phase
-	and msk_obj165_layer7533_3959,y
 	ora bm_obj165_layer7533_3959,y
 	sta bitmap+3959
 	ldx obj78_phase
@@ -4779,7 +4762,6 @@
 	ldx obj165_phase
 	ora bm_obj165_layer7533_3963,x
 	ldx obj166_phase
-	and msk_obj166_layer7636_3963,x
 	ora bm_obj166_layer7636_3963,x
 	;ldy obj167_phase
 	and msk_obj167_layer7716_3963,y
@@ -5074,6 +5056,7 @@
 	and msk_obj176_layer7787_3982,x
 	ora bm_obj176_layer7787_3982,x
 	ldx obj177_phase
+	and msk_obj177_layer7827_3982,x
 	ora bm_obj177_layer7827_3982,x
 	sta bitmap+3982
 	lda #85
@@ -5395,7 +5378,6 @@
 	and msk_obj157_layer7824_4012,x
 	ora bm_obj157_layer7824_4012,x
 	ldx obj158_phase
-	and msk_obj158_layer7846_4012,x
 	ora bm_obj158_layer7846_4012,x
 	sta bitmap+4012
 	lda #165
@@ -5437,7 +5419,6 @@
 	;ldy obj160_phase
 	ora bm_obj160_layer7663_4016,y
 	ldy obj156_phase
-	and msk_obj156_layer7770_4016,y
 	ora bm_obj156_layer7770_4016,y
 	ldy obj157_phase
 	and msk_obj157_layer7824_4016,y
@@ -5603,6 +5584,7 @@
 	and msk_obj104_layer7705_4029,x
 	ora bm_obj104_layer7705_4029,x
 	ldx obj156_phase
+	and msk_obj156_layer7770_4029,x
 	ora bm_obj156_layer7770_4029,x
 	;ldy obj157_phase
 	and msk_obj157_layer7824_4029,y
@@ -5692,7 +5674,6 @@
 	;ldy obj102_phase
 	ora bm_obj102_layer7517_4034,y
 	ldy obj103_phase
-	and msk_obj103_layer7614_4034,y
 	ora bm_obj103_layer7614_4034,y
 	ldy obj104_phase
 	and msk_obj104_layer7705_4034,y
@@ -5708,7 +5689,6 @@
 	ldx obj102_phase
 	ora bm_obj102_layer7517_4035,x
 	ldx obj103_phase
-	and msk_obj103_layer7614_4035,x
 	ora bm_obj103_layer7614_4035,x
 	ldx obj104_phase
 	and msk_obj104_layer7705_4035,x
@@ -5794,7 +5774,6 @@
 	;ldx obj59_phase
 	ora bm_obj59_layer7402_4041,x
 	ldx obj102_phase
-	and msk_obj102_layer7517_4041,x
 	ora bm_obj102_layer7517_4041,x
 	sta bitmap+4041
 	;ldy obj58_phase
@@ -5861,7 +5840,6 @@
 	ldy obj122_phase
 	ora bm_obj122_layer7429_4272,y
 	ldy obj165_phase
-	and msk_obj165_layer7533_4272,y
 	ora bm_obj165_layer7533_4272,y
 	sta bitmap+4272
 	;ldx obj120_phase
@@ -5965,7 +5943,6 @@
 	and msk_obj166_layer7636_4280,x
 	ora bm_obj166_layer7636_4280,x
 	ldx obj167_phase
-	and msk_obj167_layer7716_4280,x
 	ora bm_obj167_layer7716_4280,x
 	sta bitmap+4280
 	;ldy obj76_phase
@@ -5980,7 +5957,6 @@
 	and msk_obj166_layer7636_4281,y
 	ora bm_obj166_layer7636_4281,y
 	;ldx obj167_phase
-	and msk_obj167_layer7716_4281,x
 	ora bm_obj167_layer7716_4281,x
 	sta bitmap+4281
 	ldx obj76_phase
@@ -6033,7 +6009,6 @@
 	ldy obj163_phase
 	ora bm_obj163_layer7634_4285,y
 	ldy obj166_phase
-	and msk_obj166_layer7636_4285,y
 	ora bm_obj166_layer7636_4285,y
 	sta bitmap+4285
 	;ldx obj76_phase
@@ -6066,7 +6041,6 @@
 	ldy obj119_phase
 	ora bm_obj119_layer7539_4287,y
 	;ldx obj163_phase
-	and msk_obj163_layer7634_4287,x
 	ora bm_obj163_layer7634_4287,x
 	sta bitmap+4287
 	lda #32
@@ -6080,6 +6054,7 @@
 	ldy obj164_phase
 	ora bm_obj164_layer7601_4288,y
 	ldy obj167_phase
+	and msk_obj167_layer7716_4288,y
 	ora bm_obj167_layer7716_4288,y
 	ldy obj176_phase
 	and msk_obj176_layer7787_4288,y
@@ -6112,7 +6087,6 @@
 	ldy obj164_phase
 	ora bm_obj164_layer7601_4290,y
 	;ldx obj167_phase
-	and msk_obj167_layer7716_4290,x
 	ora bm_obj167_layer7716_4290,x
 	ldx obj176_phase
 	and msk_obj176_layer7787_4290,x
@@ -6145,7 +6119,6 @@
 	ldx obj175_phase
 	ora bm_obj175_layer7771_4292,x
 	ldx obj176_phase
-	and msk_obj176_layer7787_4292,x
 	ora bm_obj176_layer7787_4292,x
 	sta bitmap+4292
 	lda #15
@@ -6288,7 +6261,6 @@
 	ldx obj176_phase
 	ora bm_obj176_layer7787_4305,x
 	ldx obj177_phase
-	and msk_obj177_layer7827_4305,x
 	ora bm_obj177_layer7827_4305,x
 	;ldy obj178_phase
 	and msk_obj178_layer7853_4305,y
@@ -6349,6 +6321,7 @@
 	and msk_obj175_layer7771_4309,y
 	ora bm_obj175_layer7771_4309,y
 	ldy obj174_phase
+	and msk_obj174_layer7797_4309,y
 	ora bm_obj174_layer7797_4309,y
 	ldy obj179_phase
 	and msk_obj179_layer7838_4309,y
@@ -6408,7 +6381,6 @@
 	ldy obj179_phase
 	ora bm_obj179_layer7838_4314,y
 	ldy obj178_phase
-	and msk_obj178_layer7853_4314,y
 	ora bm_obj178_layer7853_4314,y
 	sta bitmap+4314
 	lda #86
@@ -6697,7 +6669,6 @@
 	ldy obj161_phase
 	ora bm_obj161_layer7611_4341,y
 	;ldx obj101_phase
-	and msk_obj101_layer7757_4341,x
 	ora bm_obj101_layer7757_4341,x
 	ldx obj154_phase
 	and msk_obj154_layer7817_4341,x
@@ -6706,6 +6677,7 @@
 	;ldy obj161_phase
 	lda bm_obj161_layer7611_4342,y
 	ldy obj101_phase
+	and msk_obj101_layer7757_4342,y
 	ora bm_obj101_layer7757_4342,y
 	;ldx obj154_phase
 	and msk_obj154_layer7817_4342,x
@@ -6759,10 +6731,8 @@
 	and msk_obj105_layer7700_4345,y
 	ora bm_obj105_layer7700_4345,y
 	ldy obj101_phase
-	and msk_obj101_layer7757_4345,y
 	ora bm_obj101_layer7757_4345,y
 	ldy obj154_phase
-	and msk_obj154_layer7817_4345,y
 	ora bm_obj154_layer7817_4345,y
 	sta bitmap+4345
 	lda #48
@@ -6940,9 +6910,9 @@
 	ldy obj55_phase
 	ora bm_obj55_layer7300_4357,y
 	ldy obj107_phase
+	and msk_obj107_layer7511_4357,y
 	ora bm_obj107_layer7511_4357,y
 	ldy obj106_phase
-	and msk_obj106_layer7603_4357,y
 	ora bm_obj106_layer7603_4357,y
 	ldy obj105_phase
 	and msk_obj105_layer7700_4357,y
@@ -6992,7 +6962,6 @@
 	;ldx obj99_phase
 	ora bm_obj99_layer7405_4361,x
 	ldx obj107_phase
-	and msk_obj107_layer7511_4361,x
 	ora bm_obj107_layer7511_4361,x
 	sta bitmap+4361
 	;ldy obj55_phase
@@ -7014,7 +6983,6 @@
 	ldx obj99_phase
 	ora bm_obj99_layer7405_4364,x
 	;ldy obj107_phase
-	and msk_obj107_layer7511_4364,y
 	ora bm_obj107_layer7511_4364,y
 	sta bitmap+4364
 	ldy obj55_phase
@@ -7022,7 +6990,6 @@
 	;ldx obj99_phase
 	ora bm_obj99_layer7405_4365,x
 	ldx obj107_phase
-	and msk_obj107_layer7511_4365,x
 	ora bm_obj107_layer7511_4365,x
 	sta bitmap+4365
 	;ldy obj55_phase
@@ -7081,7 +7048,6 @@
 	ldy obj119_phase
 	ora bm_obj119_layer7539_4601,y
 	ldy obj163_phase
-	and msk_obj163_layer7634_4601,y
 	ora bm_obj163_layer7634_4601,y
 	sta bitmap+4601
 	ldy obj73_phase
@@ -7098,7 +7064,6 @@
 	ldy obj119_phase
 	ora bm_obj119_layer7539_4602,y
 	ldy obj163_phase
-	and msk_obj163_layer7634_4602,y
 	ora bm_obj163_layer7634_4602,y
 	sta bitmap+4602
 	;ldx obj117_phase
@@ -7113,7 +7078,6 @@
 	ldx obj119_phase
 	ora bm_obj119_layer7539_4603,x
 	;ldy obj163_phase
-	and msk_obj163_layer7634_4603,y
 	ora bm_obj163_layer7634_4603,y
 	sta bitmap+4603
 	ldy obj117_phase
@@ -7128,7 +7092,6 @@
 	;ldx obj119_phase
 	ora bm_obj119_layer7539_4604,x
 	ldx obj163_phase
-	and msk_obj163_layer7634_4604,x
 	ora bm_obj163_layer7634_4604,x
 	sta bitmap+4604
 	ldx obj117_phase
@@ -7143,7 +7106,6 @@
 	ldy obj119_phase
 	ora bm_obj119_layer7539_4605,y
 	ldy obj163_phase
-	and msk_obj163_layer7634_4605,y
 	ora bm_obj163_layer7634_4605,y
 	ldy obj172_phase
 	ora bm_obj172_layer7699_4605,y
@@ -7158,7 +7120,6 @@
 	ldx obj123_phase
 	ora bm_obj123_layer7437_4606,x
 	ldx obj119_phase
-	and msk_obj119_layer7539_4606,x
 	ora bm_obj119_layer7539_4606,x
 	ldx obj163_phase
 	ora bm_obj163_layer7634_4606,x
@@ -7187,7 +7148,6 @@
 	;ldx obj163_phase
 	ora bm_obj163_layer7634_4608,x
 	ldx obj172_phase
-	and msk_obj172_layer7699_4608,x
 	ora bm_obj172_layer7699_4608,x
 	ldx obj175_phase
 	and msk_obj175_layer7771_4608,x
@@ -7213,7 +7173,6 @@
 	ldx obj163_phase
 	ora bm_obj163_layer7634_4610,x
 	;ldy obj172_phase
-	and msk_obj172_layer7699_4610,y
 	ora bm_obj172_layer7699_4610,y
 	ldy obj175_phase
 	and msk_obj175_layer7771_4610,y
@@ -7246,10 +7205,8 @@
 	ldy obj163_phase
 	ora bm_obj163_layer7634_4612,y
 	ldy obj172_phase
-	and msk_obj172_layer7699_4612,y
 	ora bm_obj172_layer7699_4612,y
 	ldy obj175_phase
-	and msk_obj175_layer7771_4612,y
 	ora bm_obj175_layer7771_4612,y
 	sta bitmap+4612
 	ldy obj20_phase
@@ -7259,10 +7216,8 @@
 	ldx obj117_phase
 	ora bm_obj117_layer7110_4613,x
 	ldx obj172_phase
-	and msk_obj172_layer7699_4613,x
 	ora bm_obj172_layer7699_4613,x
 	ldx obj175_phase
-	and msk_obj175_layer7771_4613,x
 	ora bm_obj175_layer7771_4613,x
 	sta bitmap+4613
 	;ldy obj20_phase
@@ -7287,7 +7242,6 @@
 	and msk_obj117_layer7110_4615,x
 	ora bm_obj117_layer7110_4615,x
 	;ldy obj172_phase
-	and msk_obj172_layer7699_4615,y
 	ora bm_obj172_layer7699_4615,y
 	ldx obj175_phase
 	ora bm_obj175_layer7771_4615,x
@@ -7336,12 +7290,10 @@
 	and msk_obj175_layer7771_4621,y
 	ora bm_obj175_layer7771_4621,y
 	;ldx obj174_phase
-	and msk_obj174_layer7797_4621,x
 	ora bm_obj174_layer7797_4621,x
 	sta bitmap+4621
 	lda #13
 	;ldy obj175_phase
-	and msk_obj175_layer7771_4622,y
 	ora bm_obj175_layer7771_4622,y
 	;ldx obj174_phase
 	ora bm_obj174_layer7797_4622,x
@@ -7375,6 +7327,7 @@
 	and msk_obj174_layer7797_4625,x
 	ora bm_obj174_layer7797_4625,x
 	ldx obj179_phase
+	and msk_obj179_layer7838_4625,x
 	ora bm_obj179_layer7838_4625,x
 	sta bitmap+4625
 	lda #168
@@ -7469,6 +7422,7 @@
 	ldx obj159_phase
 	ora bm_obj159_layer7689_4636,x
 	ldx obj174_phase
+	and msk_obj174_layer7797_4636,x
 	ora bm_obj174_layer7797_4636,x
 	;ldy obj179_phase
 	and msk_obj179_layer7838_4636,y
@@ -7476,7 +7430,6 @@
 	sta bitmap+4636
 	lda #119
 	;ldx obj174_phase
-	and msk_obj174_layer7797_4637,x
 	ora bm_obj174_layer7797_4637,x
 	;ldy obj179_phase
 	and msk_obj179_layer7838_4637,y
@@ -7492,7 +7445,6 @@
 	sta bitmap+4638
 	lda #127
 	;ldx obj174_phase
-	and msk_obj174_layer7797_4639,x
 	ora bm_obj174_layer7797_4639,x
 	;ldy obj179_phase
 	and msk_obj179_layer7838_4639,y
@@ -7555,7 +7507,6 @@
 	and msk_obj171_layer7823_4644,x
 	ora bm_obj171_layer7823_4644,x
 	;ldy obj179_phase
-	and msk_obj179_layer7838_4644,y
 	ora bm_obj179_layer7838_4644,y
 	sta bitmap+4644
 	lda #255
@@ -7578,7 +7529,6 @@
 	and msk_obj171_layer7823_4647,x
 	ora bm_obj171_layer7823_4647,x
 	;ldy obj179_phase
-	and msk_obj179_layer7838_4647,y
 	ora bm_obj179_layer7838_4647,y
 	sta bitmap+4647
 	lda #82
@@ -7617,6 +7567,7 @@
 	;ldx obj159_phase
 	ora bm_obj159_layer7689_4650,x
 	ldx obj154_phase
+	and msk_obj154_layer7817_4650,x
 	ora bm_obj154_layer7817_4650,x
 	ldx obj171_phase
 	and msk_obj171_layer7823_4650,x
@@ -7680,7 +7631,6 @@
 	and msk_obj101_layer7757_4658,x
 	ora bm_obj101_layer7757_4658,x
 	;ldy obj154_phase
-	and msk_obj154_layer7817_4658,y
 	ora bm_obj154_layer7817_4658,y
 	sta bitmap+4658
 	lda #2
@@ -7774,7 +7724,6 @@
 	and msk_obj16_layer7012_4667,x
 	ora bm_obj16_layer7012_4667,x
 	ldx obj105_phase
-	and msk_obj105_layer7700_4667,x
 	ora bm_obj105_layer7700_4667,x
 	;ldy obj101_phase
 	and msk_obj101_layer7757_4667,y
@@ -7794,7 +7743,6 @@
 	ldy obj106_phase
 	ora bm_obj106_layer7603_4669,y
 	ldy obj105_phase
-	and msk_obj105_layer7700_4669,y
 	ora bm_obj105_layer7700_4669,y
 	;ldx obj101_phase
 	and msk_obj101_layer7757_4669,x
@@ -7807,7 +7755,6 @@
 	ldx obj106_phase
 	ora bm_obj106_layer7603_4670,x
 	;ldy obj105_phase
-	and msk_obj105_layer7700_4670,y
 	ora bm_obj105_layer7700_4670,y
 	ldy obj101_phase
 	and msk_obj101_layer7757_4670,y
@@ -7822,7 +7769,6 @@
 	ldy obj92_phase
 	ora bm_obj92_layer7727_4671,y
 	ldy obj101_phase
-	and msk_obj101_layer7757_4671,y
 	ora bm_obj101_layer7757_4671,y
 	sta bitmap+4671
 	ldy obj15_phase
@@ -7839,7 +7785,6 @@
 	and msk_obj106_layer7603_4672,x
 	ora bm_obj106_layer7603_4672,x
 	ldx obj105_phase
-	and msk_obj105_layer7700_4672,x
 	ora bm_obj105_layer7700_4672,x
 	sta bitmap+4672
 	ldx obj15_phase
@@ -7854,7 +7799,6 @@
 	;ldy obj107_phase
 	ora bm_obj107_layer7511_4673,y
 	ldy obj106_phase
-	and msk_obj106_layer7603_4673,y
 	ora bm_obj106_layer7603_4673,y
 	ldy obj105_phase
 	and msk_obj105_layer7700_4673,y
@@ -7980,7 +7924,6 @@
 	ldy obj97_phase
 	ora bm_obj97_layer7570_4679,y
 	;ldx obj106_phase
-	and msk_obj106_layer7603_4679,x
 	ora bm_obj106_layer7603_4679,x
 	sta bitmap+4679
 	ldx obj55_phase
@@ -8005,7 +7948,6 @@
 	ldy obj123_phase
 	ora bm_obj123_layer7437_4920,y
 	ldy obj119_phase
-	and msk_obj119_layer7539_4920,y
 	ora bm_obj119_layer7539_4920,y
 	ldy obj163_phase
 	ora bm_obj163_layer7634_4920,y
@@ -8022,7 +7964,6 @@
 	ldx obj123_phase
 	ora bm_obj123_layer7437_4921,x
 	ldx obj119_phase
-	and msk_obj119_layer7539_4921,x
 	ora bm_obj119_layer7539_4921,x
 	ldx obj163_phase
 	ora bm_obj163_layer7634_4921,x
@@ -8039,7 +7980,6 @@
 	ldy obj123_phase
 	ora bm_obj123_layer7437_4922,y
 	ldy obj119_phase
-	and msk_obj119_layer7539_4922,y
 	ora bm_obj119_layer7539_4922,y
 	ldy obj110_phase
 	ora bm_obj110_layer7545_4922,y
@@ -8079,7 +8019,6 @@
 	ldy obj123_phase
 	ora bm_obj123_layer7437_4924,y
 	;ldx obj119_phase
-	and msk_obj119_layer7539_4924,x
 	ora bm_obj119_layer7539_4924,x
 	ldx obj110_phase
 	ora bm_obj110_layer7545_4924,x
@@ -8095,7 +8034,6 @@
 	ldy obj119_phase
 	ora bm_obj119_layer7539_4925,y
 	ldy obj110_phase
-	and msk_obj110_layer7545_4925,y
 	ora bm_obj110_layer7545_4925,y
 	sta bitmap+4925
 	;ldx obj115_phase
@@ -8103,7 +8041,6 @@
 	ldx obj114_phase
 	ora bm_obj114_layer7449_4926,x
 	;ldy obj110_phase
-	and msk_obj110_layer7545_4926,y
 	ora bm_obj110_layer7545_4926,y
 	sta bitmap+4926
 	ldy obj115_phase
@@ -8121,7 +8058,6 @@
 	and msk_obj117_layer7110_4928,y
 	ora bm_obj117_layer7110_4928,y
 	ldy obj172_phase
-	and msk_obj172_layer7699_4928,y
 	ora bm_obj172_layer7699_4928,y
 	sta bitmap+4928
 	;ldx obj20_phase
@@ -8136,7 +8072,6 @@
 	ldx obj108_phase
 	ora bm_obj108_layer7116_4929,x
 	;ldy obj172_phase
-	and msk_obj172_layer7699_4929,y
 	ora bm_obj172_layer7699_4929,y
 	sta bitmap+4929
 	ldy obj37_phase
@@ -8148,7 +8083,6 @@
 	and msk_obj108_layer7116_4930,x
 	ora bm_obj108_layer7116_4930,x
 	ldx obj172_phase
-	and msk_obj172_layer7699_4930,x
 	ora bm_obj172_layer7699_4930,x
 	sta bitmap+4930
 	ldx obj37_phase
@@ -8163,7 +8097,6 @@
 	ldy obj128_phase
 	ora bm_obj128_layer7644_4931,y
 	ldy obj172_phase
-	and msk_obj172_layer7699_4931,y
 	ora bm_obj172_layer7699_4931,y
 	sta bitmap+4931
 	;ldx obj37_phase
@@ -8174,10 +8107,8 @@
 	and msk_obj108_layer7116_4932,x
 	ora bm_obj108_layer7116_4932,x
 	ldx obj110_phase
-	and msk_obj110_layer7545_4932,x
 	ora bm_obj110_layer7545_4932,x
 	ldx obj128_phase
-	and msk_obj128_layer7644_4932,x
 	ora bm_obj128_layer7644_4932,x
 	;ldy obj172_phase
 	ora bm_obj172_layer7699_4932,y
@@ -8189,10 +8120,8 @@
 	ldy obj115_phase
 	ora bm_obj115_layer7333_4933,y
 	ldy obj110_phase
-	and msk_obj110_layer7545_4933,y
 	ora bm_obj110_layer7545_4933,y
 	;ldx obj128_phase
-	and msk_obj128_layer7644_4933,x
 	ora bm_obj128_layer7644_4933,x
 	sta bitmap+4933
 	ldx obj108_phase
@@ -8203,10 +8132,8 @@
 	and msk_obj115_layer7333_4934,x
 	ora bm_obj115_layer7333_4934,x
 	;ldy obj110_phase
-	and msk_obj110_layer7545_4934,y
 	ora bm_obj110_layer7545_4934,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_4934,y
 	ora bm_obj128_layer7644_4934,y
 	sta bitmap+4934
 	ldy obj108_phase
@@ -8216,10 +8143,8 @@
 	;ldx obj115_phase
 	ora bm_obj115_layer7333_4935,x
 	ldx obj110_phase
-	and msk_obj110_layer7545_4935,x
 	ora bm_obj110_layer7545_4935,x
 	ldx obj128_phase
-	and msk_obj128_layer7644_4935,x
 	ora bm_obj128_layer7644_4935,x
 	sta bitmap+4935
 	lda #23
@@ -8229,7 +8154,6 @@
 	ldy obj172_phase
 	ora bm_obj172_layer7699_4936,y
 	ldy obj175_phase
-	and msk_obj175_layer7771_4936,y
 	ora bm_obj175_layer7771_4936,y
 	ldy obj174_phase
 	and msk_obj174_layer7797_4936,y
@@ -8241,10 +8165,8 @@
 	ldx obj37_phase
 	ora bm_obj37_layer7014_4937,x
 	ldx obj172_phase
-	and msk_obj172_layer7699_4937,x
 	ora bm_obj172_layer7699_4937,x
 	ldx obj175_phase
-	and msk_obj175_layer7771_4937,x
 	ora bm_obj175_layer7771_4937,x
 	;ldy obj174_phase
 	ora bm_obj174_layer7797_4937,y
@@ -8256,10 +8178,8 @@
 	ldy obj172_phase
 	ora bm_obj172_layer7699_4938,y
 	;ldx obj175_phase
-	and msk_obj175_layer7771_4938,x
 	ora bm_obj175_layer7771_4938,x
 	ldx obj174_phase
-	and msk_obj174_layer7797_4938,x
 	ora bm_obj174_layer7797_4938,x
 	sta bitmap+4938
 	lda #2
@@ -8267,13 +8187,10 @@
 	and msk_obj37_layer7014_4939,x
 	ora bm_obj37_layer7014_4939,x
 	;ldy obj172_phase
-	and msk_obj172_layer7699_4939,y
 	ora bm_obj172_layer7699_4939,y
 	ldy obj175_phase
-	and msk_obj175_layer7771_4939,y
 	ora bm_obj175_layer7771_4939,y
 	ldy obj174_phase
-	and msk_obj174_layer7797_4939,y
 	ora bm_obj174_layer7797_4939,y
 	sta bitmap+4939
 	;ldx obj37_phase
@@ -8285,7 +8202,6 @@
 	ldx obj175_phase
 	ora bm_obj175_layer7771_4940,x
 	;ldy obj174_phase
-	and msk_obj174_layer7797_4940,y
 	ora bm_obj174_layer7797_4940,y
 	sta bitmap+4940
 	ldy obj40_phase
@@ -8296,7 +8212,6 @@
 	ldy obj108_phase
 	ora bm_obj108_layer7116_4941,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_4941,y
 	ora bm_obj128_layer7644_4941,y
 	ldy obj132_phase
 	ora bm_obj132_layer7656_4941,y
@@ -8318,12 +8233,10 @@
 	and msk_obj108_layer7116_4942,x
 	ora bm_obj108_layer7116_4942,x
 	ldx obj128_phase
-	and msk_obj128_layer7644_4942,x
 	ora bm_obj128_layer7644_4942,x
 	ldx obj132_phase
 	ora bm_obj132_layer7656_4942,x
 	;ldy obj131_phase
-	and msk_obj131_layer7737_4942,y
 	ora bm_obj131_layer7737_4942,y
 	sta bitmap+4942
 	ldy obj40_phase
@@ -8334,10 +8247,8 @@
 	ldy obj108_phase
 	ora bm_obj108_layer7116_4943,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_4943,y
 	ora bm_obj128_layer7644_4943,y
 	;ldx obj132_phase
-	and msk_obj132_layer7656_4943,x
 	ora bm_obj132_layer7656_4943,x
 	ldx obj131_phase
 	ora bm_obj131_layer7737_4943,x
@@ -8370,7 +8281,6 @@
 	sta bitmap+4948
 	lda #23
 	;ldx obj131_phase
-	and msk_obj131_layer7737_4949,x
 	ora bm_obj131_layer7737_4949,x
 	;ldy obj174_phase
 	ora bm_obj174_layer7797_4949,y
@@ -8380,7 +8290,6 @@
 	and msk_obj40_layer7007_4950,y
 	ora bm_obj40_layer7007_4950,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_4950,x
 	ora bm_obj131_layer7737_4950,x
 	sta bitmap+4950
 	lda #5
@@ -8388,7 +8297,6 @@
 	and msk_obj40_layer7007_4951,y
 	ora bm_obj40_layer7007_4951,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_4951,x
 	ora bm_obj131_layer7737_4951,x
 	sta bitmap+4951
 	lda #235
@@ -8396,7 +8304,6 @@
 	and msk_obj174_layer7797_4952,y
 	ora bm_obj174_layer7797_4952,y
 	ldx obj179_phase
-	and msk_obj179_layer7838_4952,x
 	ora bm_obj179_layer7838_4952,x
 	sta bitmap+4952
 	lda #251
@@ -8404,14 +8311,13 @@
 	and msk_obj174_layer7797_4953,y
 	ora bm_obj174_layer7797_4953,y
 	;ldx obj179_phase
-	and msk_obj179_layer7838_4953,x
 	ora bm_obj179_layer7838_4953,x
 	sta bitmap+4953
 	lda #246
 	;ldy obj174_phase
-	and msk_obj174_layer7797_4954,y
 	ora bm_obj174_layer7797_4954,y
 	;ldx obj179_phase
+	and msk_obj179_layer7838_4954,x
 	ora bm_obj179_layer7838_4954,x
 	sta bitmap+4954
 	lda #253
@@ -8441,14 +8347,12 @@
 	ldy obj130_phase
 	ora bm_obj130_layer7722_4957,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_4957,x
 	ora bm_obj131_layer7737_4957,x
 	sta bitmap+4957
 	lda #255
 	;ldy obj130_phase
 	ora bm_obj130_layer7722_4958,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_4958,x
 	ora bm_obj131_layer7737_4958,x
 	sta bitmap+4958
 	lda #85
@@ -8479,14 +8383,12 @@
 	and msk_obj127_layer7768_4962,y
 	ora bm_obj127_layer7768_4962,y
 	ldy obj171_phase
-	and msk_obj171_layer7823_4962,y
 	ora bm_obj171_layer7823_4962,y
 	;ldx obj179_phase
 	ora bm_obj179_layer7838_4962,x
 	sta bitmap+4962
 	lda #253
 	ldx obj127_phase
-	and msk_obj127_layer7768_4963,x
 	ora bm_obj127_layer7768_4963,x
 	;ldy obj171_phase
 	ora bm_obj171_layer7823_4963,y
@@ -8502,7 +8404,6 @@
 	;ldy obj130_phase
 	ora bm_obj130_layer7722_4965,y
 	;ldx obj127_phase
-	and msk_obj127_layer7768_4965,x
 	ora bm_obj127_layer7768_4965,x
 	sta bitmap+4965
 	lda #173
@@ -8510,7 +8411,6 @@
 	and msk_obj130_layer7722_4966,y
 	ora bm_obj130_layer7722_4966,y
 	;ldx obj127_phase
-	and msk_obj127_layer7768_4966,x
 	ora bm_obj127_layer7768_4966,x
 	sta bitmap+4966
 	lda #86
@@ -8525,11 +8425,11 @@
 	and msk_obj127_layer7768_4968,x
 	ora bm_obj127_layer7768_4968,x
 	ldy obj171_phase
+	and msk_obj171_layer7823_4968,y
 	ora bm_obj171_layer7823_4968,y
 	sta bitmap+4968
 	lda #252
 	;ldx obj127_phase
-	and msk_obj127_layer7768_4969,x
 	ora bm_obj127_layer7768_4969,x
 	;ldy obj171_phase
 	ora bm_obj171_layer7823_4969,y
@@ -8555,7 +8455,6 @@
 	;ldy obj92_phase
 	ora bm_obj92_layer7727_4973,y
 	;ldx obj127_phase
-	and msk_obj127_layer7768_4973,x
 	ora bm_obj127_layer7768_4973,x
 	sta bitmap+4973
 	lda #80
@@ -8564,7 +8463,6 @@
 	;ldy obj92_phase
 	ora bm_obj92_layer7727_4974,y
 	ldy obj127_phase
-	and msk_obj127_layer7768_4974,y
 	ora bm_obj127_layer7768_4974,y
 	sta bitmap+4974
 	lda #128
@@ -8655,7 +8553,6 @@
 	;ldy obj30_phase
 	ora bm_obj30_layer7063_4983,y
 	ldx obj96_phase
-	and msk_obj96_layer7637_4983,x
 	ora bm_obj96_layer7637_4983,x
 	ldx obj92_phase
 	and msk_obj92_layer7727_4983,x
@@ -8684,12 +8581,10 @@
 	ldy obj31_phase
 	ora bm_obj31_layer7189_4985,y
 	ldy obj97_phase
-	and msk_obj97_layer7570_4985,y
 	ora bm_obj97_layer7570_4985,y
 	ldy obj96_phase
 	ora bm_obj96_layer7637_4985,y
 	;ldx obj92_phase
-	and msk_obj92_layer7727_4985,x
 	ora bm_obj92_layer7727_4985,x
 	sta bitmap+4985
 	ldx obj30_phase
@@ -8697,7 +8592,6 @@
 	ldx obj31_phase
 	ora bm_obj31_layer7189_4986,x
 	ldx obj97_phase
-	and msk_obj97_layer7570_4986,x
 	ora bm_obj97_layer7570_4986,x
 	;ldy obj96_phase
 	ora bm_obj96_layer7637_4986,y
@@ -8714,10 +8608,8 @@
 	and msk_obj97_layer7570_4987,x
 	ora bm_obj97_layer7570_4987,x
 	ldx obj96_phase
-	and msk_obj96_layer7637_4987,x
 	ora bm_obj96_layer7637_4987,x
 	ldx obj92_phase
-	and msk_obj92_layer7727_4987,x
 	ora bm_obj92_layer7727_4987,x
 	sta bitmap+4987
 	ldx obj30_phase
@@ -8726,10 +8618,8 @@
 	and msk_obj31_layer7189_4988,y
 	ora bm_obj31_layer7189_4988,y
 	ldx obj97_phase
-	and msk_obj97_layer7570_4988,x
 	ora bm_obj97_layer7570_4988,x
 	ldx obj96_phase
-	and msk_obj96_layer7637_4988,x
 	ora bm_obj96_layer7637_4988,x
 	ldx obj92_phase
 	ora bm_obj92_layer7727_4988,x
@@ -8754,10 +8644,8 @@
 	ldx obj98_phase
 	ora bm_obj98_layer7448_4990,x
 	ldx obj97_phase
-	and msk_obj97_layer7570_4990,x
 	ora bm_obj97_layer7570_4990,x
 	;ldy obj96_phase
-	and msk_obj96_layer7637_4990,y
 	ora bm_obj96_layer7637_4990,y
 	sta bitmap+4990
 	ldy obj30_phase
@@ -8783,7 +8671,6 @@
 	;ldy obj98_phase
 	ora bm_obj98_layer7448_4992,y
 	ldy obj97_phase
-	and msk_obj97_layer7570_4992,y
 	ora bm_obj97_layer7570_4992,y
 	ldy obj106_phase
 	ora bm_obj106_layer7603_4992,y
@@ -8810,7 +8697,6 @@
 	ldy obj98_phase
 	ora bm_obj98_layer7448_4994,y
 	ldy obj97_phase
-	and msk_obj97_layer7570_4994,y
 	ora bm_obj97_layer7570_4994,y
 	sta bitmap+4994
 	;ldx obj31_phase
@@ -8879,10 +8765,8 @@
 	ldy obj114_phase
 	ora bm_obj114_layer7449_5248,y
 	ldy obj110_phase
-	and msk_obj110_layer7545_5248,y
 	ora bm_obj110_layer7545_5248,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_5248,y
 	ora bm_obj128_layer7644_5248,y
 	sta bitmap+5248
 	;ldx obj116_phase
@@ -8893,7 +8777,6 @@
 	ldx obj114_phase
 	ora bm_obj114_layer7449_5249,x
 	ldx obj110_phase
-	and msk_obj110_layer7545_5249,x
 	ora bm_obj110_layer7545_5249,x
 	;ldy obj128_phase
 	ora bm_obj128_layer7644_5249,y
@@ -8905,10 +8788,8 @@
 	ldy obj114_phase
 	ora bm_obj114_layer7449_5250,y
 	;ldx obj110_phase
-	and msk_obj110_layer7545_5250,x
 	ora bm_obj110_layer7545_5250,x
 	ldx obj128_phase
-	and msk_obj128_layer7644_5250,x
 	ora bm_obj128_layer7644_5250,x
 	sta bitmap+5250
 	ldx obj116_phase
@@ -8920,7 +8801,6 @@
 	ldy obj110_phase
 	ora bm_obj110_layer7545_5251,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_5251,y
 	ora bm_obj128_layer7644_5251,y
 	sta bitmap+5251
 	ldy obj116_phase
@@ -8928,7 +8808,6 @@
 	;ldx obj115_phase
 	ora bm_obj115_layer7333_5252,x
 	ldx obj114_phase
-	and msk_obj114_layer7449_5252,x
 	ora bm_obj114_layer7449_5252,x
 	ldx obj110_phase
 	ora bm_obj110_layer7545_5252,x
@@ -8960,10 +8839,8 @@
 	and msk_obj108_layer7116_5256,y
 	ora bm_obj108_layer7116_5256,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_5256,y
 	ora bm_obj128_layer7644_5256,y
 	ldy obj132_phase
-	and msk_obj132_layer7656_5256,y
 	ora bm_obj132_layer7656_5256,y
 	sta bitmap+5256
 	;ldx obj40_phase
@@ -8976,10 +8853,8 @@
 	ldx obj116_phase
 	ora bm_obj116_layer7219_5257,x
 	ldx obj128_phase
-	and msk_obj128_layer7644_5257,x
 	ora bm_obj128_layer7644_5257,x
 	;ldy obj132_phase
-	and msk_obj132_layer7656_5257,y
 	ora bm_obj132_layer7656_5257,y
 	sta bitmap+5257
 	ldy obj40_phase
@@ -8992,7 +8867,6 @@
 	and msk_obj116_layer7219_5258,y
 	ora bm_obj116_layer7219_5258,y
 	;ldx obj128_phase
-	and msk_obj128_layer7644_5258,x
 	ora bm_obj128_layer7644_5258,x
 	ldx obj132_phase
 	and msk_obj132_layer7656_5258,x
@@ -9014,7 +8888,6 @@
 	ldx obj128_phase
 	ora bm_obj128_layer7644_5259,x
 	ldx obj132_phase
-	and msk_obj132_layer7656_5259,x
 	ora bm_obj132_layer7656_5259,x
 	sta bitmap+5259
 	ldx obj41_phase
@@ -9025,10 +8898,8 @@
 	ldy obj111_phase
 	ora bm_obj111_layer7223_5260,y
 	ldy obj128_phase
-	and msk_obj128_layer7644_5260,y
 	ora bm_obj128_layer7644_5260,y
 	ldy obj132_phase
-	and msk_obj132_layer7656_5260,y
 	ora bm_obj132_layer7656_5260,y
 	sta bitmap+5260
 	;ldx obj41_phase
@@ -9045,7 +8916,6 @@
 	ldx obj128_phase
 	ora bm_obj128_layer7644_5261,x
 	;ldy obj132_phase
-	and msk_obj132_layer7656_5261,y
 	ora bm_obj132_layer7656_5261,y
 	sta bitmap+5261
 	ldy obj116_phase
@@ -9054,7 +8924,6 @@
 	and msk_obj111_layer7223_5262,y
 	ora bm_obj111_layer7223_5262,y
 	ldy obj114_phase
-	and msk_obj114_layer7449_5262,y
 	ora bm_obj114_layer7449_5262,y
 	ldy obj113_phase
 	ora bm_obj113_layer7452_5262,y
@@ -9065,7 +8934,6 @@
 	;ldx obj128_phase
 	ora bm_obj128_layer7644_5262,x
 	ldx obj132_phase
-	and msk_obj132_layer7656_5262,x
 	ora bm_obj132_layer7656_5262,x
 	sta bitmap+5262
 	ldx obj116_phase
@@ -9089,7 +8957,6 @@
 	;ldx obj132_phase
 	ora bm_obj132_layer7656_5264,x
 	ldx obj131_phase
-	and msk_obj131_layer7737_5264,x
 	ora bm_obj131_layer7737_5264,x
 	sta bitmap+5264
 	;ldy obj40_phase
@@ -9097,7 +8964,6 @@
 	ldy obj132_phase
 	ora bm_obj132_layer7656_5265,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_5265,x
 	ora bm_obj131_layer7737_5265,x
 	sta bitmap+5265
 	ldx obj40_phase
@@ -9105,7 +8971,6 @@
 	;ldy obj132_phase
 	ora bm_obj132_layer7656_5266,y
 	ldy obj131_phase
-	and msk_obj131_layer7737_5266,y
 	ora bm_obj131_layer7737_5266,y
 	sta bitmap+5266
 	;ldx obj40_phase
@@ -9113,10 +8978,8 @@
 	ldx obj41_phase
 	ora bm_obj41_layer7112_5267,x
 	ldx obj132_phase
-	and msk_obj132_layer7656_5267,x
 	ora bm_obj132_layer7656_5267,x
 	;ldy obj131_phase
-	and msk_obj131_layer7737_5267,y
 	ora bm_obj131_layer7737_5267,y
 	sta bitmap+5267
 	ldy obj40_phase
@@ -9125,19 +8988,15 @@
 	and msk_obj41_layer7112_5268,y
 	ora bm_obj41_layer7112_5268,y
 	;ldx obj132_phase
-	and msk_obj132_layer7656_5268,x
 	ora bm_obj132_layer7656_5268,x
 	ldx obj131_phase
-	and msk_obj131_layer7737_5268,x
 	ora bm_obj131_layer7737_5268,x
 	sta bitmap+5268
 	;ldy obj41_phase
 	lda bm_obj41_layer7112_5269,y
 	ldy obj132_phase
-	and msk_obj132_layer7656_5269,y
 	ora bm_obj132_layer7656_5269,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_5269,x
 	ora bm_obj131_layer7737_5269,x
 	sta bitmap+5269
 	ldx obj41_phase
@@ -9145,7 +9004,6 @@
 	ldx obj111_phase
 	ora bm_obj111_layer7223_5270,x
 	;ldy obj132_phase
-	and msk_obj132_layer7656_5270,y
 	ora bm_obj132_layer7656_5270,y
 	ldy obj131_phase
 	ora bm_obj131_layer7737_5270,y
@@ -9164,7 +9022,6 @@
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5272,x
 	;ldy obj131_phase
-	and msk_obj131_layer7737_5272,y
 	ora bm_obj131_layer7737_5272,y
 	sta bitmap+5272
 	ldy obj39_phase
@@ -9172,10 +9029,8 @@
 	ldy obj40_phase
 	ora bm_obj40_layer7007_5273,y
 	;ldx obj130_phase
-	and msk_obj130_layer7722_5273,x
 	ora bm_obj130_layer7722_5273,x
 	ldx obj131_phase
-	and msk_obj131_layer7737_5273,x
 	ora bm_obj131_layer7737_5273,x
 	sta bitmap+5273
 	ldx obj39_phase
@@ -9186,10 +9041,8 @@
 	and msk_obj40_layer7007_5274,y
 	ora bm_obj40_layer7007_5274,y
 	ldy obj130_phase
-	and msk_obj130_layer7722_5274,y
 	ora bm_obj130_layer7722_5274,y
 	ldy obj131_phase
-	and msk_obj131_layer7737_5274,y
 	ora bm_obj131_layer7737_5274,y
 	sta bitmap+5274
 	ldy obj39_phase
@@ -9203,7 +9056,6 @@
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5275,x
 	ldx obj131_phase
-	and msk_obj131_layer7737_5275,x
 	ora bm_obj131_layer7737_5275,x
 	sta bitmap+5275
 	;ldy obj39_phase
@@ -9219,10 +9071,8 @@
 	ldy obj42_phase
 	ora bm_obj42_layer7126_5276,y
 	ldy obj130_phase
-	and msk_obj130_layer7722_5276,y
 	ora bm_obj130_layer7722_5276,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_5276,x
 	ora bm_obj131_layer7737_5276,x
 	sta bitmap+5276
 	ldx obj43_phase
@@ -9236,7 +9086,6 @@
 	and msk_obj130_layer7722_5277,y
 	ora bm_obj130_layer7722_5277,y
 	ldy obj131_phase
-	and msk_obj131_layer7737_5277,y
 	ora bm_obj131_layer7737_5277,y
 	sta bitmap+5277
 	ldy obj43_phase
@@ -9248,10 +9097,8 @@
 	and msk_obj42_layer7126_5278,x
 	ora bm_obj42_layer7126_5278,x
 	ldx obj130_phase
-	and msk_obj130_layer7722_5278,x
 	ora bm_obj130_layer7722_5278,x
 	ldx obj131_phase
-	and msk_obj131_layer7737_5278,x
 	ora bm_obj131_layer7737_5278,x
 	sta bitmap+5278
 	;ldy obj41_phase
@@ -9262,15 +9109,12 @@
 	ldy obj132_phase
 	ora bm_obj132_layer7656_5279,y
 	ldy obj130_phase
-	and msk_obj130_layer7722_5279,y
 	ora bm_obj130_layer7722_5279,y
 	;ldx obj131_phase
-	and msk_obj131_layer7737_5279,x
 	ora bm_obj131_layer7737_5279,x
 	sta bitmap+5279
 	lda #177
 	;ldy obj130_phase
-	and msk_obj130_layer7722_5280,y
 	ora bm_obj130_layer7722_5280,y
 	ldx obj127_phase
 	ora bm_obj127_layer7768_5280,x
@@ -9287,19 +9131,16 @@
 	and msk_obj43_layer7036_5282,x
 	ora bm_obj43_layer7036_5282,x
 	;ldy obj130_phase
-	and msk_obj130_layer7722_5282,y
 	ora bm_obj130_layer7722_5282,y
 	sta bitmap+5282
 	;ldx obj43_phase
 	lda bm_obj43_layer7036_5283,x
 	;ldy obj130_phase
-	and msk_obj130_layer7722_5283,y
 	ora bm_obj130_layer7722_5283,y
 	sta bitmap+5283
 	;ldx obj43_phase
 	lda bm_obj43_layer7036_5284,x
 	;ldy obj130_phase
-	and msk_obj130_layer7722_5284,y
 	ora bm_obj130_layer7722_5284,y
 	sta bitmap+5284
 	;ldx obj43_phase
@@ -9315,7 +9156,6 @@
 	ldx obj129_phase
 	ora bm_obj129_layer7627_5286,x
 	;ldy obj130_phase
-	and msk_obj130_layer7722_5286,y
 	ora bm_obj130_layer7722_5286,y
 	sta bitmap+5286
 	ldy obj43_phase
@@ -9323,10 +9163,8 @@
 	ldy obj42_phase
 	ora bm_obj42_layer7126_5287,y
 	;ldx obj129_phase
-	and msk_obj129_layer7627_5287,x
 	ora bm_obj129_layer7627_5287,x
 	ldx obj130_phase
-	and msk_obj130_layer7722_5287,x
 	ora bm_obj130_layer7722_5287,x
 	sta bitmap+5287
 	ldx obj35_phase
@@ -9336,7 +9174,6 @@
 	ldy obj92_phase
 	ora bm_obj92_layer7727_5288,y
 	ldy obj127_phase
-	and msk_obj127_layer7768_5288,y
 	ora bm_obj127_layer7768_5288,y
 	sta bitmap+5288
 	ldy obj43_phase
@@ -9347,10 +9184,8 @@
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5289,x
 	ldx obj92_phase
-	and msk_obj92_layer7727_5289,x
 	ora bm_obj92_layer7727_5289,x
 	ldx obj127_phase
-	and msk_obj127_layer7768_5289,x
 	ora bm_obj127_layer7768_5289,x
 	sta bitmap+5289
 	;ldy obj43_phase
@@ -9359,12 +9194,10 @@
 	and msk_obj34_layer7075_5290,y
 	ora bm_obj34_layer7075_5290,y
 	ldy obj130_phase
-	and msk_obj130_layer7722_5290,y
 	ora bm_obj130_layer7722_5290,y
 	ldy obj92_phase
 	ora bm_obj92_layer7727_5290,y
 	;ldx obj127_phase
-	and msk_obj127_layer7768_5290,x
 	ora bm_obj127_layer7768_5290,x
 	sta bitmap+5290
 	ldx obj43_phase
@@ -9375,7 +9208,6 @@
 	ldx obj96_phase
 	ora bm_obj96_layer7637_5291,x
 	ldx obj130_phase
-	and msk_obj130_layer7722_5291,x
 	ora bm_obj130_layer7722_5291,x
 	;ldy obj92_phase
 	ora bm_obj92_layer7727_5291,y
@@ -9413,7 +9245,6 @@
 	ldy obj129_phase
 	ora bm_obj129_layer7627_5293,y
 	;ldx obj130_phase
-	and msk_obj130_layer7722_5293,x
 	ora bm_obj130_layer7722_5293,x
 	sta bitmap+5293
 	ldx obj43_phase
@@ -9427,7 +9258,6 @@
 	and msk_obj95_layer7582_5294,x
 	ora bm_obj95_layer7582_5294,x
 	;ldy obj129_phase
-	and msk_obj129_layer7627_5294,y
 	ora bm_obj129_layer7627_5294,y
 	ldy obj130_phase
 	ora bm_obj130_layer7722_5294,y
@@ -9441,10 +9271,8 @@
 	and msk_obj33_layer7201_5295,y
 	ora bm_obj33_layer7201_5295,y
 	;ldx obj95_phase
-	and msk_obj95_layer7582_5295,x
 	ora bm_obj95_layer7582_5295,x
 	ldx obj129_phase
-	and msk_obj129_layer7627_5295,x
 	ora bm_obj129_layer7627_5295,x
 	sta bitmap+5295
 	ldy obj35_phase
@@ -9455,7 +9283,6 @@
 	and msk_obj96_layer7637_5296,x
 	ora bm_obj96_layer7637_5296,x
 	ldx obj92_phase
-	and msk_obj92_layer7727_5296,x
 	ora bm_obj92_layer7727_5296,x
 	sta bitmap+5296
 	;ldy obj35_phase
@@ -9490,7 +9317,6 @@
 	and msk_obj96_layer7637_5298,y
 	ora bm_obj96_layer7637_5298,y
 	ldy obj92_phase
-	and msk_obj92_layer7727_5298,y
 	ora bm_obj92_layer7727_5298,y
 	sta bitmap+5298
 	ldy obj34_phase
@@ -9516,6 +9342,7 @@
 	ldy obj95_phase
 	ora bm_obj95_layer7582_5300,y
 	ldy obj96_phase
+	and msk_obj96_layer7637_5300,y
 	ora bm_obj96_layer7637_5300,y
 	sta bitmap+5300
 	;ldx obj34_phase
@@ -9553,7 +9380,6 @@
 	;ldy obj94_phase
 	ora bm_obj94_layer7461_5303,y
 	ldy obj95_phase
-	and msk_obj95_layer7582_5303,y
 	ora bm_obj95_layer7582_5303,y
 	sta bitmap+5303
 	ldy obj30_phase
@@ -9567,10 +9393,8 @@
 	ldx obj98_phase
 	ora bm_obj98_layer7448_5304,x
 	ldx obj97_phase
-	and msk_obj97_layer7570_5304,x
 	ora bm_obj97_layer7570_5304,x
 	ldx obj96_phase
-	and msk_obj96_layer7637_5304,x
 	ora bm_obj96_layer7637_5304,x
 	sta bitmap+5304
 	ldx obj31_phase
@@ -9609,7 +9433,6 @@
 	;ldy obj97_phase
 	ora bm_obj97_layer7570_5307,y
 	ldy obj96_phase
-	and msk_obj96_layer7637_5307,y
 	ora bm_obj96_layer7637_5307,y
 	sta bitmap+5307
 	ldy obj32_phase
@@ -9621,7 +9444,6 @@
 	ldx obj97_phase
 	ora bm_obj97_layer7570_5308,x
 	ldx obj96_phase
-	and msk_obj96_layer7637_5308,x
 	ora bm_obj96_layer7637_5308,x
 	sta bitmap+5308
 	ldx obj32_phase
@@ -9660,7 +9482,6 @@
 	ldy obj113_phase
 	ora bm_obj113_layer7452_5576,y
 	ldy obj133_phase
-	and msk_obj133_layer7560_5576,y
 	ora bm_obj133_layer7560_5576,y
 	sta bitmap+5576
 	;ldx obj111_phase
@@ -9670,7 +9491,6 @@
 	ldx obj113_phase
 	ora bm_obj113_layer7452_5577,x
 	;ldy obj133_phase
-	and msk_obj133_layer7560_5577,y
 	ora bm_obj133_layer7560_5577,y
 	sta bitmap+5577
 	ldy obj112_phase
@@ -9696,7 +9516,6 @@
 	and msk_obj111_layer7223_5585,y
 	ora bm_obj111_layer7223_5585,y
 	ldy obj133_phase
-	and msk_obj133_layer7560_5585,y
 	ora bm_obj133_layer7560_5585,y
 	sta bitmap+5585
 	;ldx obj41_phase
@@ -9709,7 +9528,6 @@
 	ldx obj113_phase
 	ora bm_obj113_layer7452_5586,x
 	;ldy obj133_phase
-	and msk_obj133_layer7560_5586,y
 	ora bm_obj133_layer7560_5586,y
 	sta bitmap+5586
 	ldy obj41_phase
@@ -9722,7 +9540,6 @@
 	;ldx obj113_phase
 	ora bm_obj113_layer7452_5587,x
 	ldx obj133_phase
-	and msk_obj133_layer7560_5587,x
 	ora bm_obj133_layer7560_5587,x
 	sta bitmap+5587
 	;ldy obj112_phase
@@ -9730,7 +9547,6 @@
 	ldy obj113_phase
 	ora bm_obj113_layer7452_5588,y
 	;ldx obj133_phase
-	and msk_obj133_layer7560_5588,x
 	ora bm_obj133_layer7560_5588,x
 	sta bitmap+5588
 	ldx obj109_phase
@@ -9763,7 +9579,6 @@
 	ldx obj129_phase
 	ora bm_obj129_layer7627_5592,x
 	ldx obj132_phase
-	and msk_obj132_layer7656_5592,x
 	ora bm_obj132_layer7656_5592,x
 	ldx obj130_phase
 	ora bm_obj130_layer7722_5592,x
@@ -9780,7 +9595,6 @@
 	ldx obj133_phase
 	ora bm_obj133_layer7560_5593,x
 	ldx obj129_phase
-	and msk_obj129_layer7627_5593,x
 	ora bm_obj129_layer7627_5593,x
 	ldx obj132_phase
 	ora bm_obj132_layer7656_5593,x
@@ -9797,10 +9611,8 @@
 	ldx obj38_phase
 	ora bm_obj38_layer7238_5594,x
 	ldx obj134_phase
-	and msk_obj134_layer7546_5594,x
 	ora bm_obj134_layer7546_5594,x
 	ldx obj133_phase
-	and msk_obj133_layer7560_5594,x
 	ora bm_obj133_layer7560_5594,x
 	ldx obj129_phase
 	ora bm_obj129_layer7627_5594,x
@@ -9812,7 +9624,6 @@
 	ldy obj38_phase
 	ora bm_obj38_layer7238_5595,y
 	ldy obj134_phase
-	and msk_obj134_layer7546_5595,y
 	ora bm_obj134_layer7546_5595,y
 	ldy obj133_phase
 	ora bm_obj133_layer7560_5595,y
@@ -9830,7 +9641,6 @@
 	ldx obj112_phase
 	ora bm_obj112_layer7339_5596,x
 	ldx obj134_phase
-	and msk_obj134_layer7546_5596,x
 	ora bm_obj134_layer7546_5596,x
 	;ldy obj133_phase
 	ora bm_obj133_layer7560_5596,y
@@ -9838,12 +9648,10 @@
 	ldy obj38_phase
 	lda bm_obj38_layer7238_5597,y
 	ldy obj109_phase
-	and msk_obj109_layer7339_5597,y
 	ora bm_obj109_layer7339_5597,y
 	ldy obj126_phase
 	ora bm_obj126_layer7438_5597,y
 	;ldx obj134_phase
-	and msk_obj134_layer7546_5597,x
 	ora bm_obj134_layer7546_5597,x
 	ldx obj133_phase
 	ora bm_obj133_layer7560_5597,x
@@ -9882,7 +9690,6 @@
 	ldy obj29_phase
 	ora bm_obj29_layer7274_5601,y
 	ldy obj129_phase
-	and msk_obj129_layer7627_5601,y
 	ora bm_obj129_layer7627_5601,y
 	sta bitmap+5601
 	;ldx obj42_phase
@@ -9894,7 +9701,6 @@
 	ldx obj134_phase
 	ora bm_obj134_layer7546_5602,x
 	;ldy obj129_phase
-	and msk_obj129_layer7627_5602,y
 	ora bm_obj129_layer7627_5602,y
 	sta bitmap+5602
 	ldy obj38_phase
@@ -9904,7 +9710,6 @@
 	;ldx obj134_phase
 	ora bm_obj134_layer7546_5603,x
 	ldx obj129_phase
-	and msk_obj129_layer7627_5603,x
 	ora bm_obj129_layer7627_5603,x
 	sta bitmap+5603
 	ldx obj38_phase
@@ -9912,7 +9717,6 @@
 	;ldy obj29_phase
 	ora bm_obj29_layer7274_5604,y
 	ldx obj134_phase
-	and msk_obj134_layer7546_5604,x
 	ora bm_obj134_layer7546_5604,x
 	ldx obj129_phase
 	ora bm_obj129_layer7627_5604,x
@@ -9962,10 +9766,8 @@
 	ldx obj29_phase
 	ora bm_obj29_layer7274_5609,x
 	ldx obj95_phase
-	and msk_obj95_layer7582_5609,x
 	ora bm_obj95_layer7582_5609,x
 	;ldy obj129_phase
-	and msk_obj129_layer7627_5609,y
 	ora bm_obj129_layer7627_5609,y
 	sta bitmap+5609
 	ldy obj33_phase
@@ -9976,10 +9778,8 @@
 	ldy obj94_phase
 	ora bm_obj94_layer7461_5610,y
 	;ldx obj95_phase
-	and msk_obj95_layer7582_5610,x
 	ora bm_obj95_layer7582_5610,x
 	ldx obj129_phase
-	and msk_obj129_layer7627_5610,x
 	ora bm_obj129_layer7627_5610,x
 	sta bitmap+5610
 	ldx obj29_phase
@@ -9989,7 +9789,6 @@
 	;ldy obj94_phase
 	ora bm_obj94_layer7461_5611,y
 	ldy obj95_phase
-	and msk_obj95_layer7582_5611,y
 	ora bm_obj95_layer7582_5611,y
 	ldy obj129_phase
 	and msk_obj129_layer7627_5611,y
@@ -10031,7 +9830,6 @@
 	ldx obj94_phase
 	ora bm_obj94_layer7461_5616,x
 	;ldy obj95_phase
-	and msk_obj95_layer7582_5616,y
 	ora bm_obj95_layer7582_5616,y
 	sta bitmap+5616
 	ldy obj33_phase
@@ -10041,10 +9839,8 @@
 	ldy obj93_phase
 	ora bm_obj93_layer7394_5617,y
 	;ldx obj94_phase
-	and msk_obj94_layer7461_5617,x
 	ora bm_obj94_layer7461_5617,x
 	ldx obj95_phase
-	and msk_obj95_layer7582_5617,x
 	ora bm_obj95_layer7582_5617,x
 	sta bitmap+5617
 	ldx obj33_phase

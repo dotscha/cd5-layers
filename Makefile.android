@@ -22,7 +22,7 @@ run_exo : main_exo.prg
 main_exo.prg : main.prg
 	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg
 
-main.prg : scene_code.asm main.asm obj_coords.asm anim.asm logo.asm
+main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm
 	$(AS) main
 
 scene_code.asm: layer $(BMPS)
@@ -48,8 +48,16 @@ clean:
 disk.d64: main.prg
 	$(MKD64) -o disk.d64 -m cbmdos -i " 2016" -d "DEMO DISK" -f main.prg -n LAYERS -w
 
+disk_exo.d64: main_exo.prg
+	$(MKD64) -o disk_exo.d64 -m cbmdos -i " 2016" -d "DEMO DISK" -f main_exo.prg -n LAYERS -w
+
 export: disk.d64
 	cp disk.d64 /sdcard/
+
+export_exo: disk_exo.d64
+	cp disk_exo.d64 /sdcard/
+
+exp: export export_exo
 
 % : %.C $(HEADERS)
 	g++ $(FLAGS) -o $@ $@.C

@@ -70,8 +70,19 @@ anim_scenario:
 	sc_rept 2*(LONG1+16),longi_rot
 	sc_rept 7,fade_out
 	sc_once init_phase_patt
-	sc_rept 400,phase2
-	sc_rept 7,fade_out
+	sc_rept 512,phase2
+
+	if THREED
+	sc_once init3d
+	sc_rept 10,render3dp
+	sc_rept 128,render3d
+	sc_rept 11,render3dp
+	sc_rept 128,render3d
+	sc_rept 11,render3dm
+	sc_rept 128,render3d
+	sc_rept 10,render3dm
+	endif
+
 	sc_once init_sc
 
 
@@ -262,26 +273,13 @@ fade_out:
 	jmp render
 
 phase2:
-
-	ldy #0
-	jsr render2
-	ldx phase2+1
-	inx
-	cpx #object_count
-	bne +
-	ldx #0
-+	stx phase2+1
-	rts
-
-render2:
+	ldy #phase_patt_len
+	inc phase2+1
 	ldx #0
 -	lda phase_patt,y
 	sta obj_phases,x
 	iny
-	cpy #object_count
-	bne +
-	ldy #0
-+	inx
+	inx
 	cpx #object_count
 	bne -
 	jmp render
@@ -302,19 +300,20 @@ init_phase_patt:
 phase_patt = bumptab
 
 phase_patt_src:
-	byt 0,1,1,2,2,3,3,4
-	byt 4,5,5,6,6,7,7,7
+	byt   1,1,2,2,3,3,4
+	byt 4,5,5,6,6,7,7
 	byt 7,7,7,7,7,7,7,7
 	byt 7,7,7,7,7,7,7,7
 	byt 7,7,7,7,7,7,7,7
 	byt 7,7,7,7,7,7,7,7
 	byt 7,7,7,7,7,7,7,7
 	byt 7,7,7,7,7,7,7,7
-	byt 7,7,7,6,6,5,5,4
-	byt 4,3,3,2,2,1,1,0
+	byt   7,7,6,6,5,5,4
+	byt 4,3,3,2,2,1,1
 
 phase_patt_len = *-phase_patt_src
 
-	byt [128]0
 
-
+	if THREED
+	include anim3d.asm
+	endif

@@ -10,6 +10,8 @@ next_line = *
 	byt 0,0
 
 
+THREED = 1
+
 bitmap = $c000
 
 main:
@@ -87,15 +89,22 @@ anim_loop:
 	jmp anim_loop
 
 
-;animation code
-
-	include anim.asm
-
 render:
 obj_phases = $02
 	include layers.asm
 	include scene_code.asm
 	include scene_data.asm
+
+	include irq.asm
+	include !player.asm
+	include music.asm
+	include scroll.asm
+
+	if THREED
+	;include texture_sides.asm
+	include texture_thetra.asm
+	;include texture_cube.asm
+	endif
 
 	org $c000
 	include logo.asm
@@ -103,9 +112,10 @@ obj_phases = $02
 	org $e000
 	include font.asm
 
-	include !player.asm
-	include music.asm
 
-	include irq.asm
-	include scroll.asm
+;animation code
+	include anim.asm
 
+	if THREED
+	include coord_map.asm
+	endif
