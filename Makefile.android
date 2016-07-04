@@ -22,7 +22,7 @@ run_exo : main_exo.prg
 main_exo.prg : main.prg
 	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg
 
-main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm
+main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm texture_thetra.asl
 	$(AS) main
 
 scene_code.asm: layer $(BMPS)
@@ -39,7 +39,7 @@ gen_code: layer $(BMPS)
 gen_coords: layer
 	./layer coords
 
-gen_texture: layer
+texture_%.asl: layer
 	./layer texture
 
 clean:

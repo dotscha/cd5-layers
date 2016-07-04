@@ -143,3 +143,4 @@ patt_offs = *+1
 	sta rot2
 
 	jmp render
+
