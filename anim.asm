@@ -51,6 +51,7 @@ bump_mid = bump_start+8
 
 anim_scenario:
 	sc_once zero_out
+	sc_rept 9,color_fade_in
 	sc_rept 12*8,nodes_in
 	sc_rept 32,render
 	sc_rept 7,fade_out
@@ -94,9 +95,60 @@ init_sc:
 	sc_init anim_scenario
 	rts
 
-zero_out:
+raster_sync2:
+	jsr raster_sync
+raster_sync:
+-	cmp $ff1d
+	bne -
+-	cmp $ff1d
+	beq -
+	rts
+
+color_fade_in:
 	ldx #0
+	lda #$cc
+	jsr raster_sync2
 	txa
+	eor #$77
+	sta color08
+	lda #$11
+	cpx #8
+	bne +
+	lda #$01
++	sta color0c
+	inc color_fade_in+1
+
+color_it:
+
+char_x0 = 14
+char_x1 = 25
+char_y0 = 7
+char_y1 = 17
+
+	ldx #char_x1-char_x0
+color08 = *+1
+	lda #$41
+y	set char_y0
+	rept char_y1-char_y0+1
+	sta $0800+y*40+char_x0,x
+y	set y+1
+	endm
+color0c = *+1
+	lda #$32
+y	set char_y0
+	rept char_y1-char_y0+1
+	sta $0c00+y*40+char_x0,x
+y	set y+1
+	endm
+	dex
+	bpl color08-1
+	rts
+
+
+zero_out:
+	lda #0
+
+	ldx #0
 -	sta obj_phases,x
 	inx
 	cpx #object_count

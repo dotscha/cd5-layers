@@ -34,10 +34,10 @@ main:
 ;set colors
 	ldx #4
 $$l1:
-	lda #$f1
+	lda #$77
 	sta $0800,y
 $$l2:
-	lda #1
+	lda #$11
 	sta $0c00,y
 	iny
 	bne $$l1
@@ -62,10 +62,6 @@ il2	lda #$04		; luminance
 	ldx #39
 il3	lda #$01
 	sta $0AF8,x
-	lda #$77		; hiding code on bitmap
-	sta $0800+40*18,x
-	lda #$11
-	sta $0c00+40*18,x
 	dex
 	bpl il3
 
