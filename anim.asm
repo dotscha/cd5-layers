@@ -106,6 +106,7 @@ raster_sync:
 
 color_fade_in:
 	ldx #0
+	inc *-1
 	lda #$cc
 	jsr raster_sync2
 	txa
@@ -114,9 +115,10 @@ color_fade_in:
 	lda #$11
 	cpx #8
 	bne +
+	lda #0
+	sta color_fade_in+1
 	lda #$01
 +	sta color0c
-	inc color_fade_in+1
 
 color_it:
 
