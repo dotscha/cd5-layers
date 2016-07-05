@@ -13,6 +13,7 @@ next_line = *
 THREED = 1
 
 bitmap = $c000
+cmatrix = $f400
 
 main:
 
@@ -59,8 +60,12 @@ il2	lda #$04		; luminance
 	bne il2
 
 	ldx #39
-	lda #$01
-il3	sta $0AF8,x
+il3	lda #$01
+	sta $0AF8,x
+	lda #$77		; hiding code on bitmap
+	sta $0800+40*18,x
+	lda #$11
+	sta $0c00+40*18,x
 	dex
 	bpl il3
 
@@ -76,7 +81,7 @@ il3	sta $0AF8,x
 	lda #$01
 	sta $FF15
 
-	lda #$E0
+	lda #hi(cmatrix)&$fc
 	sta $FF13
 
 ;init
@@ -100,19 +105,8 @@ obj_phases = $02
 	include music.asm
 	include scroll.asm
 
-	if THREED
-	;include texture_side.asm
-	;include texture_sides.asm
-	include texture_thetra.asm
-	;include texture_cube.asm
-	endif
-
-	org $c000
+	org bitmap
 	include logo.asm
-
-	org $e000
-	include font.asm
-
 
 ;animation code
 	include anim.asm
@@ -120,3 +114,16 @@ obj_phases = $02
 	if THREED
 	include coord_map.asm
 	endif
+
+	if THREED
+	;org bitmap+5620
+	;align 8
+	;include texture_side.asm
+	;include texture_sides.asm
+	include texture_thetra.asm
+	;include texture_cube.asm
+	endif
+
+	org cmatrix
+	include font2.asm
+

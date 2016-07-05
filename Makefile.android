@@ -10,8 +10,7 @@ YAPE = echo
 
 FLAGS = -O3 -Wall
 
-all : main_exo.prg
-	echo
+all : exp
 
 run : main.prg
 	$(YAPE) main.prg &
@@ -22,8 +21,10 @@ run_exo : main_exo.prg
 main_exo.prg : main.prg
 	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg
 
-main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm texture_thetra.asl
+main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm texture_thetra.asm
 	$(AS) main
+
+comp: layer
 
 scene_code.asm: layer $(BMPS)
 	./layer code
@@ -31,16 +32,14 @@ scene_code.asm: layer $(BMPS)
 obj_coords.asm: layer
 	./layer coords
 
-comp: layer
+texture_thetra.asm: layer
+	./layer texture
 
 gen_code: layer $(BMPS)
 	./layer code
 
 gen_coords: layer
 	./layer coords
-
-texture_%.asl: layer
-	./layer texture
 
 clean:
 	rm *.prg scene_*.* layers.asm *coord*.asm texture*.asm main.inc main.lst layer
