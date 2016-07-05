@@ -60,7 +60,7 @@ irq1	pha
 	nop
 	nop
 	;
-	lda #$71
+	lda #$31
 	sta $FF19
 	;
 	ldx #irq2 & 255

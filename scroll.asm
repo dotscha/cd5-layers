@@ -45,14 +45,39 @@ sc1	lda $0F21+0*40,x
 	cpx #39
 	bne sc1
 	;
+clrpos	ldx #$FF			; self-mod
+	bmi no_color_set
+newclr	lda #$61			; self-mod
+	sta $0B20+0*40,x
+	sta $0B20+1*40,x
+	sta $0B20+2*40,x
+	sta $0B20+3*40,x
+	sta $0B20+4*40,x
+	dex
+	stx clrpos+1
+	;
+no_color_set
+	;
 	; ---
 	;
 	lda char_width
 	bne no_new_char
 	;
 	ldy #$00
+chr0	lda (scroll_text_ptr),y
+	iny
+	;
+	cmp #$FE			; control byte for "set color"
+	bne chr1
+	;
 	lda (scroll_text_ptr),y
-	tax
+	iny
+	sta newclr+1
+	lda #$27
+	sta clrpos+1
+	bne chr0			; always jump, read next char
+	;
+chr1	tax
 	lda char_widths,x
 	sta char_width
 	txa
@@ -63,9 +88,9 @@ sc1	lda $0F21+0*40,x
 	lda char_ptrs+1,x
 	sta char_ptr+1
 	;
-	lda scroll_text_ptr
+	tya
 	clc
-	adc #$01
+	adc scroll_text_ptr
 	sta scroll_text_ptr
 	bcc *+4
 	inc scroll_text_ptr+1
@@ -73,7 +98,7 @@ sc1	lda $0F21+0*40,x
 no_new_char
 	dec char_width
 	;
-	ldy #$00
+	ldy #$00			; read the column from char data and put it on the screen
 	lda (char_ptr),y
 	sta $0F20+39+0*40
 	iny
@@ -88,10 +113,11 @@ no_new_char
 	iny
 	lda (char_ptr),y
 	sta $0F20+39+4*40
+	iny
 	;
-	lda char_ptr
+	tya				; advance the pointer by 5 bytes
 	clc
-	adc #$05
+	adc char_ptr
 	sta char_ptr
 	bcc *+4
 	inc char_ptr+1
@@ -103,9 +129,16 @@ no_new_char
 	CHARSET 'a','z',$21
 	
 scroll_text
-	byt "greetings to"
-	byt "                                      ..."
-	byt "                                      ..."
+	byt "kevim jaj is ..."
+	byt $FE,$61
+	byt " part blart mart cart"
+	byt $FE,$57
+	byt " greetings to"
+	byt "                                    ..."
+	byt $FE,$41
+	byt "                                    ..."
+	byt $FE,$01 ; scroll over
+	byt " "
 	
 	byt $FF
 	
@@ -243,29 +276,40 @@ char_lower_f
 	byt $0f,$07,$03,$03,$04
 	byt $09,$09,$00,$00,$00
 char_lower_g
-	byt $00,$0F,$12,$16,$06
-	byt $00,$25,$00,$08,$08
+	byt $00,$0F,$34,$16,$06
+	byt $00,$25,$00,$27,$08
 	byt $00,$0C,$03,$0A,$18
 char_lower_h
 	byt $01,$07,$03,$03,$04
 	byt $00,$24,$00,$00,$00
 	byt $00,$11,$13,$03,$04
 char_lower_i
-	byt $00,$01,$03,$03,$04
+	byt $23,$01,$03,$03,$04
 char_lower_j
+	byt $00,$00,$00,$00,$06
+	byt $23,$01,$03,$03,$18
 char_lower_k
+	byt $01,$03,$3A,$3B,$04
+	byt $00,$00,$39,$31,$00
+	byt $00,$01,$35,$36,$04
 char_lower_l
 	byt $01,$03,$03,$03,$04
 char_lower_m
+	byt $00,$0B,$03,$03,$04
+	byt $00,$02,$03,$03,$04
+	byt $00,$11,$13,$03,$04
 char_lower_n
 	byt $00,$0B,$03,$03,$04
-	byt $00,$08,$00,$00,$00
+	byt $00,$24,$00,$00,$00
 	byt $00,$11,$13,$03,$04
 char_lower_o
 	byt $00,$0F,$12,$14,$16
 	byt $00,$10,$00,$00,$17
 	byt $00,$11,$13,$15,$18
 char_lower_p
+	byt $00,$0B,$03,$07,$04
+	byt $00,$24,$00,$26,$00
+	byt $00,$11,$33,$18,$00
 char_lower_q
 char_lower_r
 	byt $00,$0B,$03,$03,$04
@@ -283,6 +327,9 @@ char_lower_u
 	byt $00,$00,$00,$00,$17
 	byt $00,$01,$03,$15,$18
 char_lower_v
+	byt $00,$01,$03,$14,$16
+	byt $00,$00,$00,$00,$17
+	byt $00,$01,$03,$15,$18
 char_lower_w
 char_lower_x
 char_lower_y

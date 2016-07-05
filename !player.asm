@@ -171,18 +171,15 @@ PLAYER_INIT
 	;
 	jsr advance_ch1
 	jsr advance_ch2
-	;JSR advance_ch3
 	;
 	ldx #$FF
 	stx VOLTAB_CNT
 	inx
 	stx NOTE1
 	stx NOTE2
-	;STX NOTE3
 	inx
 	stx NOTELEN1
 	stx NOTELEN2
-	;STX NOTELEN3
 	;
 	lda #vol_default & 255
 	sta VOL_TAB
@@ -320,25 +317,26 @@ next_note1
 ;	LDA (CH1),y		; get byte
 ;	INY
 ;	;
-;pl_10	CMP #$FD
-;	BNE pl_11
-;	;
-;	LDA #$FF		; reset voltab counter
-;	STA VOLTAB_CNT
-;	STA VOLUME		; disable SET volume
-;	;
-;	LDA (CH1),y		; get lo byte
-;	STA VOL_TAB
-;	INY
-;	;
-;	LDA (CH1),y		; get hi byte
-;	STA VOL_TAB+1
-;	INY
-;	;
-;	LDA (CH1),y		; get byte
-;	INY
-;	;
-;pl_11	
+;pl_10	
+	cmp #$FD
+	bne pl_11
+	;
+	lda #$FF		; reset voltab counter
+	sta VOLTAB_CNT
+	sta VOLUME		; disable SET volume
+	;
+	lda (CH1),y		; get lo byte
+	sta VOL_TAB
+	iny
+	;
+	lda (CH1),y		; get hi byte
+	sta VOL_TAB+1
+	iny
+	;
+	lda (CH1),y		; get byte
+	iny
+	;
+pl_11	
 ;	CMP #$FC
 ;	BNE pl_12
 ;	;
@@ -622,9 +620,13 @@ setvol	sta $FF11
 	rts     
 	;
 inst_table
-	adr normal, arp, bassdrum, snare, glide
+	adr normal, arp, bassdrum, snare, glide, plus1
 	;
 sound	;JMP *	
+	lda TONE1,x
+	cmp #OFF
+	beq lookup
+	;
 	lda INS_TYPE1,x
 	asl a
 	tay
@@ -636,6 +638,32 @@ sound	;JMP *
 inst_jump
 	jmp $0000
 	;
+plus1	lda NOTE1,x
+	bne plus1a
+	;
+	lda #$03
+	sta $FF10
+	lda $FF12
+	and #$FC
+	ora #$01
+	sta $FF12
+	lda #$FE
+	sta $FF0F
+	lda #$10
+	sta $FF0E
+	;
+	lda #$80+$38
+	sta $FF11
+	;
+plus1a	lda TONE1,x		; normal note
+	asl a
+	tax
+	lda freqs,x
+	clc
+	adc #$03
+	ldy freqs+1,x
+	rts
+	
 normal	lda TONE1,x		; normal note
 lookup	asl a
 	tax
@@ -889,18 +917,17 @@ glide_freq_diff
 	byt 0,0,0
 glide_add
 	byt 0
-;	
-;vibrato
-;	byt $00,$01,$02,$01
-;	byt $00,$81,$82,$81
-;	
+
 snare_freq
-	;DW $F8,$F0, $E8,$E0, $D8,$D0, $C8,$C0, $A0,$80, $40,$00
-	adr $00F0,$00C0, $00FC,$00A0, $00F8,$0080
-	;DW $00F4,$0060, $00F0,$0040, $00E0,$0020, $00D0,$0010
-	;DW $00F8,$0040, $00F7,$0038, $00F6,$0030, $00F5,$0028, $00F4,$0020, $00F3,$0018, $00F0,$0010
+	adr $00F7
+	adr $00D2
+	adr $00F0
+	adr $00D1
+	adr $00EF
 	;
 bass_freq
-	adr $0204, $0183, $0102, $00C1, $0067, $0024, $0007
-	;DW $0183, $00FA, $0067, $0007
-	
+	adr $0159
+	adr $0106
+	adr $00D9
+	adr $0076
+	adr $0007
