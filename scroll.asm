@@ -131,14 +131,18 @@ no_new_char
 	
 scroll_text
 	;byt "z"
+	;byt "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	byt "got your balls"
 	byt $FE,$61
 	byt " get ready to rock now! "
 	byt $FE,$57
-	byt " greetings to"
-	byt " All the Plussy people "
+	byt " Greetings to"
+	byt " all the Plussy people"
 	byt $FE,$41
-	byt " and everyone at Arok"
+	byt " and everyone at"
+	byt $FE,$51
+	byt " Arok."
+	byt "               "
 	byt $FE,$01 ; scroll over
 	byt " "
 	

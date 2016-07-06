@@ -121,5 +121,5 @@ obj_phases = $02
 	endif
 
 	org cmatrix
-	include font2.asm
+	include font.asm
 

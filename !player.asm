@@ -649,7 +649,7 @@ plus1	lda NOTE1,x
 	sta $FF12
 	lda #$FE
 	sta $FF0F
-	lda #$10
+	lda #$2F
 	sta $FF0E
 	;
 	lda #$80+$38
@@ -671,11 +671,7 @@ lookup	asl a
 	ldy freqs+1,x
 	rts
 	
-arp	lda TONE1,x		; extra feature: OFF "knows" not to use arp
-	cmp #OFF
-	beq lookup
-	;
-	ldy ARP_CNT1,x		; load current arp counter
+arp	ldy ARP_CNT1,x		; load current arp counter
 	;
 	cpx #$00		; check which channel
 	beq arp_ptr1
