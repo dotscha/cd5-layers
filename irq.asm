@@ -1,5 +1,6 @@
 init_irq
 	jsr set_irq_1		; set up the irq
+	asl $FF09
 	;
 	jsr PLAYER_FREQ_INIT	; one time music init
 	;
@@ -60,8 +61,24 @@ irq1	pha
 	nop
 	nop
 	;
-	lda #$31
+border_color
+	lda #$01
 	sta $FF19
+	;
+	lda #$7F
+	sta $FD30
+	sta $FF08
+	lda $FF08
+	and #$10	; Query keyboard for "Space"
+	bne not_pressed
+	;
+	lda $0500	; space is pressed, exit gracefully
+	cmp #$EA
+	beq *+5
+	jmp $FFF6
+	jmp $0500
+	;
+not_pressed
 	;
 	ldx #irq2 & 255
 	ldy #irq2 >> 8
@@ -156,7 +173,8 @@ irq3	pha
 	ora #(bitmap/1024)
 	sta $FF12
 	;
-	jsr SCROLL
+call_scroll
+	bit SCROLL
 	;
 	jsr set_irq_1
 	;
@@ -166,4 +184,62 @@ irq3	pha
 	tax
 	pla
 	rti
+	
+cs_middle_color
+	lda #$71
+	sta border_color+1
+	;
+	ldx #59			; init bitmap colors
+	lda #$77		; luminance
+csm1	sta $0800+6*40+0*60,x
+	sta $0800+6*40+1*60,x 
+	sta $0800+6*40+2*60,x
+	sta $0800+6*40+3*60,x
+	sta $0800+6*40+4*60,x
+	sta $0800+6*40+5*60,x
+	sta $0800+6*40+6*60,x
+	sta $0800+6*40+7*60,x
+	dex
+	bpl csm1
+	;
+	ldx #39
+	lda #$77
+csm2	sta $0800+18*40,x
+	dex
+	bpl csm2
+	rts
+
+cs_logo_color
+	ldx #$00		; init bitmap colors
+csl1	lda #$04		; luminance
+	sta $0800,x
+	lda #$11		; color
+	sta $0C00,x
+	inx
+	cpx #40*6
+	bne csl1
+	rts
+	
+cs_scroll_color
+	ldx #$27
+	lda #$41		; luminance
+csc1	sta $0B20+0*40,x
+	sta $0B20+1*40,x
+	sta $0B20+2*40,x
+	sta $0B20+3*40,x
+	sta $0B20+4*40,x
+	dex
+	bpl csc1
+	rts
+
+cs_wait_frame
+	lda #$BC
+	cmp $FF1D
+	bne *-3
+	rts
+
+cs_start_scroll
+	lda #$20	; JSR $#### opcode
+	sta call_scroll
+	rts
 	

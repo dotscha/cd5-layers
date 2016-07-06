@@ -66,6 +66,10 @@ no_color_set
 	ldy #$00
 chr0	lda (scroll_text_ptr),y
 	iny
+	cmp #$FF
+	bne *+3
+	;
+	rts
 	;
 	cmp #$FE			; control byte for "set color"
 	bne chr1
@@ -77,7 +81,14 @@ chr0	lda (scroll_text_ptr),y
 	sta clrpos+1
 	bne chr0			; always jump, read next char
 	;
-chr1	tax
+chr1	cmp #$F0			; control byte for speed
+	bcc chr2
+	;
+	and #$0F
+	sta scroll_speed+1
+	jmp chr0
+	;
+chr2	tax
 	lda char_widths,x
 	sta char_width
 	txa
@@ -129,23 +140,45 @@ no_new_char
 	CHARSET '!',$1C
 	CHARSET 'a','z',$21
 	
+initial_text
+	byt $00
+	byt $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+	byt $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+	byt $00,$00,$00,$00,$00,$00,$00,$00
+	byt $00,$00,$00,$00,$00,$00,$00,$00
+	byt $01,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+	byt $00,$00,$01,$00,$00,$00,$00,$00,$01,$01,$00,$00,$00,$00,$00,$00
+	byt $00,$00,$0F,$25,$0C,$0F,$10,$11,$07,$09,$00,$00,$01,$00,$01,$0F
+	byt $10,$11,$01,$00,$01,$0B,$24,$11,$00,$00,$07,$24,$11,$0F,$10,$11
+	byt $03,$03,$0F,$10,$11,$00,$00,$00,$00,$00,$34,$00,$03,$12,$00,$13
+	byt $03,$00,$00,$00,$14,$00,$03,$12,$00,$13,$03,$00,$03,$03,$00,$19
+	byt $00,$00,$03,$00,$13,$28,$1E,$29,$03,$03,$2D,$2E,$2F,$00,$00,$00
+	byt $00,$00,$16,$27,$0A,$14,$00,$15,$03,$00,$00,$00,$16,$27,$0A,$14
+	byt $00,$15,$14,$00,$15,$03,$00,$00,$00,$00,$03,$00,$15,$2A,$2B,$2C
+	byt $03,$03,$30,$31,$32,$00,$00,$00,$00,$00,$06,$08,$18,$16,$17,$18
+	byt $16,$09,$00,$00,$06,$08,$18,$16,$17,$18,$16,$17,$18,$04,$00,$00
+	byt $00,$00,$0D,$26,$18,$16,$08,$0E,$04,$04,$16,$17,$18,$00,$00
+	
 scroll_text
 	;byt "z"
 	;byt "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	byt "got your balls"
+	byt " "
 	byt $FE,$61
 	byt " get ready to rock now! "
 	byt $FE,$57
-	byt " Greetings to"
+	byt " "
+	byt $F7
+	byt "Greetings to"
 	byt " all the Plussy people"
 	byt $FE,$41
-	byt " and everyone at"
+	byt " "
+	byt $F4
+	byt "and everyone at"
 	byt $FE,$51
 	byt " Arok."
 	byt "               "
 	byt $FE,$01 ; scroll over
 	byt " "
-	
 	byt $FF
 	
 char_widths

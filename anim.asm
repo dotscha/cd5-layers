@@ -50,6 +50,14 @@ bump_start = bumptab+LATI1+LONG1
 bump_mid = bump_start+8
 
 anim_scenario:
+	sc_rept 80,cs_wait_frame
+	sc_once cs_middle_color
+	sc_rept 80,cs_wait_frame
+	sc_once cs_logo_color
+	sc_rept 80,cs_wait_frame
+	sc_once cs_scroll_color
+	sc_rept 70,cs_wait_frame
+	
 	sc_once zero_out
 	sc_rept 9,color_fade_in
 	sc_rept 12*8,nodes_in
@@ -57,6 +65,9 @@ anim_scenario:
 	sc_rept 7,fade_out
 	sc_rept 20*8,faces_in
 	sc_rept 32,render
+	;
+	sc_once cs_start_scroll
+	;
 	sc_rept 7,fade_out
 	sc_once init_phase1
 	sc_once bump1
