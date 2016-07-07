@@ -137,8 +137,12 @@ obj_phases = $02
 	include !player.asm
 	include music.asm
 
+	;org bitmap
+	;include logo.asm
 	org bitmap
-	include logo.asm
+	binclude logo.prg,2,6*320
+
+	org bitmap+320*18
 
 ;animation code
 	include anim.asm

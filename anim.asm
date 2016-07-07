@@ -135,6 +135,8 @@ anim_restart:
 
 	sc_rept 128,render3d
 	sc_rept 10,render3dm
+
+	sc_rept 1,render3d
 	endif
 
 	sc_rept 8,color_fade_out

@@ -646,5 +646,11 @@ int main(int argc, char** argv)
       calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_sides");
       }
     }
+    if (arg == "bmp2prg" && argc>3)
+    {
+      Bitmap b;
+      b.loadBMP(argv[2]);
+      b.save(argv[3]);
+    }
   }
 }

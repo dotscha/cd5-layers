@@ -211,7 +211,7 @@ csm2	sta $0800+18*40,x
 
 cs_logo_color
 	ldx #$00		; init bitmap colors
-csl1	lda #$04		; luminance
+csl1	lda #$50		; luminance
 	sta $0800,x
 	lda #$11		; color
 	sta $0C00,x

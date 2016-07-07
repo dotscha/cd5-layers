@@ -21,8 +21,11 @@ run_exo : main_exo.prg
 main_exo.prg : main.prg
 	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg
 
-main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm texture_thetra.asm
+main.prg : scene_code.asm main.asm obj_coords.asm anim.asm anim3d.asm logo.asm logo.prg texture_thetra.asm font.asm scroll.asm irq.asm
 	$(AS) main
+
+logo.prg: layer logo.bmp
+	./layer bmp2prg logo.bmp logo.prg
 
 comp: layer
 
