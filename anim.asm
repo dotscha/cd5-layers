@@ -43,11 +43,14 @@ scenario_next:
 
 ;-------------------------------------------------
 
-	include obj_coords.asm
+char_x0 = 14
+char_x1 = 25
+char_y0 = 7
+char_y1 = 17
 
-bumptab = $0200
-bump_start = bumptab+LATI1+LONG1
-bump_mid = bump_start+8
+char_w = char_x1-char_x0+1
+char_h = char_y1-char_y0+1
+
 
 anim_scenario:
 	sc_rept 80,cs_wait_frame
@@ -56,25 +59,62 @@ anim_scenario:
 	sc_once cs_logo_color
 	sc_rept 80,cs_wait_frame
 	sc_once cs_scroll_color
-	sc_rept 70,cs_wait_frame
-	
+
+	sc_rept 120,raster_sync
+
+	sc_once color_it
+;
+	sc_rept (char_h*8-8*3-4)/3,copy_lines3
+	sc_rept 8,copy_lines2
+	sc_rept 8,copy_lines1
+	sc_rept 3,copy_lines_hl
+	sc_rept 1,copy_lines_h
+
+	sc_rept 60,raster_sync
+;
+	sc_once copy_lines_init2
+	sc_rept (char_h*8-8*3-4)/3,copy_lines3
+	sc_rept 8,copy_lines2
+	sc_rept 8,copy_lines1
+	sc_rept 3,copy_lines_hl
+	sc_rept 1,copy_lines_h
+
+	sc_rept 60,raster_sync
+;
+	sc_once copy_lines_init3
+	sc_rept (char_h*8-8*3-4)/3,copy_lines3
+	sc_rept 8,copy_lines2
+	sc_rept 8,copy_lines1
+	sc_rept 3,copy_lines_hl
+	sc_rept 1,copy_lines_h
+
+	sc_rept 50,raster_sync
+
+	sc_once cs_middle_color
+
+anim_restart:
+	sc_rept 1,color_fade_in
 	sc_once zero_out
-	sc_rept 9,color_fade_in
+	sc_rept 8,color_fade_in
+
+	sc_once cs_start_scroll
+
+	sc_rept 80,raster_sync
+
+
 	sc_rept 12*8,nodes_in
 	sc_rept 32,render
 	sc_rept 7,fade_out
 	sc_rept 20*8,faces_in
 	sc_rept 32,render
-	;
-	sc_once cs_start_scroll
-	;
+
 	sc_rept 7,fade_out
 	sc_once init_phase1
 	sc_once bump1
 	sc_rept 8,phase1
 	sc_rept 32,render
 	sc_rept 8,phase1
-	sc_rept 64,render
+	sc_rept 55,render
 	sc_rept 8,phase1
 	sc_once bump3
 	sc_rept 2*(LATI1+16),lati_rot
@@ -97,14 +137,41 @@ anim_scenario:
 	sc_rept 10,render3dm
 	endif
 
-	sc_once init_sc
+	sc_rept 8,color_fade_out
+
+	sc_once jump_anim_restart
+
+;-------------------------------------------------
+
+	include obj_coords.asm
+
+bumptab = $0200
+bump_start = bumptab+LATI1+LONG1
+bump_mid = bump_start+8
 
 
 init_anim:
 
+	lda #7
+	jsr zero_out+2
+	lda #char_w*2*8
+	jsr copy_stuff
+
+	jsr zero_out
+	lda #0
+	jsr copy_stuff
+
+	lda #(char_w-1)*8
+	jsr copy_stuff	;clears the screen
+
 init_sc:
 	sc_init anim_scenario
 	rts
+
+jump_anim_restart:
+	sc_init anim_restart
+	rts
+
 
 raster_sync2:
 	jsr raster_sync
@@ -114,6 +181,154 @@ raster_sync:
 -	cmp $ff1d
 	beq -
 	rts
+
+copy_stuff:
+fx_00 = bitmap+char_y0*320+char_x0*8
+cp_00 = bitmap+char_y0*320+(char_x0-char_w)*8
+
+	clc
+	adc #lo(cp_00)
+	sta + +4
+	lda #hi(cp_00)
+	adc #0
+	sta + +5
+	lda #lo(fx_00)
+	sta + +1
+	lda #hi(fx_00)
+	sta + +2
+
+	ldy #char_h
+-	ldx #char_w*8-1
+/	lda fx_00,x
+	sta cp_00,x
+	dex
+	bpl -
+
+	clc
+	lda - +1
+	adc #lo(320)
+	sta - +1
+	lda - +2
+	adc #hi(320)
+	sta - +2
+
+	lda - +4
+	adc #lo(320)
+	sta - +4
+	lda - +5
+	adc #hi(320)
+	sta - +5
+
+	dey
+	bne --
+
+	rts
+
+
+copy_lines1:
+	jsr copy_lines
+	jmp horizontal_line
+
+copy_lines3:
+	jsr copy_lines
+	jsr copy_lines+5
+	jmp *+6
+
+copy_lines2:
+	jsr copy_lines
+	jsr copy_lines+5
+
+horizontal_line:
+	lda line_cp+4
+	sta $fe
+	lda line_cp+5
+	sta $ff
+	ldy #0
+	ldx #char_w
+	clc
+-	lda #255
+	sta ($fe),y
+	tya
+	adc #8
+	tay
+	dex
+	bne -
+	rts
+
+copy_lines_hl:
+	jsr copy_lines_h
+	jmp horizontal_line
+
+copy_lines_h:
+	lda #$cc
+	jsr raster_sync2
+	jmp copy_lines+5
+
+copy_lines_init3:
+	lda #lo(fx_00-320)
+	ldx #hi(fx_00-320)
+	jmp *+7
+
+copy_lines_init2:
+	lda #lo(cp_00+char_w*2*8)
+	ldx #hi(cp_00+char_w*2*8)
+
+	sta line_cp+1
+	stx line_cp+2
+	lda #lo(fx_00)
+	sta line_cp+4
+	lda #hi(fx_00)
+	sta line_cp+5
+	rts
+
+copy_lines:
+	lda #$cc
+	jsr raster_sync
+
+next_line macro a
+	inc a
+	bne +
+	inc a+1
++	lda a
+	and #7
+	bne +
+	clc
+	lda a
+	adc #lo(312)
+	sta a
+	lda a+1
+	adc #hi(312)
+	sta a+1
++
+	endm
+
+	ldy #char_w
+	ldx #0
+	clc
+line_cp:
+	lda cp_00,x
+	sta fx_00,x
+	txa
+	adc #8
+	tax
+	dey
+	bne line_cp
+	next_line line_cp+1
+	next_line line_cp+4
+	rts
+
+color_fade_out:
+	lda #$cc
+	jsr raster_sync2
+	lda #7
+	dec *-1
+	and #7
+	ora #$70
+	sta color08
+	lda #$11
+	sta color0c
+	jmp color_it
+
 
 color_fade_in:
 	ldx #0
@@ -133,23 +348,18 @@ color_fade_in:
 
 color_it:
 
-char_x0 = 14
-char_x1 = 25
-char_y0 = 7
-char_y1 = 17
-
-	ldx #char_x1-char_x0
+	ldx #char_w-1
 color08 = *+1
-	lda #$41
+	lda #$70
 y	set char_y0
-	rept char_y1-char_y0+1
+	rept char_h
 	sta $0800+y*40+char_x0,x
 y	set y+1
 	endm
 color0c = *+1
-	lda #$32
+	lda #$01
 y	set char_y0
-	rept char_y1-char_y0+1
+	rept char_h
 	sta $0c00+y*40+char_x0,x
 y	set y+1
 	endm
