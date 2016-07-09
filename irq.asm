@@ -1,5 +1,3 @@
-bg_col = $00
-
 init_irq
 	jsr set_irq_1		; set up the irq
 	asl $FF09
@@ -191,16 +189,25 @@ cs_middle_color
 	lda #$71
 	sta border_color+1
 	;
-	ldx #59			; init bitmap colors
-	lda #$77		; luminance
-csm1	sta $0800+6*40+0*60,x
-	sta $0800+6*40+1*60,x 
-	sta $0800+6*40+2*60,x
-	sta $0800+6*40+3*60,x
-	sta $0800+6*40+4*60,x
-	sta $0800+6*40+5*60,x
-	sta $0800+6*40+6*60,x
-	sta $0800+6*40+7*60,x
+	ldx #79			; init bitmap colors
+csm1	lda #$77		; luminance
+	sta $0800+6*40+0*80,x
+	sta $0800+6*40+1*80,x 
+	sta $0800+6*40+2*80,x
+	sta $0800+6*40+3*80,x
+	sta $0800+6*40+4*80,x
+	sta $0800+6*40+5*80,x
+	sta $0800+6*40+11*40,x
+
+	lda #$11
+	sta $0c00+6*40+0*80,x
+	sta $0c00+6*40+1*80,x
+	sta $0c00+6*40+2*80,x
+	sta $0c00+6*40+3*80,x
+	sta $0c00+6*40+4*80,x
+	sta $0c00+6*40+5*80,x
+	sta $0c00+6*40+11*40,x
+
 	dex
 	bpl csm1
 	;

@@ -14,6 +14,7 @@ THREED = 1
 
 bitmap = $c000
 cmatrix = $f800
+bg_col = $00
 
 main:
 
@@ -41,10 +42,10 @@ main:
 ;set colors
 	ldx #3
 $$l1:
-	lda #$00
+	lda #(bg_col & $f0) + (bg_col >> 4)
 	sta $0800,y
 $$l2:
-	lda #$11
+	lda #(bg_col & $0f) * $11
 	sta $0c00,y
 	iny
 	bne $$l1
@@ -94,7 +95,7 @@ il2	lda initial_text-1,x
 	ora #(bitmap/1024)
 	sta $ff12
 
-	lda #$01
+	lda #bg_col
 	sta $FF15
 
 	lda #hi(cmatrix)&$fc
@@ -139,15 +140,14 @@ obj_phases = $02
 
 	org bitmap
 	;include logo.asm
-	;binclude logo.prg,2,6*320
-	binclude logo2.prg,$8000-$fff,6*320
+	binclude logo.prg,$8000-$fff,6*320
 
 	org bitmap+320*18
 
 logo_lum:
-	binclude logo2.prg,$7800-$fff,6*40
+	binclude logo.prg,$7800-$fff,6*40
 logo_col:
-	binclude logo2.prg,$7c00-$fff,6*40
+	binclude logo.prg,$7c00-$fff,6*40
 
 ;animation code
 	include anim.asm
