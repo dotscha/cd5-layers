@@ -56,7 +56,8 @@ anim_scenario:
 	sc_rept 80,cs_wait_frame
 	sc_once cs_middle_color
 	sc_rept 80,cs_wait_frame
-	sc_once cs_logo_color
+	;sc_once cs_logo_color
+	sc_once logo_color
 	sc_rept 80,cs_wait_frame
 	sc_once cs_scroll_color
 
@@ -92,15 +93,17 @@ anim_scenario:
 
 	sc_once cs_middle_color
 
-anim_restart:
 	sc_rept 1,color_fade_in
 	sc_once zero_out
 	sc_rept 8,color_fade_in
 
 	sc_once cs_start_scroll
 
-	sc_rept 80,raster_sync
+	sc_rept 40,raster_sync
 
+anim_restart:
+
+	sc_rept 40,raster_sync
 
 	sc_rept 12*8,nodes_in
 	sc_rept 32,render
@@ -139,7 +142,7 @@ anim_restart:
 	sc_rept 1,render3d
 	endif
 
-	sc_rept 8,color_fade_out
+;	sc_rept 8,color_fade_out
 
 	sc_once jump_anim_restart
 
@@ -174,6 +177,17 @@ jump_anim_restart:
 	sc_init anim_restart
 	rts
 
+
+logo_color:
+	ldx #0
+-	lda logo_lum,x
+	sta $800,x
+	lda logo_col,x
+	sta $c00,x
+	inx
+	cpx #6*40
+	bne -
+	rts
 
 raster_sync2:
 	jsr raster_sync
@@ -322,8 +336,8 @@ line_cp:
 color_fade_out:
 	lda #$cc
 	jsr raster_sync2
-	lda #7
-	dec *-1
+	lda #0
+	inc *-1
 	and #7
 	ora #$70
 	sta color08

@@ -1,3 +1,5 @@
+bg_col = $00
+
 init_irq
 	jsr set_irq_1		; set up the irq
 	asl $FF09
@@ -62,7 +64,7 @@ irq1	pha
 	nop
 	;
 border_color
-	lda #$01
+	lda #bg_col
 	sta $FF19
 	;
 	lda #$7F
@@ -122,7 +124,7 @@ irq2	pha
 	nop
 	nop
 	;
-	lda #$01
+	lda #bg_col
 	sta $FF19
 	;
 	lda $FF06
@@ -213,7 +215,7 @@ cs_logo_color
 	ldx #$00		; init bitmap colors
 csl1	lda #$50		; luminance
 	sta $0800,x
-	lda #$11		; color
+	lda #$16		; color
 	sta $0C00,x
 	inx
 	cpx #40*6

@@ -19,11 +19,11 @@ main:
 
 	sei
 	sta $ff3f
-	
+
 	lda #$F7
 	cmp $FF1D
 	bne *-3
-	
+
 	lda #$0B
 	sta $FF06
 
@@ -52,7 +52,7 @@ $$l2:
 	inc $$l2+4
 	dex
 	bne $$l1
-	
+
 	ldx #120
 il2	lda initial_text-1,x
 	sta $0EF8-1,x
@@ -137,12 +137,17 @@ obj_phases = $02
 	include !player.asm
 	include music.asm
 
-	;org bitmap
-	;include logo.asm
 	org bitmap
-	binclude logo.prg,2,6*320
+	;include logo.asm
+	;binclude logo.prg,2,6*320
+	binclude logo2.prg,$8000-$fff,6*320
 
 	org bitmap+320*18
+
+logo_lum:
+	binclude logo2.prg,$7800-$fff,6*40
+logo_col:
+	binclude logo2.prg,$7c00-$fff,6*40
 
 ;animation code
 	include anim.asm
