@@ -57,8 +57,8 @@ anim_scenario:
 	sc_once cs_middle_color
 	sc_rept 80,cs_wait_frame
 	;sc_once cs_logo_color
-	sc_once logo_color
-	sc_rept 80,cs_wait_frame
+	sc_rept 8,logo_color
+	sc_rept 72,cs_wait_frame
 	sc_once cs_scroll_color
 
 	sc_rept 120,raster_sync
@@ -154,6 +154,7 @@ bumptab = $0200
 bump_start = bumptab+LATI1+LONG1
 bump_mid = bump_start+8
 
+black_mask = bumptab
 
 init_anim:
 
@@ -169,6 +170,8 @@ init_anim:
 	lda #(char_w-1)*8
 	jsr copy_stuff	;clears the screen
 
+	jsr init_black_mask
+
 init_sc:
 	sc_init anim_scenario
 	rts
@@ -177,17 +180,48 @@ jump_anim_restart:
 	sc_init anim_restart
 	rts
 
+init_black_mask:
+	lda #$00
+	sta black_mask
+	lda #$f0
+	sta black_mask+$08
+	lda #$0f
+	sta black_mask+$80
+	lda #$ff
+	sta black_mask+$88
+	ldx #0
+-	txa
+	and #$88
+	tay
+	lda black_mask,y
+	sta black_mask,x
+	inx
+	bne -
+	rts
+
 
 logo_color:
+	lda #$cc
+	jsr raster_sync
 	ldx #0
--	lda logo_lum,x
+-	clc
+	lda logo_lum,x
+	adc #$00
 	sta $800,x
+	tay
 	lda logo_col,x
+	and black_mask,y
 	sta $c00,x
 	inx
 	cpx #6*40
 	bne -
+logo_fact = - + 5
+	clc
+	lda logo_fact
+	adc #$11
+	sta logo_fact
 	rts
+
 
 raster_sync2:
 	jsr raster_sync
