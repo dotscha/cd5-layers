@@ -60,7 +60,7 @@ il2	lda initial_text-1,x
 	lda initial_text-1+120,x
 	sta $0EF8-1+120,x
 	;
-	lda #$01
+	lda #$00
 	sta $0AF8-1,x
 	sta $0AF8-1+120,x
 	;
