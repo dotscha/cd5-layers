@@ -56,22 +56,22 @@ anim_scenario:
 	sc_rept 80,cs_wait_frame
 	sc_once cs_middle_color
 	sc_rept 80,cs_wait_frame
-	;sc_once cs_logo_color
-	sc_rept 8,logo_color
-	sc_rept 72,cs_wait_frame
+	sc_rept 9,logo_color
+;	sc_rept 1,logo_color_rot
+	sc_rept 70,cs_wait_frame
 	sc_once cs_scroll_color
 
-	sc_rept 120,raster_sync
+	sc_rept 80,raster_sync
 
 	sc_once color_it
 ;
-	sc_rept (char_h*8-8*3-4)/3,copy_lines3
-	sc_rept 8,copy_lines2
-	sc_rept 8,copy_lines1
-	sc_rept 3,copy_lines_hl
-	sc_rept 1,copy_lines_h
-
-	sc_rept 60,raster_sync
+	sc_rept (char_h*8-8*3-4)/3,copy_lines3	;20
+	sc_rept 8,copy_lines2			; 8
+	sc_rept 8,copy_lines1			; 8
+	sc_rept 3,copy_lines_hl			; 6
+	sc_rept 1,copy_lines_h			; 2
+						; sum = 44
+	sc_rept 36,raster_sync
 ;
 	sc_once copy_lines_init2
 	sc_rept (char_h*8-8*3-4)/3,copy_lines3
@@ -80,7 +80,7 @@ anim_scenario:
 	sc_rept 3,copy_lines_hl
 	sc_rept 1,copy_lines_h
 
-	sc_rept 60,raster_sync
+	sc_rept 36,raster_sync
 ;
 	sc_once copy_lines_init3
 	sc_rept (char_h*8-8*3-4)/3,copy_lines3
@@ -89,43 +89,59 @@ anim_scenario:
 	sc_rept 3,copy_lines_hl
 	sc_rept 1,copy_lines_h
 
-	sc_rept 50,raster_sync
+	sc_rept 36,raster_sync
 
 	sc_once cs_middle_color
 
 	sc_rept 1,color_fade_in
 	sc_once zero_out
+
 	sc_rept 8,color_fade_in
+
+	sc_rept 58,raster_sync
 
 	sc_once cs_start_scroll
 
-	sc_rept 40,raster_sync
 
 anim_restart:
 
-	sc_rept 40,raster_sync
+	sc_rept 1,logo_color_rot
 
 	sc_rept 12*8,nodes_in
+
 	sc_rept 32,render
+
 	sc_rept 7,fade_out
 	sc_rept 20*8,faces_in
-	sc_rept 32,render
+
+	sc_rept 32,raster_sync
 
 	sc_rept 7,fade_out
 	sc_once init_phase1
 	sc_once bump1
 	sc_rept 8,phase1
-	sc_rept 32,render
+
+	sc_rept 32,raster_sync
+
 	sc_rept 8,phase1
-	sc_rept 55,render
+
+	sc_rept 32,raster_sync
+
 	sc_rept 8,phase1
+
 	sc_once bump3
 	sc_rept 2*(LATI1+16),lati_rot
+
 	sc_once bump1
 	sc_rept 2*(LONG1+16),longi_rot
+
+	sc_rept 1,logo_color_rot
+
 	sc_rept 7,fade_out
 	sc_once init_phase_patt
 	sc_rept 512,phase2
+
+	sc_rept 8,logo_color_rot
 
 	if THREED
 	sc_once init3d
@@ -142,7 +158,6 @@ anim_restart:
 	sc_rept 1,render3d
 	endif
 
-;	sc_rept 8,color_fade_out
 
 	sc_once jump_anim_restart
 
@@ -155,6 +170,7 @@ bump_start = bumptab+LATI1+LONG1
 bump_mid = bump_start+8
 
 black_mask = bumptab
+color_rot_tab = $fc00
 
 init_anim:
 
@@ -171,6 +187,7 @@ init_anim:
 	jsr copy_stuff	;clears the screen
 
 	jsr init_black_mask
+	jsr init_color_rot
 
 init_sc:
 	sc_init anim_scenario
@@ -199,9 +216,46 @@ init_black_mask:
 	bne -
 	rts
 
+init_color_rot:
+	ldx #0
+-	txa
+	lsr
+	lsr
+	lsr
+	lsr
+	tay
+	lda col_rot_lo,y
+	asl
+	asl
+	asl
+	asl
+	pha
+	txa
+	and #$0f
+	tay
+	pla
+	ora col_rot_lo,y
+	sta color_rot_tab,x
+	inx
+	bne -
+	rts
+
+col_rot_lo:
+	;    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+	byt $0,$1,$8,$d,$b,$c,$e,$a,$9,$7,$f,$2,$3,$6,$4,$5
+
+logo_color_rot:
+	jsr raster_sync
+	ldx #0
+-	ldy $0c00,x
+	lda color_rot_tab,y
+	sta $0c00,x
+	inx
+	cpx #6*40
+	bne -
+	rts
 
 logo_color:
-	lda #$cc
 	jsr raster_sync
 	ldx #0
 -	clc
@@ -226,6 +280,7 @@ logo_fact = - + 5
 raster_sync2:
 	jsr raster_sync
 raster_sync:
+	lda #$cc
 -	cmp $ff1d
 	bne -
 -	cmp $ff1d
@@ -281,12 +336,12 @@ copy_lines1:
 
 copy_lines3:
 	jsr copy_lines
-	jsr copy_lines+5
+	jsr copy_lines+3
 	jmp *+6
 
 copy_lines2:
 	jsr copy_lines
-	jsr copy_lines+5
+	jsr copy_lines+3
 
 horizontal_line:
 	lda line_cp+4
@@ -310,9 +365,8 @@ copy_lines_hl:
 	jmp horizontal_line
 
 copy_lines_h:
-	lda #$cc
 	jsr raster_sync2
-	jmp copy_lines+5
+	jmp copy_lines+3
 
 copy_lines_init3:
 	lda #lo(fx_00-320)
@@ -332,7 +386,6 @@ copy_lines_init2:
 	rts
 
 copy_lines:
-	lda #$cc
 	jsr raster_sync
 
 next_line macro a
@@ -368,7 +421,6 @@ line_cp:
 	rts
 
 color_fade_out:
-	lda #$cc
 	jsr raster_sync2
 	lda #0
 	inc *-1
@@ -383,7 +435,6 @@ color_fade_out:
 color_fade_in:
 	ldx #0
 	inc *-1
-	lda #$cc
 	jsr raster_sync2
 	txa
 	eor #$77
@@ -416,7 +467,6 @@ y	set y+1
 	dex
 	bpl color08-1
 	rts
-
 
 zero_out:
 	lda #0
