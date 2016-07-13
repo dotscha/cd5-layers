@@ -112,10 +112,10 @@ obj_latitudes:
 	byt 16
 	byt 7
 	byt 11
-	byt 11
+	byt 12
 	byt 9
 	byt 9
-	byt 11
+	byt 12
 	byt 14
 	byt 14
 	byt 18
@@ -139,10 +139,10 @@ obj_latitudes:
 	byt 16
 	byt 7
 	byt 11
-	byt 11
+	byt 12
 	byt 9
 	byt 9
-	byt 11
+	byt 12
 	byt 14
 	byt 14
 	byt 18
@@ -185,19 +185,19 @@ obj_longitudes:
 	byt 91
 	byt 76
 	byt 83
-	byt 83
+	byt 84
 	byt 80
 	byt 79
-	byt 83
+	byt 84
 	byt 88
 	byt 87
 	byt 91
 	byt 76
 	byt 83
-	byt 83
+	byt 84
 	byt 80
 	byt 79
-	byt 83
+	byt 84
 	byt 88
 	byt 87
 	byt 94
@@ -254,42 +254,42 @@ obj_longitudes:
 	byt 60
 	byt 64
 	byt 66
-	byt 89
+	byt 88
 	byt 111
-	byt 22
+	byt 23
 	byt 104
 	byt 111
 	byt 7
-	byt 12
+	byt 13
 	byt 111
-	byt 99
-	byt 78
+	byt 98
+	byt 79
 	byt 55
-	byt 33
+	byt 32
 	byt 63
 	byt 55
 	byt 48
-	byt 43
+	byt 42
 	byt 55
-	byt 68
-	byt 89
+	byt 69
+	byt 88
 	byt 111
-	byt 22
+	byt 23
 	byt 104
 	byt 111
 	byt 7
-	byt 12
+	byt 13
 	byt 111
-	byt 99
-	byt 78
+	byt 98
+	byt 79
 	byt 55
-	byt 33
+	byt 32
 	byt 63
 	byt 55
 	byt 48
-	byt 43
+	byt 42
 	byt 55
-	byt 68
+	byt 69
 	byt 2
 	byt 2
 	byt 14
@@ -349,16 +349,16 @@ obj_longitudes:
 	byt 35
 	byt 23
 	byt 24
-	byt 27
+	byt 28
 	byt 31
 	byt 32
-	byt 27
+	byt 28
 	byt 27
 	byt 20
 	byt 35
 	byt 23
 	byt 24
-	byt 27
+	byt 28
 	byt 31
 	byt 32
-	byt 27
+	byt 28

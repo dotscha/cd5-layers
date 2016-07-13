@@ -58,7 +58,7 @@ anim_scenario:
 	sc_rept 80,cs_wait_frame
 	sc_rept 9,logo_color
 ;	sc_rept 1,logo_color_rot
-	sc_rept 70,cs_wait_frame
+	sc_rept 71,cs_wait_frame
 	sc_once cs_scroll_color
 
 	sc_rept 80,raster_sync
@@ -71,7 +71,7 @@ anim_scenario:
 	sc_rept 3,copy_lines_hl			; 6
 	sc_rept 1,copy_lines_h			; 2
 						; sum = 44
-	sc_rept 36,raster_sync
+	sc_rept 36,raster_sync			; 80-44
 ;
 	sc_once copy_lines_init2
 	sc_rept (char_h*8-8*3-4)/3,copy_lines3
@@ -189,6 +189,17 @@ init_anim:
 	jsr init_black_mask
 	jsr init_color_rot
 
+	if MC_LOGO
+	ldy #1
+-	lda logo_ff15,y
+	jsr nibble_swap
+	sta logo_ff15_cp,y
+	lda #bg_col
+	sta logo_ff15,y
+	dey
+	bpl -
+	endif
+
 init_sc:
 	sc_init anim_scenario
 	rts
@@ -196,6 +207,26 @@ init_sc:
 jump_anim_restart:
 	sc_init anim_restart
 	rts
+
+	if MC_LOGO
+
+logo_ff15_cp:
+	byt 0
+logo_ff16_cp:
+	byt 0
+
+nibble_swap:
+	cmp #$80
+	rol
+	cmp #$80
+	rol
+	cmp #$80
+	rol
+	cmp #$80
+	rol
+	rts
+
+	endif
 
 init_black_mask:
 	lda #$00
@@ -243,9 +274,23 @@ init_color_rot:
 col_rot_lo:
 	;    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 	byt $0,$1,$8,$d,$b,$c,$e,$a,$9,$7,$f,$2,$3,$6,$4,$5
+	;byt 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 
 logo_color_rot:
-	jsr raster_sync
+	jsr bg_change_sync
+
+	if MC_LOGO
+	ldy #1
+-	lda logo_ff15,y
+	and #$0f
+	tax
+	eor logo_ff15,y
+	ora col_rot_lo,x
+	sta logo_ff15,y
+	dey
+	bpl -
+	endif
+
 	ldx #0
 -	ldy $0c00,x
 	lda color_rot_tab,y
@@ -253,10 +298,26 @@ logo_color_rot:
 	inx
 	cpx #6*40
 	bne -
+
 	rts
 
 logo_color:
-	jsr raster_sync
+	jsr bg_change_sync
+
+	ldy #1
+-	lda logo_fact
+	and #$f0
+	clc
+	adc logo_ff15_cp,y
+	pha
+	ora #$0f
+	tax
+	pla
+	and black_mask,x
+	sta logo_ff15,y
+	dey
+	bpl -
+
 	ldx #0
 -	clc
 	lda logo_lum,x
@@ -274,6 +335,7 @@ logo_fact = - + 5
 	lda logo_fact
 	adc #$11
 	sta logo_fact
+
 	rts
 
 
@@ -286,6 +348,10 @@ raster_sync:
 -	cmp $ff1d
 	beq -
 	rts
+
+bg_change_sync:
+	lda #56
+	jmp raster_sync+2
 
 copy_stuff:
 fx_00 = bitmap+char_y0*320+char_x0*8

@@ -9,8 +9,12 @@
 next_line = *
 	byt 0,0
 
+BOTI  = 1
+P4EMU = 2
 
 THREED = 1
+MC_LOGO = 1
+LOGO_FORMAT = P4EMU
 
 bitmap = $c000
 cmatrix = $f800
@@ -102,6 +106,13 @@ il2	lda initial_text-1,x
 	sta $FF13
 
 ;init
+	lda #bg_col
+	sta $FF19
+	if MC_LOGO
+	sta $ff15
+	sta $ff16
+	endif
+
 	jsr init_anim
 	jsr init_irq
 	;
@@ -115,8 +126,6 @@ il2	lda initial_text-1,x
 	cpx $FF1D
 	bne *-3
 	;
-	lda #$01
-	sta $FF19
 	;
 	lda #$3B
 	sta $FF06
@@ -139,15 +148,45 @@ obj_phases = $02
 	include music.asm
 
 	org bitmap
-	;include logo.asm
+
+	switch LOGO_FORMAT
+	case P4EMU
 	binclude logo.prg,$8000-$fff,6*320
+	case BOTI
+	binclude logo.prg,2+2048,6*320
+	endcase
 
 	org bitmap+320*18
 
+	switch LOGO_FORMAT
+	case P4EMU
 logo_lum:
 	binclude logo.prg,$7800-$fff,6*40
 logo_col:
 	binclude logo.prg,$7c00-$fff,6*40
+
+	if MC_LOGO
+logo_ff15:
+	binclude logo.prg,$7bff-$fff,1
+logo_ff16:
+	binclude logo.prg,$7bfe-$fff,1
+	endif
+
+	case BOTI
+logo_lum:
+	binclude logo.prg,2,6*40
+logo_col:
+	binclude logo.prg,2+1024,6*40
+
+	if MC_LOGO
+logo_ff15:
+	binclude logo.prg,1025,1
+logo_ff16:
+	binclude logo.prg,1024,1
+	endif
+
+	endcase
+
 
 ;animation code
 	include anim.asm

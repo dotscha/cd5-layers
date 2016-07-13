@@ -101,6 +101,12 @@ void rotate(double& x, double& y, double ang)
 
 P3D smiddle(const P3D& p1, const P3D& p2, double w = 0.5)
 {
+  if (1)
+  {
+    double co = p1*p2/p1.length()/p2.length();
+    double a = acos(co)/2;
+    w = (sin(a)-sin(a*(1-2*w)))/sin(a)/2;
+  }
   P3D m = p1*(1-w) + p2*w;
   m = m*(p1.length()/m.length());
   return m;

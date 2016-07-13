@@ -7,7 +7,7 @@ init_irq
 	jsr init_scroll
 	;
 	rts
-	
+
 ;	;
 ;	lda #$06		; simple delay to hold the initial graphics
 ;	ldx #$00
@@ -22,7 +22,7 @@ init_irq
 ;	;
 ;	rts
 
-set_irq_1	
+set_irq_1
 	ldx #irq1 & 255
 	ldy #irq1 >> 8
 	lda #$32
@@ -30,7 +30,7 @@ set_irq	stx $FFFE
 	sty $FFFF
 	sta $FF0B
 	rts
-	
+
 irq1	pha
 	txa
 	pha
@@ -55,15 +55,28 @@ irq1	pha
 	nop
 	nop
 	nop
+
+	if MC_LOGO
+	lda $ff07
+	and #$ef
+	sta $ff07
+	else
 	nop
 	nop
 	nop
 	nop
 	nop
+	endif
+
 	;
 border_color
 	lda #bg_col
 	sta $FF19
+
+	if MC_LOGO
+	lda #bg_col	;scroll bg
+	sta $ff15
+	endif
 	;
 	lda #$7F
 	sta $FD30
@@ -91,7 +104,7 @@ not_pressed
 	tax
 	pla
 	rti
-	
+
 irq2	pha
 	txa
 	pha
@@ -151,7 +164,7 @@ xshift	ora #$00
 	tax
 	pla
 	rti
-	
+
 irq3	pha
 	txa
 	pha
@@ -161,7 +174,7 @@ irq3	pha
 	;
 	lda $FF07
 	and #$40
-	ora #$08
+	ora #$08 + $10 * MC_LOGO
 	sta $FF07
 	;
 	lda $FF06
@@ -172,6 +185,14 @@ irq3	pha
 	and #%11000011
 	ora #(bitmap/1024)
 	sta $FF12
+
+	if MC_LOGO
+	lda logo_ff15
+	sta $ff15
+	lda logo_ff16
+	sta $ff16
+	endif
+
 	;
 call_scroll
 	bit SCROLL
@@ -184,7 +205,7 @@ call_scroll
 	tax
 	pla
 	rti
-	
+
 cs_middle_color
 	lda #$71
 	sta border_color+1
@@ -192,7 +213,7 @@ cs_middle_color
 	ldx #79			; init bitmap colors
 csm1	lda #$77		; luminance
 	sta $0800+6*40+0*80,x
-	sta $0800+6*40+1*80,x 
+	sta $0800+6*40+1*80,x
 	sta $0800+6*40+2*80,x
 	sta $0800+6*40+3*80,x
 	sta $0800+6*40+4*80,x
