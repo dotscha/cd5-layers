@@ -13,16 +13,27 @@ patt1:
 rot1:	byt 0
 rot2:	byt 0
 
+pressed:
+	byt 0
+
 p = $fe
 q = $fc
 
 init3d:
 	lda #0
+	sta pressed
 	tax
 -	sta $0200,x
 	inx
 	bne -
 	rts
+
+loop_until_fire:
+
+	lda pressed
+	bmi +
+	sc_init joy_loop
++	rts
 
 render3dp:
 	inc patt_offs
@@ -127,20 +138,67 @@ patt_offs = *+1
 	cpy #object_count
 	bne -
 
+	lda #$fd
+	sta $fd30
+	sta $ff08
+	lda $ff08
+	eor #$ff
+	and #%10001111
+	beq +
+	sta pressed
++	ldx pressed
+	bne +
+	lda #%0101
++	sta $fb
+
+	ror $fb
+	bcc +
+	jsr rot1p
++	ror $fb
+	bcc +
+	jsr rot1m
++	ror $fb
+	bcc +
+	jsr rot2p
++	ror $fb
+	bcc +
+	jsr rot2m
+
++	jmp render
+
 	; rot1++
+rot1p:
 	ldx rot1
 	inx
 	cpx #LONG1D
 	bne +
 	ldx #0
 +	stx rot1
+	rts
+
+	; rot1--
+rot1m:
+	ldx rot1
+	dex
+	bpl +
+	ldx #LONG1D-1
++	stx rot1
+	rts
 
 	; rot2++
+rot2p:
 	clc
 	lda rot2
 	adc #2
 	and #$7f
 	sta rot2
+	rts
 
-	jmp render
-
+	; rot2--
+rot2m:
+	sec
+	lda rot2
+	sbc #2
+	and #$7f
+	sta rot2
+	rts

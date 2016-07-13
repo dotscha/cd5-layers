@@ -141,12 +141,18 @@ anim_restart:
 	sc_once init_phase_patt
 	sc_rept 512,phase2
 
+	sc_rept 15,raster_sync
+
 	sc_rept 8,logo_color_rot
 
 	if THREED
 	sc_once init3d
 	sc_rept 10,render3dp
-	sc_rept 128,render3d
+	sc_rept 127,render3d
+
+joy_loop:
+	sc_once render3d
+	sc_once loop_until_fire
 
 	sc_rept 11,render3dp
 	sc_rept 128,render3d
