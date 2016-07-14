@@ -176,7 +176,7 @@ bump_start = bumptab+LATI1+LONG1
 bump_mid = bump_start+8
 
 black_mask = bumptab
-color_rot_tab = $fc00
+color_rot_tab = bitmap + 6*320
 
 init_anim:
 
@@ -441,20 +441,24 @@ copy_lines_h:
 	jmp copy_lines+3
 
 copy_lines_init3:
-	lda #lo(fx_00-320)
-	ldx #hi(fx_00-320)
-	jmp *+7
+	lda #lo(fx_00)
+	ldx #hi(fx_00)
+	jsr copy_lines_init2.sk1
+	inc line_cp+4
+	rts
 
 copy_lines_init2:
+
 	lda #lo(cp_00+char_w*2*8)
 	ldx #hi(cp_00+char_w*2*8)
 
-	sta line_cp+1
+.sk1:	ldy #lo(fx_00)
+	sty line_cp+4
+	ldy #hi(fx_00)
+	sty line_cp+5
+
+.sk2:	sta line_cp+1
 	stx line_cp+2
-	lda #lo(fx_00)
-	sta line_cp+4
-	lda #hi(fx_00)
-	sta line_cp+5
 	rts
 
 copy_lines:

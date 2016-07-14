@@ -23,10 +23,10 @@ p = $fe
 q = $fc
 
 init3d:
-	lda #0
-	sta pressed
 	lda #lo(patt1)
 	sta patt_offs
+	lda #0
+	sta pressed
 	tax
 -	sta $0200,x
 	inx
@@ -36,6 +36,7 @@ init3d:
 loop_until_fire:
 
 	lda pressed
+	beq +
 	bmi +
 	sc_init joy_loop
 +	rts
@@ -84,6 +85,9 @@ render3d_cm = * - 3
 +	ror $fb		;s
 	bcc +
 	jsr patt_m
++	ror $fb		;e
+	bcc +
+	jsr texture_swap
 
 +
 	ldx #0
@@ -225,7 +229,7 @@ patt_p:
 	ldx #lo(patt1)
 +	stx patt_offs
 	rts
-	
+
 patt_m:
 	ldx patt_offs
 	dex
@@ -233,4 +237,21 @@ patt_m:
 	bne +
 	ldx #lo(patt1+patt_len-16)
 +	stx patt_offs
+	rts
+
+texture_swap:
+	ldx #0
+-	ldy texture,x
+	lda texture+512,x
+	sta texture,x
+	tya
+	sta texture+512,x
+
+	ldy texture+256,x
+	lda texture+512+256,x
+	sta texture+256,x
+	tya
+	sta texture+512+256,x
+	inx
+	bne -
 	rts

@@ -14,7 +14,7 @@ P4EMU = 2
 
 THREED = 1
 MC_LOGO = 1
-LOGO_FORMAT = P4EMU
+LOGO_FORMAT = BOTI
 
 bitmap = $c000
 cmatrix = $f800
@@ -197,9 +197,9 @@ logo_ff16:
 
 	if THREED
 	;include texture_side.asm
-	;include texture_sides.asm
 texture:
 	include texture_thetra.asm
+	include texture_sides.asm
 	;include texture_cube.asm
 	endif
 
