@@ -283,7 +283,7 @@ col_rot_lo:
 	;byt 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 
 logo_color_rot:
-	jsr bg_change_sync
+	jsr logo_change_sync
 
 	if MC_LOGO
 	ldy #1
@@ -308,7 +308,7 @@ logo_color_rot:
 	rts
 
 logo_color:
-	jsr bg_change_sync
+	jsr logo_change_sync
 
 	ldy #1
 -	lda logo_fact
@@ -355,7 +355,7 @@ raster_sync:
 	beq -
 	rts
 
-bg_change_sync:
+logo_change_sync:
 	lda #56
 	jmp raster_sync+2
 
