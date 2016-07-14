@@ -103,6 +103,17 @@ P3D smiddle(const P3D& p1, const P3D& p2, double w = 0.5)
 {
   if (1)
   {
+    // converting w to interpolate
+    // angles betwean p1 and p2
+    //
+    //        w=.5
+    //  w=0_________w=1
+    //     \   |   /
+    //   p1 \  |  / p2
+    //       \a|a/
+    //        \|/
+    //         V
+    //
     double co = p1*p2/p1.length()/p2.length();
     double a = acos(co)/2;
     w = (sin(a)-sin(a*(1-2*w)))/sin(a)/2;
@@ -522,7 +533,7 @@ vector<size_t> getCoords(const Nodes& nodes, const Nodes& coords, map<size_t,int
 void calcTexture(const Nodes& nodes, const Nodes& coords, int q, string name)
 {
   out.open((name+".asm").data(),ios_base::out);
-  out << "texture:" << endl;
+  out << name <<":" << endl;
   vector<double> dist;
   getCoords(coords,nodes,0,&dist);
   double min = *min_element(dist.begin(),dist.end());

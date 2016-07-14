@@ -196,14 +196,13 @@ logo_ff16:
 	endif
 
 	if THREED
-	;org bitmap+5620
-	;align 8
 	;include texture_side.asm
 	;include texture_sides.asm
+texture:
 	include texture_thetra.asm
 	;include texture_cube.asm
 	endif
-	
+
 	include scroll.asm
 
 	org cmatrix

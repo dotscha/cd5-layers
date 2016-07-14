@@ -1,4 +1,4 @@
-texture:
+texture_cube:
 	byt 13
 	byt 12
 	byt 11

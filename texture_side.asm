@@ -1,4 +1,4 @@
-texture:
+texture_side:
 	byt 10
 	byt 10
 	byt 10

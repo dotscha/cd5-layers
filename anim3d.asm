@@ -42,9 +42,40 @@ render3dp:
 render3dm:
 	dec patt_offs
 
+
 render3d:
 
 LONG1D = LONG1*2 ; the obj coords have double longitude precision
+
+	lda #$fd
+	sta $fd30
+	sta $ff08
+	lda $ff08
+	eor #$ff
+	beq +
+	sta pressed
++	ldx pressed
+	bne +
+	lda #%0101
++	sta $fb
+
+render3d_nk = * - 4
+render3d_cm = * - 3
+
+	ror $fb
+	bcc +
+	jsr rot1p
++	ror $fb
+	bcc +
+	jsr rot1m
++	ror $fb
+	bcc +
+	jsr rot2p
++	ror $fb
+	bcc +
+	jsr rot2m
+
++
 
 	ldx #0
 -	lda obj_longitudes,x
@@ -138,33 +169,7 @@ patt_offs = *+1
 	cpy #object_count
 	bne -
 
-	lda #$fd
-	sta $fd30
-	sta $ff08
-	lda $ff08
-	eor #$ff
-	and #%10001111
-	beq +
-	sta pressed
-+	ldx pressed
-	bne +
-	lda #%0101
-+	sta $fb
-
-	ror $fb
-	bcc +
-	jsr rot1p
-+	ror $fb
-	bcc +
-	jsr rot1m
-+	ror $fb
-	bcc +
-	jsr rot2p
-+	ror $fb
-	bcc +
-	jsr rot2m
-
-+	jmp render
+	jmp render
 
 	; rot1++
 rot1p:

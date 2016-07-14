@@ -1,4 +1,4 @@
-texture:
+texture_thetra:
 	byt 10
 	byt 11
 	byt 12
