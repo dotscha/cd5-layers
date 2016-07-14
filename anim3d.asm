@@ -1,4 +1,6 @@
-	align 32
+	if lo(*)>256-48
+	align 64
+	endif
 patt1:
 	;byt 7,6,5,4,3,2,1,0,0,1,2,3,4,5,6,7
 	;byt 7,7,7,6,5,4,3,2,1,0,0,0,0,0,0,0 ; thetra
@@ -6,9 +8,10 @@ patt1:
 	;byt 0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7
 	;byt 0,0,0,0,0,0,0,0,1,2,3,4,5,6,7,7 ; sides
 	;byt 0,0,0,0,1,2,3,4,5,6,7,7,7,7,7,7 ; sides2
-	byt [16]0,2,3,4,5,6,7,7,7,7,7,6,5,4,3,2,[6]0 ; sides3
+	byt [16]0,2,3,4,5,6,7,7,7,7,7,6,5,4,3,2,[16]0 ; sides3
 	;byt 7,7,6,6,5,5,4,4,3,3,2,2,1,1,0,0
 
+patt_len = * - patt1
 
 rot1:	byt 0
 rot2:	byt 0
@@ -22,6 +25,8 @@ q = $fc
 init3d:
 	lda #0
 	sta pressed
+	lda #lo(patt1)
+	sta patt_offs
 	tax
 -	sta $0200,x
 	inx
@@ -36,12 +41,11 @@ loop_until_fire:
 +	rts
 
 render3dp:
-	inc patt_offs
+	jsr patt_p
 	jmp render3d
 
 render3dm:
-	dec patt_offs
-
+	jsr patt_m
 
 render3d:
 
@@ -62,21 +66,26 @@ LONG1D = LONG1*2 ; the obj coords have double longitude precision
 render3d_nk = * - 4
 render3d_cm = * - 3
 
-	ror $fb
+	ror $fb		;3
 	bcc +
 	jsr rot1p
-+	ror $fb
++	ror $fb		;w
 	bcc +
 	jsr rot1m
-+	ror $fb
++	ror $fb		;a
 	bcc +
 	jsr rot2p
-+	ror $fb
++	ror $fb		;4
 	bcc +
 	jsr rot2m
++	ror $fb		;z
+	bcc +
+	jsr patt_p
++	ror $fb		;s
+	bcc +
+	jsr patt_m
 
 +
-
 	ldx #0
 -	lda obj_longitudes,x
 	clc
@@ -206,4 +215,22 @@ rot2m:
 	sbc #2
 	and #$7f
 	sta rot2
+	rts
+
+patt_p:
+	ldx patt_offs
+	inx
+	cpx #lo(patt1+patt_len-16)
+	bne +
+	ldx #lo(patt1)
++	stx patt_offs
+	rts
+	
+patt_m:
+	ldx patt_offs
+	dex
+	cpx #lo(patt1-1)
+	bne +
+	ldx #lo(patt1+patt_len-16)
++	stx patt_offs
 	rts
