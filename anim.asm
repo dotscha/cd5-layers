@@ -102,6 +102,7 @@ anim_scenario:
 
 	sc_once cs_start_scroll
 
+adj = 10
 
 anim_restart:
 
@@ -109,23 +110,23 @@ anim_restart:
 
 	sc_rept 12*8,nodes_in
 
-	sc_rept 32,render
+	sc_rept 32-adj,raster_sync
 
 	sc_rept 7,fade_out
 	sc_rept 20*8,faces_in
 
-	sc_rept 32,raster_sync
+	sc_rept 32-adj,raster_sync
 
 	sc_rept 7,fade_out
 	sc_once init_phase1
 	sc_once bump1
 	sc_rept 8,phase1
 
-	sc_rept 32,raster_sync
+	sc_rept 32-adj,raster_sync
 
 	sc_rept 8,phase1
 
-	sc_rept 32,raster_sync
+	sc_rept 32-adj,raster_sync
 
 	sc_rept 8,phase1
 
@@ -348,7 +349,7 @@ logo_fact = - + 5
 raster_sync2:
 	jsr raster_sync
 raster_sync:
-	lda #$cc
+	lda #$dd
 -	cmp $ff1d
 	bne -
 -	cmp $ff1d
