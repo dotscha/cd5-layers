@@ -147,6 +147,11 @@ obj_phases = $02
 	include !player.asm
 	include music.asm
 
+	if THREED
+texture2:
+	include texture_sides.asm
+	endif
+
 	org bitmap
 
 	switch LOGO_FORMAT
@@ -196,11 +201,8 @@ logo_ff16:
 	endif
 
 	if THREED
-	;include texture_side.asm
 texture:
 	include texture_thetra.asm
-	include texture_sides.asm
-	;include texture_cube.asm
 	endif
 
 	include scroll.asm

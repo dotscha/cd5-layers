@@ -242,16 +242,16 @@ patt_m:
 texture_swap:
 	ldx #0
 -	ldy texture,x
-	lda texture+512,x
+	lda texture2,x
 	sta texture,x
 	tya
-	sta texture+512,x
+	sta texture2,x
 
 	ldy texture+256,x
-	lda texture+512+256,x
+	lda texture2+256,x
 	sta texture+256,x
 	tya
-	sta texture+512+256,x
+	sta texture2+256,x
 	inx
 	bne -
 	rts

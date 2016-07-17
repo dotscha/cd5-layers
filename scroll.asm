@@ -177,6 +177,14 @@ scroll_text
 	byt $FE,$51
 	byt " Arok."
 	byt "               "
+	byt "Hi there, Bubis is writing. This is my first scroll text ever, how strange! "
+	byt "So, a few words about what is going on here. You have 180 triangles covering an inner ball "
+	byt "and casting their shadow on it on your screen. The code and the textures were computed "
+	byt "and optimized by a C++ program. The texture is compressed by 54 percent to fit into the memory "
+	byt "by finding duplicates and overlaps of the 8 byte texture segments the rendering code is using. "
+	byt "Most of the coding was done on my Android tablet while commuting between home and work. :) "
+	byt "Thumbs up for Csabo and Chronos for the TED music and the logo!             "
+	byt "Are you still reading? Try to use the joystik and s, z and e in the 3D part. Enjoy!         "
 	byt $FE,$01 ; scroll over
 	byt " "
 	byt $FF
