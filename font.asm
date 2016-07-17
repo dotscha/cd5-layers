@@ -73,3 +73,4 @@
 	byt $3F,$1F,$0F,$07,$07,$0F,$1F,$3F
 	byt $81,$FF,$FF,$FF,$FF,$FF,$FF,$81
 	byt $80,$FF,$FF,$FF,$FF,$FF,$FF,$01
+	byt $7E,$FF,$FF,$FF,$FF,$FF,$FF,$7E

@@ -137,8 +137,12 @@ no_new_char
 	
 	CHARSET 'A','Z',$01
 	CHARSET '.',$1B
-	CHARSET '!',$1C
+	CHARSET ',',$1C
+	CHARSET '!',$1D
+	CHARSET '?',$1E
+	CHARSET '+',$1F
 	CHARSET 'a','z',$21
+	CHARSET '0','9',$3B
 	
 initial_text
 	byt $00
@@ -160,8 +164,6 @@ initial_text
 	byt $00,$00,$0D,$26,$18,$16,$08,$0E,$04,$04,$16,$17,$18,$00,$00
 	
 scroll_text
-	;byt "z"
-	;byt "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	byt " "
 	byt $FE,$61
 	byt " get ready to rock now! "
@@ -177,14 +179,23 @@ scroll_text
 	byt $FE,$51
 	byt " Arok."
 	byt "               "
+	byt $FE,$41
 	byt "Hi there, Bubis is writing. This is my first scroll text ever, how strange! "
 	byt "So, a few words about what is going on here. You have 180 triangles covering an inner ball "
-	byt "and casting their shadow on it on your screen. The code and the textures were computed "
-	byt "and optimized by a C++ program. The texture is compressed by 54 percent to fit into the memory "
-	byt "by finding duplicates and overlaps of the 8 byte texture segments the rendering code is using. "
-	byt "Most of the coding was done on my Android tablet while commuting between home and work. :) "
-	byt "Thumbs up for Csabo and Chronos for the TED music and the logo!             "
-	byt "Are you still reading? Try to use the joystik and s, z and e in the 3D part. Enjoy!         "
+	byt "and casting their shadow on it on your screen."
+	byt $FE,$51
+	byt " The code and the textures were computed and optimized by a C++ program."
+	byt $FE,$61
+	byt " The texture is compressed by 54 percent to fit into the memory "
+	byt "by finding duplicates and overlaps of the 8 byte texture segments the rendering code is using."
+	byt $FE,$51
+	byt " Most of the coding was done on my Android tablet while commuting between home and work."
+	byt $FE,$41
+	byt " Thumbs up for Csabo and Chronos for the TED music and the logo!            "
+	byt $FE,$57
+	byt " Are you still reading? Try to use the joystick and s, z and e in the 3D part. "
+	byt $F7
+	byt " Enjoy!         "
 	byt $FE,$01 ; scroll over
 	byt " "
 	byt $FF
@@ -195,13 +206,13 @@ char_widths
 	byt 1,3,3,3,3,3,3,3
 	byt 3,3,3,3,3,3,3,3
 	byt 3,3
-	byt 1,1,1,1,1
+	byt 1,1,1,3,3
 	byt 2 ; space
 	byt 3,3,3,3,3,2,3,3
 	byt 1,2,3,1,3,3,3,3
 	byt 3,3,3,2,3,3,3,3
 	byt 3,3
-	byt 1,1,1,1,1,1
+	byt 3,1,3,3,3,3,3,3,3,3
 	
 char_ptrs
 	adr char_space
@@ -232,10 +243,10 @@ char_ptrs
 	adr char_upper_y
 	adr char_upper_z
 	adr char_period
+	adr char_comma
 	adr char_exclamation
-	adr char_space
-	adr char_space
-	adr char_space
+	adr char_question
+	adr char_plus
 	adr char_space
 	adr char_lower_a
 	adr char_lower_b
@@ -263,6 +274,17 @@ char_ptrs
 	adr char_lower_x
 	adr char_lower_y
 	adr char_lower_z
+	;
+	adr char_upper_o
+	adr char_upper_i
+	adr char_space
+	adr char_3
+	adr char_4
+	adr char_5
+	adr char_space
+	adr char_space
+	adr char_8
+	adr char_space
 	
 char_space
 	byt 0,0,0,0,0
@@ -371,8 +393,18 @@ char_upper_z
 	byt $0C,$03,$18,$00,$09
 char_period
 	byt $00,$00,$00,$00,$23
+char_comma
+	byt $00,$00,$00,$1B,$18
 char_exclamation
 	byt $01,$03,$03,$04,$23
+char_question
+	byt $0F,$1A,$00,$00,$00
+	byt $10,$00,$0F,$04,$23
+	byt $11,$33,$18,$00,$00
+char_plus
+	byt $00,$00,$06,$00,$00
+	byt $00,$01,$49,$04,$00
+	byt $00,$00,$09,$00,$00
 char_lower_a
 	byt $00,$0F,$28,$2A,$16
 	byt $00,$10,$1E,$2B,$08
@@ -468,5 +500,20 @@ char_lower_z
 	byt $00,$06,$0F,$12,$0D
 	byt $00,$08,$25,$00,$08
 	byt $00,$0C,$18,$00,$09
-	
+char_3
+	byt $06,$00,$00,$00,$06
+	byt $24,$00,$44,$00,$26
+	byt $11,$33,$45,$33,$18
+char_4
+	byt $01,$14,$16,$00,$00
+	byt $00,$00,$27,$00,$00
+	byt $01,$03,$0A,$03,$04
+char_5
+	byt $0B,$03,$0D,$1C,$16
+	byt $08,$00,$24,$00,$17
+	byt $09,$00,$11,$33,$18
+char_8
+	byt $0F,$34,$46,$34,$16
+	byt $10,$00,$47,$00,$17
+	byt $11,$33,$45,$33,$18
 	
