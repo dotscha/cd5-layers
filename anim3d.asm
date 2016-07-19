@@ -33,13 +33,9 @@ init3d:
 	bne -
 	rts
 
-loop_until_fire:
-
-	lda pressed
-	beq +
-	bmi +
+repeat_joy_loop:
 	sc_init joy_loop
-+	rts
+	rts
 
 render3dp:
 	jsr patt_p
@@ -88,7 +84,10 @@ render3d_cm = * - 3
 +	ror $fb		;e
 	bcc +
 	jsr texture_swap
-
++	ror $fb		;shift
+	bcc +
+	sc_init jump_anim_restart
+	
 +
 	ldx #0
 -	lda obj_longitudes,x
