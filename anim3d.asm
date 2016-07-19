@@ -55,6 +55,8 @@ LONG1D = LONG1*2 ; the obj coords have double longitude precision
 	eor #$ff
 	beq +
 	sta pressed
+	sc_init joy_loop
+	lda pressed
 +	ldx pressed
 	bne +
 	lda #%0101
