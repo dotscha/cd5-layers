@@ -88,8 +88,8 @@ render3d_cm = * - 3
 	jsr texture_swap
 +	ror $fb		;shift
 	bcc +
-	sc_init jump_anim_restart
-	
+	sc_init joy_out
+
 +
 	ldx #0
 -	lda obj_longitudes,x

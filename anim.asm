@@ -168,7 +168,11 @@ anim_restart:
 joy_loop:
 	sc_once render3d
 	sc_once repeat_joy_loop
-	
+
+joy_out:
+	sc_rept 7,fade_out
+	sc_once jump_anim_restart
+
 	endif
 
 ;-------------------------------------------------
