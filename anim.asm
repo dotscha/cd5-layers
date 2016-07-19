@@ -149,11 +149,7 @@ anim_restart:
 	if THREED
 	sc_once init3d
 	sc_rept 10,render3dp
-	sc_rept 127,render3d
-
-joy_loop:
-	sc_once render3d
-	sc_once loop_until_fire
+	sc_rept 128,render3d
 
 	sc_rept 11,render3dp
 	sc_rept 128,render3d
@@ -165,8 +161,15 @@ joy_loop:
 	sc_rept 1,render3d
 	endif
 
-
 	sc_once jump_anim_restart
+
+	if THREED
+
+joy_loop:
+	sc_once render3d
+	sc_once repeat_joy_loop
+	
+	endif
 
 ;-------------------------------------------------
 
