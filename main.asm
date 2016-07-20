@@ -29,6 +29,9 @@ main:
 	cmp $FF1D
 	bne *-3
 
+	lda #$08
+	sta $ff14
+
 	lda #$0B
 	sta $FF06
 
@@ -134,7 +137,27 @@ il2	lda initial_text-1,x
 
 anim_loop:
 	jsr scenario_next
-	jmp anim_loop
+
+	; Query keyboard for "Space"
+	lda #$7F
+        sta $FD30
+        sta $FF08
+        lda $FF08
+        and #$10
+        bne anim_loop
+        ;
+        lda $0500 ; space is pressed, exit gracefully
+        cmp #$EA
+        beq *+5
+        jmp $FFF6
+	lda #0
+	sta $ff06
+	sta $ff11
+	sta $ff19
+        jmp $0500
+
+
+
 
 
 render:

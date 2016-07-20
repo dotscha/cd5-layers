@@ -78,21 +78,6 @@ border_color
 	sta $ff15
 	endif
 	;
-	lda #$7F
-	sta $FD30
-	sta $FF08
-	lda $FF08
-	and #$10	; Query keyboard for "Space"
-	bne not_pressed
-	;
-	lda $0500	; space is pressed, exit gracefully
-	cmp #$EA
-	beq *+5
-	jmp $FFF6
-	jmp $0500
-	;
-not_pressed
-	;
 	ldx #irq2 & 255
 	ldy #irq2 >> 8
 	lda #$9A
