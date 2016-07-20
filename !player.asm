@@ -6,7 +6,7 @@ F1HI	= $FF12
 F2LO	= $FF0F
 F2HI	= $FF10
 
-freqs = $0500
+freqs = $0130
 
 freqs_add
 	byt 07,57,54,51, 48,45,43,40, 38,36,34,32 ; 00
