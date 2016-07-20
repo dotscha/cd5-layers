@@ -546,6 +546,23 @@ void calcTexture(const Nodes& nodes, const Nodes& coords, int q, string name)
   out.close();
 }
 
+void calcTexture2(int lati, int longi, int q, string name)
+{
+  out.open((name+".asm").data(),ios_base::out);
+  out << name <<":" << endl;
+  for (int j = 0; j<lati; ++j)
+  {
+    double y = (j+0.5)/lati;
+    for (int i = 0; i<longi; ++i)
+    {
+      double x = (i+0.5)/longi;
+      double t = (1+cos((x+y/3)*6*PI))/2*sin(y*PI);
+      out << "\tbyt " << (int)(t*q) << endl;
+    }
+  }
+  out.close();
+}
+
 void coordinates()
 {
   Nodes coords = sphereCoords(LATI1,LONG1);
@@ -662,6 +679,7 @@ int main(int argc, char** argv)
       n.push_back(P3D(-1,0,0));
       calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_sides");
       }
+      calcTexture2(TEXT_LATI,TEXT_LONG,16,"texture2");
     }
     if (arg == "bmp2prg" && argc>3)
     {
