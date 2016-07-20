@@ -556,7 +556,7 @@ void calcTexture2(int lati, int longi, int q, string name)
     for (int i = 0; i<longi; ++i)
     {
       double x = (i+0.5)/longi;
-      double t = (1+cos((x+y/3)*6*PI))/2*sin(y*PI);
+      double t = (1+cos((x+y*0.0)*6*PI))/2*(1-(0.5-y)*(0.5-y)*4);
       out << "\tbyt " << (int)(t*q) << endl;
     }
   }
