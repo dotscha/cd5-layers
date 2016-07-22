@@ -48,6 +48,7 @@ main:
 
 ;set colors
 	ldx #3
+	ldy #0
 $$l1:
 	lda #(bg_col & $f0) + (bg_col >> 4)
 	sta $0800,y
