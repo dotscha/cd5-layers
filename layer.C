@@ -388,11 +388,11 @@ void initBitmaps()
   p.push_back(255);
   #endif
   icos_in.fill(p);
-  icos_in.saveBMP("icos_in.bmp");
+  //icos_in.saveBMP("icos_in.bmp");
   #if SCENE_NO==1
-  icos_out.loadBMP("icos_out.bmp");
-  ball_light.loadBMP("ball.bmp");
-  ball_dark.loadBMP("ball_dark.bmp");
+  icos_out.loadBMP("images/icos_out.bmp");
+  ball_light.loadBMP("images/ball.bmp");
+  ball_dark.loadBMP("images/ball_dark.bmp");
   #endif
 }
 
@@ -427,7 +427,7 @@ void genCode()
   #if SCENE_NO==1
   otherStuff(scene);
   #endif
-  //calcTables(ts);
+  /*
   scene.preview(0,"scene_phase0");
   scene.preview(1,"scene_phase1");
   scene.preview(2,"scene_phase2");
@@ -436,6 +436,7 @@ void genCode()
   scene.preview(5,"scene_phase5");
   scene.preview(6,"scene_phase6");
   scene.preview(7,"scene_phase7");
+  */
   scene.compile();
   out << "object_count = " << obj_count << endl;
   out.close();
@@ -670,12 +671,12 @@ int main(int argc, char** argv)
     }
     if (arg == "texture")
     {
-      calcTexture(cubeCoords(),sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_cube");
+      //calcTexture(cubeCoords(),sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_cube");
       calcTexture(thetraCoords(),sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_thetra");
       {
       Nodes n;
       n.push_back(P3D(1,0,0));
-      calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_side");
+      //calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_side");
       n.push_back(P3D(-1,0,0));
       calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_sides");
       }
