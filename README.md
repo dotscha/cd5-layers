@@ -1,5 +1,5 @@
 #
-# Crackers Demo 5 - Layers by Bubis
+# Crackers' Demo 5 - Layers by Bubis
 #
 
 Requires:
