@@ -1,4 +1,4 @@
-texture2:
+texture_tri:
 	byt 1
 	byt 1
 	byt 1

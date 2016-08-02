@@ -172,7 +172,8 @@ obj_phases = $02
 	include music.asm
 
 	if THREED
-	include texture2.asm
+texture2:
+	include texture_tri.asm
 texture3:
 	include texture_sides.asm
 	endif

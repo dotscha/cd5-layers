@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <set>
 #include <algorithm>
+#include <functional>
 
 using namespace std;
 
@@ -547,7 +548,7 @@ void calcTexture(const Nodes& nodes, const Nodes& coords, int q, string name)
   out.close();
 }
 
-void calcTexture2(int lati, int longi, int q, string name)
+void calcTexture(int lati, int longi, int q, string name, function<double(double,double)> f)
 {
   out.open((name+".asm").data(),ios_base::out);
   out << name <<":" << endl;
@@ -557,7 +558,7 @@ void calcTexture2(int lati, int longi, int q, string name)
     for (int i = 0; i<longi; ++i)
     {
       double x = (i+0.5)/longi;
-      double t = (1+cos((x+y*0.0)*6*PI))/2*(1-(0.5-y)*(0.5-y)*4);
+      double t = f(x,y);//(1+cos((x+y*0.0)*6*PI))/2*(1-(0.5-y)*(0.5-y)*4);
       out << "\tbyt " << (int)(t*q) << endl;
     }
   }
@@ -680,7 +681,10 @@ int main(int argc, char** argv)
       n.push_back(P3D(-1,0,0));
       calcTexture(n,sphereCoords(TEXT_LATI,TEXT_LONG,false),16,"texture_sides");
       }
-      calcTexture2(TEXT_LATI,TEXT_LONG,16,"texture2");
+      calcTexture(TEXT_LATI,TEXT_LONG,16,"texture_tri",[](double x, double y)->double
+      {
+        return (1+cos((x+y*0.0)*6*PI))/2*(1-(0.5-y)*(0.5-y)*4);
+      });
     }
     if (arg == "bmp2prg" && argc>3)
     {
