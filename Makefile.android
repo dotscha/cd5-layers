@@ -1,28 +1,26 @@
+CC = g++ -O3 -Wall -o
+AS = ./ass.sh
+EXO = ~/exo209/src/exomizer sfx basic -t4 -x1 -o
+MKD64 = ~/mkd64/bin/mkd64
+EUM = echo
+
+
 HEADERS = Bitmap.H Graphic.H BitmapObject.H Scene.H Code.H 3D.H
 BMPS = images/icos_out.bmp images/ball.bmp images/ball_dark.bmp
 ASM_SRC = !player.asm anim.asm anim3d.asm font.asm irq.asm main.asm music.asm scroll.asm
-
 LOGO = images/logo_chronos_boti.prg
 
-AS = ./ass.sh
-EXO = ~/exo209/src/exomizer
-EXO_FX = -x1
-MKD64 = ~/mkd64/bin/mkd64
-
-YAPE = echo
-
-FLAGS = -O3 -Wall
 
 all : exp
 
 run : main.prg
-	$(YAPE) main.prg &
+	$(EMU) main.prg &
 
 run_exo : main_exo.prg
-	$(YAPE) main_exo.prg &
+	$(EMU) main_exo.prg &
 
 main_exo.prg : main.prg
-	$(EXO) sfx basic -t4 $(EXO_FX) -o main_exo.prg main.prg
+	$(EXO) main_exo.prg main.prg
 
 main.prg : $(ASM_SRC) scene_code.asm obj_coords.asm logo.prg texture_thetra.asm
 	$(AS) main
@@ -44,9 +42,6 @@ gen_code: layer $(BMPS)
 gen_coords: layer
 	./layer coords
 
-clean:
-	rm *.prg *.bmp scene_*.asm layers.asm *coord*.asm node_triangs.asm texture*.asm main.inc main.lst layer *.d64 || true
-
 logo.prg: $(LOGO)
 	cp $(LOGO) logo.prg
 
@@ -65,14 +60,15 @@ export_exo: disk_exo.d64
 exp: export export_exo
 	cp main_exo.prg /sdcard/
 
+clean:
+	rm *.prg *.bmp scene_*.asm layers.asm *coord*.asm node_triangs.asm texture*.asm main.inc main.lst layer *.d64 *.zip || true
+
 zip-src: clean
 	zip cd5-layers-src.zip README.md Makefile.android ass.sh default.ini *.asm *.H *.C $(BMPS) $(LOGO)
 
-zip-all: main.prg
+zip-all: disk_exo.d64
 	rm scene_bg.* || true
-	zip cd5-layers-all.zip README.md Makefile.android ass.sh default.ini *.asm *.H *.C *.prg $(BMPS) $(LOGO)
-
+	zip cd5-layers-all.zip README.md Makefile.android ass.sh default.ini *.asm *.H *.C *.prg disk_exo.d64 $(BMPS) $(LOGO)
 
 % : %.C $(HEADERS)
-	g++ $(FLAGS) -o $@ $@.C
-
+	$(CC) $@ $@.C
