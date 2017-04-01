@@ -9,6 +9,7 @@ Requires:
  - MkD64 1.4b (optional)
 
 Build on Android:
+ - You need Termux: https://play.google.com/store/apps/details?id=com.termux
  - `make -f Makefile.android`
 
 Build on other systems:
